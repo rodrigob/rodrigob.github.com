@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Envy Labs</title>
-  </head>
+---
+layout: default
+title: Rodrigob's github page
+---
 
-  <body>
-    <h1>Envy Labs</h1>
-  </body>
-</html>
+Welcome to my little projects !
+
+
+{% for post in site.posts limit:5 %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {{ post.content }}
+  <em>Posted on {{ post.date | date_to_long_string }}.</em>
+{% endfor %}
+
