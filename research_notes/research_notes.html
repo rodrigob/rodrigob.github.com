@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta name="generator" content="http://www.nongnu.org/elyxer/" />
+<meta name="create-date" content="2010-05-01" />
+<link href="research_notes.css" rel="stylesheet" media="screen" type="text/css" />
+<title>Research notes onVision for mobile robots</title>
+</head>
+<body>
+<div id="globalWrapper">
+
+<h1 class="title">
+Research notes on<span class="giant"><br />
+Vision for mobile robots</span>
+</h1>
+<h2 class="author">
+<a href="http://www.google.com/profiles/rodrigo.benenson" class="URL">Rodrigo Benenson</a>
+</h2>
+<h2 class="Date">Last updated on 2010-05-01</h2>
+<h2 class="Section-">
+<a name="toc-Section*-1" class="toc"></a>What is this document ?
+</h2>
+<div class="Unindented">
+This is a live document where I keep my though on my current research.
+</div>
+<div class="Indented">
+After finishing my PhD thesis <sup><a href="#biblio-1" name="cite-1" class="bibliocite">1</a></sup> on mobile robotics I decided to continue my work by exploring the world of vision. This document is an attempt to gather and share my though and knowledge on the subject.
+</div>
+<div class="Indented">
+Blogs are good, but lack the consistency of a book. Books are good, but cannot be shared as easily as online documents. This is an attempt to share knowledge in a new form.
+</div>
+<h2 class="Section-">
+<a name="toc-Section*-2" class="toc"></a>License
+</h2>
+<div class="Unindented">
+
+<div class="center">
+This document is shared under the<br />
+ <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" class="URL">Creative Commons Attribution-Noncommercial-Share Alike 3.0 </a> license.
+</div>
+</div>
+<div class="Indented">
+The document is shared in an open format, you are free to copy it, branch it, remix it, as long as you respect the mentioned creative commons license. 
+</div>
+<div class="Indented">
+If you are interested on collaborating with me on this document, please feel free to <a href="http://www.google.com/profiles/rodrigo.benenson" class="URL">contact me</a>.
+</div>
+<h2 class="Section-">
+<a name="toc-Section*-3" class="toc"></a>Acknowledgements
+</h2>
+<div class="Unindented">
+I do my research at <a href="http://kuleuven.be" class="URL">KULeuven</a>, first I woud like to thank <a href="http://www.esat.kuleuven.be/psi/visics" class="URL">Prof. Van Gool</a> for giving me the extraordinary opportunity to explore this research topic.
+</div>
+<div class="Indented">
+Second I have to make a pause to remember all the person that mattered most in my intelectual path, most of them are mentioned in my PhD preface <sup><a href="#biblio-1" name="cite-1" class="bibliocite">1</a></sup>. I would like to mention in particular Prof. Javier Ruiz-del-Solar who first introduced me in the topic of computer vision.
+</div>
+<div class="Indented">
+Finally I would like to thanks my colleagues at INRIA, Mines Paris and KULeuven with whom I had and have many enriching discussions that have steered my way of thinking on the subject. I would like to mention in particular Nicolas Simond, Yann Dumortier, Julien Perret, and my current colleagues at VISICS as great positives influences.
+</div>
+<div class="Indented">
+
+<span class="Newpage">
+
+</span>
+</div>
+<div class="Indented">
+
+<div class="fulltoc">
+
+<div class="tocheader">
+Table of Contents
+</div><div class="tocindent">
+<div class="tocindent">
+
+<div class="toc">
+<a href="#toc-Section*-1" class="Link">Section: What is this document ?</a>
+</div>
+<div class="toc">
+<a href="#toc-Section*-2" class="Link">Section: License</a>
+</div>
+<div class="toc">
+<a href="#toc-Section*-3" class="Link">Section: Acknowledgements</a>
+</div></div>
+
+<div class="toc">
+<a href="#toc-Chapter-1" class="Link">Chapter 1: The big picture</a>
+</div><div class="tocindent">
+
+<div class="toc">
+<a href="#toc-Section-1.1" class="Link">Section 1.1: Buzz words</a>
+</div></div>
+
+<div class="toc">
+<a href="#toc-Chapter-2" class="Link">Chapter 2: Limits and minimal assumptions</a>
+</div><div class="tocindent">
+
+<div class="toc">
+<a href="#toc-Section-2.1" class="Link">Section 2.1: Monocular vision</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-2.2" class="Link">Section 2.2: Stereo vision</a>
+</div></div>
+
+<div class="toc">
+<a href="#toc-Chapter-3" class="Link">Chapter 3: Traversability estimation</a>
+</div><div class="tocindent">
+
+<div class="toc">
+<a href="#toc-Section-3.1" class="Link">Section 3.1: The map fallacy</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-3.2" class="Link">Section 3.2: Depth estimation from a stereo pair</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-3.3" class="Link">Section 3.3: Depth estimation from a stereo stream</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-3.4" class="Link">Section 3.4: Depth estimation from multiple images</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-3.5" class="Link">Section 3.5: Optical flow</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-3.6" class="Link">Section 3.6: Scene flow</a>
+</div></div>
+
+<div class="toc">
+<a href="#toc-Chapter-4" class="Link">Chapter 4: Moving objects</a>
+</div><div class="tocindent">
+
+<div class="toc">
+<a href="#toc-Section-4.1" class="Link">Section 4.1: Moving objects detection without motion estimation</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-4.2" class="Link">Section 4.2: The moving objects detection problem</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-4.3" class="Link">Section 4.3: Moving objects detection with motion estimation</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-4.4" class="Link">Section 4.4: Tracking</a>
+</div></div>
+
+<div class="toc">
+<a href="#toc-Chapter-5" class="Link">Chapter 5: Mobile objects</a>
+</div></div>
+
+</div>
+</div>
+<h1 class="Chapter">
+<a name="toc-Chapter-1" class="toc">1</a> The big picture
+</h1>
+<h2 class="Section">
+<a name="toc-Section-1.1" class="toc">1.1</a> Buzz words
+</h2>
+<h1 class="Chapter">
+<a name="toc-Chapter-2" class="toc">2</a> Limits and minimal assumptions
+</h1>
+<h2 class="Section">
+<a name="toc-Section-2.1" class="toc">2.1</a> Monocular vision
+</h2>
+<h2 class="Section">
+<a name="toc-Section-2.2" class="toc">2.2</a> Stereo vision
+</h2>
+<h1 class="Chapter">
+<a name="toc-Chapter-3" class="toc">3</a> Traversability estimation
+</h1>
+<h2 class="Section">
+<a name="toc-Section-3.1" class="toc">3.1</a> The map fallacy
+</h2>
+<h2 class="Section">
+<a name="toc-Section-3.2" class="toc">3.2</a> Depth estimation from a stereo pair
+</h2>
+<h2 class="Section">
+<a name="toc-Section-3.3" class="toc">3.3</a> Depth estimation from a stereo stream
+</h2>
+<h2 class="Section">
+<a name="toc-Section-3.4" class="toc">3.4</a> Depth estimation from multiple images
+</h2>
+<h2 class="Section">
+<a name="toc-Section-3.5" class="toc">3.5</a> Optical flow
+</h2>
+<h2 class="Section">
+<a name="toc-Section-3.6" class="toc">3.6</a> Scene flow
+</h2>
+<h1 class="Chapter">
+<a name="toc-Chapter-4" class="toc">4</a> Moving objects
+</h1>
+<h2 class="Section">
+<a name="toc-Section-4.1" class="toc">4.1</a> Moving objects detection without motion estimation
+</h2>
+<h2 class="Section">
+<a name="toc-Section-4.2" class="toc">4.2</a> The moving objects detection problem
+</h2>
+<div class="Unindented">
+
+</div>
+<div class="Indented">
+Let <span class="formula"><b>x</b><sub><i>fp</i></sub> = [<i>u</i>, <i>v</i>]<sup><i>T</i></sup> ∈ ℝ<sup>2</sup></span> be a point in image <span class="formula"><span class="script">I</span><sub><i>f</i></sub></span> corresponding to the projection of a point <span class="formula"><i>s</i><sub><i>p</i></sub> ∈ 𝔼<sup>3</sup></span> in the 3 dimensional euclidean space. We want to define a function <span class="formula"><i>f</i>(<b><b>x</b></b><sub><i>fp</i></sub>, <span class="script">I</span><sub>0..<i>f</i></sub>) ∈ {0, 1}</span> that will return <span class="formula">0</span> if <span class="formula"><i>s</i><sub><i>p</i></sub></span> had the same rigid motion than the ground plane in the frames <span class="formula">[0, <i>f</i>]</span> (static object) and <span class="formula">1</span> otherwise (moving object). 
+</div>
+<div class="Indented">
+In order to make the problem slightly more tractable we will assume that the camera motion is smooth enough so pixels can be tracked from one frame to the next.
+</div>
+<div class="Indented">
+
+</div>
+<div class="Indented">
+Moving objects detection based solely on the motion cue is a difficult task. When the robot moves every pixel in the image change, without knowing a priori the scene geometry nor the robot movement recognizing which pixels correspond to the static objects and which ones to moving objects is non trivial. Even when the both the scene geometry and the robot motion are know, the task still is non trivial since the motion maybe difficult to observe (small picture change), because moving objects are non rigid (no coherence between moving pixels), and because of appearance changes non related to movement such as shadows and reflections.
+</div>
+<h2 class="Section">
+<a name="toc-Section-4.3" class="toc">4.3</a> Moving objects detection with motion estimation
+</h2>
+<h2 class="Section">
+<a name="toc-Section-4.4" class="toc">4.4</a> Tracking
+</h2>
+<div class="Unindented">
+Explain how tracking is different from optical flow (teddy bear turning over itself, teddy bear hides and comes back)
+</div>
+<h1 class="Chapter">
+<a name="toc-Chapter-5" class="toc">5</a> Mobile objects
+</h1>
+<div class="Unindented">
+
+<h1 class="biblio">
+Bibliography
+</h1>
+<p class="biblio">
+<span class="entry">[<a name="biblio-1" class="biblioentry">1</a>] </span> Rodrigo Benenson, <i>Perception for driverless vehicles in urban environment</i>. , 2008.
+</p>
+</div>
+
+<hr />
+<p>Copyright (C) 2010 Rodrigo Benenson</p>
+</div>
+</body>
+</html>

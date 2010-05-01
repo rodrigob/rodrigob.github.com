@@ -1,0 +1,34 @@
+
+require "rubygems"
+require "hpricot"
+
+desc "The default task to execute"
+task :default => [ :create_html ]
+
+desc "Conver the lyx file into html"
+task :create_html do
+  
+  lyx_filename = "research_notes.lyx"
+  html_filename = "research_notes.html"
+  css_filename = "research_notes.css"
+  
+  if (File.exist? lyx_filename) == false then
+    puts "[ERROR] Could not find the lyx file " + lyx_filename
+  
+  elsif ((File.exist? html_filename) and ((File.mtime html_filename) >  (File.mtime lyx_filename))) then 
+    puts "The html file  #{html_filename} is already up to date. Nothing to do."
+  
+  else 
+      puts "Updating " + html_filename 
+      sh "elyxer.py --css #{css_filename} #{lyx_filename} #{html_filename}"
+      
+      # update the creation date
+      doc = open("research_notes.html") { |f| Hpricot(f) }
+      (doc/"h2.Date").inner_html = "Last updated on " + Date::today.to_s
+      open(html_filename, "w"){|fout| fout.write(doc)}
+      
+      puts "Modified the date inside " + html_filename    
+  end
+  
+  
+end
