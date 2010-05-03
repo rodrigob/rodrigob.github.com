@@ -3,13 +3,17 @@ layout: default
 title: Rodrigob's github page
 ---
 
-<h3>Welcome to my little projects !</h3>
+<div id="content_links">
+<p><a href="research_notes/research_notes.html">Research notes on vision for mobile robots</a></p>
 
-<p><a href="people_in_stuff/people_in_stuff.html">stuff</a></p>
+<p><a href="people_in_stuff/people_in_stuff.html">People in stuff</a></p>
 
+</div>
+
+<div id="posts_links">
 {% for post in site.posts limit:5 %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   {{ post.content }}
   <em>Posted on {{ post.date | date_to_long_string }}.</em>
 {% endfor %}
-
+</div>

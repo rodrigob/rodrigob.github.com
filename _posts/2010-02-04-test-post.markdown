@@ -3,4 +3,4 @@ layout: default
 title: First Post
 ---
 
-This is a test.
+This is a test post.

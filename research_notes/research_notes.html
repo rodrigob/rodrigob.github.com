@@ -4,21 +4,22 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 <meta name="generator" content="http://www.nongnu.org/elyxer/" />
-<meta name="create-date" content="2010-05-01" />
+<meta name="create-date" content="2010-05-03" />
 <link href="research_notes.css" rel="stylesheet" media="screen" type="text/css" />
-<title>Research notes onVision for mobile robots</title>
+<title>Research notes on Vision for mobile robots</title>
 </head>
 <body>
 <div id="globalWrapper">
 
 <h1 class="title">
-Research notes on<span class="giant"><br />
+Research notes on<span class="giant"> <br />
 Vision for mobile robots</span>
-</h1>
+</h1><iframe scrolling="no" allowtransparency="true" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Frodrigob.github.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" frameborder="0" id="facebook_like" style="border:none; overflow:hidden; width:450px; height:2em"></iframe>
+
 <h2 class="author">
-<a href="http://www.google.com/profiles/rodrigo.benenson" class="URL">Rodrigo Benenson</a>
+Created by <a href="http://www.google.com/profiles/rodrigo.benenson" class="URL">Rodrigo Benenson</a>
 </h2>
-<h2 class="Date">Last updated on 2010-05-01</h2>
+<h2 class="Date">Last updated on 2010-05-03</h2>
 <h2 class="Section-">
 <a name="toc-Section*-1" class="toc"></a>What is this document ?
 </h2>
@@ -26,7 +27,7 @@ Vision for mobile robots</span>
 This is a live document where I keep my though on my current research.
 </div>
 <div class="Indented">
-After finishing my PhD thesis <sup><a href="#biblio-1" name="cite-1" class="bibliocite">1</a></sup> on mobile robotics I decided to continue my work by exploring the world of vision. This document is an attempt to gather and share my though and knowledge on the subject.
+After finishing my PhD thesis <sup><a name="cite-6" href="#biblio-6" class="bibliocite">6</a></sup> on mobile robotics I decided to continue my work by exploring the world of vision. This document is an attempt to gather and share my though and knowledge on the subject.
 </div>
 <div class="Indented">
 Blogs are good, but lack the consistency of a book. Books are good, but cannot be shared as easily as online documents. This is an attempt to share knowledge in a new form.
@@ -54,7 +55,7 @@ If you are interested on collaborating with me on this document, please feel fre
 I do my research at <a href="http://kuleuven.be" class="URL">KULeuven</a>, first I woud like to thank <a href="http://www.esat.kuleuven.be/psi/visics" class="URL">Prof. Van Gool</a> for giving me the extraordinary opportunity to explore this research topic.
 </div>
 <div class="Indented">
-Second I have to make a pause to remember all the person that mattered most in my intelectual path, most of them are mentioned in my PhD preface <sup><a href="#biblio-1" name="cite-1" class="bibliocite">1</a></sup>. I would like to mention in particular Prof. Javier Ruiz-del-Solar who first introduced me in the topic of computer vision.
+Second I have to make a pause to remember all the person that mattered most in my intelectual path, most of them are mentioned in my PhD preface <sup><a name="cite-6" href="#biblio-6" class="bibliocite">6</a></sup>. I would like to mention in particular Prof. Javier Ruiz-del-Solar who first introduced me in the topic of computer vision.
 </div>
 <div class="Indented">
 Finally I would like to thanks my colleagues at INRIA, Mines Paris and KULeuven with whom I had and have many enriching discussions that have steered my way of thinking on the subject. I would like to mention in particular Nicolas Simond, Yann Dumortier, Julien Perret, and my current colleagues at VISICS as great positives influences.
@@ -89,7 +90,10 @@ Table of Contents
 </div><div class="tocindent">
 
 <div class="toc">
-<a href="#toc-Section-1.1" class="Link">Section 1.1: Buzz words</a>
+<a href="#toc-Section-1.1" class="Link">Section 1.1: The ultimate goal and the good enough goal</a>
+</div>
+<div class="toc">
+<a href="#toc-Section-1.2" class="Link">Section 1.2: Buzz words</a>
 </div></div>
 
 <div class="toc">
@@ -97,11 +101,21 @@ Table of Contents
 </div><div class="tocindent">
 
 <div class="toc">
-<a href="#toc-Section-2.1" class="Link">Section 2.1: Monocular vision</a>
-</div>
+<a href="#toc-Section-2.1" class="Link">Section 2.1: Monocular vision limits</a>
+</div><div class="tocindent">
+
 <div class="toc">
-<a href="#toc-Section-2.2" class="Link">Section 2.2: Stereo vision</a>
+<a href="#toc-Subsection-2.1.1" class="Link">Subsection 2.1.1: Minimal assumptions for monocular vision</a>
 </div></div>
+
+<div class="toc">
+<a href="#toc-Section-2.2" class="Link">Section 2.2: Stereo vision limits</a>
+</div><div class="tocindent">
+
+<div class="toc">
+<a href="#toc-Subsection-2.2.1" class="Link">Subsection 2.2.1: Minimal assumptions for stereo vision</a>
+</div></div>
+</div>
 
 <div class="toc">
 <a href="#toc-Chapter-3" class="Link">Chapter 3: Traversability estimation</a>
@@ -152,18 +166,102 @@ Table of Contents
 <h1 class="Chapter">
 <a name="toc-Chapter-1" class="toc">1</a> The big picture
 </h1>
+<div class="Unindented">
+Computer vision aims to extract information from images. This information is meant to support decision making. Which information should be extracted depends on which decisions should be done.
+</div>
+<div class="Indented">
+In some cases we want to create accurate 3d models to analyse and reproduce a scene (e.g. building an elevation map from aerial images). Sometimes we want to count the presence of a certain element in the images (e.g. estimating the area of a forest). 
+</div>
+<div class="Indented">
+In this text we will focus on the information required to allow a robot move safely on the streets of a city. We will assume that all the images have been taken from the moving robot itself and that the robot has access to a comercial grade navigation system (such as <a href="http://www.google.com/mobile/navigation/" class="URL">Google maps navigation</a>).
+</div>
 <h2 class="Section">
-<a name="toc-Section-1.1" class="toc">1.1</a> Buzz words
+<a name="toc-Section-1.1" class="toc">1.1</a> The ultimate goal and the “good enough” goal
 </h2>
+<div class="Unindented">
+It is commonly though that the ultimate goal of computer vision is “scene understanding”. To be able to see an image (or a set of images), and be able to extract all the information that is to be known about it: its 3d geometry, the objects presents, all the attribute of the objects, being able to predict the future behaviour of the objects and explain why such behaviour would occur. We would like machines to be able to understand images up to point where they can reason about it.
+</div>
+<div class="Indented">
+Let us inspect the woman on figure <a href="#fig:woman-crossing" class="Reference">1.1↓</a>. From this picture a human can guess 
+</div>
+<div class="Indented">
+
+<div class="float">
+<a name="fig:woman-crossing" class="Label"> </a>
+<div class="figure">
+
+<div class="caption">
+Figure 1.1 Woman crossing the street
+</div>
+</div>
+</div>
+</div>
+<h2 class="Section">
+<a name="toc-Section-1.2" class="toc">1.2</a> Buzz words
+</h2>
+<div class="Unindented">
+&gt;&gt;&gt; If you arrived here you probably already heard many buzz words
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>given two images, optical flow tries to explain how did each pixel move from the first image to the second <sup><a name="cite-9" href="#biblio-9" class="bibliocite">9</a></sup>. It can be seen as a dense version of features tracking.
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>given two images and their known relative position stereo matching tries to find for every pixel in the first image the corresponding pixel in the second image <sup><a name="cite-3" href="#biblio-3" class="bibliocite">3</a>,<a name="cite-5" href="#biblio-5" class="bibliocite">5</a></sup>. Once the correspondence of a pixel is known then its 3d position can be estimated.
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>given a sequence of images, scene flow algorithms try to estimate the 3d position of each pixels and their velocity vector <sup><a name="cite-8" href="#biblio-8" class="bibliocite">8</a>,<a name="cite-1" href="#biblio-1" class="bibliocite">1</a></sup>. The projection of scene flow into 2d is equivalent to the optical flow.
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>given an image, image segmentation will try to group pixels by a given similarity criterion. The given criterion is application dependent, the grouping may be done by surface type, by appartenance to an object, or by any other relevant criterion. 
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>given a sequence of images, motion segmentation attempts to group pixel that have a similar 3d motion (rigid or non rigid). In order to estimate the 3d motion of each pixel point methods such as structure from motion and scene flow can be involved <sup><a name="cite-1" href="#biblio-1" class="bibliocite">1</a></sup>.
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>Given a set (or sequence) of images, a set of points appearing in multiple images is identified (tracks building via features detection and matching). Given the correspondences of the points in the images, structure from motion will attempt to reconstruct the 3d position of the points and of the cameras that took the images <sup><a name="cite-4" href="#biblio-4" class="bibliocite">4</a></sup>. 
+</div>
+<div class="Description">
+<span class="Description-entry">SLAM </span>Simulateneous localization and mapping. If you havea sequence of observations and a map, then you can reconstruct your path on the map. If you have a sequence of observations and a know your path then you can build a map. SLAM attempts to do both simulateanously. This is today a mature problem in the robotics field, typically using laser scanners as sensors <sup><a name="cite-7" href="#biblio-7" class="bibliocite">7</a></sup>. In the computer vision field, the problem is known as Structure from motion (Sfm).
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>
+</div>
+<div class="Description">
+<span class="Description-entry">Tracking </span>
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>
+</div>
+<div class="Description">
+<span class="Description-entry"> </span>
+</div>
+<div class="Description">
+<span class="Description-entry">Context </span>
+</div>
 <h1 class="Chapter">
-<a name="toc-Chapter-2" class="toc">2</a> Limits and minimal assumptions
+<a name="toc-Chapter-2" class="toc">2</a> <a name="cha:limits-and-assumptions" class="Label"> </a>Limits and minimal assumptions
 </h1>
 <h2 class="Section">
-<a name="toc-Section-2.1" class="toc">2.1</a> Monocular vision
+<a name="toc-Section-2.1" class="toc">2.1</a> Monocular vision limits
 </h2>
+<h3 class="Subsection">
+<a name="toc-Subsection-2.1.1" class="toc">2.1.1</a> Minimal assumptions for monocular vision
+</h3>
 <h2 class="Section">
-<a name="toc-Section-2.2" class="toc">2.2</a> Stereo vision
+<a name="toc-Section-2.2" class="toc">2.2</a> Stereo vision limits
 </h2>
+<h3 class="Subsection">
+<a name="toc-Subsection-2.2.1" class="toc">2.2.1</a> Minimal assumptions for stereo vision
+</h3>
 <h1 class="Chapter">
 <a name="toc-Chapter-3" class="toc">3</a> Traversability estimation
 </h1>
@@ -227,12 +325,52 @@ Explain how tracking is different from optical flow (teddy bear turning over its
 Bibliography
 </h1>
 <p class="biblio">
-<span class="entry">[<a name="biblio-1" class="biblioentry">1</a>] </span> Rodrigo Benenson, <i>Perception for driverless vehicles in urban environment</i>. , 2008.
+<span class="entry">[<a name="biblio-1" class="biblioentry">1</a>] </span> Andreas Wedel, <i>3D Motion Analysis via Energy Minimization</i>. , 2009.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-2" class="biblioentry">2</a>] </span> D. Scharstein and R. Szeliski, “A taxonomy and evaluation of dense two-frame stereo correspondence
+	algorithms”, <i>International Journal of Computer Vision</i>, pp. 7—42, 2002.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-3" class="biblioentry">3</a>] </span> D. Scharstein and R. Szeliski, “A taxonomy and evaluation of dense two-frame stereo correspondence
+	algorithms”, <i>International Journal of Computer Vision</i>, pp. 7-42, 2002.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-4" class="biblioentry">4</a>] </span> Ma, Yi and Soatto, Stefano and Kosecka, Jana and Sastry, Shankar
+	S., <i>An Invitation to 3-D Vision</i>. Springer, 2003.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-5" class="biblioentry">5</a>] </span> Michael Bleyer, <i>Segmentation-based Stereo and Motion with Occlusions</i>. , 2006.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-6" class="biblioentry">6</a>] </span> Rodrigo Benenson, <i>Perception for driverless vehicles in urban environment</i>. , 2008.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-7" class="biblioentry">7</a>] </span> Sebastian Thrun and Wolfram Burgard and Dieter Fox, <i>Probabilistic Robotics (Intelligent Robotics and Autonomous Agents)</i>. MIT Press, 2005.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-8" class="biblioentry">8</a>] </span> Sundar Vedula and Simon Baker and Peter Rander and Robert Collins
+	and Takeo Kanade, “Three-Dimensional Scene Flow”, <i></i>, pp. 722 - 729, 1999.
+</p>
+<p class="biblio">
+<span class="entry">[<a name="biblio-9" class="biblioentry">9</a>] </span> Thomas Pock, <i>Fast Total Variation for Computer Vision</i>. , 2008.
 </p>
 </div>
 
 <hr />
-<p>Copyright (C) 2010 Rodrigo Benenson</p>
+<p>Copyright (C) 2010 Created by </p>
 </div>
+<!-- Google analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ?
+"https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-80935-10");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 </body>
 </html>

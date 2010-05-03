@@ -54,7 +54,7 @@
 \begin_layout Title
 Research notes on
 \size giant
-
+ 
 \begin_inset Newline newline
 \end_inset
 
@@ -62,6 +62,7 @@ Vision for mobile robots
 \end_layout
 
 \begin_layout Author
+Created by 
 \begin_inset CommandInset href
 LatexCommand href
 name "Rodrigo Benenson"
@@ -224,20 +225,406 @@ LatexCommand tableofcontents
 The big picture
 \end_layout
 
+\begin_layout Standard
+Computer vision aims to extract information from images.
+ This information is meant to support decision making.
+ Which information should be extracted depends on which decisions should
+ be done.
+\end_layout
+
+\begin_layout Standard
+In some cases we want to create accurate 3d models to analyse and reproduce
+ a scene (e.g.
+ building an elevation map from aerial images).
+ Sometimes we want to count the presence of a certain element in the images
+ (e.g.
+ estimating the area of a forest).
+ 
+\end_layout
+
+\begin_layout Standard
+In this text we will focus on the information required to allow a robot
+ move safely on the streets of a city.
+ We will assume that all the images have been taken from the moving robot
+ itself and that the robot has access to a comercial grade navigation system
+ (such as 
+\begin_inset CommandInset href
+LatexCommand href
+name "Google maps navigation"
+target "http://www.google.com/mobile/navigation/"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Section
+The ultimate goal and the 
+\begin_inset Quotes eld
+\end_inset
+
+good enough
+\begin_inset Quotes erd
+\end_inset
+
+ goal
+\end_layout
+
+\begin_layout Standard
+It is commonly though that the ultimate goal of computer vision is 
+\begin_inset Quotes eld
+\end_inset
+
+scene understanding
+\begin_inset Quotes erd
+\end_inset
+
+.
+ To be able to see an image (or a set of images), and be able to extract
+ all the information that is to be known about it: its 3d geometry, the
+ objects presents, all the attribute of the objects, being able to predict
+ the future behaviour of the objects and explain why such behaviour would
+ occur.
+ We would like machines to be able to understand images up to point where
+ they can reason about it.
+\end_layout
+
+\begin_layout Standard
+Let us inspect the woman on figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:woman-crossing"
+
+\end_inset
+
+.
+ From this picture a human can guess 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:woman-crossing"
+
+\end_inset
+
+Woman crossing the street
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Buzz words
 \end_layout
 
+\begin_layout Standard
+>>> If you arrived here you probably already heard many buzz words
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Optical flow}
+\end_layout
+
+\end_inset
+
+ given two images, optical flow tries to explain how did each pixel move
+ from the first image to the second 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pock2008Phd"
+
+\end_inset
+
+.
+ It can be seen as a dense version of features tracking.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\lang british
+Stereo matching
+}
+\end_layout
+
+\end_inset
+
+ given two images and their known relative position stereo matching tries
+ to find for every pixel in the first image the corresponding pixel in the
+ second image 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Scharstein2002,Bleyer2006Phd"
+
+\end_inset
+
+.
+ Once the correspondence of a pixel is known then its 3d position can be
+ estimated.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Scene flow}
+\end_layout
+
+\end_inset
+
+ given a sequence of images, scene flow algorithms try to estimate the 3d
+ position of each pixels and their velocity vector 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Vedula1999,Wedel2009Phd"
+
+\end_inset
+
+.
+ The projection of scene flow into 2d is equivalent to the optical flow.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Image segmentation}
+\end_layout
+
+\end_inset
+
+ given an image, image segmentation will try to group pixels by a given
+ similarity criterion.
+ The given criterion is application dependent, the grouping may be done
+ by surface type, by appartenance to an object, or by any other relevant
+ criterion.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+REFERENCE ? Mention MRF ?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Motion segmentation}
+\end_layout
+
+\end_inset
+
+ given a sequence of images, motion segmentation attempts to group pixel
+ that have a similar 3d motion (rigid or non rigid).
+ In order to estimate the 3d motion of each pixel point methods such as
+ structure from motion and scene flow can be involved 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wedel2009Phd"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Structure from motion}
+\end_layout
+
+\end_inset
+
+ Given a set (or sequence) of images, a set of points appearing in multiple
+ images is identified (tracks building via features detection and matching).
+ Given the correspondences of the points in the images, structure from motion
+ will attempt to reconstruct the 3d position of the points and of the cameras
+ that took the images 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ma2003"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+SLAM Simulateneous localization and mapping.
+ If you havea sequence of observations and a map, then you can reconstruct
+ your path on the map.
+ If you have a sequence of observations and a know your path then you can
+ build a map.
+ SLAM attempts to do both simulateanously.
+ This is today a mature problem in the robotics field, typically using laser
+ scanners as sensors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thrun2005b"
+
+\end_inset
+
+.
+ In the computer vision field, the problem is known as Structure from motion
+ (Sfm).
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Features detection}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Features description}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Features tracking}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Tracking
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Multiview geometry}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Multiclass multiview classification}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Procedural modeling}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Context
+\end_layout
+
 \begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:limits-and-assumptions"
+
+\end_inset
+
 Limits and minimal assumptions
 \end_layout
 
 \begin_layout Section
-Monocular vision
+Monocular vision limits
+\end_layout
+
+\begin_layout Subsection
+Minimal assumptions for monocular vision
 \end_layout
 
 \begin_layout Section
-Stereo vision
+Stereo vision limits
+\end_layout
+
+\begin_layout Subsection
+Minimal assumptions for stereo vision
 \end_layout
 
 \begin_layout Chapter

@@ -1,0 +1,43 @@
+
+body {
+	font: 100% sans-serif;
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+
+font-size: 3.0em;
+color: #c33;
+}
+
+a:link, a:visited {
+	color: #09c;
+    text-decoration: none;
+	}
+	
+a:hover {
+	color: #c33;
+	}
+    
+    
+div#content_links
+{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+    border-bottom: 1px dashed #a0a7ae;
+	font-size: 1.7em;
+}
+
+div#posts_links
+{
+    padding-bottom: 1.5em;
+    border-bottom: 2px solid #dcdee1;
+}
+
+div#posts_links h2
+{
+    font-size: 1.2em;
+}

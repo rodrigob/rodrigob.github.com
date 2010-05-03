@@ -5,6 +5,26 @@ require "hpricot"
 desc "The default task to execute"
 task :default => [ :create_html ]
 
+
+google_analytics_snippet = <<ANALYTICS_SNIPPET
+<!-- Google analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ?
+"https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-80935-10");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+ANALYTICS_SNIPPET
+
+facebook_like_snippet = <<LIKE_SNIPPET
+<iframe id="facebook_like" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Frodrigob.github.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:2em"></iframe>
+LIKE_SNIPPET
+
 desc "Conver the lyx file into html"
 task :create_html do
   
@@ -25,9 +45,16 @@ task :create_html do
       # update the creation date
       doc = open("research_notes.html") { |f| Hpricot(f) }
       (doc/"h2.Date").inner_html = "Last updated on " + Date::today.to_s
+      
+      (doc/"body").inner_html += google_analytics_snippet
+      
+      (doc/"h1.title").after facebook_like_snippet
+      
       open(html_filename, "w"){|fout| fout.write(doc)}
       
-      puts "Modified the date inside " + html_filename    
+      puts "Added date, google analytics and facebook like inside " + html_filename   
+      
+      # add 
   end
   
   
