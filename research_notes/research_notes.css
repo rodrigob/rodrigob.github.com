@@ -678,3 +678,8 @@ div.warning {
 div.PlainVisible {
 	width: auto;
 }
+
+.footer 
+{
+ display: none;
+}

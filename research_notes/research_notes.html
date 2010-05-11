@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 <meta name="generator" content="http://www.nongnu.org/elyxer/" />
-<meta name="create-date" content="2010-05-03" />
+<meta name="create-date" content="2010-05-12" />
 <link href="research_notes.css" rel="stylesheet" media="screen" type="text/css" />
 <title>Research notes on Vision for mobile robots</title>
 </head>
@@ -19,7 +19,7 @@ Vision for mobile robots</span>
 <h2 class="author">
 Created by <a href="http://www.google.com/profiles/rodrigo.benenson" class="URL">Rodrigo Benenson</a>
 </h2>
-<h2 class="Date">Last updated on 2010-05-03</h2>
+<h2 class="Date">Last updated on 2010-05-12</h2>
 <h2 class="Section-">
 <a name="toc-Section*-1" class="toc"></a>What is this document ?
 </h2>
@@ -61,10 +61,9 @@ Second I have to make a pause to remember all the person that mattered most in m
 Finally I would like to thanks my colleagues at INRIA, Mines Paris and KULeuven with whom I had and have many enriching discussions that have steered my way of thinking on the subject. I would like to mention in particular Nicolas Simond, Yann Dumortier, Julien Perret, and my current colleagues at VISICS as great positives influences.
 </div>
 <div class="Indented">
+<p><br />
+</p>
 
-<span class="Newpage">
-
-</span>
 </div>
 <div class="Indented">
 
@@ -203,46 +202,46 @@ Figure 1.1 Woman crossing the street
 &gt;&gt;&gt; If you arrived here you probably already heard many buzz words
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>given two images, optical flow tries to explain how did each pixel move from the first image to the second <sup><a name="cite-9" href="#biblio-9" class="bibliocite">9</a></sup>. It can be seen as a dense version of features tracking.
+<span class="Description-entry">Optical flow </span>given two images, optical flow tries to explain how did each pixel move from the first image to the second <sup><a name="cite-9" href="#biblio-9" class="bibliocite">9</a></sup>. It can be seen as a dense version of features tracking.
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>given two images and their known relative position stereo matching tries to find for every pixel in the first image the corresponding pixel in the second image <sup><a name="cite-3" href="#biblio-3" class="bibliocite">3</a>,<a name="cite-5" href="#biblio-5" class="bibliocite">5</a></sup>. Once the correspondence of a pixel is known then its 3d position can be estimated.
+<span class="Description-entry">Stereo matching </span>given two images and their known relative position stereo matching tries to find for every pixel in the first image the corresponding pixel in the second image <sup><a name="cite-3" href="#biblio-3" class="bibliocite">3</a>,<a name="cite-5" href="#biblio-5" class="bibliocite">5</a></sup>. Once the correspondence of a pixel is known then its 3d position can be estimated.
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>given a sequence of images, scene flow algorithms try to estimate the 3d position of each pixels and their velocity vector <sup><a name="cite-8" href="#biblio-8" class="bibliocite">8</a>,<a name="cite-1" href="#biblio-1" class="bibliocite">1</a></sup>. The projection of scene flow into 2d is equivalent to the optical flow.
+<span class="Description-entry">Scene flow </span>given a sequence of images, scene flow algorithms try to estimate the 3d position of each pixels and their velocity vector <sup><a name="cite-8" href="#biblio-8" class="bibliocite">8</a>,<a name="cite-1" href="#biblio-1" class="bibliocite">1</a></sup>. The projection of scene flow into 2d is equivalent to the optical flow.
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>given an image, image segmentation will try to group pixels by a given similarity criterion. The given criterion is application dependent, the grouping may be done by surface type, by appartenance to an object, or by any other relevant criterion. 
+<span class="Description-entry">Image segmentation </span>given an image, image segmentation will try to group pixels by a given similarity criterion. The given criterion is application dependent, the grouping may be done by surface type, by appartenance to an object, or by any other relevant criterion. 
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>given a sequence of images, motion segmentation attempts to group pixel that have a similar 3d motion (rigid or non rigid). In order to estimate the 3d motion of each pixel point methods such as structure from motion and scene flow can be involved <sup><a name="cite-1" href="#biblio-1" class="bibliocite">1</a></sup>.
+<span class="Description-entry">Motion segmentation </span>given a sequence of images, motion segmentation attempts to group pixel that have a similar 3d motion (rigid or non rigid). In order to estimate the 3d motion of each pixel point methods such as structure from motion and scene flow can be involved <sup><a name="cite-1" href="#biblio-1" class="bibliocite">1</a></sup>.
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>Given a set (or sequence) of images, a set of points appearing in multiple images is identified (tracks building via features detection and matching). Given the correspondences of the points in the images, structure from motion will attempt to reconstruct the 3d position of the points and of the cameras that took the images <sup><a name="cite-4" href="#biblio-4" class="bibliocite">4</a></sup>. 
+<span class="Description-entry">Structure from motion </span>Given a set (or sequence) of images, a set of points appearing in multiple images is identified (tracks building via features detection and matching). Given the correspondences of the points in the images, structure from motion will attempt to reconstruct the 3d position of the points and of the cameras that took the images <sup><a name="cite-4" href="#biblio-4" class="bibliocite">4</a></sup>. 
 </div>
 <div class="Description">
 <span class="Description-entry">SLAM </span>Simulateneous localization and mapping. If you havea sequence of observations and a map, then you can reconstruct your path on the map. If you have a sequence of observations and a know your path then you can build a map. SLAM attempts to do both simulateanously. This is today a mature problem in the robotics field, typically using laser scanners as sensors <sup><a name="cite-7" href="#biblio-7" class="bibliocite">7</a></sup>. In the computer vision field, the problem is known as Structure from motion (Sfm).
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>
+<span class="Description-entry">Features detection </span>
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>
+<span class="Description-entry">Features description </span>
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>
+<span class="Description-entry">Features tracking </span>
 </div>
 <div class="Description">
 <span class="Description-entry">Tracking </span>
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>
+<span class="Description-entry">Multiview geometry </span>
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>
+<span class="Description-entry">Multiclass multiview classification </span>
 </div>
 <div class="Description">
-<span class="Description-entry"> </span>
+<span class="Description-entry">Procedural modeling </span>
 </div>
 <div class="Description">
 <span class="Description-entry">Context </span>
@@ -325,11 +324,15 @@ Explain how tracking is different from optical flow (teddy bear turning over its
 Bibliography
 </h1>
 <p class="biblio">
-<span class="entry">[<a name="biblio-1" class="biblioentry">1</a>] </span> Andreas Wedel, <i>3D Motion Analysis via Energy Minimization</i>. , 2009.
+<span class="entry">[<a name="biblio-1" class="biblioentry">1</a>] </span> Andreas Wedel, <i>3D Motion Analysis via Energy Minimization</i>. , 2009. URL <a href="http://hss.ulb.uni-bonn.de:90/2009/1964/1964.htm
+">http://hss.ulb.uni-bonn.de:90/2009/1964/1964.htm
+</a>.
 </p>
 <p class="biblio">
 <span class="entry">[<a name="biblio-2" class="biblioentry">2</a>] </span> D. Scharstein and R. Szeliski, “A taxonomy and evaluation of dense two-frame stereo correspondence
-	algorithms”, <i>International Journal of Computer Vision</i>, pp. 7—42, 2002.
+	algorithms”, <i>International Journal of Computer Vision</i>, pp. 7—42, 2002. URL <a href="http://vision.middlebury.edu/stereo/
+">http://vision.middlebury.edu/stereo/
+</a>.
 </p>
 <p class="biblio">
 <span class="entry">[<a name="biblio-3" class="biblioentry">3</a>] </span> D. Scharstein and R. Szeliski, “A taxonomy and evaluation of dense two-frame stereo correspondence
@@ -337,28 +340,43 @@ Bibliography
 </p>
 <p class="biblio">
 <span class="entry">[<a name="biblio-4" class="biblioentry">4</a>] </span> Ma, Yi and Soatto, Stefano and Kosecka, Jana and Sastry, Shankar
-	S., <i>An Invitation to 3-D Vision</i>. Springer, 2003.
+	S., <i>An Invitation to 3-D Vision</i>. Springer, 2003. URL <a href="http://vision.ucla.edu/MASKS
+">http://vision.ucla.edu/MASKS
+</a>.
 </p>
 <p class="biblio">
-<span class="entry">[<a name="biblio-5" class="biblioentry">5</a>] </span> Michael Bleyer, <i>Segmentation-based Stereo and Motion with Occlusions</i>. , 2006.
+<span class="entry">[<a name="biblio-5" class="biblioentry">5</a>] </span> Michael Bleyer, <i>Segmentation-based Stereo and Motion with Occlusions</i>. , 2006. URL <a href="http://www.ims.tuwien.ac.at/staff_detail.php?ims_id=bleyer
+">http://www.ims.tuwien.ac.at/staff_detail.php?ims_id=bleyer
+</a>.
 </p>
 <p class="biblio">
-<span class="entry">[<a name="biblio-6" class="biblioentry">6</a>] </span> Rodrigo Benenson, <i>Perception for driverless vehicles in urban environment</i>. , 2008.
+<span class="entry">[<a name="biblio-6" class="biblioentry">6</a>] </span> Rodrigo Benenson, <i>Perception for driverless vehicles in urban environment</i>. , 2008. URL <a href="http://pastel.paristech.org/5327
+">http://pastel.paristech.org/5327
+</a>.
 </p>
 <p class="biblio">
-<span class="entry">[<a name="biblio-7" class="biblioentry">7</a>] </span> Sebastian Thrun and Wolfram Burgard and Dieter Fox, <i>Probabilistic Robotics (Intelligent Robotics and Autonomous Agents)</i>. MIT Press, 2005.
+<span class="entry">[<a name="biblio-7" class="biblioentry">7</a>] </span> Sebastian Thrun and Wolfram Burgard and Dieter Fox, <i>Probabilistic Robotics (Intelligent Robotics and Autonomous Agents)</i>. MIT Press, 2005. URL <a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2\&tid=10668
+">http://mitpress.mit.edu/catalog/item/default.asp?ttype=2\&tid=10668
+</a>.
 </p>
 <p class="biblio">
 <span class="entry">[<a name="biblio-8" class="biblioentry">8</a>] </span> Sundar Vedula and Simon Baker and Peter Rander and Robert Collins
 	and Takeo Kanade, “Three-Dimensional Scene Flow”, <i></i>, pp. 722 - 729, 1999.
 </p>
 <p class="biblio">
-<span class="entry">[<a name="biblio-9" class="biblioentry">9</a>] </span> Thomas Pock, <i>Fast Total Variation for Computer Vision</i>. , 2008.
+<span class="entry">[<a name="biblio-9" class="biblioentry">9</a>] </span> Thomas Pock, <i>Fast Total Variation for Computer Vision</i>. , 2008. URL <a href="http://www.icg.tu-graz.ac.at/Members/pock
+">http://www.icg.tu-graz.ac.at/Members/pock
+</a>.
 </p>
 </div>
 
-<hr />
-<p>Copyright (C) 2010 Created by </p>
+<hr class="footer" />
+<div class="footer">
+Copyright (C) 2010 Created by 
+</div>
+<div class="footer" id="generated-by">
+Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 0.44 (2010-05-11)</a> on <span class="create-date">2010-05-12T01:10:55.804692</span>
+</div>
 </div>
 <!-- Google analytics -->
 <script type="text/javascript">
