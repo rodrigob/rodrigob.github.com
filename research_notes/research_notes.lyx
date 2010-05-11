@@ -1,4 +1,4 @@
-#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -347,16 +347,13 @@ Buzz words
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-{Optical flow}
-\end_layout
-
+Optical
+\begin_inset space ~
 \end_inset
 
+flow
+\lang british
  given two images, optical flow tries to explain how did each pixel move
  from the first image to the second 
 \begin_inset CommandInset citation
@@ -370,22 +367,13 @@ key "Pock2008Phd"
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\lang british
-Stereo matching
-}
-\end_layout
-
+Stereo
+\begin_inset space ~
 \end_inset
 
- given two images and their known relative position stereo matching tries
- to find for every pixel in the first image the corresponding pixel in the
- second image 
+matching given two images and their known relative position stereo matching
+ tries to find for every pixel in the first image the corresponding pixel
+ in the second image 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Scharstein2002,Bleyer2006Phd"
@@ -398,17 +386,12 @@ key "Scharstein2002,Bleyer2006Phd"
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Scene flow}
-\end_layout
-
+Scene
+\begin_inset space ~
 \end_inset
 
- given a sequence of images, scene flow algorithms try to estimate the 3d
- position of each pixels and their velocity vector 
+flow given a sequence of images, scene flow algorithms try to estimate the
+ 3d position of each pixels and their velocity vector 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Vedula1999,Wedel2009Phd"
@@ -420,17 +403,12 @@ key "Vedula1999,Wedel2009Phd"
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Image segmentation}
-\end_layout
-
+Image
+\begin_inset space ~
 \end_inset
 
- given an image, image segmentation will try to group pixels by a given
- similarity criterion.
+segmentation given an image, image segmentation will try to group pixels
+ by a given similarity criterion.
  The given criterion is application dependent, the grouping may be done
  by surface type, by appartenance to an object, or by any other relevant
  criterion.
@@ -448,17 +426,12 @@ REFERENCE ? Mention MRF ?
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Motion segmentation}
-\end_layout
-
+Motion
+\begin_inset space ~
 \end_inset
 
- given a sequence of images, motion segmentation attempts to group pixel
- that have a similar 3d motion (rigid or non rigid).
+segmentation given a sequence of images, motion segmentation attempts to
+ group pixel that have a similar 3d motion (rigid or non rigid).
  In order to estimate the 3d motion of each pixel point methods such as
  structure from motion and scene flow can be involved 
 \begin_inset CommandInset citation
@@ -471,17 +444,17 @@ key "Wedel2009Phd"
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Structure from motion}
-\end_layout
-
+Structure
+\begin_inset space ~
 \end_inset
 
- Given a set (or sequence) of images, a set of points appearing in multiple
- images is identified (tracks building via features detection and matching).
+from
+\begin_inset space ~
+\end_inset
+
+motion Given a set (or sequence) of images, a set of points appearing in
+ multiple images is identified (tracks building via features detection and
+ matching).
  Given the correspondences of the points in the images, structure from motion
  will attempt to reconstruct the 3d position of the points and of the cameras
  that took the images 
@@ -516,42 +489,27 @@ key "Thrun2005b"
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Features detection}
-\end_layout
-
+Features
+\begin_inset space ~
 \end_inset
 
- 
+detection 
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Features description}
-\end_layout
-
+Features
+\begin_inset space ~
 \end_inset
 
-
+description
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Features tracking}
-\end_layout
-
+Features
+\begin_inset space ~
 \end_inset
 
-
+tracking
 \end_layout
 
 \begin_layout Description
@@ -559,42 +517,32 @@ Tracking
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-{Multiview geometry}
-\end_layout
-
+Multiview
+\begin_inset space ~
 \end_inset
 
-
+geometry
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Multiclass multiview classification}
-\end_layout
-
+Multiclass
+\begin_inset space ~
 \end_inset
 
+multiview
+\begin_inset space ~
+\end_inset
 
+classification
 \end_layout
 
 \begin_layout Description
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-{Procedural modeling}
-\end_layout
-
+Procedural
+\begin_inset space ~
 \end_inset
 
-
+modeling
 \end_layout
 
 \begin_layout Description
