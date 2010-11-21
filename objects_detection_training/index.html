@@ -4,9 +4,42 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>Objects detection trainning toolset</title>
+    <title>Objects detection training toolset</title>
+
+ <style type="text/css">
+body
+{
+	font-size: 26pt !important; 
+}
+ </style>
+
   </head>
   <body >
-  <div id="waveframe" style="width:500px; height:400px;"></div><script src="http://www.google.com/jsapi"></script><script type="text/javascript"> google.load("wave", "1"); google.setOnLoadCallback(function() { new google.wave.WavePanel({target: document.getElementById("waveframe")}).loadWave("googlewave.com!w+yH-HOCb6H");}); </script>
+  <div id="waveframe" style="width:70%; height:10000px; margin-left:auto; margin-right:auto;" ></div>
+
+<script src="http://www.google.com/jsapi"></script><script type="text/javascript"> 
+
+google.load("wave", "1"); 
+google.setOnLoadCallback(function() { 
+var options = {
+  target: document.getElementById("waveframe"),
+  header: false,
+  toolbar: false
+}
+
+var wave_panel = new google.wave.WavePanel(options);
+
+//var config = new google.wave.UIConfig();
+//config.setHeaderEnabled(false);
+//config.setFooterEnabled(false);
+//config.setBgcolor("blue");
+//config.setColor("white");
+//config.setFont("Georgia");
+//config.setFontSize("26pt");
+//wave_panel.setUIConfigObject(config);
+
+wave_panel.loadWave("googlewave.com!w+yH-HOCb6H");
+}); 
+</script>
   </body>
 </html>
