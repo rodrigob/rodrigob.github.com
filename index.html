@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,17 +68,24 @@
 --- layout: default 
 --- title: Rodrigob's github page
 
+
 <div id="content_links">
-  <p><a href="research_notes/research_notes.html">Research notes on vision for mobile robots</a></p>
-  <p><a href="people_in_stuff/people_in_stuff.html">People in stuff</a></p>
+
+<a href="https://sites.google.com/site/rodrigobenenson/home/publications">(old) Research website</a>
+<p> New content here, after the CVPR2012 deadline</p>
+!-- <p><a href="research_notes/research_notes.html">Research notes on vision for mobile robots</a></p> --
+!-- <p><a href="people_in_stuff/people_in_stuff.html">People in stuff</a></p> --
 </div>
 
-<div id="posts_links"> {% for post in site.posts limit:5 %}
-<h2><a href="%7B%7B%20post.url%20%7D%7D">{{ post.title }}</a></h2>
-{{ post.content }} <em>Posted on {{ post.date | date_to_long_string }}.</em>
-{% endfor %} </div>
-
-erfefe <br>
+!--
+<div id="posts_links">
+{% for post in site.posts limit:5 %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {{ post.content }}
+  <em>Posted on {{ post.date | date_to_long_string }}.</em>
+{% endfor %}
+</div>
+--
 
 -->
 
@@ -485,6 +491,10 @@ C++
 		<li><a href="http://www.flickr.com/photos/rodrigob">
 	<img style="width: 300px;" src="http://farm5.staticflickr.com/4150/4972864677_3833187210.jpg" /></a></li>
 	</ul>
+</div> <!-- /container -->
+
+<div class="container">
+<center><p><small>Page created using <a href="http://twitter.github.com/bootstrap">bootstrap</a>.</small></p></center>
 </div> <!-- /container -->
 </section>   
       
