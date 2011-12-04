@@ -16,17 +16,18 @@
 		  font-size: 1.5em;
 	  }
 	  
-	  .sidebar {
+	  .container-fluid > .sidebar {
+		  top: 10px;
 		  font-size: 1.5em;
 		  color: #BFBFBF;
 	  }
 	  
-	  .sidebar li {
+	  .container-fluid > .sidebar li {
 		  padding: 0.5em;
 	  }
 	  
 	  section {
-		  margin-top: 24px;
+		  margin-top: 48px;
 	  }
 	  
 	  .master-head h1 {
@@ -108,7 +109,7 @@
   <div class="container-fluid">
     <div class="sidebar">
 	<div class="well">
-		          <h5>Sidebar</h5>
+		<!-- <h5>Sidebar</h5> -->
 		<ul>
 		<!-- <li class="active"><a href="#">Home</a></li> -->
 		<li><a href="#publications">Publications</a></li>
@@ -175,7 +176,7 @@
 		<!-- <br><span class="label success">Chef's recommendation</span> -->
 		</p> 
 		<blockquote>
-			<p>We propose a new detector that improve both speed and quality over state-of-the-art single part detectors.</p>
+			<p>We propose a new detector that improves both speed and quality over state-of-the-art single part detectors.</p>
 			<p>We reach 50 Hz in monocular setup, and 125 Hz when using stixels on a street scene (including the stereo processing time).</p>
 		</blockquote>
 	</div>
@@ -258,7 +259,7 @@
 			<p>How to design a driverless vehicle ?
 			<br>Core contributions in the safety design, perception algorithm, and a proof-of-concept system integration.</p>
 		</blockquote>
-		<p><a href="http://issuu.com/rodrigo.benenson/docs/phd_thesis_benenson?mode=window&backgroundColor=%23222222">Watch online</a></p>
+		<p><a class="btn" href="http://issuu.com/rodrigo.benenson/docs/phd_thesis_benenson?mode=window&backgroundColor=%23222222">Watch online</a></p>
 	</div>
 </div> <!-- /row -->
 <hr>
@@ -393,12 +394,7 @@
 
 <div class="row">
 
-	<div class="span4">
-
-	<p></p>
-	</div>
-
-	<div class="span8 well">
+	<div class="span12 offset2 well">
 		<h4>Copyright Notice</h4>
 		<p>
 		The downloadable documents on this web site are presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. These works may not be reposted without the explicit permission of the copyright holder.
@@ -424,7 +420,7 @@
 <ul>
 <li>Linux port of <a href="https://github.com/rodrigob/barinova_pedestrians_detection">Pedestrian detection using Hough forest</a>, by Olga Barinova.</li>
 <li><a href="https://github.com/rodrigob/cudatemplates">cudatemplates</a>, makes my life with CUDA (GPU) code much easier.</li>
-<li><a href="http://www.ros.org">ROS</a>, is a good enough modules system for robotic software.</li>
+<li><a href="http://www.ros.org">ROS</a>, is a good enough tool to create modular robotic software.</li>
 <li>I believe research must use open source tools. My current combo is 
 C++ 
 + <a href="http://qt.nokia.com/products/developer-tools">QtCreator</a>
