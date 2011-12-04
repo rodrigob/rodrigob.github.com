@@ -1,17 +1,499 @@
----
-layout: default
-title: Rodrigob's github page
----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+	<title>Rodrigob's github page</title>
+
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        background-color: #FAFAFA;
+      }
+      
+      .topbar {
+		  font-size: 1.5em;
+	  }
+	  
+	  .sidebar {
+		  font-size: 1.5em;
+		  color: #BFBFBF;
+	  }
+	  
+	  .sidebar li {
+		  padding: 0.5em;
+	  }
+	  
+	  section {
+		  margin-top: 24px;
+	  }
+	  
+	  .master-head h1 {
+		  margin-bottom: 0px;
+		  /*color: #C33;*/
+	  }
+	  
+	  .master-head p.lead {
+		 margin-top: 18px;
+		 font-size: 18px;
+	  }
+	  
+	  
+	  .shadow-title {
+		  text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+	  }
+	  
+	  img.thumbnail {
+		  width: 210px;
+		  /*height: 150px;*/
+	  }
+	  
+	  
+	div.container-fluid a:link, div.container-fluid a:visited {
+		color: #09c;
+		text-decoration: none;
+	}
+		
+	div.container-fluid a:hover {
+		color: #c33;
+	}
+		
+    </style>
+
+</head>
+<body>
+<!--
+
+--- layout: default 
+--- title: Rodrigob's github page
 
 <div id="content_links">
-<!-- <p><a href="research_notes/research_notes.html">Research notes on vision for mobile robots</a></p> -->
-<!-- <p><a href="people_in_stuff/people_in_stuff.html">People in stuff</a></p> -->
+  <p><a href="research_notes/research_notes.html">Research notes on vision for mobile robots</a></p>
+  <p><a href="people_in_stuff/people_in_stuff.html">People in stuff</a></p>
 </div>
 
-<div id="posts_links">
-{% for post in site.posts limit:5 %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  {{ post.content }}
-  <em>Posted on {{ post.date | date_to_long_string }}.</em>
-{% endfor %}
+<div id="posts_links"> {% for post in site.posts limit:5 %}
+<h2><a href="%7B%7B%20post.url%20%7D%7D">{{ post.title }}</a></h2>
+{{ post.content }} <em>Posted on {{ post.date | date_to_long_string }}.</em>
+{% endfor %} </div>
+
+erfefe <br>
+
+-->
+
+<div class="topbar" data-scrollspy="scrollspy">
+<div class="topbar-inner">
+	<div class="container">
+		<a class="brand" href="#">Rodrigob's github page</a>
+		<ul>
+		<!-- <li class="active"><a href="#">Home</a></li> -->
+		<li><a href="#publications">Publications</a></li>
+		<li><a href="#code">Code</a></li>
+		<li><a href="#data">Data</a></li>
+		<li><a href="#contact">Contact</a></li>
+		</ul>
+	</div><!-- /container -->
+  </div> 
+</div><!-- /topbar -->
+
+
+  <div class="container-fluid">
+    <div class="sidebar">
+	<div class="well">
+		          <h5>Sidebar</h5>
+		<ul>
+		<!-- <li class="active"><a href="#">Home</a></li> -->
+		<li><a href="#publications">Publications</a></li>
+		<li><a href="#code">Code</a></li>
+		<li><a href="#data">Data</a></li>
+		<li><a href="#contact">Contact</a></li>
+		</ul>	
+	</div>
+    </div> <!-- /sidebar -->
+    <div class="content">
+
+<header class="master-head masthead" id="overview">
+      <div class="inner">
+        <div class="container">
+			<div class="row">
+			  <div class="span16"><h2>I do research</h2></div>
+			</div> <!-- /row -->
+			<div class="row">
+			  <div class="offset1 shadow-title"><h1>to save the life of our children</h1></div>
+	</div> <!-- /row -->
+
+			<div class="row">
+			  <div class="offset4"><h3>(you can <a class="" href="">check the numbers</a>)</h3></div>
+	</div> <!-- /row -->
+          <p class="lead">
+			  I whish to make <a href="http://youtu.be/Ns896Thb9oY">driverless vehicles</a> a reality by 2030~2050.
+			 </p>
+        </div><!-- /container -->
+      </div>
+    </header>
+
+
+<section id="publications">
+
+        <div class="container span16">
+
+<div class="page-header">
+    <h1>Publications <small>free the ideas!</small></h1>
+  </div>
+
+<div class="row">
+	<div class="span4">
+	<p></p>
+	</div>
+	<div class="span12">
+		<!-- <p><h4><a href="http://scholar.google.com/citations?user=SVNNgu4AAAAJ&hl=en">Google citations</a></h4></p> -->
+		<!-- <p><h4><a href="http://hal.inria.fr/aut/Rodrigo+Benenson/">INRIA publications</a> <small>(2006-2008)</small></h4></p> -->
+	</div>
+</div> <!-- /row -->
+<!--<hr>-->
+
+
+<h4>2012 <small></small></h4>
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/50_models_1_image_scale_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3>Pedestrian detection at 100 frames per second</h3>
+		<p>Benenson R., Mathias M., Timofte R., Van Gool L.<br><em>submitted</em>
+		<!-- <br><span class="label success">Chef's recommendation</span> -->
+		</p> 
+		<blockquote>
+			<p>We propose a new detector that improve both speed and quality over state-of-the-art single part detectors.</p>
+			<p>We reach 50 Hz in monocular setup, and 125 Hz when using stixels on a street scene (including the stereo processing time).</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<h4>2011 <small>First time at ICCV</small></h4>
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/stixels_example_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="https://docs.google.com/open?id=0B6LzqcYZJN2cMWU1YzFiMzAtNWFjOC00OGRlLWIyZDQtM2Y5Mjk2YjUzOWNi">
+			Stixels estimation without depth map computation</a></h3>
+		<p>Benenson R., Timofte R., Van Gool L.<br>ICCV 2011, <a href="http://www.cvc.uab.es/adas/CVVT2011/">CVVT workshop</a></p> 
+		<blockquote>
+			<p>We detect (unknown) objects on a street scene faster than it takes to compute a depth map.</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<h4>2010 <small>First year at <a href="https://securewww.esat.kuleuven.be/psi/visics">Visics</a>, scratching my head</small></h4>
+
+<h4>2009 <small>Working on industrial applications</small></h4>
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/parking_planning_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<blockquote>
+			<p>Working on planning software for industrial projects</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<h4>2008 <small>Got my PhD!</small></h4>
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/safety_question_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00294750">Achievable safety of driverless ground vehicles</a></h3>
+		<p>Benenson R., Fraichard T., Parent M.<br>ICARCV 2008<br><span class="label success">Chef's recommendation</span></p>
+		<blockquote>
+			<p>Which safety <em>guarantees</em> can we give for autonomous vehicles?
+			<br>Under which conditions these guarantees hold?
+			<br>Which guarantees can we give during extraordinary situations?</p>
+		</blockquote>
+
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/phd_pages_small.png" alt="" /></a></li>
+		<!-- <li><div><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" style="width:420px;height:272px" id="e757234b-cc51-07da-aec0-7c0763783a72" ><param name="movie" value="http://static.issuu.com/webembed/viewers/style1/v2/IssuuReader.swf?mode=mini&amp;backgroundColor=%23222222&amp;documentId=100402182912-247a2d9020524a3e9060163c868052df" /><param name="allowfullscreen" value="true"/><param name="menu" value="false"/><param name="wmode" value="transparent"/><embed src="http://static.issuu.com/webembed/viewers/style1/v2/IssuuReader.swf" type="application/x-shockwave-flash" allowfullscreen="true" menu="false" wmode="transparent" style="width:420px;height:272px" flashvars="mode=mini&amp;backgroundColor=%23222222&amp;documentId=100402182912-247a2d9020524a3e9060163c868052df" /></object></div></li> -->
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://pastel.paristech.org/5327">Perception for driverless vehicles</a></h3>
+		<p>Benenson R.<br>PhD thesis, <a href="http://www.mines-paristech.fr">Mines Paristech</a> 2008</p>
+		<blockquote>
+			<p>How to design a driverless vehicle ?
+			<br>Core contributions in the safety design, perception algorithm, and a proof-of-concept system integration.</p>
+		</blockquote>
+		<p><a href="http://issuu.com/rodrigo.benenson/docs/phd_thesis_benenson?mode=window&backgroundColor=%23222222">Watch online</a></p>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/cycab_iros_2008_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00295152">Design of an urban driverless ground vehicle</a></h3>
+		<p>Benenson R., Parent M.<br>IROS 2008<br><span class="label success">Chef's recommendation</span></p>
+		<blockquote>
+			<p>Updated version of our <a href="http://hal.inria.fr/inria-00086286">IROS 2006</a> work.</p>
+			<p>Introduction of the harm function, integration with global planning system, (primitive) use of vision for traversability estimation.</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/pmp_and_slammot_ijvas_2008_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00115112">Towards urban driverless vehicles</a></h3>
+		<p>Benenson R., Petti S., Fraichard T., Parent M.<br>International Journal of Vehicle Autonomous Systems 2008</p>
+		<blockquote>
+			<p>Journal version of our <a href="http://hal.inria.fr/inria-00086286">IROS 2006</a> work.</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<h4>2007 <small>First time at ICRA</small></h4>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/cycab_simulation_icra_2007_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00126677">Cybernetic transportation systems design and development: simulation software</a></h3>
+		<p>Boissé S., Benenson R., Bouraoui L., Parent M., Vlacic L.<br>ICRA 2007</p>
+		<blockquote>
+			<p>This paper describes the simulator we developed in order to validate our on-board software in single and multiple vehicles scenarios.</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/v2v_itst_2007_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00147286">Networking needs and solutions for road vehicles at IMARA</a></h3>
+		<p>Mehani O., Benenson R., <a href="http://scholar.google.com/citations?user=-CUOP2gAAAAJ&hl=en">Lemaignan S.</a>, Ernst T.<br>ITST 2007</p>
+		<blockquote>
+			<p>Which are the communications need for driverless vehicles?</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+<h4>2006 <small>First time at IROS</small></h4>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/cycab_iros_2006_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00086286">Integrating perception and planning for autonomous navigation of urban vehicles</a></h3>
+		<p>Benenson R., Petti S., Parent M., Fraichard T.<br>IROS 2006</p> 
+		<blockquote>
+			<p>Motion estimation, online static map building, moving objects detection and tracking, safe planning and control;
+				all of it running in real-time on single PC, controlling an electric vehicle.</p>
+			<p>See the <a href="http://youtu.be/R8EWHndSn34">proof of concept video</a>.</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/patch_matching_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00117116">Real-time vehicle motion estimation using texture learning and monocular vision</a></h3>
+		<p>Dumortier Y., Benenson R., Kais M.<br>ICCVG 2006</p> 
+		<blockquote>
+			<p>On how we do motion estimation using the ground texture.</p>
+		</blockquote>
+	</div>
+</div> <!-- /row -->
+<!--<hr>-->
+
+<h4>2005 <small>First year of PhD</small></h4>
+<hr>
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="#"><img class="thumbnail" src="figures/dafir_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="https://sites.google.com/site/rodrigobenenson/home/publications/2004_rodrigo_benenson_engineering_thesis_spanish.pdf">Diseño e implementación de un receptor digital de radio</a></h3>
+		<p>Benenson R.<br>Engineer thesis (in Spanish), <a href="http://www.utfsm.cl"><abbr>UTFSM</abbr></a> 2004</p> 
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+
+<div class="row">
+
+	<div class="span4">
+
+	<p></p>
+	</div>
+
+	<div class="span8 well">
+		<h4>Copyright Notice</h4>
+		<p>
+		The downloadable documents on this web site are presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. These works may not be reposted without the explicit permission of the copyright holder.
+		</p>
+	</div>
+
+</div> <!-- /row -->
+
+
+</div> <!-- /container -->
+</section>   
+      
+      
+<section id="code">
+
+<div class="container span16">
+
+<div class="page-header">
+<h1>Code <small>free the sources!</small></h1>
 </div>
+
+<p>Due to industrial partnerships, most of the code I write is closed source.<br>However here is a list of interesting open-source code I have used:</p>
+<ul>
+<li>Linux port of <a href="https://github.com/rodrigob/barinova_pedestrians_detection">Pedestrian detection using Hough forest</a>, by Olga Barinova.</li>
+<li><a href="https://github.com/rodrigob/cudatemplates">cudatemplates</a>, makes my life with CUDA (GPU) code much easier.</li>
+<li><a href="http://www.ros.org">ROS</a>, is a good enough modules system for robotic software.</li>
+<li>I believe research must use open source tools. My current combo is 
+C++ 
++ <a href="http://qt.nokia.com/products/developer-tools">QtCreator</a>
++ <a href="http://numpy.scipy.org">numpy</a> 
++ <a href="http://docs.scipy.org/doc/scipy/reference">scipy</a> 
++ <a href="http://matplotlib.sourceforge.net">matplotlib</a>
++ <a href="http://code.google.com/p/spyderlib">spyder</a>.</li>
+</ul>
+
+
+</div> <!-- /container -->
+</section>   
+
+
+<section id="data">
+
+<div class="container span16">
+
+<div class="page-header">
+<h1>Data <small>free the bits!</small></h1>
+</div>
+
+<p>These are some of the datasets I have used during my research:</p>
+<ul>
+<li><a href="http://pascal.inrialpes.fr/data/human">INRIA persons</a>, the standard dataset for pedestrians.</li>
+<li><a href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians">Caltech pedestrians</a>, a (much) larger dataset of pedestrians.</li>
+<li><a href="http://www.vision.ee.ethz.ch/~aess/dataset">ETHZ pedestrians</a>, one of the rare color stereo sequences with annotated pedestrians.</li>
+
+</ul>
+
+</div> <!-- /container -->
+</section>   
+
+
+<section id="contact">
+
+<div class="container span16">
+
+<div class="page-header">
+<h1>Contact <small>who is rodrigob?</small></h1>
+</div>
+
+<div class="row">
+	<div class="span3">
+		<ul class="media-grid">
+		<li><a href="https://plus.google.com/114975295342705145033/about">
+			<img style="width: 150px;" class="thumbnail" src="figures/2010_09 postdoc day.jpg" alt="Rodrigo Benenson" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<p>I studied electronics engineering at <a href="http://www.utfsm.cl"><abbr>UTFSM</abbr></a>.</p>
+		<p>I did my PhD in robotics inside the <a href="http://www.lara.prd.fr/"><abbr>Lara team</abbr></a>, 
+		part of <a href="http://www.mines-paristech.fr">Mines Paristech</a> and <a	href="http://www.inria.fr/centre/paris-rocquencourt"><abbr>INRIA</abbr></a>.</p>
+		<p>I am currently doing a post-doc in computer vision at  <a href="https://securewww.esat.kuleuven.be/psi/visics">Visics</a>.</p>
+		<p>You can contact <a href="https://plus.google.com/114975295342705145033/about" title="social profile">me</a> by sending an email at &#114;&#111;&#100;&#114;&#105;&#103;&#111;DOT&#98;&#101;&#110;&#101;&#110;&#115;&#111;&#110;AT&#103;&#109;&#97;&#105;&#108;DOT&#99;&#111;&#109;.</p>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+</div> <!-- /container -->
+
+<div class="container span6">
+			<ul class="media-grid">
+		<li><a href="http://www.flickr.com/photos/rodrigob">
+	<img style="width: 300px;" src="http://farm5.staticflickr.com/4150/4972864677_3833187210.jpg" /></a></li>
+	</ul>
+</div> <!-- /container -->
+</section>   
+      
+</div> <!-- /content -->
+</div> <!-- /container fluid -->
+
+
+<!-- Javascript -->
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-scrollspy.js"></script>
+
+</body></html>
