@@ -65,7 +65,25 @@
 		background: url("figures/pdf.png") center right no-repeat;
 		padding-right: 22px;
 	}		
+	
+	img.bibtex_link {
+		cursor:pointer;
+	}
+	
+	pre.invisible_bibtex {
+		display: none;
+	}
     </style>
+
+	<script language="javascript" type="text/javascript">
+	function toggle(element) {
+		if(element.style.display=="block") {
+			element.style.display="none";
+		} else {
+			element.style.display="block";
+		}
+	}
+	</script>
 
 <!-- Google analytics -->
 <script type="text/javascript">
@@ -192,9 +210,17 @@
 	<div class="span12">
 		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2012_cvpr_pedestrian_detection_at_100_frames_per_second.pdf">
 			Pedestrian detection at 100 frames per second</a></h3>
-		<p>Benenson R., Mathias M., Timofte R., Van Gool L.
-		<br>Oral at CVPR 2012, 2.5% acceptance rate.
+		<p>Benenson R., Mathias M., Timofte R., Van Gool L. 
+		<br>Oral at CVPR 2012, 2.5% acceptance rate. 
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2012Cvpr);" />
 		<br><span class="label success">Chef's recommendation</span>
+		<pre id="Benenson2012Cvpr" class="invisible_bibtex">
+@INPROCEEDINGS{Benenson2012Cvpr,
+  author = {R. Benenson and M. Mathias and R. Timofte and L. {Van Gool}},
+  title = {Pedestrian detection at 100 frames per second},
+  booktitle = {CVPR},
+  year = {2012}
+}</pre>
 		</p> 
 		<blockquote>
 			<p>We propose a new detector that improves both speed and quality over state-of-the-art single part detectors. We reach 50 Hz in monocular setup, and 135 Hz when using stixels on a street scene (including the stereo processing time).</p>
@@ -219,7 +245,16 @@
 	<div class="span12">
 		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2011_iccv_workshop_stixels_estimation.pdf">
 			Stixels estimation without depth map computation</a></h3>
-		<p>Benenson R., Timofte R., Van Gool L.<br>ICCV 2011, <a href="http://www.cvc.uab.es/adas/CVVT2011/">CVVT workshop</a></p> 
+		<p>Benenson R., Timofte R., Van Gool L.<br>ICCV 2011, <a href="http://www.cvc.uab.es/adas/CVVT2011/">CVVT workshop</a>
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2011IccvWorkshop);" />
+		<pre id="Benenson2011IccvWorkshop" class="invisible_bibtex">
+@INPROCEEDINGS{Benenson2011IccvWorkshop,
+  author = {R. Benenson and R. Timofte and L. {Van Gool}},
+  title = {Stixels estimation without depthmap computation},
+  booktitle = {ICCV, CVVT workshop},
+  year = {2011}
+}</pre>
+		</p> 
 		<blockquote>
 			<p>We detect (unknown) objects on a street scene faster than it takes to compute a depth map.</p>
 		</blockquote>
@@ -258,7 +293,18 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00294750">Achievable safety of driverless ground vehicles</a></h3>
-		<p>Benenson R., Fraichard T., Parent M.<br>ICARCV 2008<br><span class="label success">Chef's recommendation</span></p>
+		<p>Benenson R., Fraichard T., Parent M.<br>ICARCV 2008
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008Icarcv);" />
+		<br><span class="label success">Chef's recommendation</span>
+		<pre id="Benenson2008Icarcv" class="invisible_bibtex">
+@INPROCEEDINGS{Benenson2008Icarcv,
+  author = {R. Benenson and T. Fraichard and M. Parent},
+  title = {Achievable safety of driverless vehicles},
+  booktitle = {ICARCV},
+  year = {2008},
+  url = {http://hal.inria.fr/inria-00294750}
+}</pre>
+		</p>
 		<blockquote>
 			<p>Which safety <em>guarantees</em> can we give for autonomous vehicles?
 			<br>Under which conditions these guarantees hold?
@@ -280,7 +326,17 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://pastel.archives-ouvertes.fr/pastel-00005327">Perception for driverless vehicles</a></h3>
-		<p>Benenson R.<br>PhD thesis, <a href="http://www.mines-paristech.fr">Mines Paristech</a> 2008</p>
+		<p>Benenson R.<br>PhD thesis, <a href="http://www.mines-paristech.fr">Mines Paristech</a> 2008
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008PhD);" />
+		<pre id="Benenson2008PhD" class="invisible_bibtex">
+@PHDTHESIS{Benenson2008PhD,
+  author = {Rodrigo Benenson},
+  title = {Perception for driverless vehicles in urban environment},
+  school = {Ecole des Mines de Paris},
+  year = {2008},
+  url = {http://pastel.paristech.org/5327}
+}</pre>		
+		</p>
 		<blockquote>
 			<p>How to design a driverless vehicle ?
 			<br>Core contributions in the safety design, perception algorithm, and a proof-of-concept system integration.</p>
@@ -300,7 +356,19 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00295152">Design of an urban driverless ground vehicle</a></h3>
-		<p>Benenson R., Parent M.<br>IROS 2008<br><span class="label success">Chef's recommendation</span></p>
+		<p>Benenson R., Parent M.<br>IROS 2008
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008Iros);" />
+		<br><span class="label success">Chef's recommendation</span>
+		<pre id="Benenson2008Iros" class="invisible_bibtex">
+@INPROCEEDINGS{Benenson2008Iros,
+  author = {R. Benenson and M. Parent},
+  title = {Design of a driverless vehicle for urban environment},
+  booktitle = {IROS},
+  year = {2008},
+  url = {http://hal.inria.fr/inria-00295152}
+}
+</pre>
+		</p>
 		<blockquote>
 			<p>Updated version of our <a href="http://hal.inria.fr/inria-00086286">IROS 2006</a> work.</p>
 			<p>Introduction of the harm function, integration with global planning system, (primitive) use of vision for traversability estimation.</p>
@@ -319,7 +387,20 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00115112">Towards urban driverless vehicles</a></h3>
-		<p>Benenson R., Petti S., Fraichard T., Parent M.<br>International Journal of Vehicle Autonomous Systems 2008</p>
+		<p>Benenson R., Petti S., Fraichard T., Parent M.<br>International Journal of Vehicle Autonomous Systems 2008
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008Ijvas);" />
+		<pre id="Benenson2008Ijvas" class="invisible_bibtex">
+@ARTICLE{Benenson2008Ijvas,
+  author = {Rodrigo Benenson and St{\'e}phane Petti and Thierry Fraichard and Michel Parent},
+  title = {Toward urban driverless vehicles},
+  journal = {Int. Journal of Vehicle Autonomous Systems, Special Issue on Advances in Autonomous Vehicle Technologies for Urban Environment},
+  year = {2008},
+  volume = {1},
+  pages = {4 - 23},
+  number = {6},
+  url = {http://hal.inria.fr/inria-00115112}
+}</pre>
+		</p>
 		<blockquote>
 			<p>Journal version of our <a href="http://hal.inria.fr/inria-00086286">IROS 2006</a> work.</p>
 		</blockquote>
@@ -379,11 +460,22 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00086286">Integrating perception and planning for autonomous navigation of urban vehicles</a></h3>
-		<p>Benenson R., Petti S., Parent M., Fraichard T.<br>IROS 2006</p> 
+		<p>Benenson R., Petti S., Parent M., Fraichard T.<br>IROS 2006
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2006Iros);" />
+		<pre id="Benenson2006Iros" class="invisible_bibtex">
+@INPROCEEDINGS{Benenson2006Iros,
+  author = {Rodrigo Benenson and St{\'e}phane Petti and Michel Parent and Thierry Fraichard},
+  title = {Integrating Perception and Planning for Autonomous Navigation of Urban Vehicles},
+  booktitle = {IROS},
+  year = {2006},
+  url = {http://hal.inria.fr/inria-00086286}
+}
+</pre>	
+		</p> 
 		<blockquote>
 			<p>Motion estimation, online static map building, moving objects detection and tracking, safe planning and control;
 				all of it running in real-time on single PC, controlling an electric vehicle.</p>
-			<p>See the <a href="http://youtu.be/R8EWHndSn34">proof of concept video</a>.</p>
+			<p>See the <a class="btn" href="http://youtu.be/R8EWHndSn34">proof of concept video</a>.</p>
 		</blockquote>
 	</div>
 </div> <!-- /row -->
