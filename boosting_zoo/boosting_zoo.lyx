@@ -1,0 +1,515 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language british
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Travelling in boosting land
+\end_layout
+
+\begin_layout Author
+Created by 
+\begin_inset CommandInset href
+LatexCommand href
+name "Rodrigo Benenson"
+target "http://rodrigob.github.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Last updated the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+What is this document ?
+\end_layout
+
+\begin_layout Standard
+Boosting is a very popular machine learning algorithm that has been developed
+ in the last 20 years of research.
+ Boosting can be used for classification (single and multi-class; supervised
+ and semi-supervised), regression, ranking, and density estimation (Welling
+ 2003).
+ The key idea of boosting is to iteratively train a set of bad classifiers
+ (so called 
+\emph on
+weak classifiers
+\emph default
+), such that when used together we obtain a (very) good classifier (so called
+ 
+\emph on
+strong classifier
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Boosting has received large attention due to two combined factors.
+ On one hand, boosting in its simplest form it is very easy to grasp, implement
+ and provides very competitive results.
+ On the other hand it has proven quite difficult to understand 
+\emph on
+why 
+\emph default
+it works so well, this has spanned vast theoretical research linking boosting
+ with machine learning theory, statistics, computational mathematics, and
+ optimization theory.
+ Not knowing why the method works so well has also left room for many, many
+ variants to appear, each one testing one a different idea.
+ 
+\end_layout
+
+\begin_layout Standard
+In this document we will focus on boosting applied to 
+\emph on
+binary classification
+\emph default
+.
+ Even for this restricted application there are dozens of different algorithms
+ that have been proposed.
+ The following text hopes to give some light on the relation between different
+ algorithms, tracing back theoretical and empirical results.
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Boosting-zoo"
+
+\end_inset
+
+ we enumerate as many algorithms as we aware off, trying to be exhaustive.
+ For each one of them we give a synopsis of the key idea behind the method.
+\end_layout
+
+\begin_layout Section*
+License
+\end_layout
+
+\begin_layout Standard
+\align center
+This document is shared under the
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Creative Commons Attribution-Noncommercial-Share Alike 3.0 "
+target "http://creativecommons.org/licenses/by-nc-sa/3.0/"
+
+\end_inset
+
+ license.
+\end_layout
+
+\begin_layout Standard
+The document is shared in an open format, you are free to copy it, branch
+ it, remix it, as long as you respect the mentioned creative commons license.
+ 
+\end_layout
+
+\begin_layout Standard
+If you are interested on collaborating with me on this document, please
+ feel free to 
+\begin_inset CommandInset href
+LatexCommand href
+name "contact me"
+target "http://www.google.com/profiles/rodrigo.benenson"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Boosting-zoo"
+
+\end_inset
+
+Boosting zoo
+\end_layout
+
+\begin_layout Standard
+For binary classification only.
+ Please note that this is list covers only a small fraction of the boosting
+ literature.
+ Many other publications exist, in particular the ones studying multi-class
+ and ranking problems via boosting.
+\end_layout
+
+\begin_layout Standard
+For survey papers:
+\end_layout
+
+\begin_layout Standard
+2008 Boosting algorithms: regularization, prediction and model fitting 
+\emph on
+(with discussions
+\emph default
+),
+\end_layout
+
+\begin_layout Standard
+2008 Evidence Contrary to the Statistical View of Boosting (
+\emph on
+with discussions
+\emph default
+),
+\end_layout
+
+\begin_layout Standard
+2008 Introduction to Boosting: Origin, Practice and Recent Developments
+ 
+\end_layout
+
+\begin_layout Standard
+https://qir.kyushu-u.ac.jp/dspace/bitstream/2324/13301/1/12_p056.pdf
+\end_layout
+
+\begin_layout Standard
+The discussion shows very well the large amount of unknowns around 2008,
+ and to my knowledge, no much light has raised since.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Non-totally-corrective-algorithm"
+
+\end_inset
+
+Non-totally corrective algorithms
+\end_layout
+
+\begin_layout Standard
+These algorithms learn a new weak classifier at each iteration, in an incrementa
+l fashion.
+ Once a weak classifier has been added, it will never be removed nor tuned.
+ These are simpler to implement and understand, and usually run faster,
+ but usually provide lower quality results compared to the totally corrective
+ algorithms described in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Totally-corrective-boosting"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+How do I support this claim ?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+AdaBoost the mother of them all
+\end_layout
+
+\begin_layout Description
+GradientBoost
+\end_layout
+
+\begin_layout Description
+LogitBoost
+\end_layout
+
+\begin_layout Description
+GentleBoost
+\end_layout
+
+\begin_layout Description
+AnyBoost Mason 2000
+\end_layout
+
+\begin_layout Description
+MadaBoost Domingo and Watanabe, 2000
+\end_layout
+
+\begin_layout Description
+SmoothBoost Servedio, 2003
+\end_layout
+
+\begin_layout Description
+Agnostic
+\begin_inset space ~
+\end_inset
+
+boosting http://research.microsoft.com/en-us/um/people/adum/publications/2009-Pote
+ntial-Based_Agnostic_Boosting.pdf
+\end_layout
+
+\begin_layout Description
+WaldBoost
+\end_layout
+
+\begin_layout Description
+BrownBoost
+\end_layout
+
+\begin_layout Description
+NadaBoost Improvement of boosting algorithm by modifying the weighting rule.
+ M Nakamura, H Nomiya, K Uehara
+\end_layout
+
+\begin_layout Description
+DOOM
+\begin_inset space ~
+\end_inset
+
+1&2
+\end_layout
+
+\begin_layout Description
+TotalBoost
+\end_layout
+
+\begin_layout Description
+BinomialBoosting
+\end_layout
+
+\begin_layout Description
+Martingale
+\begin_inset space ~
+\end_inset
+
+boosting
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $L_{2}$
+\end_inset
+
+Boosting
+\end_layout
+
+\begin_layout Description
+RealBoosting
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ealBoosting (yes this is a different boosting method)
+\end_layout
+
+\begin_layout Description
+One-pass
+\begin_inset space ~
+\end_inset
+
+boosting
+\end_layout
+
+\begin_layout Description
+Corrective
+\begin_inset space ~
+\end_inset
+
+boosting DOI 10.1007/s10994-010-5173-z (similar optimization goal than totally
+ corrective, but with different method)
+\end_layout
+
+\begin_layout Description
+Stochastic
+\begin_inset space ~
+\end_inset
+
+boosting Using random subset of the training data to train each weak classifier
+ (Friedman 1999)
+\end_layout
+
+\begin_layout Description
+Adaptive
+\begin_inset space ~
+\end_inset
+
+bagging Is another approach for stochastic boosting (Breiman 1999)
+\end_layout
+
+\begin_layout Description
+LazyBoost
+\end_layout
+
+\begin_layout Description
+BanditBoost (is this single class ?)
+\end_layout
+
+\begin_layout Description
+FilterBoost
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Totally-corrective-boosting"
+
+\end_inset
+
+Totally corrective boosting algorithms
+\end_layout
+
+\begin_layout Description
+LPBoost Stands for 
+\begin_inset Quotes eld
+\end_inset
+
+linear programming boosting
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Entropy
+\begin_inset space ~
+\end_inset
+
+regularized
+\begin_inset space ~
+\end_inset
+
+boosting
+\end_layout
+
+\begin_layout Description
+GradBoost http://www.eecs.berkeley.edu/~jduchi/projects/DuchiSi09d.pdf
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+-Boosting
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Key-questions"
+
+\end_inset
+
+Key questions
+\end_layout
+
+\begin_layout Subsection
+Does boosting over-fits ?
+\end_layout
+
+\begin_layout Standard
+Buhlmann and Hothron 2007 say yes, Buja, Mease and Wyner 2007/2008 say no.
+\end_layout
+
+\begin_layout Subsection
+Is boosting robust to noise in the training data ?
+\end_layout
+
+\begin_layout Subsection
+What is the link between boosting and SVM learning ?
+\end_layout
+
+\begin_layout Standard
+Regularized logistic regression, Reguralized least-square regression, Regularize
+d exponential regression, Regularized hinge-loss regression (SVMs).
+\end_layout
+
+\begin_layout Standard
+No surrogate loss is the best, should be adapted on the data http://eprints.pasca
+l-network.org/archive/00007458/01/reid10a.pdf
+\end_layout
+
+\begin_layout Subsection
+What is the best boosting algorithm ?
+\end_layout
+
+\begin_layout Standard
+>>> The ultimate question...
+\end_layout
+
+\end_body
+\end_document
