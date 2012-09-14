@@ -73,6 +73,10 @@
 	pre.invisible_bibtex {
 		display: none;
 	}
+
+        a.source_code_link {
+                font-family: Courier New, Courrier;
+        }
     </style>
 
 	<script language="javascript" type="text/javascript">
@@ -198,7 +202,71 @@
 <!--<hr>-->
 
 
-<h4>2012 <small></small></h4>
+<h4 id="year2012">2012 <small></small></h4>
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="http://rodrigob.github.com/documents/2012_eccv_cvvt_workshop_fast_stixels_estimation.pdf">
+			<img class="thumbnail" src="figures/2012_eccv_cvvt_workshop_example_system_results_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2012_eccv_cvvt_workshop_fast_stixels_estimation.pdf">
+                        Fast stixels estimation for fast pedestrian detection</a></h3>
+		<p>R. Benenson, M. Mathias, <a href="http://homes.esat.kuleuven.be/~rtimofte">R. Timofte</a>, L. Van Gool
+		<br>ECCV 2012, <a href="http://www.cvc.uab.es/adas/CVVT2012">CVVT workshop</a> 
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2012EccvCvvtWorkshop);" />
+		<pre id="Benenson2012EccvCvvtWorkshop" class="invisible_bibtex">
+@INPROCEEDINGS{Benenson2012EccvCvvtWorkshop,
+  author = {R. Benenson and M. Mathias and R. Timofte and L. {Van Gool}},
+  title = {Fast stixels estimation for fast pedestrian detection},
+  booktitle = {ECCV, CVVT workshop},
+  year = {2012}
+}</pre>
+		</p> 
+		<blockquote>
+			<p>We revisit the stixel computation method.
+                        <br>Stixels computation now reaches 200 Hz, and we can detect pedestrians at the record speed of 165 Hz (with state of the art quality).</p>
+		</blockquote>
+		<!-- <p>Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">result video</a>.</p> -->
+		<p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p>
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="http://rodrigob.github.com/documents/2012_eccv_stixels_motion_estimation.pdf">
+			<img class="thumbnail" src="figures/stixels_river_frames_230_to_260_tracks_small.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2012_eccv_stixels_motion_estimation.pdf">
+        		Stixels motion estimation without optical flow computation</a></h3>
+		<p>B. Gunyel, R. Benenson, <a href="http://homes.esat.kuleuven.be/~rtimofte">R. Timofte</a>, L. Van Gool 
+		<br>ECCV 2012 
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Gunyel2012Eccv);" />
+		<pre id="Gunyel2012Eccv" class="invisible_bibtex">
+@INPROCEEDINGS{Gunyel2012Eccv,
+  author = {B. Gunyel and R. Benenson and R. Timofte and L. {Van Gool}},
+  title = {Stixels motion estimation without optical flow computation},
+  booktitle = {ECCV},
+  year = {2012}
+}</pre>
+		</p> 
+		<blockquote>
+			<p>We estimate the motion of objects without computing optical flow.</p>
+		</blockquote>
+		<!-- <p>Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">result video</a>.</p> -->
+		<!-- <p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p> -->
+	</div>
+</div> <!-- /row -->
+<hr>
 
 <div class="row">
 	<div class="span4">
@@ -210,7 +278,7 @@
 	<div class="span12">
 		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2012_cvpr_pedestrian_detection_at_100_frames_per_second.pdf">
 			Pedestrian detection at 100 frames per second</a></h3>
-		<p>Benenson R., Mathias M., Timofte R., Van Gool L. 
+		<p>R. Benenson, Mathias M., <a href="http://homes.esat.kuleuven.be/~rtimofte">R. Timofte</a>, L. Van Gool 
 		<br>Oral at CVPR 2012, 2.5% acceptance rate. 
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2012Cvpr);" />
 		<br><span class="label success">Chef's recommendation</span>
@@ -225,27 +293,28 @@
 		<blockquote>
 			<p>We propose a new detector that improves both speed and quality over state-of-the-art single part detectors. We reach 50 Hz in monocular setup, and 135 Hz when using stixels on a street scene (including the stereo processing time).</p>
 		</blockquote>
-		<p>Download <a class="paper_link" href="http://rodrigob.github.com/documents/2012_06_cvpr_talk.pdf">presentation slides</a>. Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">CVPR result video</a>.</p>
+		<p>Download <a class="paper_link" href="http://rodrigob.github.com/documents/2012_06_cvpr_talk.pdf">presentation slides</a>. Watch <a class="" href="http://techtalks.tv/talks/pedestrian-detection-at-100-frames-per-second/56381/">CVPR talk</a> (visible for free six month after the conference).</p>
+		<p>Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">CVPR result video</a>.</p>
 		<p>Watch <a href="http://europa.informatik.uni-freiburg.de/videos.html">Europa project</a> <a class="btn" href="http://youtu.be/d_S4CaxtQJU">result video</a>, our detector running inside a robot, together with a tracker from <a href="http://www.mmp.rwth-aachen.de/people">RWTH Aachen</a>.</p>
-		<p><em>Source code will be released on August 1st 2012</em>, with a research only license.</p>
+		<p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p>
 	</div>
 </div> <!-- /row -->
 <hr>
 
 
-<h4>2011 <small>First time at ICCV</small></h4>
+<h4 id="year2011">2011 <small>First time at ICCV</small></h4>
 
 <div class="row">
 	<div class="span4">
 		<ul class="media-grid">
-		<li><a href="http://rodrigob.github.com/documents/2011_iccv_workshop_stixels_estimation.pdf">
+		<li><a href="http://rodrigob.github.com/documents/2011_iccv_cvvt_workshop_stixels_estimation.pdf">
 			<img class="thumbnail" src="figures/stixels_example_small.png" alt="" /></a></li>
 		</ul>
 	</div>
 	<div class="span12">
-		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2011_iccv_workshop_stixels_estimation.pdf">
+		<h3><a class="paper_link" href="http://rodrigob.github.com/documents/2011_iccv_cvvt_workshop_stixels_estimation.pdf">
 			Stixels estimation without depth map computation</a></h3>
-		<p>Benenson R., Timofte R., Van Gool L.<br>ICCV 2011, <a href="http://www.cvc.uab.es/adas/CVVT2011/">CVVT workshop</a>
+		<p>R. Benenson, <a href="http://homes.esat.kuleuven.be/~rtimofte">R. Timofte</a>, L. Van Gool<br>ICCV 2011, CVVT workshop
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2011IccvWorkshop);" />
 		<pre id="Benenson2011IccvWorkshop" class="invisible_bibtex">
 @INPROCEEDINGS{Benenson2011IccvWorkshop,
@@ -258,14 +327,15 @@
 		<blockquote>
 			<p>We detect (unknown) objects on a street scene faster than it takes to compute a depth map.</p>
 		</blockquote>
+		<p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p>
 	</div>
 </div> <!-- /row -->
 <hr>
 
 
-<h4>2010 <small>First year at <a href="https://securewww.esat.kuleuven.be/psi/visics">Visics</a>, scratching my head</small></h4>
+<h4 id="year2010">2010 <small>First year at <a href="https://securewww.esat.kuleuven.be/psi/visics">Visics</a>, scratching my head</small></h4>
 
-<h4>2009 <small>Working on industrial applications</small></h4>
+<h4 id="year2009">2009 <small>Working on industrial applications</small></h4>
 
 <div class="row">
 	<div class="span4">
@@ -282,7 +352,7 @@
 <hr>
 
 
-<h4>2008 <small>Got my PhD!</small></h4>
+<h4 id="year2008">2008 <small>Got my PhD!</small></h4>
 
 <div class="row">
 	<div class="span4">
@@ -293,7 +363,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00294750">Achievable safety of driverless ground vehicles</a></h3>
-		<p>Benenson R., Fraichard T., Parent M.<br>ICARCV 2008
+		<p>R. Benenson, T. Fraichard, M. Parent<br>ICARCV 2008
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008Icarcv);" />
 		<br><span class="label success">Chef's recommendation</span>
 		<pre id="Benenson2008Icarcv" class="invisible_bibtex">
@@ -326,7 +396,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://pastel.archives-ouvertes.fr/pastel-00005327">Perception for driverless vehicles</a></h3>
-		<p>Benenson R.<br>PhD thesis, <a href="http://www.mines-paristech.fr">Mines Paristech</a> 2008
+		<p>R. Benenson<br>PhD thesis, <a href="http://www.mines-paristech.fr">Mines Paristech</a> 2008
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008PhD);" />
 		<pre id="Benenson2008PhD" class="invisible_bibtex">
 @PHDTHESIS{Benenson2008PhD,
@@ -356,7 +426,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00295152">Design of an urban driverless ground vehicle</a></h3>
-		<p>Benenson R., Parent M.<br>IROS 2008
+		<p>R. Benenson, M. Parent<br>IROS 2008
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008Iros);" />
 		<br><span class="label success">Chef's recommendation</span>
 		<pre id="Benenson2008Iros" class="invisible_bibtex">
@@ -387,7 +457,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00115112">Towards urban driverless vehicles</a></h3>
-		<p>Benenson R., Petti S., Fraichard T., Parent M.<br>International Journal of Vehicle Autonomous Systems 2008
+		<p>R. Benenson, S. Petti, T. Fraichard, M. Parent<br>International Journal of Vehicle Autonomous Systems 2008
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2008Ijvas);" />
 		<pre id="Benenson2008Ijvas" class="invisible_bibtex">
 @ARTICLE{Benenson2008Ijvas,
@@ -409,7 +479,7 @@
 <hr>
 
 
-<h4>2007 <small>First time at ICRA</small></h4>
+<h4 id="year2007">2007 <small>First time at ICRA</small></h4>
 
 
 <div class="row">
@@ -421,7 +491,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00126677">Cybernetic transportation systems design and development: simulation software</a></h3>
-		<p>Boissé S., Benenson R., Bouraoui L., Parent M., Vlacic L.<br>ICRA 2007</p>
+		<p>S. Boissé, R. Benenson, L. Bouraoui, M. Parent, L. Vlacic<br>ICRA 2007</p>
 		<blockquote>
 			<p>This paper describes the simulator we developed in order to validate our on-board software in single and multiple vehicles scenarios.</p>
 		</blockquote>
@@ -439,7 +509,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00147286">Networking needs and solutions for road vehicles at IMARA</a></h3>
-		<p>Mehani O., Benenson R., <a href="http://scholar.google.com/citations?user=-CUOP2gAAAAJ&hl=en">Lemaignan S.</a>, Ernst T.<br>ITST 2007</p>
+		<p><a href="http://www.nicta.com.au/people/mehanio">O. Mehani</a>, R. Benenson, <a href="http://scholar.google.com/citations?user=-CUOP2gAAAAJ&hl=en">S. Lemaignan</a>, T. Ernst<br>ITST 2007</p>
 		<blockquote>
 			<p>Which are the communications need for driverless vehicles?</p>
 		</blockquote>
@@ -448,7 +518,7 @@
 <hr>
 
 
-<h4>2006 <small>First time at IROS</small></h4>
+<h4 id="year2006">2006 <small>First time at IROS</small></h4>
 
 
 <div class="row">
@@ -460,7 +530,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00086286">Integrating perception and planning for autonomous navigation of urban vehicles</a></h3>
-		<p>Benenson R., Petti S., Parent M., Fraichard T.<br>IROS 2006
+		<p>R. Benenson, S. Petti, M. Parent, T. Fraichard<br>IROS 2006
 		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2006Iros);" />
 		<pre id="Benenson2006Iros" class="invisible_bibtex">
 @INPROCEEDINGS{Benenson2006Iros,
@@ -490,7 +560,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="http://hal.inria.fr/inria-00117116">Real-time vehicle motion estimation using texture learning and monocular vision</a></h3>
-		<p>Dumortier Y., Benenson R., Kais M.<br>ICCVG 2006</p> 
+		<p>Y. Dumortier, R. Benenson, M. Kais<br>ICCVG 2006</p> 
 		<blockquote>
 			<p>On how we do motion estimation using the ground texture.</p>
 		</blockquote>
@@ -498,7 +568,7 @@
 </div> <!-- /row -->
 <!--<hr>-->
 
-<h4>2005 <small>First year of PhD</small></h4>
+<h4 id="year2005">2005 <small>First year of PhD</small></h4>
 <hr>
 
 <div class="row">
@@ -510,7 +580,7 @@
 	</div>
 	<div class="span12">
 		<h3><a class="paper_link" href="https://sites.google.com/site/rodrigobenenson/home/publications/2004_rodrigo_benenson_engineering_thesis_spanish.pdf">Diseño e implementación de un receptor digital de radio</a></h3>
-		<p>Benenson R.<br>Engineer thesis (in Spanish), <a href="http://www.utfsm.cl"><abbr>UTFSM</abbr></a> 2004</p> 
+		<p>R. Benenson<br>Engineer thesis (in Spanish), <a href="http://www.utfsm.cl"><abbr>UTFSM</abbr></a> 2004</p> 
 	</div>
 </div> <!-- /row -->
 <hr>
@@ -541,7 +611,10 @@
 <h1>Code <small>free the sources!</small></h1>
 </div>
 
-<p>Due to industrial partnerships, most of the code I write is closed source.<br>However here is a list of interesting open-source code I have used:</p>
+<p>Due to industrial partnerships, most of the code I write is closed source.<br>
+Happily, I have been recently authorized to <a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">release the source code</a> of <a href="#year2012">my work on fast pestrians detection</a>.
+</p>
+<p>Otherwise, here is a list of interesting open-source code I have used:</p>
 <ul>
 <li>Linux port of <a href="https://github.com/rodrigob/barinova_pedestrians_detection">Pedestrian detection using Hough forest</a>, by Olga Barinova.</li>
 <li><a href="https://github.com/rodrigob/cudatemplates">cudatemplates</a>, makes my life with CUDA (GPU) code much easier.</li>
@@ -588,19 +661,20 @@ C++
 <h1>Contact <small>who is rodrigob?</small></h1>
 </div>
 
-<div class="row">
+<div class="row" itemscope itemtype="http://data-vocabulary.org/Person">
 	<div class="span3">
 		<ul class="media-grid">
-		<li><a href="https://plus.google.com/114975295342705145033/about">
-			<img style="width: 150px;" class="thumbnail" src="figures/2010_09 postdoc day.jpg" alt="Rodrigo Benenson" /></a></li>
+		<li><a href="https://plus.google.com/114975295342705145033?rel=author">
+			<img style="width: 150px;" class="thumbnail" itemprop="photo" src="figures/2010_09 postdoc day.jpg" alt="Rodrigo Benenson" /></a></li>
 		</ul>
 	</div>
 	<div class="span12">
-		<p>My name is <a href="https://plus.google.com/114975295342705145033/about">Rodrigo Benenson</a>.</p>
+		<p>My name is <a href="https://plus.google.com/114975295342705145033/about"><span itemprop="name" >Rodrigo Benenson</span></a>.</p>
+		<meta itemprop="nickname" content="rodrigob" />
 		<p>I studied electronics engineering at <a href="http://www.utfsm.cl"><abbr>UTFSM</abbr></a>.</p>
 		<p>I did my PhD in robotics inside the <a href="http://www.lara.prd.fr/"><abbr>Lara team</abbr></a>, 
-		part of <a href="http://www.mines-paristech.fr">Mines Paristech</a> and <a	href="http://www.inria.fr/centre/paris-rocquencourt"><abbr>INRIA</abbr></a>.</p>
-		<p>I am currently doing a post-doc in computer vision at  <a href="https://securewww.esat.kuleuven.be/psi/visics">Visics</a>.</p>
+		part of <a href="http://www.mines-paristech.fr">Mines Paristech</a> and <a href="http://www.inria.fr/centre/paris-rocquencourt"><abbr>INRIA</abbr></a>.</p>
+		<p>I am currently doing a <span itemprop="role">post-doc in computer vision</span> at  <a href="http://www.esat.kuleuven.be/psi_n/visics"><span itemprop="affiliation">Visics, KU Leuven</span></a>.</p>
 		<p>You can contact <a href="https://plus.google.com/114975295342705145033/about" title="social profile">me</a> by sending an email at &#114;&#111;&#100;&#114;&#105;&#103;&#111;DOT&#98;&#101;&#110;&#101;&#110;&#115;&#111;&#110;AT&#103;&#109;&#97;&#105;&#108;DOT&#99;&#111;&#109;.</p>
 		<p><br><br><a href="https://plus.google.com/114975295342705145033/about" title="social profile">我</a>想建设一个更美好的世界。</p>
 	</div>
