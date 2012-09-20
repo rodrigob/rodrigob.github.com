@@ -422,6 +422,26 @@ BanditBoost (is this single class ?)
 FilterBoost
 \end_layout
 
+\begin_layout Description
+RLPBoost
+\end_layout
+
+\begin_layout Description
+RQPBoost
+\end_layout
+
+\begin_layout Description
+SoftMarginBoosting
+\end_layout
+
+\begin_layout Description
+EBBoosting Empirical Bernstein boosting
+\end_layout
+
+\begin_layout Description
+VadaBoost Variance Penalizing AdaBoost, an improved EBBoost
+\end_layout
+
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -445,15 +465,7 @@ linear programming boosting
 \end_layout
 
 \begin_layout Description
-Entropy
-\begin_inset space ~
-\end_inset
-
-regularized
-\begin_inset space ~
-\end_inset
-
-boosting
+ERLPBoost Entropy regularized boosting
 \end_layout
 
 \begin_layout Description
