@@ -442,14 +442,34 @@ FilterBoost
 \end_layout
 
 \begin_layout Description
+RLPBoost
+\end_layout
+
+\begin_layout Description
+RQPBoost
+\end_layout
+
+\begin_layout Description
+SoftMarginBoosting
+\end_layout
+
+\begin_layout Description
+EBBoosting Empirical Bernstein boosting
+\end_layout
+
+\begin_layout Description
+VadaBoost Variance Penalizing AdaBoost, an improved EBBoost
+\end_layout
+
+\begin_layout Description
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Regression boosting methods (that I stumbled upon)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\varepsilon$
 \end_inset
 
@@ -484,15 +504,7 @@ linear programming boosting
 \end_layout
 
 \begin_layout Description
-Entropy
-\begin_inset space ~
-\end_inset
-
-regularized
-\begin_inset space ~
-\end_inset
-
-boosting
+ERLPBoost Entropy regularized boosting
 \end_layout
 
 \begin_layout Description
