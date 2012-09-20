@@ -61,7 +61,7 @@
 \begin_body
 
 \begin_layout Title
-Travelling in boosting land
+Visiting the boosting zoo; binary classification.
 \end_layout
 
 \begin_layout Author
@@ -313,6 +313,13 @@ SmoothBoost Servedio, 2003
 \end_layout
 
 \begin_layout Description
+\begin_inset Formula $\alpha$
+\end_inset
+
+-Boost in the boosting book 2012
+\end_layout
+
+\begin_layout Description
 Agnostic
 \begin_inset space ~
 \end_inset
@@ -330,8 +337,20 @@ BrownBoost
 \end_layout
 
 \begin_layout Description
+CondifenceBoost
+\end_layout
+
+\begin_layout Description
+ARC-X4
+\end_layout
+
+\begin_layout Description
 NadaBoost Improvement of boosting algorithm by modifying the weighting rule.
  M Nakamura, H Nomiya, K Uehara
+\end_layout
+
+\begin_layout Description
+MarginBoost
 \end_layout
 
 \begin_layout Description
@@ -339,7 +358,7 @@ DOOM
 \begin_inset space ~
 \end_inset
 
-1&2
+1&2 1999& Direct Optimization of Margins, work by Llew Mason 1999
 \end_layout
 
 \begin_layout Description
@@ -422,6 +441,26 @@ BanditBoost (is this single class ?)
 FilterBoost
 \end_layout
 
+\begin_layout Description
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Regression boosting methods (that I stumbled upon)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-Boost (Barrier boosting, Raetsch 2000)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -467,6 +506,58 @@ GradBoost http://www.eecs.berkeley.edu/~jduchi/projects/DuchiSi09d.pdf
 -Boosting
 \end_layout
 
+\begin_layout Description
+Adaboost-QP
+\end_layout
+
+\begin_layout Description
+Adaboost-CG
+\end_layout
+
+\begin_layout Description
+MDBoost
+\end_layout
+
+\begin_layout Description
+Laplacian
+\begin_inset space ~
+\end_inset
+
+MDBoost http://users.cecs.anu.edu.au/~hexm/paper/dicta11_final.pdf
+\end_layout
+
+\begin_layout Description
+EBBoost
+\end_layout
+
+\begin_layout Description
+Total
+\begin_inset space ~
+\end_inset
+
+Bregman
+\begin_inset space ~
+\end_inset
+
+divergence
+\begin_inset space ~
+\end_inset
+
+boosting 
+\end_layout
+
+\begin_layout Description
+LACBoost
+\end_layout
+
+\begin_layout Description
+FisherBoost
+\end_layout
+
+\begin_layout Description
+MCBoost (better than MDBoost) http://arxiv.org/pdf/1208.1846.pdf
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -509,6 +600,35 @@ What is the best boosting algorithm ?
 
 \begin_layout Standard
 >>> The ultimate question...
+\end_layout
+
+\begin_layout Paragraph
+Which method requires less iterations to find its minimal test error ?
+\end_layout
+
+\begin_layout Paragraph
+Which method finds the lowest test error ?
+\end_layout
+
+\begin_layout Standard
+MCBoost is the best candidate for now...
+\end_layout
+
+\begin_layout Paragraph
+Which method is the most robust to error ?
+\end_layout
+
+\begin_layout Paragraph
+Which method is the most scalable ?
+\end_layout
+
+\begin_layout Standard
+Number of samples ? Dimension of samples ? Length of strong classifier ?
+\end_layout
+
+\begin_layout Paragraph
+Which method provides a good compromise between quality and training speed
+ ?
 \end_layout
 
 \end_body
