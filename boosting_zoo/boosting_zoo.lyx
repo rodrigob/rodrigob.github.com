@@ -469,6 +469,13 @@ ERLPBoost Entropy regularized boosting
 \end_layout
 
 \begin_layout Description
+SERLPBoost Adds additional constraints into ERLPBoost for faster convergence.
+ Improved Boosting Algorithm Using Combined Weak Classifiers.
+ Fang et al.
+ 2011.
+\end_layout
+
+\begin_layout Description
 GradBoost http://www.eecs.berkeley.edu/~jduchi/projects/DuchiSi09d.pdf
 \end_layout
 
