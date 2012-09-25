@@ -512,6 +512,7 @@ SERLPBoost Adds additional constraints into ERLPBoost for faster convergence.
  Improved Boosting Algorithm Using Combined Weak Classifiers.
  Fang et al.
  2011.
+ (see impresive results at figure 3)
 \end_layout
 
 \begin_layout Description
@@ -585,6 +586,27 @@ name "sec:Key-questions"
 \end_inset
 
 Key questions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To be inspired by Shapire's 2012 talk on 
+\begin_inset Quotes eld
+\end_inset
+
+proving adaboost
+\begin_inset Quotes erd
+\end_inset
+
+, and the multiple papers read.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
