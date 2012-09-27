@@ -551,6 +551,10 @@ EBBoost
 \end_layout
 
 \begin_layout Description
+RBoost 2011 RIEMANNIAN DISTANCE BASED REGULARIZED BOOSTING
+\end_layout
+
+\begin_layout Description
 Total
 \begin_inset space ~
 \end_inset
@@ -563,7 +567,7 @@ divergence
 \begin_inset space ~
 \end_inset
 
-boosting 
+boosting 2011
 \end_layout
 
 \begin_layout Description
@@ -575,7 +579,7 @@ FisherBoost
 \end_layout
 
 \begin_layout Description
-MCBoost (better than MDBoost) http://arxiv.org/pdf/1208.1846.pdf
+MCBoost 2012 (better than MDBoost) http://arxiv.org/pdf/1208.1846.pdf
 \end_layout
 
 \begin_layout Section
