@@ -118,7 +118,7 @@ strong classifier
 
 \begin_layout Standard
 Boosting has received large attention due to two combined factors.
- On one hand, boosting in its simplest form it is very easy to grasp, implement
+ On one hand, boosting in its simplest form is very easy to grasp, implement
  and provides very competitive results.
  On the other hand it has proven quite difficult to understand 
 \emph on
@@ -128,7 +128,7 @@ it works so well, this has spanned vast theoretical research linking boosting
  with machine learning theory, statistics, computational mathematics, and
  optimization theory.
  Not knowing why the method works so well has also left room for many, many
- variants to appear, each one testing one a different idea.
+ variants to appear, each one testing a different idea.
  
 \end_layout
 
@@ -142,6 +142,76 @@ binary classification
  that have been proposed.
  The following text hopes to give some light on the relation between different
  algorithms, tracing back theoretical and empirical results.
+\end_layout
+
+\begin_layout Standard
+>>> Explain the structure of the document
+\end_layout
+
+\begin_layout Standard
+>>> Give a map to the newcomer.
+ Falling into a 2000 paper may give an incomplete impression on boosting.
+ 
+\end_layout
+
+\begin_layout Standard
+>>> We thus try to answer some of the important questions a practitioner
+ may have (including the burning question 
+\begin_inset Quotes eld
+\end_inset
+
+which boosting method is the best?
+\begin_inset Quotes erd
+\end_inset
+
+), and provide an 
+\begin_inset Quotes eld
+\end_inset
+
+quite
+\begin_inset Quotes erd
+\end_inset
+
+ exhaustive list of methods in chronological order.
+ You can thus find your method of interest, and see where it stands on the
+ big picture.
+\end_layout
+
+\begin_layout Standard
+>>> In this paper we have done our best attempt to summarise a reading stack
+ of XX centimetres; so you do not have to read it yourself.
+\end_layout
+
+\begin_layout Standard
+>>> What will you discover in this paper?
+\end_layout
+
+\begin_layout Enumerate
+An updated overview of the developments in boosting
+\end_layout
+
+\begin_layout Enumerate
+Concise answers to some of the usual 
+\begin_inset Quotes eld
+\end_inset
+
+burning questions
+\begin_inset Quotes erd
+\end_inset
+
+; including 
+\begin_inset Quotes eld
+\end_inset
+
+which is the best boosting method?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A summary of 50+ published boosting methods
 \end_layout
 
 \begin_layout Standard
@@ -285,7 +355,8 @@ How do I support this claim ?
 \end_layout
 
 \begin_layout Description
-AdaBoost the mother of them all
+AdaBoost the mother of them all.
+ Adaboost.M1, Adaboost.MH ?
 \end_layout
 
 \begin_layout Description
@@ -306,6 +377,14 @@ AnyBoost Mason 2000
 
 \begin_layout Description
 MadaBoost Domingo and Watanabe, 2000
+\end_layout
+
+\begin_layout Description
+LogLoss
+\begin_inset space ~
+\end_inset
+
+Boost 
 \end_layout
 
 \begin_layout Description
@@ -333,11 +412,31 @@ WaldBoost
 \end_layout
 
 \begin_layout Description
-BrownBoost
+BrownBoost Another attempt at having a robust boosting algorithm
 \end_layout
 
 \begin_layout Description
 CondifenceBoost
+\end_layout
+
+\begin_layout Description
+RobustBoost (
+\begin_inset Quotes eld
+\end_inset
+
+A more robust boosting algorithm
+\begin_inset Quotes erd
+\end_inset
+
+, 2009 Freund's answer to 
+\begin_inset Quotes eld
+\end_inset
+
+is adaboost robust to noise?
+\begin_inset Quotes erd
+\end_inset
+
+, answer to MMM Boost)
 \end_layout
 
 \begin_layout Description
@@ -417,8 +516,8 @@ Stochastic
 \begin_inset space ~
 \end_inset
 
-boosting Using random subset of the training data to train each weak classifier
- (Friedman 1999)
+boosting 2002 Using random subset of the training data to train each weak
+ classifier (Friedman 1999)
 \end_layout
 
 \begin_layout Description
@@ -430,15 +529,22 @@ bagging Is another approach for stochastic boosting (Breiman 1999)
 \end_layout
 
 \begin_layout Description
-LazyBoost
+LazyBoosting 2000 Boosting Applied to Word Sense Disambiguation Gerard Escudero.
+ Random subset of features at each iteration.
 \end_layout
 
 \begin_layout Description
-BanditBoost (is this single class ?)
+FilterBoost 2008 http://jmlr.csail.mit.edu/papers/volume13/benbouzid12a/benbouzid12
+a.pdf
 \end_layout
 
 \begin_layout Description
-FilterBoost
+BanditBoost 2009 (designed for multi-class but applicable to single class);
+ how to select fast which feature matter ?
+\end_layout
+
+\begin_layout Description
+AdaBoost.MH.Exp3.P 2010 improved banditboost
 \end_layout
 
 \begin_layout Description
@@ -454,11 +560,38 @@ SoftMarginBoosting
 \end_layout
 
 \begin_layout Description
-EBBoosting Empirical Bernstein boosting
+PickyBoost 2007 (One-Pass Boosting, Long and Servedio 2007)
 \end_layout
 
 \begin_layout Description
-VadaBoost Variance Penalizing AdaBoost, an improved EBBoost
+MM
+\begin_inset space ~
+\end_inset
+
+Boost 2004 (Boosting in the presence of noise, 2004 Kalai and Servedio;
+ the baseline method)
+\end_layout
+
+\begin_layout Description
+MMM
+\begin_inset space ~
+\end_inset
+
+Boost 2004 (Boosting in the presence of noise, 2004 Kalai and Servedio;
+ the proposed improvement)
+\end_layout
+
+\begin_layout Description
+EBBoosting Empirical Bernstein boosting
+\end_layout
+
+\begin_layout Paragraph*
+2012
+\end_layout
+
+\begin_layout Description
+VadaBoost 2012 Variance Penalizing AdaBoost, an improved EBBoost.
+ Seems like a greedy version of MDBoost/MCBoost
 \end_layout
 
 \begin_layout Description
@@ -535,7 +668,8 @@ Adaboost-CG
 \end_layout
 
 \begin_layout Description
-MDBoost
+MDBoost Optimize the average margin and its standard deviation (regularization
+ parameter weights these two).
 \end_layout
 
 \begin_layout Description
@@ -563,7 +697,7 @@ divergence
 \begin_inset space ~
 \end_inset
 
-boosting 
+boosting Best experimental results I am aware of
 \end_layout
 
 \begin_layout Description
@@ -575,7 +709,9 @@ FisherBoost
 \end_layout
 
 \begin_layout Description
-MCBoost (better than MDBoost) http://arxiv.org/pdf/1208.1846.pdf
+MCBoost Directly optimize the margin standard deviation, assuming a given
+ margin value (which becomes the regularization parameter) (better than
+ MDBoost) http://arxiv.org/pdf/1208.1846.pdf
 \end_layout
 
 \begin_layout Section
@@ -604,6 +740,11 @@ proving adaboost
 , and the multiple papers read.
 \end_layout
 
+\begin_layout Plain Layout
+http://intractability.princeton.edu/videos/stream/videoplay.html?videofile=cs/Prova
+ble%20Bounds/schapire.mp4
+\end_layout
+
 \end_inset
 
 
@@ -617,12 +758,148 @@ Does boosting over-fits ?
 Buhlmann and Hothron 2007 say yes, Buja, Mease and Wyner 2007/2008 say no.
 \end_layout
 
+\begin_layout Standard
+VC theory indicates that upper bound on test error grows with T (shapire
+ work).
+ As it is, it only says that Adaboost 
+\emph on
+may
+\emph default
+ overfit as T increases, but it may also not overfit.
+\end_layout
+
+\begin_layout Standard
+Margin theory (Schapire, Freund, Bartlett and Lee work's; 1998).
+ Weigthed fraction voting correctly - weighted fraction voting incorrectly.
+ Bound on generalization error based on VC dimension of weak classifier
+ and the margin distribution.
+ This bound is independent of T.
+\end_layout
+
+\begin_layout Standard
+Maximizing the minimum margin became an obsession (why ?), which is wrong.
+ Reyzin and Schapire 2006 explains what ??
+\end_layout
+
+\begin_layout Standard
+The fact that exponential loss is minimized by adaboost, says nothing (in
+ itself) about its generalization power.
+ Better minimizing the exponential loss does not lead to better generalization
+ (ref ??).
+\end_layout
+
+\begin_layout Standard
+It is not (only) about 
+\emph on
+what
+\emph default
+ is minimized, but about 
+\emph on
+how
+\emph default
+ it is minimized.
+\end_layout
+
+\begin_layout Standard
+Learning is all about regularization.
+ How much regularization must be set via cross-validation (or its variants).
+\end_layout
+
+\begin_layout Standard
+(Regularization links to probabilites and to LeCun's energy based models,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+pulling-up other areas
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Hastie & others + Zhao & Yu; worked on Adaboost + Regularization.
+ This brings the concept of 
+\begin_inset Quotes eld
+\end_inset
+
+shrinkage
+\begin_inset Quotes erd
+\end_inset
+
+ (fix 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ to a small value), as a way to regularize the weights of the final Adaboost.
+ Purely (mainly?) a theoretical tool.
+ Rosset, Zhu and Hastie, link this to maximum margin solution.
+\end_layout
+
+\begin_layout Standard
+(book Boosting foundation and algorithms, Schapire and Freund).
+\end_layout
+
+\begin_layout Standard
+Bartlett and Traskin, 
+\begin_inset Quotes eld
+\end_inset
+
+universal consistency
+\begin_inset Quotes erd
+\end_inset
+
+ (??).
+\end_layout
+
 \begin_layout Subsection
 Is boosting robust to noise in the training data ?
 \end_layout
 
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Random Classiﬁcation Noise Defeats All Convex Potential Boosters
+\begin_inset Quotes erd
+\end_inset
+
+ Philip M.
+ Long · Rocco A.
+ Servedio, 2008; shows that most 
+\begin_inset Quotes eld
+\end_inset
+
+adaboost like
+\begin_inset Quotes erd
+\end_inset
+
+ methods break down with noise on the labels.
+ Regularization may not help (why ? see RobustBoost paper too).
+\end_layout
+
 \begin_layout Subsection
 What is the link between boosting and SVM learning ?
+\end_layout
+
+\begin_layout Standard
+Arguably the most popular machine learning methods include boosting, random
+ forests, neural networks (which are growing into deep network), and support
+ vector machines.
+\end_layout
+
+\begin_layout Standard
+Support vector machines are popular due to theoretical background, their
+ ease of use and their competitive results 
+\begin_inset Quotes eld
+\end_inset
+
+out of the box
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -635,8 +912,13 @@ No surrogate loss is the best, should be adapted on the data http://eprints.pasc
 l-network.org/archive/00007458/01/reid10a.pdf
 \end_layout
 
+\begin_layout Standard
+>>> short description of how SVM are flawed...
+ (surrogate losses are a lie)
+\end_layout
+
 \begin_layout Subsection
-What is the best boosting algorithm ?
+Which is the best boosting algorithm ?
 \end_layout
 
 \begin_layout Standard
@@ -655,6 +937,10 @@ Which method finds the lowest test error ?
 MCBoost is the best candidate for now...
 \end_layout
 
+\begin_layout Standard
+or total bregman divergence....
+\end_layout
+
 \begin_layout Paragraph
 Which method is the most robust to error ?
 \end_layout
@@ -667,9 +953,17 @@ Which method is the most scalable ?
 Number of samples ? Dimension of samples ? Length of strong classifier ?
 \end_layout
 
+\begin_layout Standard
+Stochastic adaboost ?
+\end_layout
+
 \begin_layout Paragraph
 Which method provides a good compromise between quality and training speed
  ?
+\end_layout
+
+\begin_layout Standard
+Vanilla adaboost is a quite good start ?
 \end_layout
 
 \end_body
