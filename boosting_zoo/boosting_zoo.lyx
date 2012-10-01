@@ -284,6 +284,22 @@ How do I support this claim ?
 
 \end_layout
 
+\begin_layout Paragraph
+1995-2000
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 AdaBoost the mother of them all
 \end_layout
@@ -298,6 +314,22 @@ LogitBoost
 
 \begin_layout Description
 GentleBoost
+\end_layout
+
+\begin_layout Paragraph
+2000-2005
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -395,6 +427,22 @@ RealBoosting
 ealBoosting (yes this is a different boosting method)
 \end_layout
 
+\begin_layout Paragraph
+2005-2010 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 One-pass
 \begin_inset space ~
@@ -453,6 +501,22 @@ RQPBoost
 SoftMarginBoosting
 \end_layout
 
+\begin_layout Paragraph
+2010-2012 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
 EBBoosting Empirical Bernstein boosting
 \end_layout
@@ -491,8 +555,24 @@ name "sub:Totally-corrective-boosting"
 Totally corrective boosting algorithms
 \end_layout
 
+\begin_layout Paragraph
+2000-2005 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Description
-LPBoost Stands for 
+LPBoost 2002 Stands for 
 \begin_inset Quotes eld
 \end_inset
 
@@ -501,18 +581,6 @@ linear programming boosting
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Description
-ERLPBoost Entropy regularized boosting
-\end_layout
-
-\begin_layout Description
-SERLPBoost Adds additional constraints into ERLPBoost for faster convergence.
- Improved Boosting Algorithm Using Combined Weak Classifiers.
- Fang et al.
- 2011.
- (see impresive results at figure 3)
 \end_layout
 
 \begin_layout Description
@@ -548,6 +616,50 @@ MDBoost http://users.cecs.anu.edu.au/~hexm/paper/dicta11_final.pdf
 
 \begin_layout Description
 EBBoost
+\end_layout
+
+\begin_layout Paragraph
+2005-2010 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ERLPBoost 2008 Entropy regularized boosting
+\end_layout
+
+\begin_layout Paragraph
+2010-2013 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+SERLPBoost Adds additional constraints into ERLPBoost for faster convergence.
+ Improved Boosting Algorithm Using Combined Weak Classifiers.
+ Fang et al.
+ 2011.
+ (see impresive results at figure 3)
 \end_layout
 
 \begin_layout Description
