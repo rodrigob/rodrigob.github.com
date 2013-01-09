@@ -814,7 +814,6 @@ divergence
 \end_inset
 
 boosting 2011 Best experimental results I am aware of
-
 \end_layout
 
 \begin_layout Description
@@ -826,11 +825,9 @@ FisherBoost
 \end_layout
 
 \begin_layout Description
-
-MCBoost 2012 Directly optimize the margin standard deviation, assuming a given
- margin value (which becomes the regularization parameter) (better than
- MDBoost) http://arxiv.org/pdf/1208.1846.pdf
-
+MCBoost 2012 Directly optimize the margin standard deviation, assuming a
+ given margin value (which becomes the regularization parameter) (better
+ than MDBoost) http://arxiv.org/pdf/1208.1846.pdf
 \end_layout
 
 \begin_layout Section
@@ -996,6 +993,19 @@ adaboost like
 
  methods break down with noise on the labels.
  Regularization may not help (why ? see RobustBoost paper too).
+\end_layout
+
+\begin_layout Standard
+Also 
+\begin_inset Quotes eld
+\end_inset
+
+The Dynamics of AdaBoost: Cyclic Behavior and Convergence of Margins
+\begin_inset Quotes erd
+\end_inset
+
+, 2004; shows sensitivity to start conditions and cases where it simply
+ does not converge.
 \end_layout
 
 \begin_layout Subsection
