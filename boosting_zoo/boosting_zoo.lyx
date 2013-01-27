@@ -1,0 +1,1099 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language british
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Visiting the boosting zoo; binary classification.
+\end_layout
+
+\begin_layout Author
+Created by 
+\begin_inset CommandInset href
+LatexCommand href
+name "Rodrigo Benenson"
+target "http://rodrigob.github.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+Last updated the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+What is this document ?
+\end_layout
+
+\begin_layout Standard
+Boosting is a very popular machine learning algorithm that has been developed
+ in the last 20 years of research.
+ Boosting can be used for classification (single and multi-class; supervised
+ and semi-supervised), regression, ranking, and density estimation (Welling
+ 2003).
+ The key idea of boosting is to iteratively train a set of bad classifiers
+ (so called 
+\emph on
+weak classifiers
+\emph default
+), such that when used together we obtain a (very) good classifier (so called
+ 
+\emph on
+strong classifier
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Boosting has received large attention due to two combined factors.
+ On one hand, boosting in its simplest form is very easy to grasp, implement
+ and provides very competitive results.
+ On the other hand it has proven quite difficult to understand 
+\emph on
+why 
+\emph default
+it works so well, this has spanned vast theoretical research linking boosting
+ with machine learning theory, statistics, computational mathematics, and
+ optimization theory.
+ Not knowing why the method works so well has also left room for many, many
+ variants to appear, each one testing a different idea.
+ 
+\end_layout
+
+\begin_layout Standard
+In this document we will focus on boosting applied to 
+\emph on
+binary classification
+\emph default
+.
+ Even for this restricted application there are dozens of different algorithms
+ that have been proposed.
+ The following text hopes to give some light on the relation between different
+ algorithms, tracing back theoretical and empirical results.
+\end_layout
+
+\begin_layout Standard
+>>> Explain the structure of the document
+\end_layout
+
+\begin_layout Standard
+>>> Give a map to the newcomer.
+ Falling into a 2000 paper may give an incomplete impression on boosting.
+ 
+\end_layout
+
+\begin_layout Standard
+>>> We thus try to answer some of the important questions a practitioner
+ may have (including the burning question 
+\begin_inset Quotes eld
+\end_inset
+
+which boosting method is the best?
+\begin_inset Quotes erd
+\end_inset
+
+), and provide an 
+\begin_inset Quotes eld
+\end_inset
+
+quite
+\begin_inset Quotes erd
+\end_inset
+
+ exhaustive list of methods in chronological order.
+ You can thus find your method of interest, and see where it stands on the
+ big picture.
+\end_layout
+
+\begin_layout Standard
+>>> In this paper we have done our best attempt to summarise a reading stack
+ of XX centimetres; so you do not have to read it yourself.
+\end_layout
+
+\begin_layout Standard
+>>> What will you discover in this paper?
+\end_layout
+
+\begin_layout Enumerate
+An updated overview of the developments in boosting
+\end_layout
+
+\begin_layout Enumerate
+Concise answers to some of the usual 
+\begin_inset Quotes eld
+\end_inset
+
+burning questions
+\begin_inset Quotes erd
+\end_inset
+
+; including 
+\begin_inset Quotes eld
+\end_inset
+
+which is the best boosting method?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+A summary of 50+ published boosting methods
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Boosting-zoo"
+
+\end_inset
+
+ we enumerate as many algorithms as we aware off, trying to be exhaustive.
+ For each one of them we give a synopsis of the key idea behind the method.
+\end_layout
+
+\begin_layout Section*
+License
+\end_layout
+
+\begin_layout Standard
+\align center
+This document is shared under the
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Creative Commons Attribution-Noncommercial-Share Alike 3.0 "
+target "http://creativecommons.org/licenses/by-nc-sa/3.0/"
+
+\end_inset
+
+ license.
+\end_layout
+
+\begin_layout Standard
+The document is shared in an open format, you are free to copy it, branch
+ it, remix it, as long as you respect the mentioned creative commons license.
+ 
+\end_layout
+
+\begin_layout Standard
+If you are interested on collaborating with me on this document, please
+ feel free to 
+\begin_inset CommandInset href
+LatexCommand href
+name "contact me"
+target "http://www.google.com/profiles/rodrigo.benenson"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Boosting-zoo"
+
+\end_inset
+
+Boosting zoo
+\end_layout
+
+\begin_layout Standard
+For binary classification only.
+ Please note that this is list covers only a small fraction of the boosting
+ literature.
+ Many other publications exist, in particular the ones studying multi-class
+ and ranking problems via boosting.
+\end_layout
+
+\begin_layout Standard
+For survey papers:
+\end_layout
+
+\begin_layout Standard
+2008 Boosting algorithms: regularization, prediction and model fitting 
+\emph on
+(with discussions
+\emph default
+),
+\end_layout
+
+\begin_layout Standard
+2008 Evidence Contrary to the Statistical View of Boosting (
+\emph on
+with discussions
+\emph default
+),
+\end_layout
+
+\begin_layout Standard
+2008 Introduction to Boosting: Origin, Practice and Recent Developments
+ 
+\end_layout
+
+\begin_layout Standard
+https://qir.kyushu-u.ac.jp/dspace/bitstream/2324/13301/1/12_p056.pdf
+\end_layout
+
+\begin_layout Standard
+The discussion shows very well the large amount of unknowns around 2008,
+ and to my knowledge, no much light has raised since.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Non-totally-corrective-algorithm"
+
+\end_inset
+
+Non-totally corrective algorithms
+\end_layout
+
+\begin_layout Standard
+These algorithms learn a new weak classifier at each iteration, in an incrementa
+l fashion.
+ Once a weak classifier has been added, it will never be removed nor tuned.
+ These are simpler to implement and understand, and usually run faster,
+ but usually provide lower quality results compared to the totally corrective
+ algorithms described in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Totally-corrective-boosting"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+How do I support this claim ?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+1995-2000
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+AdaBoost the mother of them all.
+ Adaboost.M1, Adaboost.MH ?
+\end_layout
+
+\begin_layout Description
+GradientBoost
+\end_layout
+
+\begin_layout Description
+LogitBoost
+\end_layout
+
+\begin_layout Description
+GentleBoost
+\end_layout
+
+\begin_layout Paragraph
+2000-2005
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+AnyBoost Mason 2000
+\end_layout
+
+\begin_layout Description
+MadaBoost Domingo and Watanabe, 2000
+\end_layout
+
+\begin_layout Description
+LogLoss
+\begin_inset space ~
+\end_inset
+
+Boost 
+\end_layout
+
+\begin_layout Description
+SmoothBoost Servedio, 2003
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\alpha$
+\end_inset
+
+-Boost in the boosting book 2012
+\end_layout
+
+\begin_layout Description
+Agnostic
+\begin_inset space ~
+\end_inset
+
+boosting http://research.microsoft.com/en-us/um/people/adum/publications/2009-Pote
+ntial-Based_Agnostic_Boosting.pdf
+\end_layout
+
+\begin_layout Description
+WaldBoost
+\end_layout
+
+\begin_layout Description
+BrownBoost Another attempt at having a robust boosting algorithm
+\end_layout
+
+\begin_layout Description
+CondifenceBoost
+\end_layout
+
+\begin_layout Description
+RobustBoost (
+\begin_inset Quotes eld
+\end_inset
+
+A more robust boosting algorithm
+\begin_inset Quotes erd
+\end_inset
+
+, 2009 Freund's answer to 
+\begin_inset Quotes eld
+\end_inset
+
+is adaboost robust to noise?
+\begin_inset Quotes erd
+\end_inset
+
+, answer to MMM Boost)
+\end_layout
+
+\begin_layout Description
+ARC-X4
+\end_layout
+
+\begin_layout Description
+NadaBoost Improvement of boosting algorithm by modifying the weighting rule.
+ M Nakamura, H Nomiya, K Uehara
+\end_layout
+
+\begin_layout Description
+MarginBoost
+\end_layout
+
+\begin_layout Description
+DOOM
+\begin_inset space ~
+\end_inset
+
+1&2 1999& Direct Optimization of Margins, work by Llew Mason 1999
+\end_layout
+
+\begin_layout Description
+TotalBoost
+\end_layout
+
+\begin_layout Description
+BinomialBoosting
+\end_layout
+
+\begin_layout Description
+Martingale
+\begin_inset space ~
+\end_inset
+
+boosting
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $L_{2}$
+\end_inset
+
+Boosting
+\end_layout
+
+\begin_layout Description
+RealBoosting
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ealBoosting (yes this is a different boosting method)
+\end_layout
+
+\begin_layout Paragraph
+2005-2010 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+One-pass
+\begin_inset space ~
+\end_inset
+
+boosting
+\end_layout
+
+\begin_layout Description
+Corrective
+\begin_inset space ~
+\end_inset
+
+boosting DOI 10.1007/s10994-010-5173-z (similar optimization goal than totally
+ corrective, but with different method)
+\end_layout
+
+\begin_layout Description
+Stochastic
+\begin_inset space ~
+\end_inset
+
+boosting 2002 Using random subset of the training data to train each weak
+ classifier (Friedman 1999)
+\end_layout
+
+\begin_layout Description
+Adaptive
+\begin_inset space ~
+\end_inset
+
+bagging Is another approach for stochastic boosting (Breiman 1999)
+\end_layout
+
+\begin_layout Description
+LazyBoosting 2000 Boosting Applied to Word Sense Disambiguation Gerard Escudero.
+ Random subset of features at each iteration.
+\end_layout
+
+\begin_layout Description
+FilterBoost 2008 http://jmlr.csail.mit.edu/papers/volume13/benbouzid12a/benbouzid12
+a.pdf
+\end_layout
+
+\begin_layout Description
+BanditBoost 2009 (designed for multi-class but applicable to single class);
+ how to select fast which feature matter ?
+\end_layout
+
+\begin_layout Description
+AdaBoost.MH.Exp3.P 2010 improved banditboost
+\end_layout
+
+\begin_layout Description
+RLPBoost
+\end_layout
+
+\begin_layout Description
+RQPBoost
+\end_layout
+
+\begin_layout Description
+SoftMarginBoosting
+\end_layout
+
+\begin_layout Paragraph
+2010-2012 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+PickyBoost 2007 (One-Pass Boosting, Long and Servedio 2007)
+\end_layout
+
+\begin_layout Description
+MM
+\begin_inset space ~
+\end_inset
+
+Boost 2004 (Boosting in the presence of noise, 2004 Kalai and Servedio;
+ the baseline method)
+\end_layout
+
+\begin_layout Description
+MMM
+\begin_inset space ~
+\end_inset
+
+Boost 2004 (Boosting in the presence of noise, 2004 Kalai and Servedio;
+ the proposed improvement)
+\end_layout
+
+\begin_layout Description
+EBBoosting Empirical Bernstein boosting
+\end_layout
+
+\begin_layout Paragraph*
+2012
+\end_layout
+
+\begin_layout Description
+VadaBoost 2012 Variance Penalizing AdaBoost, an improved EBBoost.
+ Seems like a greedy version of MDBoost/MCBoost
+\end_layout
+
+\begin_layout Description
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Regression boosting methods (that I stumbled upon)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+-Boost (Barrier boosting, Raetsch 2000)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Totally-corrective-boosting"
+
+\end_inset
+
+Totally corrective boosting algorithms
+\end_layout
+
+\begin_layout Paragraph
+2000-2005 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+LPBoost 2002 Stands for 
+\begin_inset Quotes eld
+\end_inset
+
+linear programming boosting
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+GradBoost http://www.eecs.berkeley.edu/~jduchi/projects/DuchiSi09d.pdf
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+-Boosting
+\end_layout
+
+\begin_layout Description
+Adaboost-QP
+\end_layout
+
+\begin_layout Description
+Adaboost-CG
+\end_layout
+
+\begin_layout Description
+MDBoost Optimize the average margin and its standard deviation (regularization
+ parameter weights these two).
+\end_layout
+
+\begin_layout Description
+Laplacian
+\begin_inset space ~
+\end_inset
+
+MDBoost http://users.cecs.anu.edu.au/~hexm/paper/dicta11_final.pdf
+\end_layout
+
+\begin_layout Description
+EBBoost
+\end_layout
+
+\begin_layout Paragraph
+2005-2010 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+ERLPBoost 2008 Entropy regularized boosting
+\end_layout
+
+\begin_layout Paragraph
+2010-2013 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+SERLPBoost Adds additional constraints into ERLPBoost for faster convergence.
+ Improved Boosting Algorithm Using Combined Weak Classifiers.
+ Fang et al.
+ 2011.
+ (see impresive results at figure 3)
+\end_layout
+
+\begin_layout Description
+RBoost 2011 RIEMANNIAN DISTANCE BASED REGULARIZED BOOSTING
+\end_layout
+
+\begin_layout Description
+Total
+\begin_inset space ~
+\end_inset
+
+Bregman
+\begin_inset space ~
+\end_inset
+
+divergence
+\begin_inset space ~
+\end_inset
+
+boosting 2011 Best experimental results I am aware of
+\end_layout
+
+\begin_layout Description
+LACBoost
+\end_layout
+
+\begin_layout Description
+FisherBoost
+\end_layout
+
+\begin_layout Description
+MCBoost 2012 Directly optimize the margin standard deviation, assuming a
+ given margin value (which becomes the regularization parameter) (better
+ than MDBoost) http://arxiv.org/pdf/1208.1846.pdf
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Key-questions"
+
+\end_inset
+
+Key questions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To be inspired by Shapire's 2012 talk on 
+\begin_inset Quotes eld
+\end_inset
+
+proving adaboost
+\begin_inset Quotes erd
+\end_inset
+
+, and the multiple papers read.
+\end_layout
+
+\begin_layout Plain Layout
+http://intractability.princeton.edu/videos/stream/videoplay.html?videofile=cs/Prova
+ble%20Bounds/schapire.mp4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Does boosting over-fits ?
+\end_layout
+
+\begin_layout Standard
+Buhlmann and Hothron 2007 say yes, Buja, Mease and Wyner 2007/2008 say no.
+\end_layout
+
+\begin_layout Standard
+VC theory indicates that upper bound on test error grows with T (shapire
+ work).
+ As it is, it only says that Adaboost 
+\emph on
+may
+\emph default
+ overfit as T increases, but it may also not overfit.
+\end_layout
+
+\begin_layout Standard
+Margin theory (Schapire, Freund, Bartlett and Lee work's; 1998).
+ Weigthed fraction voting correctly - weighted fraction voting incorrectly.
+ Bound on generalization error based on VC dimension of weak classifier
+ and the margin distribution.
+ This bound is independent of T.
+\end_layout
+
+\begin_layout Standard
+Maximizing the minimum margin became an obsession (why ?), which is wrong.
+ Reyzin and Schapire 2006 explains what ??
+\end_layout
+
+\begin_layout Standard
+The fact that exponential loss is minimized by adaboost, says nothing (in
+ itself) about its generalization power.
+ Better minimizing the exponential loss does not lead to better generalization
+ (ref ??).
+\end_layout
+
+\begin_layout Standard
+It is not (only) about 
+\emph on
+what
+\emph default
+ is minimized, but about 
+\emph on
+how
+\emph default
+ it is minimized.
+\end_layout
+
+\begin_layout Standard
+Learning is all about regularization.
+ How much regularization must be set via cross-validation (or its variants).
+\end_layout
+
+\begin_layout Standard
+(Regularization links to probabilites and to LeCun's energy based models,
+ 
+\begin_inset Quotes eld
+\end_inset
+
+pulling-up other areas
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Hastie & others + Zhao & Yu; worked on Adaboost + Regularization.
+ This brings the concept of 
+\begin_inset Quotes eld
+\end_inset
+
+shrinkage
+\begin_inset Quotes erd
+\end_inset
+
+ (fix 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ to a small value), as a way to regularize the weights of the final Adaboost.
+ Purely (mainly?) a theoretical tool.
+ Rosset, Zhu and Hastie, link this to maximum margin solution.
+\end_layout
+
+\begin_layout Standard
+(book Boosting foundation and algorithms, Schapire and Freund).
+\end_layout
+
+\begin_layout Standard
+Bartlett and Traskin, 
+\begin_inset Quotes eld
+\end_inset
+
+universal consistency
+\begin_inset Quotes erd
+\end_inset
+
+ (??).
+\end_layout
+
+\begin_layout Subsection
+Is boosting robust to noise in the training data ?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Random Classiﬁcation Noise Defeats All Convex Potential Boosters
+\begin_inset Quotes erd
+\end_inset
+
+ Philip M.
+ Long · Rocco A.
+ Servedio, 2008; shows that most 
+\begin_inset Quotes eld
+\end_inset
+
+adaboost like
+\begin_inset Quotes erd
+\end_inset
+
+ methods break down with noise on the labels.
+ Regularization may not help (why ? see RobustBoost paper too).
+\end_layout
+
+\begin_layout Standard
+Also 
+\begin_inset Quotes eld
+\end_inset
+
+The Dynamics of AdaBoost: Cyclic Behavior and Convergence of Margins
+\begin_inset Quotes erd
+\end_inset
+
+, 2004; shows sensitivity to start conditions and cases where it simply
+ does not converge.
+\end_layout
+
+\begin_layout Subsection
+What is the link between boosting and SVM learning ?
+\end_layout
+
+\begin_layout Standard
+Arguably the most popular machine learning methods include boosting, random
+ forests, neural networks (which are growing into deep network), and support
+ vector machines.
+\end_layout
+
+\begin_layout Standard
+Support vector machines are popular due to theoretical background, their
+ ease of use and their competitive results 
+\begin_inset Quotes eld
+\end_inset
+
+out of the box
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Regularized logistic regression, Reguralized least-square regression, Regularize
+d exponential regression, Regularized hinge-loss regression (SVMs).
+\end_layout
+
+\begin_layout Standard
+No surrogate loss is the best, should be adapted on the data http://eprints.pasca
+l-network.org/archive/00007458/01/reid10a.pdf
+\end_layout
+
+\begin_layout Standard
+>>> short description of how SVM are flawed...
+ (surrogate losses are a lie)
+\end_layout
+
+\begin_layout Subsection
+Which is the best boosting algorithm ?
+\end_layout
+
+\begin_layout Standard
+>>> The ultimate question...
+\end_layout
+
+\begin_layout Paragraph
+Which method requires less iterations to find its minimal test error ?
+\end_layout
+
+\begin_layout Paragraph
+Which method finds the lowest test error ?
+\end_layout
+
+\begin_layout Standard
+MCBoost is the best candidate for now...
+\end_layout
+
+\begin_layout Standard
+or total bregman divergence....
+\end_layout
+
+\begin_layout Paragraph
+Which method is the most robust to error ?
+\end_layout
+
+\begin_layout Paragraph
+Which method is the most scalable ?
+\end_layout
+
+\begin_layout Standard
+Number of samples ? Dimension of samples ? Length of strong classifier ?
+\end_layout
+
+\begin_layout Standard
+Stochastic adaboost ?
+\end_layout
+
+\begin_layout Paragraph
+Which method provides a good compromise between quality and training speed
+ ?
+\end_layout
+
+\begin_layout Standard
+Vanilla adaboost is a quite good start ?
+\end_layout
+
+\end_body
+\end_document
