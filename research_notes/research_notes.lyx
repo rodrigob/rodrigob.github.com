@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -226,6 +226,50 @@ The big picture
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figures/marc_johns_hand_drawn_pixels.jpg
+	lyxscale 30
+	width 50line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pixels, as seen by artist 
+\begin_inset CommandInset href
+LatexCommand href
+name "Marc Johns"
+target "http://www.marcjohns.com"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Computer vision aims to extract information from images.
  This information is meant to support decision making.
  Which information should be extracted depends on which decisions should
@@ -347,15 +391,12 @@ Buzz words
 \end_layout
 
 \begin_layout Description
-
 Optical
 \begin_inset space ~
 \end_inset
 
-flow
-\lang british
- given two images, optical flow tries to explain how did each pixel move
- from the first image to the second 
+flow given two images, optical flow tries to explain how did each pixel
+ move from the first image to the second 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Pock2008Phd"
@@ -517,7 +558,6 @@ Tracking
 \end_layout
 
 \begin_layout Description
-
 Multiview
 \begin_inset space ~
 \end_inset
