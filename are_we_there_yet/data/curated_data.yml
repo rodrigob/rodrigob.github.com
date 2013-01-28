@@ -1,0 +1,158 @@
+---
+- :dataset_name: COIL-100 (precision)
+  :paper_name: Deep Learning from Temporal Coherence in Video
+  :paper_year: '2009'
+  :paper_venue: ICML
+  :result: 92.5%
+  :paper_pdf_url: http://www.cs.illinois.edu/homes/hmobahi2/pubs/embedvideo.pdf
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: ! 'Multi-column Deep Neural Networks for Image Classiﬁcation '
+  :paper_year: '2012'
+  :paper_venue: CVPR
+  :result: 0.23%
+  :paper_pdf_url: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition
+  :paper_year: '2010'
+  :paper_venue: Neural Computation
+  :result: 0.35%
+  :paper_pdf_url: http://arxiv.org/pdf/1003.0358v1
+  :additional_information: ! 'Additional info: 6-layer NN 784-2500-2000-1500-1000-500-10
+    (on GPU) [elastic distortions]'
+- :dataset_name: MNIST
+  :paper_name: Efﬁcient Learning of Sparse Representations with an Energy-Based Model
+  :paper_year: '2006'
+  :paper_venue: NIPS
+  :result: 0.39%
+  :paper_pdf_url: http://books.nips.cc/papers/files/nips19/NIPS2006_0804.pdf
+  :additional_information: ! 'Additional info: large conv. net, unsup pretraining
+    [elastic distortions]'
+- :dataset_name: MNIST
+  :paper_name: Best Practices for Convolutional Neural Networks Applied to Visual
+    Document Analysis
+  :paper_year: '2003'
+  :paper_venue: Document Analysis and Recognition
+  :result: 0.4%
+  :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=D1C7D701BD39935473808DA5A93426C5?doi=10.1.1.160.8494&rep=rep1&type=pdf
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: What is the Best Multi-Stage Architecture for Object Recognition?
+  :paper_year: '2009'
+  :paper_venue: ICCV
+  :result: 0.53%
+  :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf
+  :additional_information: ! 'Additional info: large conv. net, unsup pretraining
+    [no distortions]'
+- :dataset_name: MNIST
+  :paper_name: Deformation Models for Image Recognition
+  :paper_year: '2007'
+  :paper_venue: PAMI
+  :result: 0.54%
+  :paper_pdf_url: http://www.keysers.net/daniel/files/Keysers--Deformation-Models--TPAMI2007.pdf
+  :additional_information: ! 'Additional info: K-NN with non-linear deformation (IDM)
+    (Preprocessing: shiftable edges)'
+- :dataset_name: MNIST
+  :paper_name: A trainable feature extractor for handwritten digit recognition
+  :paper_year: '2007'
+  :paper_venue: ! ' Journal
+
+    Pattern Recognition'
+  :result: 0.54%
+  :paper_pdf_url: http://hal.inria.fr/docs/00/05/75/61/PDF/LauerSuenBlochPR.pdf
+  :additional_information: ! 'Additional info: Trainable feature extractor + SVMs
+    [affine distortions]'
+- :dataset_name: MNIST
+  :paper_name: Training Invariant Support Vector Machines
+  :paper_year: '2002'
+  :paper_venue: Machine Learning
+  :result: 0.56%
+  :paper_pdf_url: http://citeseerx.ist.psu.edu/icons/pdf.gif
+  :additional_information: ! 'Additional info: Virtual SVM, deg-9 poly, 2-pixel jittered
+    (Preprocessing: deskewing)'
+- :dataset_name: MNIST
+  :paper_name: Simple Methods for High-Performance Digit Recognition Based on Sparse
+    Coding
+  :paper_year: '2008'
+  :paper_venue: TNN
+  :result: 0.59%
+  :paper_pdf_url: http://www.inb.uni-luebeck.de/publikationen/pdfs/LaBaMa08c.pdf
+  :additional_information: ! 'Additional info: unsupervised sparse features + SVM,
+    [no distortions]'
+- :dataset_name: MNIST
+  :paper_name: Unsupervised learning of invariant feature hierarchies with applications
+    to object recognition
+  :paper_year: '2007'
+  :paper_venue: CVPR
+  :result: 0.62%
+  :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/ranzato-cvpr-07.pdf
+  :additional_information: ! 'Additional info: large conv. net, unsup features [no
+    distortions]'
+- :dataset_name: MNIST
+  :paper_name: Shape matching and object recognition using shape contexts
+  :paper_year: '2002'
+  :paper_venue: PAMI
+  :result: 0.63%
+  :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=B2AAC2BC3824F19757CAC66986D5F3FF?doi=10.1.1.18.8852&rep=rep1&type=pdf
+  :additional_information: ! 'Additional info: K-NN, shape context matching (preprocessing:
+    shape context feature extraction)'
+- :dataset_name: MNIST
+  :paper_name: ! 'Beyond Spatial Pyramids: Receptive Field Learning for Pooled Image
+    Features'
+  :paper_year: '2012'
+  :paper_venue: CVPR
+  :result: 0.64%
+  :paper_pdf_url: http://www.icsi.berkeley.edu/pubs/vision/beyondspatial12.pdf
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: Convolutional Deep Belief Networks for Scalable Unsupervised Learning
+    of Hierarchical Representations
+  :paper_year: '2009'
+  :paper_venue: ICML
+  :result: 0.82%
+  :paper_pdf_url: ''
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: Large-Margin kNN Classification using a Deep Encoder Network
+  :paper_year: '2009'
+  :paper_venue: ''
+  :result: 0.94%
+  :paper_pdf_url: ''
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: Deep Boltzmann Machines
+  :paper_year: '2009'
+  :paper_venue: AISTATS
+  :result: 0.95%
+  :paper_pdf_url: http://www.utstat.toronto.edu/~rsalakhu/papers/dbm.pdf
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: ! 'CS81: Learning words with Deep Belief Networks'
+  :paper_year: '2008'
+  :paper_venue: ''
+  :result: 1.12%
+  :paper_pdf_url: ''
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: ! 'Convolutional Neural Networks '
+  :paper_year: '2003'
+  :paper_venue: ''
+  :result: 1.19%
+  :paper_pdf_url: ''
+  :additional_information: ! 'More info: The ConvNN is based on the paper "Best Practices
+    for Convolutional Neural Networks Applied to Visual Document Analysis".'
+- :dataset_name: MNIST
+  :paper_name: ! 'Reducing the dimensionality of data with neural networks '
+  :paper_year: '2006'
+  :paper_venue: ''
+  :result: 1.2%
+  :paper_pdf_url: ''
+  :additional_information: ''
+- :dataset_name: MNIST
+  :paper_name: Deep learning via semi-supervised embedding
+  :paper_year: '2008'
+  :paper_venue: ''
+  :result: 1.5%
+  :paper_pdf_url: ''
+  :additional_information: ''
