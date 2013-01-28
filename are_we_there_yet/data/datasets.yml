@@ -1,20 +1,74 @@
 ---
 Classification:
-  -
-    name: CIFAR-10
-    units: error %
-    description: 
-    figure_url: 
-    external_results_url:
-  
-  -
-    name: CIFAR-100
-    units: error %
-    description:
-    figure_url:
-    external_results_url:	  
+- :group: Classification
+  :name: MNIST
+  :evaluation_units: error %
+  :description: ! "[Classify handwriten digits](http://yann.lecun.com/exdb/mnist/).
+    \nSome additional results are available on the [original dataset page](http://yann.lecun.com/exdb/mnist/)"
+  :figure_url: figures/mnist.png
+  :external_results_url: ''
+- :group: Classification
+  :name: CIFAR-10
+  :evaluation_units: precision %
+  :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html)
+  :figure_url: figures/cifar_10.png
+  :external_results_url: ''
+- :group: Classification
+  :name: CIFAR-100
+  :evaluation_units: precision %
+  :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html)
+  :figure_url: figures/cifar_10.png
+  :external_results_url: ''
 Detection:
-  - 
-   name: INRIA persons
-  
-  
+- :group: Detection
+  :name: Pascal VOC 2007 comp3
+  :evaluation_units: mAP
+  :description: ''
+  :figure_url: ''
+  :external_results_url: ''
+- :group: Detection
+  :name: Pascal VOC 2011/2012 comp3
+  :evaluation_units: mAP
+  :description: ''
+  :figure_url: ''
+  :external_results_url: ''
+- :group: Detection
+  :name: Caltech Pedestrians USA
+  :evaluation_units: average miss-rate %
+  :description: ! '[Project website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/)'
+  :figure_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/USA-test-reasonable.pdf
+- :group: Detection
+  :name: INRIA Persons
+  :evaluation_units: average miss-rate %
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+
+    [Original dataset website](http://pascal.inrialpes.fr/data/human/)'
+  :figure_url: ''
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-INRIA-test.pdf
+- :group: Detection
+  :name: ! 'ETH Pedestrian '
+  :evaluation_units: average miss-rate %
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+
+    Only left images used.
+
+    [Original dataset website](http://www.vision.ee.ethz.ch/~aess/dataset/)'
+  :figure_url: http://www.vision.ee.ethz.ch/~bleibe/papers/images/picture-iccv07b.png
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-ETH-reasonable.pdf
+- :group: Detection
+  :name: TUD-Brussels Pedestrian
+  :evaluation_units: average miss-rate %
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+
+    [Original dataset website](http://www.d2.mpi-inf.mpg.de/tud-brussels)'
+  :figure_url: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-TudBrussels-reasonable.pdf
+- :group: Detection
+  :name: Daimler Pedestrian
+  :evaluation_units: average miss-rate %
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+
+    [Original dataset website](http://www.science.uva.nl/research/isla/downloads/pedestrians/)'
+  :figure_url: http://www.science.uva.nl/research/isla/downloads/pedestrians/assets/images/ped_det_benchmark.jpg
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-Daimler-reasonable.pdf
