@@ -1,0 +1,44 @@
+---
+title: Who is the best at X ?
+---
+
+
+%div.jumbotron
+  %h1.shadow-title Are we there yet ?
+
+  %p.lead
+    Did you ever want to <em>quickly</em> learn<br>
+    which paper provides the best results on standard dataset X ?<br>
+    Wait no more, just
+    %a(href="#datasets")click below
+    and discover the current state of the art.
+  
+-# end of header
+
+%section#about
+  %div.container.span16
+    %h1.page-header About <small>where does this data come from ?</small>
+    :markdown
+      This list crowd sourced. You are most welcome to [add new (or old) results](#).
+      
+      Every entry on this page has been checked (once) by [me](#).
+      
+      You can also see the [not-yet curated entries](#).
+
+%section#datasets
+  %div.container.span16
+    %h1.page-header Datasets <small>who is the best at X ?</small>
+
+    :markdown
+      This list crowd sourced.
+
+    %div.btn-group.dataset-type
+      - data.datasets.each do |d|
+        %a(href="#dataset-type-#{d.first}" class="btn")= d.first
+
+    - data.datasets.each do |group|
+      = partial "dataset_group", { :locals => {:dataset_group => group}}
+      
+    %p= data.datasets
+    
+   

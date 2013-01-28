@@ -1,0 +1,20 @@
+---
+Classification:
+  -
+    name: CIFAR-10
+    units: error %
+    description: 
+    figure_url: 
+    external_results_url:
+  
+  -
+    name: CIFAR-100
+    units: error %
+    description:
+    figure_url:
+    external_results_url:	  
+Detection:
+  - 
+   name: INRIA persons
+  
+  

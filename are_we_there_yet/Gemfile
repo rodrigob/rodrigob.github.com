@@ -1,0 +1,8 @@
+source :rubygems
+
+gem "middleman", "~>3.0.11"
+
+gem "bootstrap-sass"
+
+gem "therubyracer"
+gem "google_drive"

@@ -1,0 +1,56 @@
+// Web fonts
+@import url(http://fonts.googleapis.com/css?family=Montserrat)
+@import url(http://fonts.googleapis.com/css?family=Belgrano)
+
+// Your own styles go here.
+
+// Idiomatic customisation of twitter bootstrap is 
+// via use of variables that they provide for precisely
+// this purpose. For example:
+
+$bodyBackground:  rgb(250, 250, 250)
+$textColor:       rgb(64, 64, 64)
+// $sansFontFamily:  "Montserrat"
+// $serifFontFamily: "Belgrano"
+
+body
+  // Without this (borrowed from one of the bootstrap samples) the bootstrap navbar
+  // clobbers the top of the content.
+  padding-top: 60px
+  padding-bottom: 40px
+
+  font-size: 1em
+
+  footer
+    padding-top: 20px
+
+  .shadow-title 
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5)
+
+  // Custom container
+  .container-narrow
+    margin: 0 auto
+    max-width: 700px
+
+  .jumbotron
+    font-size: 1.25em
+    line-height: 1em
+    text-align: center
+    h1
+      font-size: 3em
+    .lead
+      margin-top: 1em
+
+  section#datasets > div.btn-group.dataset-type > button.btn
+    font-size: 3em
+
+  .dataset-preview
+    
+    > h3
+      font-size: 1.5em
+
+
+// Twitter Bootstrap
+@import 'bootstrap'
+@import 'bootstrap-responsive'
+

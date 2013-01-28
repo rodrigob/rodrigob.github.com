@@ -1,0 +1,21 @@
+
+%div.row.dataset-preview
+  %div.span4
+    %ul.media-grid
+      %li
+        - # This should be a link towards the actual results table
+        - link_to dataset_url(dataset) do
+          = image_tag dataset.figure_url || "dataset_without_figure_url.jpg", |
+          :class => "thumbnail", :width=>"150px", :height=>"150px" |
+        
+  %div.span10
+    %h3= link_to dataset.name, dataset_url(dataset)
+    %p
+      Units:
+      = dataset.units || "(unknown units)"
+    %blockquote= dataset.description || "(no description)"
+    %p= dataset
+/ end of row
+%hr
+
+ 
