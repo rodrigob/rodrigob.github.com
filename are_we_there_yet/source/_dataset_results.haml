@@ -1,0 +1,22 @@
+
+%div.row.dataset-preview
+  %div.span2
+    %ul.thumbnails
+      %li
+        - # This should be a link towards the actual results table
+        - link_to dataset_url(dataset), class:"thumbnail" do
+          = image_tag dataset.figure_url || "dataset_without_figure_url.jpg", |
+          :width=>"150px", :height=>"150px" |
+        
+  %div.span7
+    %h3= link_to dataset.name, dataset_url(dataset), |
+      :class => ("external_link" if dataset.external_results_url) |
+    %p
+      Units:
+      = dataset.units || "(unknown units)"
+    %blockquote= Tilt::MarukuTemplate.new { dataset.description || "(no description)" }.render
+    -# %p= dataset
+/ end of row
+%hr
+
+ 
