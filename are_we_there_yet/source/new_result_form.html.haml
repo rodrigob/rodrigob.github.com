@@ -1,0 +1,24 @@
+---
+title: Classification datasets results
+---
+
+
+%div.jumbotron
+  %h1 What is the class of this image ?
+
+  %p.lead
+    Discover the current state of the art in objects classification.
+    
+-# end of header
+
+%div.row.datasets-list
+  %ul.span4.offset2.nav.nav-stacked.nav-pills
+    - data.datasets[:Classification].each do |dataset|
+      %li= link_to dataset.name, anchor:dataset_anchor(dataset)
+
+- data.datasets[:Classification].each do |dataset|
+  = partial "dataset_results", { :locals => {:dataset => dataset}}
+  %hr
+
+    
+   
