@@ -65,6 +65,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :site_url, "http://rodrigob.github.com/are_we_there_yet/build"
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -79,7 +81,7 @@ configure :build do
   activate :live_reload
   
   # Use relative URLs
-  activate :relative_assets
+  #activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
