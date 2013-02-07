@@ -1,49 +1,24 @@
 ---
-title: Who is the best at X ?
+title: Classification datasets results
 ---
 
 
 %div.jumbotron
-  %h1.shadow-title Are we there yet ?
+  %h1 What is the class of this image ?
 
   %p.lead
-    Did you ever want to <em>quickly</em> learn<br>
-    which paper provides the best results on standard dataset X ?<br>
-    Wait no more, just
-    %a(href="#datasets")click below
-    and discover the current state of the art.
-  
+    Discover the current state of the art in objects classification.
+    
 -# end of header
 
-%section#about
-  %div.container.span9
-    %h1.page-header About <small>where does this data come from ?</small>
-    :markdown
-      Frustated by seeing too many papers omit the best performing methods,
-      and inspired by [Hao Wooi Lim's blog](zybler.blogspot.de/2011/02/table-of-results-for-cifar-10-dataset.html),
-      here you have a crowd sourced list of known result the "major" visual classification and detection datasets.
-      
-      You are most welcome to [add new (or old) results](#).
+%div.row.datasets-list
+  %ul.span4.offset2.nav.nav-stacked.nav-pills
+    - data.datasets[:Classification].each do |dataset|
+      %li= link_to dataset.name, anchor:dataset_anchor(dataset)
 
-      Every entry on this page has been checked (once) by [me](http://rodrigob.github.com/#contact). 
-      I might have made mistakes.
-      Feel free to indicate any inacurracy in the listed data.
-    / You can also see the [not-yet curated entries](#).
+- data.datasets[:Classification].each do |dataset|
+  = partial "dataset_results", { :locals => {:dataset => dataset}}
+  %hr
 
-%section#datasets
-  %div.container.span9
-    %h1.page-header Datasets <small>who is the best at X ?</small>
-
-    :markdown
-      This list crowd sourced.
-
-    %div.btn-group.dataset-type
-      - data.datasets.each do |d|
-        %a(href="##{d.first}-dataset-type" class="btn")= d.first
-
-    - data.datasets.each do |group|
-      = partial "dataset_group", { :locals => {:dataset_group => group}}
-      
-    -# %p= data.datasets
     
    

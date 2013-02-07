@@ -1,24 +1,171 @@
 ---
-title: Classification datasets results
+title: Who is the best in dataset X ?
 ---
 
-
 %div.jumbotron
-  %h1 What is the class of this image ?
+  %link{:rel => "stylesheet", :type => "text/css"}
+    :css
+      small {font-size: 0.8em;}
+    
+  %h1 Who is the best in dataset X ?
 
   %p.lead
-    Discover the current state of the art in objects classification.
-    
+    Thanks for sharing information !<br/><small>(The content of the form will be double checked before being put online)</small>
+
 -# end of header
 
-%div.row.datasets-list
-  %ul.span4.offset2.nav.nav-stacked.nav-pills
-    - data.datasets[:Classification].each do |dataset|
-      %li= link_to dataset.name, anchor:dataset_anchor(dataset)
-
-- data.datasets[:Classification].each do |dataset|
-  = partial "dataset_results", { :locals => {:dataset => dataset}}
-  %hr
-
+-# %link{:href => "https://docs.google.com/static/spreadsheets/client/css/779923916-published_form_compiled.css", :rel => "stylesheet", :type => "text/css"}
+%link{:rel => "stylesheet", :type => "text/css"}
+  :css
+    a{color:#09c}
+    div.ss-form-container{color:#333;padding:1em;border:none;font-size:1.1em;margin:0 auto;max-width:50em;padding:0;width:auto}
+    h1.ss-form-title{background:#f9bd4a;color:#fff;font-size:2.4em;font-weight:normal;line-height:1.4;margin:0 0 .4em;padding:.4em}
+    div.ss-form-desc{background:#43ae56;color:#fff;font-size:1.4em;line-height:1.4;margin:0 0 .8em;padding:.8em;width:auto}
+    div.ss-form br{display:none}
+    .ss-required-asterisk{color:#dd184a}
+    div.errorheader{background:#dd184a;color:#fff;border:none;margin:1em 0;padding:1em}
+    div.errorbox-good{margin:0 0 1.5em}
+    div.errorbox-bad{background:#fadde4;border:2px solid #dd184a;margin:0 0 1.5em;padding:1em}
+    div.ss-form-entry{margin:0}
+    div.ss-section-header h2{border-top:2px dotted #333;font-size:1.8em;font-weight:normal;padding-top:1em}
+    %body.ss-base-body{:dir => "ltr", :itemscope => "", :itemtype => "http://schema.org/CreativeWork/FormObject"}
+    input{width:75%;}
+    textarea{width:75%;}
+    select{width:75%;}
+    label{font-size:1.1em;}
     
-   
+%meta{:content => "Who is the best in dataset X ?", :itemprop => "name"}
+%meta{:content => "Thanks for sharing information !", :itemprop => "description"}
+%meta{:content => "https://docs.google.com/spreadsheet/embeddedform?formkey=dEhBMlFpUzU2OTZHUXNoWW1aNlJvOUE6MQ", :itemprop => "embedUrl"}
+%meta{:content => "//ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png", :itemprop => "faviconUrl"}
+.ss-form-container
+
+  -#
+    .ss-form-heading
+    %h1.ss-form-title Who is the best in dataset X ?
+    %p
+    .ss-form-desc.ss-no-ignore-whitespace Thanks for sharing information !
+    
+  %hr.ss-email-break{:style => "display:none;"}
+    .ss-required-asterisk * Required
+  .ss-form
+    %form#ss-form{:action => "https://docs.google.com/spreadsheet/formResponse?formkey=dEhBMlFpUzU2OTZHUXNoWW1aNlJvOUE6MQ&theme=0AX42CRMsmRFbUy1lZDQ5MzdmZC03OTA5LTQyNTEtOTAyNS1lYjJiMThlYmVlZjM&ifq", :method => "POST"}
+      %br
+      .errorbox-good
+        .ss-item.ss-item-required.ss-text
+        .ss-form-entry
+          %label.ss-q-title{:for => "entry_1"}
+            Name of the paper
+            %span.ss-required-asterisk *
+          %label.ss-q-help{:for => "entry_1"} Please indicate the full name of the paper, as published
+          %input#entry_1.ss-q-short{:name => "entry.1.single", :type => "text", :value => ""}/
+      %br
+      .errorbox-good
+        .ss-item.ss-item-required.ss-select
+          .ss-form-entry
+            %label.ss-q-title{:for => "entry_0"}
+              Which dataset ?
+              %span.ss-required-asterisk *
+            %label.ss-q-help{:for => "entry_0"} Please indicate from which dataset you would like to provide a missing result
+            %select#entry_0{:name => "entry.0.single"}
+              - data.datasets.each do |group_name, group|  
+                - group.each do |dataset|  
+                  %option{:value => "#{dataset.name}"}
+                    #{dataset.name} 
+                    -if dataset.evaluation_units
+                      (#{dataset.evaluation_units})
+                -# %optgroup{label:"-------"}
+      %br
+      .errorbox-good
+        .ss-item.ss-item-required.ss-text
+          .ss-form-entry
+            %label.ss-q-title{:for => "entry_5"}
+              Obtained result
+              %span.ss-required-asterisk *
+            %label.ss-q-help{:for => "entry_5"}
+              Please put the numbers with the units indicated in the dataset name
+            %label.ss-q-help{:for => "entry_5"}
+              (e.g. precision% -> 80%, mAP -> 0.5 mAP)
+            %input#entry_5.ss-q-short{:name => "entry.5.single", :type => "text", :value => ""}/
+      %br
+      .errorbox-good
+        .ss-item.ss-item-required.ss-text
+          .ss-form-entry
+            %label.ss-q-title{:for => "entry_2"}
+              Year of publication
+              %span.ss-required-asterisk *
+            %label.ss-q-help{:for => "entry_2"} Either when published or when appeared online
+            %input#entry_2.ss-q-short{:name => "entry.2.single", :type => "text", :value => ""}/
+      %br
+      .errorbox-good
+        .ss-item.ss-text
+          .ss-form-entry
+            %label.ss-q-title{:for => "entry_6"}
+              Publication venue
+            %label.ss-q-help{:for => "entry_6"} Please indicate the conference/journal acronym (i.e. CVPR, ICCV, PAMI, IJCV, etc.)
+            %input#entry_6.ss-q-short{:name => "entry.6.single", :type => "text", :value => ""}/
+      %br
+      .errorbox-good
+        .ss-item.ss-item-required.ss-text
+          .ss-form-entry
+            %label.ss-q-title{:for => "entry_4"}
+              URL of paper's file
+            %span.ss-required-asterisk *
+            %label.ss-q-help{:for => "entry_4"} Please link to an available PDF file, to the project page, or to the publisher online page
+            %input#entry_4.ss-q-short{:name => "entry.4.single", :type => "text", :value => ""}/
+      %br
+      .errorbox-good
+        .ss-item.ss-paragraph-text
+          .ss-form-entry
+            %label.ss-q-title{:for => "entry_3"}
+              Additional information
+            %label.ss-q-help{:for => "entry_3"} Add here any detail, comment, short description you may want people to know about
+            %textarea#entry_3.ss-q-long{:cols => "75", :name => "entry.3.single", :rows => "8"}
+      %br
+        %input{:name => "pageNumber", :type => "hidden", :value => "0"}/
+        %input{:name => "backupCache", :type => "hidden", :value => ""}/
+        .ss-item.ss-navigate
+          .ss-form-entry
+            %input{:name => "submit", :type => "submit", :value => "Submit", :class=>"btn btn-large"}/
+
+
+  .ss-footer
+    .ss-attribution
+    .ss-legal
+      %span.ss-powered-by
+        Powered by
+        %a{:href => "http://docs.google.com"} Google Docs
+      %span.ss-terms
+        %small
+          %a{:href => "https://docs.google.com/spreadsheet/reportabuse?formkey=dEhBMlFpUzU2OTZHUXNoWW1aNlJvOUE6MQ&source=https://docs.google.com/spreadsheet/viewform?formkey%3DdEhBMlFpUzU2OTZHUXNoWW1aNlJvOUE6MQ"} Report Abuse
+          \-
+          %a{:href => "http://www.google.com/accounts/TOS"} Terms of Service
+          \-
+          %a{:href => "http://www.google.com/google-d-s/terms.html"} Additional Terms
+
+
+:javascript
+  (function() {
+  var divs = document.getElementById('ss-form').
+  getElementsByTagName('div');
+  var numDivs = divs.length;
+  for (var j = 0; j < numDivs; j++) {
+  if (divs[j].className == 'errorbox-bad') {
+  divs[j].lastChild.firstChild.lastChild.focus();
+  return;
+  }
+  }
+  for (var i = 0; i < numDivs; i++) {
+  var div = divs[i];
+  if (div.className == 'ss-form-entry' &&
+  div.firstChild &&
+  div.firstChild.className == 'ss-q-title') {
+  div.lastChild.focus();
+  return;
+  }
+  }
+  })();
+
+
+
+

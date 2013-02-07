@@ -22,15 +22,17 @@ body
   font-size: 1em
 
   footer
+    text-align: center 
     padding-top: 20px
 
   .shadow-title 
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5)
 
   // Custom container
-  .container-narrow
-    margin: 0 auto
-    max-width: 700px
+  .main-container
+    margin-left: auto
+    margin-right: auto
+    width: 80%
 
   .jumbotron
     font-size: 1.25em
@@ -49,7 +51,26 @@ body
     > h3
       font-size: 1.5em
 
+  a.pdf_link
+    background: url( image_path("pdf_link_icon.png") ) center right no-repeat
+    display: inline-block
+    padding-right: 22px
 
+  a.external_link
+    background: url( image_path("external_link_icon.png") ) center right no-repeat
+    display: inline-block
+    padding-right: 22px
+
+  div.datasets-list
+    font-size: 1.5em
+
+  div.dataset-results
+    font-size: 1.2em
+    padding-bottom: 5em
+	
+  table
+    padding-bottom: 1em
+	
 // Twitter Bootstrap
 @import 'bootstrap'
 @import 'bootstrap-responsive'

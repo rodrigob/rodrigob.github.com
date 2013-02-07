@@ -1,18 +1,16 @@
 ---
-- :dataset_name: COIL-100 (precision)
+- :dataset_name: COIL-100
   :paper_name: Deep Learning from Temporal Coherence in Video
   :paper_year: '2009'
   :paper_venue: ICML
   :result: 92.5%
   :paper_pdf_url: http://www.cs.illinois.edu/homes/hmobahi2/pubs/embedvideo.pdf
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: ! 'Multi-column Deep Neural Networks for Image Classiﬁcation '
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 0.23%
   :paper_pdf_url: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition
   :paper_year: '2010'
@@ -36,7 +34,6 @@
   :paper_venue: Document Analysis and Recognition
   :result: 0.4%
   :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=D1C7D701BD39935473808DA5A93426C5?doi=10.1.1.160.8494&rep=rep1&type=pdf
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: What is the Best Multi-Stage Architecture for Object Recognition?
   :paper_year: '2009'
@@ -104,55 +101,96 @@
   :paper_venue: CVPR
   :result: 0.64%
   :paper_pdf_url: http://www.icsi.berkeley.edu/pubs/vision/beyondspatial12.pdf
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: Convolutional Deep Belief Networks for Scalable Unsupervised Learning
     of Hierarchical Representations
   :paper_year: '2009'
   :paper_venue: ICML
   :result: 0.82%
-  :paper_pdf_url: ''
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: Large-Margin kNN Classification using a Deep Encoder Network
   :paper_year: '2009'
-  :paper_venue: ''
   :result: 0.94%
-  :paper_pdf_url: ''
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: Deep Boltzmann Machines
   :paper_year: '2009'
   :paper_venue: AISTATS
   :result: 0.95%
   :paper_pdf_url: http://www.utstat.toronto.edu/~rsalakhu/papers/dbm.pdf
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: ! 'CS81: Learning words with Deep Belief Networks'
   :paper_year: '2008'
-  :paper_venue: ''
   :result: 1.12%
-  :paper_pdf_url: ''
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: ! 'Convolutional Neural Networks '
   :paper_year: '2003'
-  :paper_venue: ''
   :result: 1.19%
-  :paper_pdf_url: ''
   :additional_information: ! 'More info: The ConvNN is based on the paper "Best Practices
     for Convolutional Neural Networks Applied to Visual Document Analysis".'
 - :dataset_name: MNIST
   :paper_name: ! 'Reducing the dimensionality of data with neural networks '
   :paper_year: '2006'
-  :paper_venue: ''
   :result: 1.2%
-  :paper_pdf_url: ''
-  :additional_information: ''
 - :dataset_name: MNIST
   :paper_name: Deep learning via semi-supervised embedding
   :paper_year: '2008'
-  :paper_venue: ''
   :result: 1.5%
-  :paper_pdf_url: ''
-  :additional_information: ''
+- :dataset_name: STL-10
+  :paper_name: Discriminative Learning of Sum-Product Networks
+  :paper_year: '2012'
+  :paper_venue: NIPS
+  :result: 62.3% (± 1%)
+  :paper_pdf_url: http://homes.cs.washington.edu/~rcg/papers/dspn.pdf
+- :dataset_name: STL-10
+  :paper_name: ! 'Selecting Receptive Fields in Deep Networks '
+  :paper_year: '2011'
+  :paper_venue: NIPS
+  :result: 60.1% (± 1%)
+  :paper_pdf_url: http://www.stanford.edu/~acoates/papers/coatesng_nips_2011.pdf
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Object Detection with Discriminatively Trained Part Based Models
+  :paper_year: '2010'
+  :paper_venue: PAMI
+  :result: 35.4 mAP
+  :paper_pdf_url: http://people.cs.uchicago.edu/~rbg/latent/
+  :additional_information: 2012 results using [voc-release5](http://people.cs.uchicago.edu/~rbg/latent/)
+    (instead of release3 from 2010), with context. Obtains 33.7 mAP without context.
+- :dataset_name: Pascal VOC 2011/2012 comp3
+  :paper_name: ! 'Object Detection with Discriminatively Trained Part Based Models '
+  :paper_year: '2010'
+  :paper_venue: PAMI
+  :result: 33.4 mAP
+  :paper_pdf_url: http://people.cs.uchicago.edu/~rbg/latent/
+  :additional_information: 2012 results [voc-release5](http://people.cs.uchicago.edu/~rbg/latent/),
+    with context and extra octave. Obtains 29.6 mAP without context (or extra octave).
+- :dataset_name: Pascal VOC 2011/2012 comp3
+  :paper_name: Hybrid Coding for Selective Search (UVA submission)
+  :paper_year: '2012'
+  :paper_venue: PASCAL VOC
+  :result: 40.86 mAP
+  :paper_pdf_url: http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/results/index.html#KEY_UVA_HYBRID_CODING_APE
+  :additional_information: ! "Winner of comp3 2012. This unpublished work presented
+    at the PASCAL VOC 2012 workshop (at ECCV 2012). \n\nSee the [UVA_HYBRID_CODING_APE
+    method description](http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/results/index.html#KEY_UVA_HYBRID_CODING_APE)
+    or the workshop [presentation slides](http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/workshop/VOC2012-UvA-HybridCodingForSelectiveSearch.pdf)
+    for details on these results are achieved."
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Latent Hierarchical Structural Learning for Object Detection
+  :paper_year: '2010'
+  :paper_venue: CVPR
+  :result: 29.6 mAP
+  :paper_pdf_url: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Automatic discovery of meaningful object parts with latent CRFs
+  :paper_year: '2010'
+  :paper_venue: CVPR
+  :result: 28.7 mAP
+  :paper_pdf_url: http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/cvpr10schnitzspan.pdf
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Object Detection with Discriminatively Trained Part Based Models
+  :paper_year: '2010'
+  :paper_venue: PAMI
+  :result: 29.0 mAP
+  :paper_pdf_url: http://people.cs.uchicago.edu/~rbg/latent/
+  :additional_information: Original PAMI 2010 results, using [voc-release3](http://people.cs.uchicago.edu/~rbg/latent/),
+    with context. Obtains 26.2 mAP without context.

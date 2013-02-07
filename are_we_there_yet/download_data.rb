@@ -41,8 +41,10 @@ def read_datasets_data worksheet
 		} if not row[0].empty?
 	end
 
-	data = data.compact # remove nil entries (from row.empty? == true)
-
+	# remove nil entries (from row.empty? == true), and empty strings
+	data = data.compact 
+	data = data.map{ |datum| datum.select {|k,v| v and not v.empty?} }
+	
 	groups = Set.new
 	data.each {|x| groups.add x[:group] }
 	grouped_datasets = {}
@@ -72,7 +74,11 @@ def read_curated_data worksheet
 		} if not row[0].empty?
 	end
 
-	data.compact # remove nil entries (from row.empty? == true)
+	# remove nil entries (from row.empty? == true), and empty strings
+	data = data.compact 
+	data = data.map{ |datum| datum.select {|k,v| v and not v.empty?} }
+	
+	data
 end # end of read_curated_data
 
 
@@ -88,7 +94,7 @@ end # end of save_data
 datasets_data = read_datasets_data datasets_worksheet
 curated_data = read_curated_data data_worksheet
 
-save_data datasets_data, "data/dataset.yml"
+save_data datasets_data, "data/datasets.yml"
 save_data curated_data, "data/curated_data.yml"
 
 puts "End of game. Have a nice day !"

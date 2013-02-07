@@ -1,10 +1,11 @@
 
-%section.dataset-group(id="dataset-type-#{dataset_group.first}")
-  %div.container.span12
+%div.dataset-group
+  %div.container.span12(id="#{dataset_group.first}-dataset-type")
 
     %h2= dataset_group.first
-    %p= dataset_group
+    -# %p= dataset_group
 
     - dataset_group[1].each do |dataset|
       = partial "dataset_preview", { :locals => {:dataset => dataset}}
-      
+      %hr
+       

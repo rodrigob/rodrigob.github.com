@@ -15,30 +15,35 @@ title: Who is the best at X ?
   
 -# end of header
 
-%section#about
-  %div.container.span16
+%section
+  %div.container.span9#about
     %h1.page-header About <small>where does this data come from ?</small>
     :markdown
-      This list crowd sourced. You are most welcome to [add new (or old) results](#).
+      Frustated by seeing too many papers omit the best performing methods,
+      and inspired by [Hao Wooi Lim's blog](zybler.blogspot.de/2011/02/table-of-results-for-cifar-10-dataset.html),<br/>
+      here you have a crowd sourced list of known result the "major" visual classification and detection datasets.
       
-      Every entry on this page has been checked (once) by [me](#).
-      
-      You can also see the [not-yet curated entries](#).
+      You are most welcome to #{link_to "add new (or old) results", "new_result_form.html"}.
 
-%section#datasets
-  %div.container.span16
+      Every entry on this page has been checked (once) by [me](http://rodrigob.github.com/#contact). 
+      I might have made mistakes.<br/>
+      Feel free to indicate any inacurracy in the listed data.
+    / You can also see the [not-yet curated entries](#).
+
+%section
+  %div.container.span9#datasets
     %h1.page-header Datasets <small>who is the best at X ?</small>
-
-    :markdown
-      This list crowd sourced.
+      
 
     %div.btn-group.dataset-type
       - data.datasets.each do |d|
-        %a(href="#dataset-type-#{d.first}" class="btn")= d.first
+        %a(href="##{d.first}-dataset-type" class="btn")= d.first
+
+    %p
 
     - data.datasets.each do |group|
       = partial "dataset_group", { :locals => {:dataset_group => group}}
       
-    %p= data.datasets
+    -# %p= data.datasets
     
    

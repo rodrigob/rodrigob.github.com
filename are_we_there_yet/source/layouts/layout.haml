@@ -16,26 +16,34 @@
 
   = stylesheet_link_tag "screen"
 
-%body
-  %div.container-narrow
-
+%body(data-spy="scroll" data-target="#the-top-navbar")
+  %div.container.main-container    
     %div.masthead
-      %ul.nav.nav-pills.pull-right
-        %li.active
-          %a{ "href" =>"#about" } About
-        %li
-          %a{ "href" => "#datasets"} Datasets
-        %li
-          %a{ "href" => "http://rodrigob.github.com/#contact" } Contact
+      -# %div.navbar.navbar-fixed-top
+      -# %div.navbar
+      %div#the-top-navbar
+        -# %div.navbar-inner
+        %div
+          %ul.nav.nav-pills.pull-right
+            %li
+              = link_to "About", "index.html", anchor:"about"
+            %li
+              = link_to "Datasets", "index.html", anchor:"datasets"
+            %li
+              = link_to "Contact", "http://rodrigob.github.com", anchor:"Contact"
 		  
-      %h3.muted= data.page.title || @title || "Rodrigo Benenson github page"
+          %h3.muted= data.page.title || @title || "Rodrigo Benenson github page"
 
     %hr
-      
-    = yield
 
-    %footer
-      %p &copy; #{copyright_years(2011)} Rodrigo Benenson
+    = yield
+    
+    %div.row
+      %footer.span12
+        :markdown
+          &copy; #{copyright_years(2013)} Rodrigo Benenson.
+          
+          Built using [middleman](http://middlemanapp.com) and [bootstrap](http://twitter.github.com/bootstrap).
       
   = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
   :javascript
@@ -43,6 +51,8 @@
 
   = javascript_include_tag "plugins", "script"
   = javascript_include_tag "bootstrap.js"
+  = javascript_include_tag "bootstrap-scrollspy.js"
+  
   -# = javascript_include_tag "highlight.pack"
   -# = stylesheet_link_tag "solarized_light"
   -# %script hljs.initHighlightingOnLoad();

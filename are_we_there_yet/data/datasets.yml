@@ -4,71 +4,87 @@ Classification:
   :name: MNIST
   :evaluation_units: error %
   :description: ! "[Classify handwriten digits](http://yann.lecun.com/exdb/mnist/).
-    \nSome additional results are available on the [original dataset page](http://yann.lecun.com/exdb/mnist/)"
-  :figure_url: figures/mnist.png
-  :external_results_url: ''
+    \nSome additional results are available on the [original dataset page](http://yann.lecun.com/exdb/mnist/)."
+  :figure_url: mnist.png
 - :group: Classification
   :name: CIFAR-10
   :evaluation_units: precision %
-  :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html)
-  :figure_url: figures/cifar_10.png
-  :external_results_url: ''
+  :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html).
+  :figure_url: cifar_10.png
 - :group: Classification
   :name: CIFAR-100
   :evaluation_units: precision %
-  :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html)
-  :figure_url: figures/cifar_10.png
-  :external_results_url: ''
+  :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html).
+  :figure_url: cifar_100.png
+- :group: Classification
+  :name: STL-10
+  :description: Similar to CIFAR-10 but with 96x96 images. [Original dataset website](http://www.stanford.edu/~acoates/stl10/).
+  :figure_url: stl_10.png
+- :group: Classification
+  :name: ILSVRC2012 task 1
+  :evaluation_units: Error (5 guesses)
+  :description: ! '1000 categories [classification challenge](http://www.image-net.org/challenges/LSVRC/2012/index).
+    With tens of thousands of training, validation and testing images.
+
+
+    See this interesting [comparative analysis](http://www.image-net.org/challenges/LSVRC/2012/analysis/).'
+  :figure_url: ! 'ilsvrc2012_task1.png
+
+'
+  :external_results_url: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
 Detection:
 - :group: Detection
   :name: Pascal VOC 2007 comp3
   :evaluation_units: mAP
-  :description: ''
-  :figure_url: ''
-  :external_results_url: ''
+  :description: Pascal VOC 2007 is commonly used because the test set has been realased.
+    comp3 is the objects detection competition.
 - :group: Detection
   :name: Pascal VOC 2011/2012 comp3
   :evaluation_units: mAP
-  :description: ''
-  :figure_url: ''
-  :external_results_url: ''
+  :description: Last Pascal VOC challenge instance.
 - :group: Detection
   :name: Caltech Pedestrians USA
   :evaluation_units: average miss-rate %
-  :description: ! '[Project website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/)'
+  :description: ! '[Project website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).'
   :figure_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
   :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/USA-test-reasonable.pdf
 - :group: Detection
   :name: INRIA Persons
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
-    [Original dataset website](http://pascal.inrialpes.fr/data/human/)'
-  :figure_url: ''
+    [Original dataset website](http://pascal.inrialpes.fr/data/human/).'
   :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-INRIA-test.pdf
 - :group: Detection
   :name: ! 'ETH Pedestrian '
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
     Only left images used.
 
-    [Original dataset website](http://www.vision.ee.ethz.ch/~aess/dataset/)'
-  :figure_url: http://www.vision.ee.ethz.ch/~bleibe/papers/images/picture-iccv07b.png
+    [Original dataset website](http://www.vision.ee.ethz.ch/~aess/dataset/).'
+  :figure_url: eth_pedestrian.png
   :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-ETH-reasonable.pdf
 - :group: Detection
   :name: TUD-Brussels Pedestrian
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
-    [Original dataset website](http://www.d2.mpi-inf.mpg.de/tud-brussels)'
+    [Original dataset website](http://www.d2.mpi-inf.mpg.de/tud-brussels).'
   :figure_url: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
   :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-TudBrussels-reasonable.pdf
 - :group: Detection
   :name: Daimler Pedestrian
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit]](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
-    [Original dataset website](http://www.science.uva.nl/research/isla/downloads/pedestrians/)'
+    [Original dataset website](http://www.science.uva.nl/research/isla/downloads/pedestrians/).'
   :figure_url: http://www.science.uva.nl/research/isla/downloads/pedestrians/assets/images/ped_det_benchmark.jpg
   :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-Daimler-reasonable.pdf
+- :group: Detection
+  :name: KITTI Vision Benchmark
+  :evaluation_units: average recall %
+  :description: A rich dataset to evaluate multiple computer vision tasks, including
+    cars, pedestrian and bycicles detection.
+  :figure_url: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
+  :external_results_url: http://www.cvlibs.net/datasets/kitti/eval_object.php

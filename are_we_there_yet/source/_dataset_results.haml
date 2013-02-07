@@ -1,22 +1,44 @@
 
-%div.row.dataset-preview
-  %div.span2
-    %ul.thumbnails
-      %li
-        - # This should be a link towards the actual results table
-        - link_to dataset_url(dataset), class:"thumbnail" do
-          = image_tag dataset.figure_url || "dataset_without_figure_url.jpg", |
-          :width=>"150px", :height=>"150px" |
+%section
+  %div.dataset-results.container.span9(id="#{dataset_anchor(dataset)}" name="#{dataset_anchor(dataset)}")
+    %h1.page-header #{dataset.name}<br/><small>who is the best in #{dataset.name} ?</small>
+
+    = partial "dataset_preview", { :locals => {:dataset => dataset}}
+
+    -if dataset_results(dataset.name).empty? == false
+      %table.table.table-striped
+        %thead
+          %tr
+            %th
+              Result
+              -#
+                -if dataset.evaluation_units
+                  (#{dataset.evaluation_units})
+            %th Method
+            %th Venue
+        %tbody
+          - dataset_results(dataset.name).each do |method|
+            %tr
+              %td=method.result
+              
+              - if method.paper_pdf_url then
+                %td= link_to method.paper_name, method.paper_pdf_url, class:"pdf_link"
+              - else
+                %td=method.paper_name
+
+              %td #{method.paper_venue} #{method.paper_year}
+              
+      :markdown
+        <small>Something is off, something is missing ? Feel free to #{link_to "fill in the form", "new_result_form.html"}.</small>
         
-  %div.span7
-    %h3= link_to dataset.name, dataset_url(dataset), |
-      :class => ("external_link" if dataset.external_results_url) |
-    %p
-      Units:
-      = dataset.units || "(unknown units)"
-    %blockquote= Tilt::MarukuTemplate.new { dataset.description || "(no description)" }.render
-    -# %p= dataset
-/ end of row
-%hr
+    -elsif dataset.external_results_url
+      :markdown
+        Results are collected in the following #{link_to "external webpage", dataset_url(dataset), :class => "external_link" }
+        
+    -else
+      :markdown
+        No results have been collected (yet) for this dataset. Feel free to #{link_to "contribute some results", "new_result_form.html"}.
+      
+/ end of dataset section
 
  
