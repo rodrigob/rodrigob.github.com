@@ -65,7 +65,6 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-set :site_url, "http://rodrigob.github.com/are_we_there_yet/build"
 
 # Build-specific configuration
 configure :build do
@@ -92,5 +91,5 @@ configure :build do
   # set :http_path, "/Content/images/"
 
   # website deployed at http://rodrigob.github.com/are_we_there_yet/build/
-  set :http_prefix, "are_we_there_yet/build/"
+  set :http_prefix, "/are_we_there_yet/build/"
 end
