@@ -16,8 +16,9 @@
                   (#{dataset.evaluation_units})
             %th Method
             %th Venue
+            %th Details
         %tbody
-          - dataset_results(dataset.name).each do |method|
+          - dataset_results(dataset.name).each_with_index do |method, method_index|
             %tr
               %td=method.result
               
@@ -27,7 +28,26 @@
                 %td=method.paper_name
 
               %td #{method.paper_venue} #{method.paper_year}
-              
+
+              %td
+                -if method.additional_information
+                  %a{"class" => "btn",
+                     "rel" => "popover",
+                     "data" => { "original-title" => "Additional information",
+                         "placement" => "left",
+                         "toggle" => "popover",
+                         "trigger" => "hover",
+                         "html" => "true",
+                         "content_id" => "\##{dataset_anchor(dataset)}-method-#{method_index}",
+                        },
+                     }
+                    Details
+
+                  %div{"style"=>"display:none",
+                       "id"=> "#{dataset_anchor(dataset)}-method-#{method_index}",
+                       }
+                    = Tilt::MarukuTemplate.new { method.additional_information || "(no additional information)" }.render
+                  
       :markdown
         <small>Something is off, something is missing ? Feel free to #{link_to "fill in the form", "new_result_form.html"}.</small>
         
@@ -40,5 +60,3 @@
         No results have been collected (yet) for this dataset. Feel free to #{link_to "contribute some results", "new_result_form.html"}.
       
 / end of dataset section
-
- 

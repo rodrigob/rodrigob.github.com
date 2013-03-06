@@ -10,10 +10,14 @@ end
 
 session = GoogleDrive.login( ENV['google_mail'], ENV['google_password'])
 
+if not session then
+  raise "Failed to open GoogleDrive session"
+end
+
 spreadsheet_key = "0AqLzqcYZJN2cdEhBMlFpUzU2OTZHUXNoWW1aNlJvOUE"
 spreadsheet = session.spreadsheet_by_key(spreadsheet_key)
 data_worksheet = spreadsheet.worksheets[1]
-datasets_worksheet = spreadsheet.worksheets[3]
+datasets_worksheet = spreadsheet.worksheets[2]
 
 if data_worksheet.title != "Curated data" then
 	raise "Got the wrong data worksheet (named #{data_worksheet.title})" 

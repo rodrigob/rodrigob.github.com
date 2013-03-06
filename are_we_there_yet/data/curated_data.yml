@@ -17,16 +17,15 @@
   :paper_venue: Neural Computation
   :result: 0.35%
   :paper_pdf_url: http://arxiv.org/pdf/1003.0358v1
-  :additional_information: ! 'Additional info: 6-layer NN 784-2500-2000-1500-1000-500-10
-    (on GPU) [elastic distortions]'
+  :additional_information: 6-layer NN 784-2500-2000-1500-1000-500-10 (on GPU), uses
+    elastic distortions
 - :dataset_name: MNIST
   :paper_name: Efﬁcient Learning of Sparse Representations with an Energy-Based Model
   :paper_year: '2006'
   :paper_venue: NIPS
   :result: 0.39%
   :paper_pdf_url: http://books.nips.cc/papers/files/nips19/NIPS2006_0804.pdf
-  :additional_information: ! 'Additional info: large conv. net, unsup pretraining
-    [elastic distortions]'
+  :additional_information: Large conv. net, unsup pretraining, uses elastic distortions
 - :dataset_name: MNIST
   :paper_name: Best Practices for Convolutional Neural Networks Applied to Visual
     Document Analysis
@@ -40,16 +39,15 @@
   :paper_venue: ICCV
   :result: 0.53%
   :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf
-  :additional_information: ! 'Additional info: large conv. net, unsup pretraining
-    [no distortions]'
+  :additional_information: Large conv. net, unsup pretraining, no distortions
 - :dataset_name: MNIST
   :paper_name: Deformation Models for Image Recognition
   :paper_year: '2007'
   :paper_venue: PAMI
   :result: 0.54%
   :paper_pdf_url: http://www.keysers.net/daniel/files/Keysers--Deformation-Models--TPAMI2007.pdf
-  :additional_information: ! 'Additional info: K-NN with non-linear deformation (IDM)
-    (Preprocessing: shiftable edges)'
+  :additional_information: ! 'K-NN with non-linear deformation (IDM) (Preprocessing:
+    shiftable edges)'
 - :dataset_name: MNIST
   :paper_name: A trainable feature extractor for handwritten digit recognition
   :paper_year: '2007'
@@ -58,16 +56,15 @@
     Pattern Recognition'
   :result: 0.54%
   :paper_pdf_url: http://hal.inria.fr/docs/00/05/75/61/PDF/LauerSuenBlochPR.pdf
-  :additional_information: ! 'Additional info: Trainable feature extractor + SVMs
-    [affine distortions]'
+  :additional_information: Trainable feature extractor + SVMs, uses affine distortions
 - :dataset_name: MNIST
   :paper_name: Training Invariant Support Vector Machines
   :paper_year: '2002'
   :paper_venue: Machine Learning
   :result: 0.56%
   :paper_pdf_url: http://citeseerx.ist.psu.edu/icons/pdf.gif
-  :additional_information: ! 'Additional info: Virtual SVM, deg-9 poly, 2-pixel jittered
-    (Preprocessing: deskewing)'
+  :additional_information: ! 'Virtual SVM, deg-9 poly, 2-pixel jittered (Preprocessing:
+    deskewing)'
 - :dataset_name: MNIST
   :paper_name: Simple Methods for High-Performance Digit Recognition Based on Sparse
     Coding
@@ -75,8 +72,7 @@
   :paper_venue: TNN
   :result: 0.59%
   :paper_pdf_url: http://www.inb.uni-luebeck.de/publikationen/pdfs/LaBaMa08c.pdf
-  :additional_information: ! 'Additional info: unsupervised sparse features + SVM,
-    [no distortions]'
+  :additional_information: Unsupervised sparse features + SVM, no distortions
 - :dataset_name: MNIST
   :paper_name: Unsupervised learning of invariant feature hierarchies with applications
     to object recognition
@@ -84,16 +80,15 @@
   :paper_venue: CVPR
   :result: 0.62%
   :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/ranzato-cvpr-07.pdf
-  :additional_information: ! 'Additional info: large conv. net, unsup features [no
-    distortions]'
+  :additional_information: Large conv. net, unsup features, no distortions
 - :dataset_name: MNIST
   :paper_name: Shape matching and object recognition using shape contexts
   :paper_year: '2002'
   :paper_venue: PAMI
   :result: 0.63%
   :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=B2AAC2BC3824F19757CAC66986D5F3FF?doi=10.1.1.18.8852&rep=rep1&type=pdf
-  :additional_information: ! 'Additional info: K-NN, shape context matching (preprocessing:
-    shape context feature extraction)'
+  :additional_information: ! 'K-NN, shape context matching (preprocessing: shape context
+    feature extraction)'
 - :dataset_name: MNIST
   :paper_name: ! 'Beyond Spatial Pyramids: Receptive Field Learning for Pooled Image
     Features'
@@ -125,8 +120,8 @@
   :paper_name: ! 'Convolutional Neural Networks '
   :paper_year: '2003'
   :result: 1.19%
-  :additional_information: ! 'More info: The ConvNN is based on the paper "Best Practices
-    for Convolutional Neural Networks Applied to Visual Document Analysis".'
+  :additional_information: The ConvNN is based on the paper "Best Practices for Convolutional
+    Neural Networks Applied to Visual Document Analysis".
 - :dataset_name: MNIST
   :paper_name: ! 'Reducing the dimensionality of data with neural networks '
   :paper_year: '2006'
