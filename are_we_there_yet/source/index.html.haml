@@ -37,7 +37,7 @@ title: Who is the best at X ?
 
     %div.btn-group.dataset-type
       - data.datasets.each do |d|
-        %a(href="##{d.first}-dataset-type" class="btn")= d.first
+        %a(href="##{normalized_group_name d.first}-dataset-type" class="btn")= d.first
 
     %p
 

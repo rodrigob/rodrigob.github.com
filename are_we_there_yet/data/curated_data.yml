@@ -189,3 +189,18 @@
   :paper_pdf_url: http://people.cs.uchicago.edu/~rbg/latent/
   :additional_information: Original PAMI 2010 results, using [voc-release3](http://people.cs.uchicago.edu/~rbg/latent/),
     with context. Obtains 26.2 mAP without context.
+- :dataset_name: STL-10
+  :paper_name: ! 'Pooling-Invariant Image Feature Learning '
+  :paper_year: '2012'
+  :paper_venue: arXiv
+  :result: 58.28%
+  :paper_pdf_url: http://arxiv.org/pdf/1302.5056v1.pdf
+  :additional_information: 1600 codes, learnt using 2x PDL
+- :dataset_name: STL-10
+  :paper_name: Deep Learning of Invariant Features via Simulated Fixations in Video
+  :paper_year: '2012'
+  :paper_venue: NIPS
+  :result: 56.5%
+  :paper_pdf_url: http://ai.stanford.edu/~wzou/nips_ZouZhuNgYu12.pdf
+  :additional_information: Trained also with video (unrelated to STL-10) obtained
+    61%

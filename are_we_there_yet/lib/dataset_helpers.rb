@@ -14,7 +14,7 @@ module DatasetHelpers
 			group = dataset.group || "no_group"
 			
 			dataset.external_results_url \
-			|| "#{group.downcase}_datasets_results.html##{dataset_anchor dataset}" \
+			|| "#{normalized_group_name group}_datasets_results.html##{dataset_anchor dataset}" \
 			|| "#"
 		else
 		"#"
@@ -25,5 +25,9 @@ module DatasetHelpers
 		results = data.curated_data.select {|d| d.dataset_name == dataset_name }
 		results = results.sort { |a, b| a[:result] <=> b[:result] }
 		results
+	end
+
+	def normalized_group_name dataset_group
+		dataset_group.downcase.gsub(" ", "_")
 	end
 end

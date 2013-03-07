@@ -18,6 +18,7 @@ Classification:
   :figure_url: cifar_100.png
 - :group: Classification
   :name: STL-10
+  :evaluation_units: precision %
   :description: Similar to CIFAR-10 but with 96x96 images. [Original dataset website](http://www.stanford.edu/~acoates/stl10/).
   :figure_url: stl_10.png
 - :group: Classification
@@ -88,3 +89,8 @@ Detection:
     cars, pedestrian and bycicles detection.
   :figure_url: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
   :external_results_url: http://www.cvlibs.net/datasets/kitti/eval_object.php
+Pose estimation:
+- :group: Pose estimation
+  :name: Test Pose estimation dataset
+  :evaluation_units: PCP
+  :description: Just a test
