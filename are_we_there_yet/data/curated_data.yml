@@ -204,3 +204,10 @@
   :paper_pdf_url: http://ai.stanford.edu/~wzou/nips_ZouZhuNgYu12.pdf
   :additional_information: Trained also with video (unrelated to STL-10) obtained
     61%
+- :dataset_name: Leeds Sport Poses
+  :paper_name: ! 'Pictorial structures revisited: People detection and articulated
+    pose estimation'
+  :paper_year: '2009'
+  :paper_venue: CVPR
+  :result: 55.6%
+  :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/andriluka_cvpr09

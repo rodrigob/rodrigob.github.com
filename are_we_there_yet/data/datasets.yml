@@ -39,10 +39,12 @@ Detection:
   :evaluation_units: mAP
   :description: Pascal VOC 2007 is commonly used because the test set has been realased.
     comp3 is the objects detection competition.
+  :figure_url: pascal_voc_2007.png
 - :group: Detection
   :name: Pascal VOC 2011/2012 comp3
   :evaluation_units: mAP
   :description: Last Pascal VOC challenge instance.
+  :figure_url: pascal_voc_2010.png
 - :group: Detection
   :name: Caltech Pedestrians USA
   :evaluation_units: average miss-rate %
@@ -55,6 +57,7 @@ Detection:
   :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
     [Original dataset website](http://pascal.inrialpes.fr/data/human/).'
+  :figure_url: inria_persons.png
   :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-INRIA-test.pdf
 - :group: Detection
   :name: ! 'ETH Pedestrian '
@@ -91,6 +94,9 @@ Detection:
   :external_results_url: http://www.cvlibs.net/datasets/kitti/eval_object.php
 Pose estimation:
 - :group: Pose estimation
-  :name: Test Pose estimation dataset
-  :evaluation_units: PCP
-  :description: Just a test
+  :name: Leeds Sport Poses
+  :evaluation_units: PCP %
+  :description: ! '[2000 poses anotated pictures](http://www.comp.leeds.ac.uk/mat4saj/lsp.html)
+    from Flickr. From a selected set of activities and with the person at the center
+    of the pictures.'
+  :figure_url: leeds_sport_poses.jpg

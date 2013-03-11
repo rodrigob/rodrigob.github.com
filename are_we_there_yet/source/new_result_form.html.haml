@@ -71,7 +71,7 @@ title: Who is the best in dataset X ?
               - data.datasets.each do |group_name, group|  
                 - group.each do |dataset|  
                   %option{:value => "#{dataset.name}"}
-                    #{dataset.name} 
+                    [#{group_name}] #{dataset.name} 
                     -if dataset.evaluation_units
                       (#{dataset.evaluation_units})
                 -# %optgroup{label:"-------"}

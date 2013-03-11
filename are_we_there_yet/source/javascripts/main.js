@@ -15,6 +15,7 @@ $(function () {
 	   var content_id = $(this).data("content_id");
 
 	   $(this).popover( {
+		 delay: { show: 0, hide: 1000 },
 		 content:  function() {
 			// data-content has the html content #id-value
 			return $( content_id ).html();
