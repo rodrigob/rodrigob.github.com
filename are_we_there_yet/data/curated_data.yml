@@ -211,3 +211,28 @@
   :paper_venue: CVPR
   :result: 55.6%
   :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/andriluka_cvpr09
+- :dataset_name: CIFAR-100
+  :paper_name: Maxout Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 61.43%
+  :paper_pdf_url: http://arxiv.org/abs/1302.4389
+  :additional_information: Uses convolution. Does not use dataset agumentation.
+- :dataset_name: CIFAR-10
+  :paper_name: Maxout Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 87.07%
+  :paper_pdf_url: http://arxiv.org/abs/1302.4389
+  :additional_information: ! 'Uses convolution.
+
+    Does not use dataset agumentation.'
+- :dataset_name: MNIST
+  :paper_name: Maxout Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 0.45%
+  :paper_pdf_url: http://arxiv.org/abs/1302.4389
+  :additional_information: ! 'Uses convolution.
+
+    Does not use dataset augmentation.'
