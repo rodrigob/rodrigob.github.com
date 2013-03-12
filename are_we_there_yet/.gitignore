@@ -7,6 +7,10 @@
 # Ignore bundler config
 /.bundle
 
+# Ignore gems
+/gems
+
+
 # Ignore the build directory
 #/build
 

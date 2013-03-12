@@ -236,3 +236,59 @@
   :additional_information: ! 'Uses convolution.
 
     Does not use dataset augmentation.'
+- :dataset_name: CIFAR-10
+  :paper_name: ! 'Multi-Column Deep Neural Networks for Image Classification '
+  :paper_year: '2012'
+  :paper_venue: CVPR
+  :result: 88.79%
+  :paper_pdf_url: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
+  :additional_information: ! '[Supplemental material](http://www.idsia.ch/~ciresan/data/cvpr2012-supp.pdf),
+    [Technical Report](http://arxiv.org/pdf/1202.2745v1.pdf)'
+- :dataset_name: CIFAR-10
+  :paper_name: ! 'Practical Bayesian Optimization of Machine Learning Algorithms '
+  :paper_year: '2012'
+  :paper_venue: NIPS
+  :result: 85.02%
+  :paper_pdf_url: http://www.cs.toronto.edu/~jasper/bayesopt.pdf
+  :additional_information: With data augmented with horizontal reﬂections and translations,
+    90.5% accuracy on  test set is achieved.
+- :dataset_name: CIFAR-10
+  :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
+    Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 84.87%
+  :paper_pdf_url: http://arxiv.org/pdf/1301.3557.pdf
+- :dataset_name: CIFAR-10
+  :paper_name: Improving neural networks by preventing co-adaptation of feature detectors
+  :paper_year: '2012'
+  :paper_venue: arXiv
+  :result: 84.4%
+  :paper_pdf_url: http://arxiv.org/pdf/1207.0580.pdf
+  :additional_information: So called "dropout" method.
+- :dataset_name: CIFAR-10
+  :paper_name: Discriminative Learning of Sum-Product Networks
+  :paper_year: '2012'
+  :paper_venue: NIPS
+  :result: 83.96%
+  :paper_pdf_url: http://books.nips.cc/papers/files/nips25/NIPS2012_1484.pdf
+- :dataset_name: CIFAR-100
+  :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
+    Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 57.49%
+  :paper_pdf_url: http://arxiv.org/pdf/1301.3557.pdf
+- :dataset_name: CIFAR-10
+  :paper_name: Discriminative Learning of Sum-Product Networks
+  :paper_year: '2012'
+  :paper_venue: NIPS
+  :result: 83.96%
+  :paper_pdf_url: http://books.nips.cc/papers/files/nips25/NIPS2012_1484.pdf
+- :dataset_name: CIFAR-100
+  :paper_name: ! 'Beyond Spatial Pyramids: Receptive Field Learning for Pooled Image
+    Features'
+  :paper_year: '2012'
+  :paper_venue: CVPR
+  :result: 54.23%
+  :paper_pdf_url: http://www.eecs.berkeley.edu/~jiayq/papers/cvpr12pooling.pdf
