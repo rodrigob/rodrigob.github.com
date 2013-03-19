@@ -248,10 +248,13 @@
   :paper_name: ! 'Practical Bayesian Optimization of Machine Learning Algorithms '
   :paper_year: '2012'
   :paper_venue: NIPS
-  :result: 85.02%
+  :result: 90.5%
   :paper_pdf_url: http://www.cs.toronto.edu/~jasper/bayesopt.pdf
-  :additional_information: With data augmented with horizontal reﬂections and translations,
-    90.5% accuracy on  test set is achieved.
+  :additional_information: ! '85.02% without data augmentation.
+
+
+    With data augmented with horizontal reﬂections and translations, 90.5% accuracy
+    on  test set is achieved.'
 - :dataset_name: CIFAR-10
   :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
     Networks
@@ -292,3 +295,36 @@
   :paper_venue: CVPR
   :result: 54.23%
   :paper_pdf_url: http://www.eecs.berkeley.edu/~jiayq/papers/cvpr12pooling.pdf
+- :dataset_name: CIFAR-10
+  :paper_name: ImageNet Classification with Deep Convolutional Neural Networks
+  :paper_year: '2012'
+  :paper_venue: NIPS
+  :result: 89%
+  :paper_pdf_url: http://books.nips.cc/papers/files/nips25/NIPS2012_0534.pdf
+  :additional_information: 87% error on the unaugmented data.
+- :dataset_name: SVHN
+  :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
+    Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 2.8%
+  :paper_pdf_url: http://arxiv.org/pdf/1301.3557.pdf
+  :additional_information: 64-64-128 Stochastic Pooling
+- :dataset_name: SVHN
+  :paper_name: Convolutional neural networks applied to house numbers digit classiﬁcation
+  :paper_year: '2012'
+  :paper_venue: ICPR
+  :result: 4.9%
+  :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/sermanet-icpr-12.pdf
+  :additional_information: ConvNet / MS / L4 / Padded
+- :dataset_name: SVHN
+  :paper_name: Estimated human performance
+  :paper_year: '2011'
+  :paper_venue: NIPS
+  :result: 2%
+  :paper_pdf_url: http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf
+  :additional_information: ! 'Based on the paper that introduced the dataset [Reading
+    Digits in Natural Images
+
+    with Unsupervised Feature Learning](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf),
+    section 5.'
