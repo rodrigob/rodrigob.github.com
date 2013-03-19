@@ -328,3 +328,10 @@
 
     with Unsupervised Feature Learning](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf),
     section 5.'
+- :dataset_name: SVHN
+  :paper_name: Maxout Networks
+  :paper_year: '2013'
+  :paper_venue: arXiv
+  :result: 2.72%
+  :paper_pdf_url: http://arxiv.org/abs/1302.4389
+  :additional_information: Does not use image transformations.
