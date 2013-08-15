@@ -131,6 +131,6 @@ Semantic labeling:
     the annotations and how unbalanced the classes are, this dataset still is commonly
     used as reference point.\nNote that here we consider the [original annotations](http://jamie.shotton.org/work/data.html)
     (where most results are published), not the [cleaned-up version](http://www.cs.cmu.edu/~tmalisie/projects/bmvc07).
-    \n\nThe results are reported per-class and per-pixel (this is sometimes called
-    \"average\" and \"global\" result, respectivelly).\n\n[Original dataset website](http://jamie.shotton.org/work/data.html)\n"
+    \n\n\nThe results are reported per-class and per-pixel (this is sometimes called
+    \"average\" and \"global\" result, respectively).\n\n\n[Original dataset website](http://jamie.shotton.org/work/data.html)\n"
   :figure_url: msrc_21.png

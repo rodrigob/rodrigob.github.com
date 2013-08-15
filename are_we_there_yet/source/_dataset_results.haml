@@ -9,25 +9,25 @@
       %table.table.table-striped
         %thead
           %tr
-            %th
+            %th.span2.pull-right
               Result
               -#
                 -if dataset.evaluation_units
                   (#{dataset.evaluation_units})
             %th Method
-            %th Venue
+            %th.span2 Venue
             %th Details
         %tbody
           - dataset_results(dataset.name).each_with_index do |method, method_index|
             %tr
-              %td=method.result
+              %td.span2= method.result
               
               - if method.paper_pdf_url then
                 %td= link_to method.paper_name, method.paper_pdf_url, class:"pdf_link"
               - else
                 %td=method.paper_name
 
-              %td #{method.paper_venue} #{method.paper_year}
+              %td.span2 #{method.paper_venue} #{method.paper_year}
 
               %td
                 -if method.additional_information
