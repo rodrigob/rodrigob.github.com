@@ -377,3 +377,58 @@
   :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: This result was obtained using convolution but not any
     synthetic transformations of the training data.
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: ! 'Beyond Bounding-Boxes: Learning Object Shape by Model-Driven Grouping'
+  :paper_year: '2012'
+  :paper_venue: ECCV
+  :result: 43.7 mAP
+  :paper_pdf_url: http://hci.iwr.uni-heidelberg.de/Staff/bommer/papers/monroy_ommer_eccv12.pdf
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Deformable Part Models with Individual Part Scaling
+  :paper_year: '2013'
+  :paper_venue: BMVC
+  :result: 32.4 mAP
+  :paper_pdf_url: http://www.idiap.ch/~fleuret/papers/dubout-fleuret-bmvc2013.pdf
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Discriminatively Trained And-Or Tree Models for Object Detection
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 34.7 mAP
+  :paper_pdf_url: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
+  :additional_information: The number of components, parts, their shape, appearance,
+    and configuration are all learned.
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Discriminatively Trained And-Or Tree Models for Object Detection
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 29.4 mAP
+  :paper_pdf_url: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
+  :additional_information: The number of components, parts, their shape, appearance,
+    and configuration are all learned.
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Object Detection with Discriminatively Trained Part Based Models
+  :paper_year: '2010'
+  :paper_venue: PAMI
+  :result: 33.4 mAP
+  :paper_pdf_url: http://people.cs.uchicago.edu/~rbg/latent-release5/
+  :additional_information: ! 'This are the results of version 5 (September 2012) with
+    context and extra octave. Raw detection obtains 29.6 mAP.
+
+'
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Bottom-up Segmentation for Top-down Detection
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 40.4 mAP
+  :paper_pdf_url: http://ttic.uchicago.edu/~fidler/papers/fidler_et_al_cvpr13a.pdf
+  :additional_information: ! "Reaches 40.4 mAP when using full post-processing. \nReaches
+    36.6 mAP without any post-processing.\nThis method builds upon a sophisticated
+    object segmentation method (CPMC)."
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Object Detection by Context and Boosted HOG-LBP
+  :paper_year: '2010'
+  :paper_venue: ECCV
+  :result: 36.8 mAP
+  :paper_pdf_url: http://kylezheng.org/publications/
+  :additional_information: There seem to be no paper about this work, but only the
+    slides from the entry at the PASCAL VOC workshop ECCV 2010.
