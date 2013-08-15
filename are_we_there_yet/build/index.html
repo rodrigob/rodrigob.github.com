@@ -58,6 +58,7 @@
       <a class='btn' href='#classification-dataset-type'>Classification</a>
       <a class='btn' href='#detection-dataset-type'>Detection</a>
       <a class='btn' href='#pose_estimation-dataset-type'>Pose estimation</a>
+      <a class='btn' href='#semantic_labeling-dataset-type'>Semantic labeling</a>
     </div>
     <p></p>
     <div class='dataset-group'>
@@ -75,7 +76,7 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/classification_datasets_results.html#4d4e495354">MNIST</a>
-      <small>20 results collected</small>
+      <small>21 results collected</small>
     </h3>
     <p>
       Units:
@@ -144,7 +145,7 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/classification_datasets_results.html#53544c2d3130">STL-10</a>
-      <small>4 results collected</small>
+      <small>6 results collected</small>
     </h3>
     <p>
       Units:
@@ -167,7 +168,7 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/classification_datasets_results.html#5356484e">SVHN</a>
-      <small>4 results collected</small>
+      <small>5 results collected</small>
     </h3>
     <p>
       Units:
@@ -238,7 +239,29 @@
   <div class='span2'>
     <ul class='thumbnails'>
       <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f4320323031312f3230313220636f6d7033"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2010.png?1363085077" />
+        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2010.png?1363085077" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class='span7'>
+    <h3>
+      <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033">Pascal VOC 2010 comp3</a>
+    </h3>
+    <p>
+      Units:
+      mAP
+    </p>
+    <blockquote><p>Pascal VOC 2010 version of the challenge. comp3 is the objects detection competition.</p></blockquote>
+  </div>
+</div>
+<!-- end of row -->
+    <hr />
+    <div class='row dataset-preview'>
+  <div class='span2'>
+    <ul class='thumbnails'>
+      <li>
+        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f4320323031312f3230313220636f6d7033"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2012.png?1376533467" />
         </a>
       </li>
     </ul>
@@ -417,10 +440,45 @@
     <hr />
   </div>
 </div>
+    <div class='dataset-group'>
+  <div class='container span12' id='semantic_labeling-dataset-type'>
+    <h2>Semantic labeling</h2>
+    <div class='row dataset-preview'>
+  <div class='span2'>
+    <ul class='thumbnails'>
+      <li>
+        <a class="thumbnail" href="/are_we_there_yet/build/semantic_labeling_datasets_results.html#4d5352432d3231"><img width="150px" height="150px" src="/are_we_there_yet/build/images/msrc_21.png?1376533467" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class='span7'>
+    <h3>
+      <a href="/are_we_there_yet/build/semantic_labeling_datasets_results.html#4d5352432d3231">MSRC-21</a>
+    </h3>
+    <p>
+      Units:
+      precision % per-class / (and) per-pixel
+    </p>
+    <blockquote>
+      <p>One of the oldest and classic dataset for semantic labelling. 21 different categories of surfaces are considered. Despite the innacuracies in the annotations and how unbalanced the classes are, this dataset still is commonly used as reference point. Note that here we consider the <a href='http://jamie.shotton.org/work/data.html'>original annotations</a> (where most results are published), not the <a href='http://www.cs.cmu.edu/~tmalisie/projects/bmvc07'>cleaned-up version</a>.</p>
+      
+      <p>The results are reported per-class and per-pixel (this is sometimes called &#8220;average&#8221; and &#8220;global&#8221; result, respectively).</p>
+      
+      <p><a href='http://jamie.shotton.org/work/data.html'>Original dataset website</a></p>
+    </blockquote>
+  </div>
+</div>
+<!-- end of row -->
+    <hr />
+  </div>
+</div>
   </div>
 </section>
     <div class='row'>
       <footer class='span12'>
+        <p>Last updated on 2013-08-15.</p>
+        
         <p>&#169; 2013 Rodrigo Benenson.</p>
         
         <p>Built using <a href='http://middlemanapp.com'>middleman</a> and <a href='http://twitter.github.com/bootstrap'>bootstrap</a>.</p>

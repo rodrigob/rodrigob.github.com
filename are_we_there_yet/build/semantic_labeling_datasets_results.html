@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8' />
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
-  <title>Pose estimation datasets results</title>
+  <title>Semantic labeling datasets results</title>
   <meta content='' name='description' />
   <meta content='Rodrigo Benenson' name='author' />
   <meta content='width=device-width, initial-scale=1.0' name='viewport' />
@@ -25,43 +25,49 @@
               <a href="http://rodrigob.github.com/#contact">Contact</a>
             </li>
           </ul>
-          <h3 class='muted'>Pose estimation datasets results</h3>
+          <h3 class='muted'>Semantic labeling datasets results</h3>
         </div>
       </div>
     </div>
     <hr />
     <div class='jumbotron'>
-  <h1>Where are the objects parts in the image ?</h1>
+  <h1>What is the label of each pixel in the image ?</h1>
   <p class='lead'>
-    Discover the current state of the art in pose estimation.
+    Discover the current state of the art in semantic labeling.
   </p>
 </div>
 <div class='row datasets-list'>
   <ul class='span4 offset2 nav nav-stacked nav-pills'>
-    <li><a href="#4c656564732053706f727420506f736573">Leeds Sport Poses</a></li>
+    <li><a href="#4d5352432d3231">MSRC-21</a></li>
   </ul>
 </div>
 <section>
-  <div class='dataset-results container span9' id='4c656564732053706f727420506f736573' name='4c656564732053706f727420506f736573'>
-    <h1 class='page-header'>Leeds Sport Poses<br/><small>who is the best in Leeds Sport Poses ?</small></h1>
+  <div class='dataset-results container span9' id='4d5352432d3231' name='4d5352432d3231'>
+    <h1 class='page-header'>MSRC-21<br/><small>who is the best in MSRC-21 ?</small></h1>
     <div class='row dataset-preview'>
   <div class='span2'>
     <ul class='thumbnails'>
       <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/pose_estimation_datasets_results.html#4c656564732053706f727420506f736573"><img width="150px" height="150px" src="/are_we_there_yet/build/images/leeds_sport_poses.jpg?1363085077" />
+        <a class="thumbnail" href="/are_we_there_yet/build/semantic_labeling_datasets_results.html#4d5352432d3231"><img width="150px" height="150px" src="/are_we_there_yet/build/images/msrc_21.png?1376533467" />
         </a>
       </li>
     </ul>
   </div>
   <div class='span7'>
     <h3>
-      <a href="/are_we_there_yet/build/pose_estimation_datasets_results.html#4c656564732053706f727420506f736573">Leeds Sport Poses</a>
+      <a href="/are_we_there_yet/build/semantic_labeling_datasets_results.html#4d5352432d3231">MSRC-21</a>
     </h3>
     <p>
       Units:
-      PCP %
+      precision % per-class / (and) per-pixel
     </p>
-    <blockquote><p><a href='http://www.comp.leeds.ac.uk/mat4saj/lsp.html'>2000 poses anotated pictures</a> from Flickr. From a selected set of activities and with the person at the center of the pictures.</p></blockquote>
+    <blockquote>
+      <p>One of the oldest and classic dataset for semantic labelling. 21 different categories of surfaces are considered. Despite the innacuracies in the annotations and how unbalanced the classes are, this dataset still is commonly used as reference point. Note that here we consider the <a href='http://jamie.shotton.org/work/data.html'>original annotations</a> (where most results are published), not the <a href='http://www.cs.cmu.edu/~tmalisie/projects/bmvc07'>cleaned-up version</a>.</p>
+      
+      <p>The results are reported per-class and per-pixel (this is sometimes called &#8220;average&#8221; and &#8220;global&#8221; result, respectively).</p>
+      
+      <p><a href='http://jamie.shotton.org/work/data.html'>Original dataset website</a></p>
+    </blockquote>
   </div>
 </div>
 <!-- end of row -->
@@ -78,9 +84,22 @@
       </thead>
       <tbody>
         <tr>
-          <td class='span2'>55.6%</td>
-          <td><a class="pdf_link" href="http://www.d2.mpi-inf.mpg.de/andriluka_cvpr09">Pictorial structures revisited: People detection and articulated pose estimation</a></td>
-          <td class='span2'>CVPR 2009</td>
+          <td class='span2'>80% / 83%</td>
+          <td><a class="pdf_link" href="http://link.springer.com/article/10.1007%2Fs11263-011-0449-8">Harmony Potentials - Fusing Local and Global Scale for Semantic Image Segmentation</a></td>
+          <td class='span2'>IJCV 2012</td>
+          <td>
+            <a class='btn' data-content_id='#4d5352432d3231-method-0' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+              Details
+            </a>
+            <div id='4d5352432d3231-method-0' style='display:none'>
+              <p>per-class % / per-pixel %</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class='span2'>  77% / 87%</td>
+          <td><a class="pdf_link" href="http://research.microsoft.com/en-us/um/people/pkohli/papers/lrkt_eccv2010.pdf">Graph Cut based Inference with Co-occurrence Statistics</a></td>
+          <td class='span2'>ECCV 2010</td>
           <td>
           </td>
         </tr>

@@ -35,6 +35,7 @@
     <style type='text/css'>
       /*<![CDATA[*/
         small {font-size: 0.8em;}
+        .ss-q-title {font-weight: bold;}
       /*]]>*/
     </style>
   </link>
@@ -125,6 +126,10 @@
                 [Detection] Pascal VOC 2007 comp3
                 (mAP)
               </option>
+              <option value='Pascal VOC 2010 comp3'>
+                [Detection] Pascal VOC 2010 comp3
+                (mAP)
+              </option>
               <option value='Pascal VOC 2011/2012 comp3'>
                 [Detection] Pascal VOC 2011/2012 comp3
                 (mAP)
@@ -156,6 +161,10 @@
               <option value='Leeds Sport Poses'>
                 [Pose estimation] Leeds Sport Poses
                 (PCP %)
+              </option>
+              <option value='MSRC-21'>
+                [Semantic labeling] MSRC-21
+                (precision % per-class / (and) per-pixel)
               </option>
             </select>
           </div>
@@ -210,8 +219,8 @@
           <div class='ss-form-entry'>
             <label class='ss-q-title' for='entry_4'>
               URL of paper's file
+              <span class='ss-required-asterisk'>*</span>
             </label>
-            <span class='ss-required-asterisk'>*</span>
             <label class='ss-q-help' for='entry_4'>Please link to an available PDF file, to the project page, or to the publisher online page</label>
             <input class='ss-q-short' id='entry_4' name='entry.4.single' type='text' value='' />
           </div>
@@ -224,7 +233,10 @@
             <label class='ss-q-title' for='entry_3'>
               Additional information
             </label>
-            <label class='ss-q-help' for='entry_3'>Add here any detail, comment, short description you may want people to know about</label>
+            <label class='ss-q-help' for='entry_3'>
+              <p>Add here any detail, comment, short description you may want people to know about.</p>
+              <p>Feel free to add your name, nickname, or labname so I can add you in the thanks section.</p>
+            </label>
             <textarea class='ss-q-long' cols='75' id='entry_3' name='entry.3.single' rows='8'></textarea>
           </div>
         </div>
@@ -285,6 +297,8 @@
 </script>
     <div class='row'>
       <footer class='span12'>
+        <p>Last updated on 2013-08-15.</p>
+        
         <p>&#169; 2013 Rodrigo Benenson.</p>
         
         <p>Built using <a href='http://middlemanapp.com'>middleman</a> and <a href='http://twitter.github.com/bootstrap'>bootstrap</a>.</p>
