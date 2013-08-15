@@ -57,10 +57,16 @@ Detection:
     comp3 is the objects detection competition.
   :figure_url: pascal_voc_2007.png
 - :group: Detection
+  :name: Pascal VOC 2010 comp3
+  :evaluation_units: mAP
+  :description: Pascal VOC 2010 version of the challenge. comp3 is the objects detection
+    competition.
+  :figure_url: pascal_voc_2010.png
+- :group: Detection
   :name: Pascal VOC 2011/2012 comp3
   :evaluation_units: mAP
   :description: Last Pascal VOC challenge instance.
-  :figure_url: pascal_voc_2010.png
+  :figure_url: pascal_voc_2012.png
 - :group: Detection
   :name: Caltech Pedestrians USA
   :evaluation_units: average miss-rate %
@@ -116,3 +122,15 @@ Pose estimation:
     from Flickr. From a selected set of activities and with the person at the center
     of the pictures.'
   :figure_url: leeds_sport_poses.jpg
+Semantic labeling:
+- :group: Semantic labeling
+  :name: MSRC-21
+  :evaluation_units: precision % per-class / (and) per-pixel
+  :description: ! "One of the oldest and classic dataset for semantic labelling.\n21
+    different categories of surfaces are considered.\nDespite the innacuracies in
+    the annotations and how unbalanced the classes are, this dataset still is commonly
+    used as reference point.\nNote that here we consider the [original annotations](http://jamie.shotton.org/work/data.html)
+    (where most results are published), not the [cleaned-up version](http://www.cs.cmu.edu/~tmalisie/projects/bmvc07).
+    \n\nThe results are reported per-class and per-pixel (this is sometimes called
+    \"average\" and \"global\" result, respectivelly).\n\n[Original dataset website](http://jamie.shotton.org/work/data.html)\n"
+  :figure_url: msrc_21.png

@@ -1,3 +1,4 @@
+# This script should be executed calling $ bundle exec ruby download_data.rb
 
 require "bundler"
 require "psych"

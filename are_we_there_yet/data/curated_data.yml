@@ -214,25 +214,16 @@
 - :dataset_name: CIFAR-100
   :paper_name: Maxout Networks
   :paper_year: '2013'
-  :paper_venue: arXiv
+  :paper_venue: ICML
   :result: 61.43%
-  :paper_pdf_url: http://arxiv.org/abs/1302.4389
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: Uses convolution. Does not use dataset agumentation.
-- :dataset_name: CIFAR-10
-  :paper_name: Maxout Networks
-  :paper_year: '2013'
-  :paper_venue: arXiv
-  :result: 87.07%
-  :paper_pdf_url: http://arxiv.org/abs/1302.4389
-  :additional_information: ! 'Uses convolution.
-
-    Does not use dataset agumentation.'
 - :dataset_name: MNIST
   :paper_name: Maxout Networks
   :paper_year: '2013'
-  :paper_venue: arXiv
+  :paper_venue: ICML
   :result: 0.45%
-  :paper_pdf_url: http://arxiv.org/abs/1302.4389
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: ! 'Uses convolution.
 
     Does not use dataset augmentation.'
@@ -250,7 +241,7 @@
   :paper_venue: NIPS
   :result: 90.5%
   :paper_pdf_url: http://www.cs.toronto.edu/~jasper/bayesopt.pdf
-  :additional_information: ! '85.02% without data augmentation.
+  :additional_information: ! 'Reaches 85.02% without data augmentation.
 
 
     With data augmented with horizontal reﬂections and translations, 90.5% accuracy
@@ -269,12 +260,6 @@
   :result: 84.4%
   :paper_pdf_url: http://arxiv.org/pdf/1207.0580.pdf
   :additional_information: So called "dropout" method.
-- :dataset_name: CIFAR-10
-  :paper_name: Discriminative Learning of Sum-Product Networks
-  :paper_year: '2012'
-  :paper_venue: NIPS
-  :result: 83.96%
-  :paper_pdf_url: http://books.nips.cc/papers/files/nips25/NIPS2012_1484.pdf
 - :dataset_name: CIFAR-100
   :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
     Networks
@@ -328,10 +313,67 @@
 
     with Unsupervised Feature Learning](http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf),
     section 5.'
+- :dataset_name: MSRC-21
+  :paper_name: Harmony Potentials - Fusing Local and Global Scale for Semantic Image
+    Segmentation
+  :paper_year: '2012'
+  :paper_venue: IJCV
+  :result: 80% / 83%
+  :paper_pdf_url: http://link.springer.com/article/10.1007%2Fs11263-011-0449-8
+  :additional_information: per-class % / per-pixel %
+- :dataset_name: MSRC-21
+  :paper_name: Graph Cut based Inference with Co-occurrence Statistics
+  :paper_year: '2010'
+  :paper_venue: ECCV
+  :result: ! '  77% / 87%'
+  :paper_pdf_url: http://research.microsoft.com/en-us/um/people/pkohli/papers/lrkt_eccv2010.pdf
+- :dataset_name: STL-10
+  :paper_name: Learning Invariant Representations with Local Transformations
+  :paper_year: '2012'
+  :paper_venue: ICML
+  :result: 58.7%
+  :paper_pdf_url: http://web.eecs.umich.edu/~honglak/icml12-invariantFeatureLearning.pdf
+- :dataset_name: STL-10
+  :paper_name: Deep Learning of Invariant Features via Simulated Fixations in Video
+  :paper_year: '2012'
+  :paper_venue: NIPS 2012
+  :result: 61%
+  :paper_pdf_url: http://books.nips.cc/papers/files/nips25/NIPS2012_1467.pdf
+- :dataset_name: CIFAR-10
+  :paper_name: Maxout Networks
+  :paper_year: '2013'
+  :paper_venue: ICML
+  :result: 90.65%
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
+  :additional_information: ! 'This result was obtained using both convolution and
+    synthetic translations / horizontal reflections of the training data.
+
+
+    Reaches 88.32% when using convolution, but without any synthetic transformations
+    of the training data.'
+- :dataset_name: MNIST
+  :paper_name: Regularization of Neural Networks using DropConnect
+  :paper_year: '2013'
+  :paper_venue: ICML
+  :result: 0.21%
+  :paper_pdf_url: http://cs.nyu.edu/~wanli/dropc/
+- :dataset_name: CIFAR-10
+  :paper_name: Regularization of Neural Networks using DropConnect
+  :paper_year: '2013'
+  :paper_venue: ICML
+  :result: 90.68%
+  :paper_pdf_url: http://cs.nyu.edu/~wanli/dropc/
+- :dataset_name: SVHN
+  :paper_name: Regularization of Neural Networks using DropConnect
+  :paper_year: '2013'
+  :paper_venue: ICML
+  :result: 1.94%
+  :paper_pdf_url: http://cs.nyu.edu/~wanli/dropc/
 - :dataset_name: SVHN
   :paper_name: Maxout Networks
   :paper_year: '2013'
-  :paper_venue: arXiv
-  :result: 2.72%
-  :paper_pdf_url: http://arxiv.org/abs/1302.4389
-  :additional_information: Does not use image transformations.
+  :paper_venue: ICML
+  :result: 2.47%
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
+  :additional_information: This result was obtained using convolution but not any
+    synthetic transformations of the training data.

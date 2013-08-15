@@ -23,7 +23,12 @@ module DatasetHelpers
 
     def dataset_results dataset_name
 		results = data.curated_data.select {|d| d.dataset_name == dataset_name }
-		results = results.sort { |a, b| a[:result] <=> b[:result] }
+		results = results.sort { |a, b| a[:result] <=> b[:result] } 
+		last_result = if results.last then results.last[:result] else 0 end
+		if last_result.to_i > 51 then 
+		  # it it seems to be a lost of precision, not error
+		  results = results.reverse
+		end
 		results
 	end
 

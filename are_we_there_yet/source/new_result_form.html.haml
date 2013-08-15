@@ -6,6 +6,7 @@ title: Who is the best in dataset X ?
   %link{:rel => "stylesheet", :type => "text/css"}
     :css
       small {font-size: 0.8em;}
+      .ss-q-title {font-weight: bold;}
     
   %h1 Who is the best in dataset X ?
 
@@ -110,7 +111,7 @@ title: Who is the best in dataset X ?
           .ss-form-entry
             %label.ss-q-title{:for => "entry_4"}
               URL of paper's file
-            %span.ss-required-asterisk *
+              %span.ss-required-asterisk *
             %label.ss-q-help{:for => "entry_4"} Please link to an available PDF file, to the project page, or to the publisher online page
             %input#entry_4.ss-q-short{:name => "entry.4.single", :type => "text", :value => ""}/
       %br
@@ -119,7 +120,9 @@ title: Who is the best in dataset X ?
           .ss-form-entry
             %label.ss-q-title{:for => "entry_3"}
               Additional information
-            %label.ss-q-help{:for => "entry_3"} Add here any detail, comment, short description you may want people to know about
+            %label.ss-q-help{:for => "entry_3"} 
+              %p Add here any detail, comment, short description you may want people to know about.
+              %p Feel free to add your name, nickname, or labname so I can add you in the thanks section. 
             %textarea#entry_3.ss-q-long{:cols => "75", :name => "entry.3.single", :rows => "8"}
       %br
         %input{:name => "pageNumber", :type => "hidden", :value => "0"}/
