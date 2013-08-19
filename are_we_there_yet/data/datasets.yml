@@ -36,7 +36,14 @@ Classification:
     house numbers in Google Street View images.
 
 '
-  :figure_url: http://ufldl.stanford.edu/housenumbers/32x32eg.png
+  :figure_url: !ruby/string
+    str: http://ufldl.stanford.edu/housenumbers/32x32eg.png
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://ufldl.stanford.edu/housenumbers/32x32eg.png
+      background: 9
+      mode: 0
 - :group: Classification
   :name: ILSVRC2012 task 1
   :evaluation_units: Error (5 guesses)
@@ -45,10 +52,15 @@ Classification:
 
 
     See this interesting [comparative analysis](http://www.image-net.org/challenges/LSVRC/2012/analysis/).'
-  :figure_url: ! 'ilsvrc2012_task1.png
-
-'
-  :external_results_url: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
+  :figure_url: ilsvrc2012_task1.png
+  :external_results_url: !ruby/string
+    str: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
+      background: 9
+      mode: 0
 Detection:
 - :group: Detection
   :name: Pascal VOC 2007 comp3
@@ -71,8 +83,22 @@ Detection:
   :name: Caltech Pedestrians USA
   :evaluation_units: average miss-rate %
   :description: ! '[Project website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).'
-  :figure_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
-  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/USA-test-reasonable.pdf
+  :figure_url: !ruby/string
+    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
+      background: 9
+      mode: 0
+  :external_results_url: !ruby/string
+    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf
+      background: 9
+      mode: 0
 - :group: Detection
   :name: INRIA Persons
   :evaluation_units: average miss-rate %
@@ -80,7 +106,14 @@ Detection:
 
     [Original dataset website](http://pascal.inrialpes.fr/data/human/).'
   :figure_url: inria_persons.png
-  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-INRIA-test.pdf
+  :external_results_url: !ruby/string
+    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf
+      background: 9
+      mode: 0
 - :group: Detection
   :name: ! 'ETH Pedestrian '
   :evaluation_units: average miss-rate %
@@ -90,30 +123,79 @@ Detection:
 
     [Original dataset website](http://www.vision.ee.ethz.ch/~aess/dataset/).'
   :figure_url: eth_pedestrian.png
-  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-ETH-reasonable.pdf
+  :external_results_url: !ruby/string
+    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf
+      background: 9
+      mode: 0
 - :group: Detection
   :name: TUD-Brussels Pedestrian
   :evaluation_units: average miss-rate %
   :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
     [Original dataset website](http://www.d2.mpi-inf.mpg.de/tud-brussels).'
-  :figure_url: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
-  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-TudBrussels-reasonable.pdf
+  :figure_url: !ruby/string
+    str: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
+      background: 9
+      mode: 0
+  :external_results_url: !ruby/string
+    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf
+      background: 9
+      mode: 0
 - :group: Detection
   :name: Daimler Pedestrian
   :evaluation_units: average miss-rate %
   :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
 
     [Original dataset website](http://www.science.uva.nl/research/isla/downloads/pedestrians/).'
-  :figure_url: http://www.science.uva.nl/research/isla/downloads/pedestrians/assets/images/ped_det_benchmark.jpg
-  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/roc-Daimler-reasonable.pdf
+  :figure_url: !ruby/string
+    str: http://www.science.uva.nl/research/isla/downloads/pedestrians/assets/images/ped_det_benchmark.jpg
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.science.uva.nl/research/isla/downloads/pedestrians/assets/images/ped_det_benchmark.jpg
+      background: 9
+      mode: 0
+  :external_results_url: !ruby/string
+    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf
+      background: 9
+      mode: 0
 - :group: Detection
   :name: KITTI Vision Benchmark
   :evaluation_units: average recall %
   :description: A rich dataset to evaluate multiple computer vision tasks, including
     cars, pedestrian and bycicles detection.
-  :figure_url: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
-  :external_results_url: http://www.cvlibs.net/datasets/kitti/eval_object.php
+  :figure_url: !ruby/string
+    str: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
+      background: 9
+      mode: 0
+  :external_results_url: !ruby/string
+    str: http://www.cvlibs.net/datasets/kitti/eval_object.php
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cvlibs.net/datasets/kitti/eval_object.php
+      background: 9
+      mode: 0
 Pose estimation:
 - :group: Pose estimation
   :name: Leeds Sport Poses

@@ -3,7 +3,11 @@
 require "bundler"
 require "psych"
 require "google_drive"
+require "colorize"
+require "faraday" # HTTP requests library
 require "set"
+
+puts "Start of script".green
 
 if not (ENV['google_mail'] and ENV['google_password']) then
 	raise "Environment variables 'google_mail' and 'google_password' need to be set."
@@ -30,6 +34,43 @@ end
 
 puts "Found spreadsheet data, processing..."
 
+
+def check_url url
+
+  ret = true # return value
+  if url == nil then
+    ret = true
+  elsif url.start_with? "http" then
+    if Faraday.head(url).status == 200 then
+      puts "Found " + url.light_blue
+      ret = true
+    else
+      puts "Indicated url does not exists ".red + url.yellow 
+      ret = false
+    end
+  else 
+    file_path = File.join "source/images/", url
+    if File.exists? file_path then
+       puts "Found " + file_path.light_blue
+      ret = true
+    else
+     puts "Indicated image file does not exists ".red + url.yellow + " " + file_path.light_yellow
+     ret = false
+    end
+  end
+
+  ret
+end # end of check_url
+
+
+def check_dataset_urls dataset
+
+  check_url dataset[:figure_url]
+  check_url dataset[:external_results_url]
+
+end # end of check_dataset_urls
+
+
 def read_datasets_data worksheet
 
 	rows = worksheet.rows
@@ -48,8 +89,10 @@ def read_datasets_data worksheet
 
 	# remove nil entries (from row.empty? == true), and empty strings
 	data = data.compact 
-	data = data.map{ |datum| datum.select {|k,v| v and not v.empty?} }
+	data = data.map { |datum| datum.select {|k,v| v and not v.empty?} }
 	
+	data.map { |d| check_dataset_urls d }
+
 	groups = Set.new
 	data.each {|x| groups.add x[:group] }
 	grouped_datasets = {}
@@ -102,5 +145,5 @@ curated_data = read_curated_data data_worksheet
 save_data datasets_data, "data/datasets.yml"
 save_data curated_data, "data/curated_data.yml"
 
-puts "End of game. Have a nice day !"
+puts "End of game. Have a nice day !".green
 

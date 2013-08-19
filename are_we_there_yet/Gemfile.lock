@@ -11,6 +11,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    colorize (0.5.8)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -126,6 +127,8 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  colorize
+  faraday
   google_drive
   middleman (~> 3.0.11)
   therubyracer
