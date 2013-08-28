@@ -325,7 +325,7 @@
   :paper_name: Graph Cut based Inference with Co-occurrence Statistics
   :paper_year: '2010'
   :paper_venue: ECCV
-  :result: ! '  77% / 87%'
+  :result: 77% / 87%
   :paper_pdf_url: http://research.microsoft.com/en-us/um/people/pkohli/papers/lrkt_eccv2010.pdf
 - :dataset_name: MSRC-21
   :paper_name: TextonBoost for Image Understanding
@@ -346,27 +346,27 @@
   :paper_year: '2011'
   :paper_venue: NIPS
   :result: 78% / 86%
-  :paper_pdf_url: graphics.stanford.edu/projects/densecrf/densecrf.pdf
+  :paper_pdf_url: http://graphics.stanford.edu/projects/densecrf/densecrf.pdf
 - :dataset_name: MSRC-21
   :paper_name: ! 'Describing the Scene as a Whole: Joint Object Detection, Scene Classification
     and Semantic Segmentation'
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 79% / 86%
-  :paper_pdf_url: ttic.uchicago.edu/~rurtasun/publications/yao_et_al_cvpr12.pdf‎
+  :paper_pdf_url: http://ttic.uchicago.edu/~rurtasun/publications/yao_et_al_cvpr12.pdf‎
 - :dataset_name: MSRC-21
   :paper_name: Auto-Context and Its Application to High-Level Vision Tasks and 3D
     Brain Image Segmentation
   :paper_year: '2010'
   :paper_venue: PAMI
   :result: 69% / 78%
-  :paper_pdf_url: www.loni.ucla.edu/~ztu/publication/pami_autocontext.pdf‎
+  :paper_pdf_url: http://www.loni.ucla.edu/~ztu/publication/pami_autocontext.pdf‎
 - :dataset_name: MSRC-21
   :paper_name: Are Spatial and Global Constraints Really Necessary for Segmentation?
   :paper_year: '2011'
   :paper_venue: ICCV
   :result: 77% / 85%
-  :paper_pdf_url: www.vision.ee.ethz.ch/~boxavier/PID2003049.pdf‎
+  :paper_pdf_url: http://www.vision.ee.ethz.ch/~boxavier/PID2003049.pdf‎
   :additional_information: Several variants are examined, no single method attains
     the overall best results, i.e. both best per-class and per-pixel averages simultaneously.
     Indicated result corresponds to the method that we best on the average (per-class
@@ -476,3 +476,36 @@
   :paper_pdf_url: http://kylezheng.org/publications/
   :additional_information: There seem to be no paper about this work, but only the
     slides from the entry at the PASCAL VOC workshop ECCV 2010.
+- :dataset_name: MSRC-21
+  :paper_name: Structured Image Segmentation using Kernelized Features
+  :paper_year: '2012'
+  :paper_venue: ECCV
+  :result: 76 % / 82 %
+  :paper_pdf_url: http://infoscience.epfl.ch/record/180190
+  :additional_information: 70 % / 73 % when using only local features (not considering
+    global features)
+- :dataset_name: CIFAR-10
+  :paper_name: ! 'An Analysis of Single-Layer Networks in Unsupervised Feature Learning '
+  :paper_year: '2011'
+  :paper_venue: AISTATS
+  :result: 79.6 %
+  :paper_pdf_url: http://www.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf
+  :additional_information: 79.6% obtained using K-means over whitened patches, with
+    triangle encoding and 4000 features (clusters).
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Segmentation as selective search for object recognition
+  :paper_year: '2011'
+  :paper_venue: ICCV
+  :result: 34.1 mAP
+  :paper_pdf_url: http://www.science.uva.nl/research/publications/2011/vandeSandeICCV2011/vandesande_iccv2011.pdf
+  :additional_information: Source code availabe at http://koen.me/research/selectivesearch/
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Latent Hierarchical Structural Learning for Object  Detection
+  :paper_year: '2010'
+  :paper_venue: CVPR
+  :result: 36.0 mAP
+  :paper_pdf_url: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
+  :additional_information: ! 'Result presented in the [VOC 2010 workshop](http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2010/workshop/mitucla.pdf)
+    at ECCV 2010.
+
+    They reported 35.99, which rounds up to 36.0.'
