@@ -41,11 +41,19 @@ def check_url url
   if url == nil then
     ret = true
   elsif url.start_with? "http" then
-    if Faraday.head(url).status == 200 then
+    begin
+      http_status = Faraday.head(url).status
+    rescue Exception => e
+     #puts "Something when terribly wrong when consulting url ".red + url.yellow + "( " + e.to_s.light_red + " )"
+     #http_status = "??"
+     http_status = "ERROR ?? " + e.to_s
+    end
+
+    if http_status == 200 then
       puts "Found " + url.light_blue
       ret = true
     else
-      puts "Indicated url does not exists ".red + url.yellow 
+      puts "Indicated url does not exists ".red + url.yellow + " HTTP status ".red + http_status.to_s.red
       ret = false
     end
   else 
@@ -117,7 +125,7 @@ def read_curated_data worksheet
 		  paper_year: row[3],
 		  paper_venue: row[4],
 		  result: row[5],
-		  paper_pdf_url: row[6],
+		  paper_pdf_url: row[6].strip,
 		  additional_information: row[7]
 		} if not row[0].empty?
 	end
@@ -125,6 +133,8 @@ def read_curated_data worksheet
 	# remove nil entries (from row.empty? == true), and empty strings
 	data = data.compact 
 	data = data.map{ |datum| datum.select {|k,v| v and not v.empty?} }
+	
+	data.map { |datum| check_url datum[:paper_pdf_url] }
 	
 	data
 end # end of read_curated_data
