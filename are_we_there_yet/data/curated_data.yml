@@ -998,3 +998,30 @@
       str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13cvpr.pdf
       background: 9
       mode: 0
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Detection Evolution with Multi-Order Contextual Co-occurrence
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 38.7 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf
+      background: 9
+      mode: 0
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Color Attributes for Object Detection
+  :paper_year: '2012'
+  :paper_venue: CVPR
+  :result: 34.8 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf
+      background: 9
+      mode: 0
+  :additional_information: Code [available](http://www.cat.uab.cat/Research/object-detection).
