@@ -1025,3 +1025,53 @@
       background: 9
       mode: 0
   :additional_information: Code [available](http://www.cat.uab.cat/Research/object-detection).
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Ensemble of Exemplar-SVMs for Object Detection and Beyond
+  :paper_year: '2011'
+  :paper_venue: ICCV
+  :result: 22.7 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! 'Reaches 19.8 mAP when not using context.
+
+
+    Code [available](http://www.cs.cmu.edu/~tmalisie/projects/iccv11).'
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Incorporating Structural Alternatives and Sharing into Hierarchy for
+    Multiclass Object Recognition and Detection
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 34.7 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf
+      background: 9
+      mode: 0
+- :dataset_name: MSRC-21
+  :paper_name: ! 'PatchMatchGraph: Building a Graph of Dense Patch Correspondences
+    for Label Transfer'
+  :paper_year: '2012'
+  :paper_venue: ECCV
+  :result: 72.8% / 79.0%
+  :paper_pdf_url: !ruby/string
+    str: http://users.cecs.anu.edu.au/~sgould/papers/eccv12-patchGraph.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://users.cecs.anu.edu.au/~sgould/papers/eccv12-patchGraph.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! '49.8% / 63.3% raw PatchMatchGraph accuracy, 72.8% /
+    79.0% when using Boosted CRF.
+
+
+    Code [available](http://drwn.anu.edu.au/drwnProjPatchMatch.html).'
