@@ -669,11 +669,11 @@
   :paper_venue: PAMI
   :result: 69% / 78%
   :paper_pdf_url: !ruby/string
-    str: http://www.loni.ucla.edu/~ztu/publication/pami_autocontext.pdf
+    str: http://pages.ucsd.edu/~ztu/publication/pami_autocontext.pdf
     background: 9
     mode: 0
     uncolorized: !ruby/string
-      str: http://www.loni.ucla.edu/~ztu/publication/pami_autocontext.pdf
+      str: http://pages.ucsd.edu/~ztu/publication/pami_autocontext.pdf
       background: 9
       mode: 0
 - :dataset_name: MSRC-21
@@ -1075,3 +1075,88 @@
 
 
     Code [available](http://drwn.anu.edu.au/drwnProjPatchMatch.html).'
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Learning Collections of Part Models for Object Recognition
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 24.98 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf
+      background: 9
+      mode: 0
+- :dataset_name: Leeds Sport Poses
+  :paper_name: Strong Appearance and Expressive Spatial Models for Human Pose Estimation
+  :paper_year: '2013'
+  :paper_venue: ICCV
+  :result: 69.2 %
+  :paper_pdf_url: !ruby/string
+    str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13iccv.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13iccv.pdf
+      background: 9
+      mode: 0
+  :additional_information: Starting model reaches 58.1 %, improved local appearances
+    reaches 66.9 %, and 69.2% when using the full model.
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Histograms of Sparse Codes for Object Detection
+  :paper_year: '2013'
+  :paper_venue: CVPR
+  :result: 34.3 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.ics.uci.edu/~dramanan/papers/hsc.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.ics.uci.edu/~dramanan/papers/hsc.pdf
+      background: 9
+      mode: 0
+  :additional_information: Reaches 26.9 mAP when using only the root templates (no
+    parts).
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Measuring the objectness of image windows
+  :paper_year: '2012'
+  :paper_venue: PAMI
+  :result: 0.27 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf
+      background: 9
+      mode: 0
+  :additional_information: Source code [available](http://groups.inf.ed.ac.uk/calvin/objectness/).
+- :dataset_name: MNIST
+  :paper_name: Trainable COSFIRE filters for keypoint detection and pattern recognition
+  :paper_year: '2013'
+  :paper_venue: PAMI
+  :result: 0.52 %
+  :paper_pdf_url: !ruby/string
+    str: http://iwi.eldoc.ub.rug.nl/FILES/root/2013/IEEETPAMIAzzopardi/2013IEEETPAMIAzzopardi.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://iwi.eldoc.ub.rug.nl/FILES/root/2013/IEEETPAMIAzzopardi/2013IEEETPAMIAzzopardi.pdf
+      background: 9
+      mode: 0
+  :additional_information: Source code [available](http://www.mathworks.de/matlabcentral/fileexchange/37395-trainable-cosfire-filters-for-keypoint-detection-and-pattern-recognition).
+- :dataset_name: STL-10
+  :paper_name: Unsupervised Feature Learning for RGB-D Based Object Recognition
+  :paper_year: '2012'
+  :paper_venue: ISER
+  :result: 64.5% (±1%)
+  :paper_pdf_url: !ruby/string
+    str: http://homes.cs.washington.edu/~lfb/paper/iser12.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://homes.cs.washington.edu/~lfb/paper/iser12.pdf
+      background: 9
+      mode: 0
+  :additional_information: Hierarchical sparse coding using Matching Pursuit and K-SVD
