@@ -648,6 +648,7 @@
       str: http://graphics.stanford.edu/projects/densecrf/densecrf.pdf
       background: 9
       mode: 0
+  :additional_information: ! 'Strong unary used provides 76.6% / 84.0% '
 - :dataset_name: MSRC-21
   :paper_name: ! 'Describing the Scene as a Whole: Joint Object Detection, Scene Classification
     and Semantic Segmentation'
@@ -1122,7 +1123,7 @@
   :paper_name: Measuring the objectness of image windows
   :paper_year: '2012'
   :paper_venue: PAMI
-  :result: 0.27 mAP
+  :result: 27.4 mAP
   :paper_pdf_url: !ruby/string
     str: http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf
     background: 9
@@ -1160,3 +1161,17 @@
       background: 9
       mode: 0
   :additional_information: Hierarchical sparse coding using Matching Pursuit and K-SVD
+- :dataset_name: MSRC-21
+  :paper_name: ! 'Morphological Proximity Priors: Spatial Relationships for Semantic
+    Segmentation'
+  :paper_year: '2013'
+  :paper_venue: TUM-I1222
+  :result: ! '78.2% / 85.0% '
+  :paper_pdf_url: !ruby/string
+    str: http://mediatum.ub.tum.de/doc/1175516/1175516.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://mediatum.ub.tum.de/doc/1175516/1175516.pdf
+      background: 9
+      mode: 0

@@ -207,7 +207,7 @@ Pose estimation:
 Semantic labeling:
 - :group: Semantic labeling
   :name: MSRC-21
-  :evaluation_units: precision % per-class / (and) per-pixel
+  :evaluation_units: accuracy % per-class / (and) per-pixel
   :description: ! "One of the oldest and classic dataset for semantic labelling.\n21
     different categories of surfaces are considered.\nDespite the innacuracies in
     the annotations and how unbalanced the classes are, this dataset still is commonly
