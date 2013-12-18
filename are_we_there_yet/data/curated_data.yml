@@ -868,7 +868,7 @@
     context and extra octave. Raw detection obtains 29.6 mAP.
 
 '
-- :dataset_name: Pascal VOC 2010 comp3
+- :dataset_name: Pascal VOC 2010 comp4
   :paper_name: Bottom-up Segmentation for Top-down Detection
   :paper_year: '2013'
   :paper_venue: CVPR
@@ -1175,3 +1175,142 @@
       str: http://mediatum.ub.tum.de/doc/1175516/1175516.pdf
       background: 9
       mode: 0
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Regionlets for Generic Object Detection
+  :paper_year: '2013'
+  :paper_venue: ICCV
+  :result: 41.7 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
+      background: 9
+      mode: 0
+  :additional_information: No context information being used.
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Regionlets for Generic Object Detection
+  :paper_year: '2013'
+  :paper_venue: ICCV
+  :result: 39.7 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
+      background: 9
+      mode: 0
+  :additional_information: No context information being used.
+- :dataset_name: Pascal VOC 2007 comp4
+  :paper_name: Rich feature hierarchies for accurate object detection and semantic
+    segmentation
+  :paper_year: '2013'
+  :paper_venue: Arxiv
+  :result: 48.0 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://arxiv.org/pdf/1311.2524.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://arxiv.org/pdf/1311.2524.pdf
+      background: 9
+      mode: 0
+- :dataset_name: Pascal VOC 2010 comp4
+  :paper_name: Rich feature hierarchies for accurate object detection and semantic
+    segmentation
+  :paper_year: '2013'
+  :paper_venue: Arxiv
+  :result: 43.5 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://arxiv.org/pdf/1311.2524.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://arxiv.org/pdf/1311.2524.pdf
+      background: 9
+      mode: 0
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Selective Search for Object Recognition
+  :paper_year: '2013'
+  :paper_venue: IJCV
+  :result: 35.1 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf
+      background: 9
+      mode: 0
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Segmentation Driven Object Detection with Fisher Vectors
+  :paper_year: '2013'
+  :paper_venue: ICCV
+  :result: 40.5 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
+      background: 9
+      mode: 0
+  :additional_information: 38.5 mAP when not using inter-class contextual cues
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Segmentation Driven Object Detection with Fisher Vectors
+  :paper_year: '2013'
+  :paper_venue: ICCV
+  :result: 38.4 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
+      background: 9
+      mode: 0
+  :additional_information: 35.8 mAP when not using inter-class contextual cues
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Boosted local structured HOG-LBP for object localization
+  :paper_year: '2011'
+  :paper_venue: CVPR
+  :result: 34.3 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf
+      background: 9
+      mode: 0
+- :dataset_name: MNIST
+  :paper_name: Sparse Activity and Sparse Connectivity in Supervised Learning
+  :paper_year: '2013'
+  :paper_venue: JMLR
+  :result: 0.75%
+  :paper_pdf_url: !ruby/string
+    str: http://jmlr.org/papers/v14/thom13a.html
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://jmlr.org/papers/v14/thom13a.html
+      background: 9
+      mode: 0
+- :dataset_name: Pascal VOC 2007 comp3
+  :paper_name: Machine Learning Methods for Visual Object Detection
+  :paper_year: '2011'
+  :paper_venue: archives-ouvertes
+  :result: 36.0 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! "Thesis results based on the features explained in our
+    earlier paper \"Feature Sets and Dimensionality Reduction For Visual Object Detection,
+    BMVC, 2010\". \n\nResults table can be found on the page 104 of thesis."

@@ -8,17 +8,17 @@ Classification:
   :figure_url: mnist.png
 - :group: Classification
   :name: CIFAR-10
-  :evaluation_units: precision %
+  :evaluation_units: accuracy %
   :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html).
   :figure_url: cifar_10.png
 - :group: Classification
   :name: CIFAR-100
-  :evaluation_units: precision %
+  :evaluation_units: accuracy %
   :description: Classify [32x32 colour images](http://www.cs.toronto.edu/~kriz/cifar.html).
   :figure_url: cifar_100.png
 - :group: Classification
   :name: STL-10
-  :evaluation_units: precision %
+  :evaluation_units: accuracy %
   :description: Similar to CIFAR-10 but with 96x96 images. [Original dataset website](http://www.stanford.edu/~acoates/stl10/).
   :figure_url: stl_10.png
 - :group: Classification
@@ -66,7 +66,13 @@ Detection:
   :name: Pascal VOC 2007 comp3
   :evaluation_units: mAP
   :description: Pascal VOC 2007 is commonly used because the test set has been realased.
-    comp3 is the objects detection competition.
+    comp3 is the objects detection competition, using only the comp3 pascal training
+    data.
+  :figure_url: pascal_voc_2007.png
+- :group: Detection
+  :name: Pascal VOC 2007 comp4
+  :evaluation_units: mAP
+  :description: Just like comp3 but "any training data" can be used.
   :figure_url: pascal_voc_2007.png
 - :group: Detection
   :name: Pascal VOC 2010 comp3
@@ -75,9 +81,14 @@ Detection:
     competition.
   :figure_url: pascal_voc_2010.png
 - :group: Detection
-  :name: Pascal VOC 2011/2012 comp3
+  :name: Pascal VOC 2007 comp4
   :evaluation_units: mAP
-  :description: Last Pascal VOC challenge instance.
+  :description: Just like comp3 but "any training data" can be used.
+  :figure_url: pascal_voc_2010.png
+- :group: Detection
+  :name: Pascal VOC 2011 comp3
+  :evaluation_units: mAP
+  :description: Last Pascal VOC challenge instance (2012 version had identical data).
   :figure_url: pascal_voc_2012.png
 - :group: Detection
   :name: Caltech Pedestrians USA
