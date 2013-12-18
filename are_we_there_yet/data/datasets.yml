@@ -81,7 +81,7 @@ Detection:
     competition.
   :figure_url: pascal_voc_2010.png
 - :group: Detection
-  :name: Pascal VOC 2007 comp4
+  :name: Pascal VOC 2010 comp4
   :evaluation_units: mAP
   :description: Just like comp3 but "any training data" can be used.
   :figure_url: pascal_voc_2010.png
