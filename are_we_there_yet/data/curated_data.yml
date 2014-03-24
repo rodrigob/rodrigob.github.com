@@ -46,11 +46,11 @@
   :paper_venue: NIPS
   :result: 0.39%
   :paper_pdf_url: !ruby/string
-    str: http://books.nips.cc/papers/files/nips19/NIPS2006_0804.pdf
+    str: http://papers.nips.cc/paper/3112-efficient-learning-of-sparse-representations-with-an-energy-based-model
     background: 9
     mode: 0
     uncolorized: !ruby/string
-      str: http://books.nips.cc/papers/files/nips19/NIPS2006_0804.pdf
+      str: http://papers.nips.cc/paper/3112-efficient-learning-of-sparse-representations-with-an-energy-based-model
       background: 9
       mode: 0
   :additional_information: Large conv. net, unsup pretraining, uses elastic distortions
@@ -437,11 +437,11 @@
   :paper_venue: NIPS
   :result: 90.5%
   :paper_pdf_url: !ruby/string
-    str: http://www.cs.toronto.edu/~jasper/bayesopt.pdf
+    str: http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf
     background: 9
     mode: 0
     uncolorized: !ruby/string
-      str: http://www.cs.toronto.edu/~jasper/bayesopt.pdf
+      str: http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf
       background: 9
       mode: 0
   :additional_information: ! 'Reaches 85.02% without data augmentation.
@@ -497,11 +497,11 @@
   :paper_venue: NIPS
   :result: 83.96%
   :paper_pdf_url: !ruby/string
-    str: http://books.nips.cc/papers/files/nips25/NIPS2012_1484.pdf
+    str: http://papers.nips.cc/paper/4516-discriminative-learning-of-sum-product-networks
     background: 9
     mode: 0
     uncolorized: !ruby/string
-      str: http://books.nips.cc/papers/files/nips25/NIPS2012_1484.pdf
+      str: http://papers.nips.cc/paper/4516-discriminative-learning-of-sum-product-networks
       background: 9
       mode: 0
 - :dataset_name: CIFAR-100
@@ -524,11 +524,11 @@
   :paper_venue: NIPS
   :result: 89%
   :paper_pdf_url: !ruby/string
-    str: http://books.nips.cc/papers/files/nips25/NIPS2012_0534.pdf
+    str: http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
     background: 9
     mode: 0
     uncolorized: !ruby/string
-      str: http://books.nips.cc/papers/files/nips25/NIPS2012_0534.pdf
+      str: http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
       background: 9
       mode: 0
   :additional_information: 87% error on the unaugmented data.
@@ -715,11 +715,11 @@
   :paper_venue: NIPS 2012
   :result: 61%
   :paper_pdf_url: !ruby/string
-    str: http://books.nips.cc/papers/files/nips25/NIPS2012_1467.pdf
+    str: http://papers.nips.cc/paper/4730-deep-learning-of-invariant-features-via-simulated-fixations-in-video
     background: 9
     mode: 0
     uncolorized: !ruby/string
-      str: http://books.nips.cc/papers/files/nips25/NIPS2012_1467.pdf
+      str: http://papers.nips.cc/paper/4730-deep-learning-of-invariant-features-via-simulated-fixations-in-video
       background: 9
       mode: 0
 - :dataset_name: CIFAR-10
@@ -1071,7 +1071,7 @@
       str: http://users.cecs.anu.edu.au/~sgould/papers/eccv12-patchGraph.pdf
       background: 9
       mode: 0
-  :additional_information: ! '49.8% / 63.3% raw PatchMatchGraph accuracy, 72.8% /
+  :additional_information: ! ' 49.8% / 63.3% raw PatchMatchGraph accuracy, 72.8% /
     79.0% when using Boosted CRF.
 
 
@@ -1257,7 +1257,7 @@
       str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
       background: 9
       mode: 0
-  :additional_information: 38.5 mAP when not using inter-class contextual cues
+  :additional_information: ! ' 38.5 mAP when not using inter-class contextual cues'
 - :dataset_name: Pascal VOC 2010 comp3
   :paper_name: Segmentation Driven Object Detection with Fisher Vectors
   :paper_year: '2013'
@@ -1271,7 +1271,7 @@
       str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
       background: 9
       mode: 0
-  :additional_information: 35.8 mAP when not using inter-class contextual cues
+  :additional_information: ! ' 35.8 mAP when not using inter-class contextual cues'
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Boosted local structured HOG-LBP for object localization
   :paper_year: '2011'
@@ -1314,3 +1314,140 @@
   :additional_information: ! "Thesis results based on the features explained in our
     earlier paper \"Feature Sets and Dimensionality Reduction For Visual Object Detection,
     BMVC, 2010\". \n\nResults table can be found on the page 104 of thesis."
+- :dataset_name: SVHN
+  :paper_name: Multi-digit Number Recognition from Street View Imagery using Deep
+    Convolutional Neural Networks
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 2.16%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/0c571b22-f4b6-4d58-87e4-99d7de42a893#0c571b22-f4b6-4d58-87e4-99d7de42a893
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/0c571b22-f4b6-4d58-87e4-99d7de42a893#0c571b22-f4b6-4d58-87e4-99d7de42a893
+      background: 9
+      mode: 0
+  :additional_information: ! 'For classification of individual digits with a single
+    network, error rate is 2.16%.
+
+    For classification of the entire digit sequence  (first paper doing this): error
+    rate of 3.97%.'
+- :dataset_name: CIFAR-10
+  :paper_name: Network In Network
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 91.2%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+      background: 9
+      mode: 0
+  :additional_information: ! 'The code for NIN available at
+
+    https://github.com/mavenlin/cuda-convnet
+
+
+    NIN + Dropout 89.6%
+
+    NIN + Dropout + Data Augmentation 91.2%'
+- :dataset_name: CIFAR-100
+  :paper_name: Network in Network
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 64.32%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+      background: 9
+      mode: 0
+  :additional_information: ! 'NIN + Dropout
+
+
+    The code for NIN available at
+
+    https://github.com/mavenlin/cuda-convnet'
+- :dataset_name: SVHN
+  :paper_name: Network in Network
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 2.35%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+      background: 9
+      mode: 0
+  :additional_information: ! 'NIN + Dropout
+
+
+    The code for NIN available at
+
+    https://github.com/mavenlin/cuda-convnet'
+- :dataset_name: MNIST
+  :paper_name: Network in Network
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 0.47%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
+      background: 9
+      mode: 0
+  :additional_information: ! 'NIN + Dropout
+
+
+    The code for NIN available at
+
+    https://github.com/mavenlin/cuda-convnet'
+- :dataset_name: CIFAR-10
+  :paper_name: Learning Smooth Pooling Regions for Visual Recognition
+  :paper_year: '2013'
+  :paper_venue: BMVC
+  :result: 80.02%
+  :paper_pdf_url: !ruby/string
+    str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
+      background: 9
+      mode: 0
+- :dataset_name: CIFAR-100
+  :paper_name: Learning Smooth Pooling Regions for Visual Recognition
+  :paper_year: '2013'
+  :paper_venue: BMVC
+  :result: 56.29%
+  :paper_pdf_url: !ruby/string
+    str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
+      background: 9
+      mode: 0
+  :additional_information: No data augmentation.
+- :dataset_name: MSRC-21
+  :paper_name: Large-Scale Semantic Co-Labeling of Image Sets
+  :paper_year: '2014'
+  :paper_venue: WACV
+  :result: 80.9% / 86.8%
+  :paper_pdf_url: !ruby/string
+    str: http://www.cvc.uab.es/~jalvarez/research_cosegment.php
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cvc.uab.es/~jalvarez/research_cosegment.php
+      background: 9
+      mode: 0
