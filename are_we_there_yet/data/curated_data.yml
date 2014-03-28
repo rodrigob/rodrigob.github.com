@@ -1451,3 +1451,81 @@
       str: http://www.cvc.uab.es/~jalvarez/research_cosegment.php
       background: 9
       mode: 0
+- :dataset_name: Pascal VOC 2007 comp4
+  :paper_name: Multi-Component Models for Object Detection
+  :paper_year: '2012'
+  :paper_venue: ECCV
+  :result: 29.0 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! '20.9 Monolithic, 29.0 Multi-components.
+
+
+    Uses poselets and segmentation masks labels to build the clusters (thus comp4
+    not comp3).'
+- :dataset_name: Pascal VOC 2010 comp4
+  :paper_name: Multi-Component Models for Object Detection
+  :paper_year: '2012'
+  :paper_venue: ECCV
+  :result: 33.1 mAP
+  :paper_pdf_url: !ruby/string
+    str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! 'Multi-components result
+
+
+    Uses poselets and segmentation masks labels to build the clusters (thus comp4
+    not comp3).'
+- :dataset_name: CIFAR-10
+  :paper_name: Improving Deep Neural Networks with Probabilistic Maxout Units
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 90.61%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
+      background: 9
+      mode: 0
+  :additional_information: ! '88.65% without data augmentation.
+
+    90.61% when using data augmentation.'
+- :dataset_name: CIFAR-100
+  :paper_name: Improving Deep Neural Networks with Probabilistic Maxout Units
+  :paper_year: '2014'
+  :paper_venue: ICLR
+  :result: 61.86%
+  :paper_pdf_url: !ruby/string
+    str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
+      background: 9
+      mode: 0
+- :dataset_name: MNIST
+  :paper_name: On Optimization Methods for Deep Learning
+  :paper_year: '2011'
+  :paper_venue: ICML
+  :result: 0.69%
+  :paper_pdf_url: !ruby/string
+    str: http://ai.stanford.edu/~quocle/LeNgiCoaLahProNg11.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://ai.stanford.edu/~quocle/LeNgiCoaLahProNg11.pdf
+      background: 9
+      mode: 0
