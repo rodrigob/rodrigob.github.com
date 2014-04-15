@@ -1529,3 +1529,20 @@
       str: http://ai.stanford.edu/~quocle/LeNgiCoaLahProNg11.pdf
       background: 9
       mode: 0
+- :dataset_name: CIFAR-100
+  :paper_name: Discriminative Transfer Learning with Tree-based Priors
+  :paper_year: '2013'
+  :paper_venue: NIPS
+  :result: 63.15%
+  :paper_pdf_url: !ruby/string
+    str: http://www.cs.toronto.edu/~nitish/treebasedpriors.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.cs.toronto.edu/~nitish/treebasedpriors.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! 'The baseline "Convnet + max pooling + dropout" reaches
+    62.80% (without any tree prior).
+
+'
