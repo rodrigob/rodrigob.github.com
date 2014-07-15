@@ -203,35 +203,87 @@
 
 <h4 id="year2014">2014 <small>First time at BMVC</small></h4>
 
+
+
+
+
+
 <div class="row">
 	<div class="span4">
 		<ul class="media-grid">
-		<li><a href="http://rodrigob.github.io/documents/2012_cvpr_pedestrian_detection_at_100_frames_per_second.pdf">
-			<img class="thumbnail" src="figures/50_models_1_image_scale_small.png" alt="" /></a></li>
+		<li><a href="http://arxiv.org/abs/1406.6962">
+			<img class="thumbnail" src="figures/2014_bmvc_selective_search_teaser.png" alt="" /></a></li>
 		</ul>
 	</div>
 	<div class="span12">
-		<h3><a class="paper_link" href="http://rodrigob.github.io/documents/2012_cvpr_pedestrian_detection_at_100_frames_per_second.pdf">
-			Pedestrian detection at 100 frames per second</a></h3>
-		<p>R. Benenson, <a href="http://homes.esat.kuleuven.be/~mmathias/">M. Mathias</a>, <a href="http://homes.esat.kuleuven.be/~rtimofte">R. Timofte</a>, L. Van Gool
-		<br>Oral at CVPR 2012, 2.5% acceptance rate
-		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Benenson2012Cvpr);" />
-		<br><span class="label success">Chef's recommendation</span>
-		<pre id="Benenson2012Cvpr" class="invisible_bibtex">
-@INPROCEEDINGS{Benenson2012Cvpr,
-  author = {R. Benenson and M. Mathias and R. Timofte and L. {Van Gool}},
-  title = {Pedestrian detection at 100 frames per second},
-  booktitle = {CVPR},
-  year = {2012}
+		<h3><!--<a class="paper_link" href="http://rodrigob.github.io/documents/2014_eccv_face_detection_with_supplementary_material.pdf">
+			How good are detection proposals, really?</a>-->
+            How good are detection proposals, really?
+        </h3>
+		<p><a href="https://www.d2.mpi-inf.mpg.de/People/jhosang">J. Hosang</a>, R. Benenson, <a href="http://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/">B. Schiele</a>
+		<br>Oral at BMVC 2014, 7% acceptance rate
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Hosang2014Bmvc);" />
+		<!-- <br><span class="label success">Chef's recommendation</span> -->
+		<pre id="Hosang2014Bmvc" class="invisible_bibtex">
+@INPROCEEDINGS{Hosang2014Bmvc,
+  author = {J. Hosang and R. Benenson and B. Schiele},
+  title = {How good are detection proposals, really?},
+  booktitle = {BMVC},
+  year = {2014}
 }</pre>
 		</p>
 		<blockquote>
-			<p>We propose a new detector that improves both speed and quality over state-of-the-art single part detectors. We reach 50 Hz in monocular setup, and 135 Hz when using stixels on a street scene (including the stereo processing time).</p>
+			<p>Detection proposals allow to avoiding exhaustive sliding window search across images, while keeping high detection quality.
+               <!-- Despite the popularity of detection proposals, it is unclear which trade-offs are made when using them during object detection. -->
+                We provide an in depth analysis of proposal methods regarding recall, repeatability, and impact on DPM detector performance.
+                <br>Our findings show common weaknesses of existing methods, and provide insights to choose the most adequate method for different settings.
+            </p>
 		</blockquote>
-		<p>Download <a class="paper_link" href="http://rodrigob.github.io/documents/2012_06_cvpr_talk.pdf">presentation slides</a>. Watch <a class="" href="http://techtalks.tv/talks/pedestrian-detection-at-100-frames-per-second/56381/">CVPR talk</a>.</p>
-		<p>Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">CVPR result video</a>.</p>
-		<p>Watch <a href="http://europa.informatik.uni-freiburg.de/videos.html">Europa project</a> <a class="btn" href="http://youtu.be/d_S4CaxtQJU">result video</a>, our detector running inside a robot, together with a tracker from <a href="http://www.mmp.rwth-aachen.de/people">RWTH Aachen</a>.</p>
-		<p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p>
+        <p>Draft version <a class="paper_link" href="http://arxiv.org/abs/1406.6962">available in arXiv.org</a>, camera ready in preparation.
+		<!-- <p>Download <a class="paper_link" href="http://rodrigob.github.io/documents/2012_06_cvpr_talk.pdf">presentation slides</a>. Watch <a class="" href="http://techtalks.tv/talks/pedestrian-detection-at-100-frames-per-second/56381/">CVPR talk</a>.</p> -->
+		<!-- <p>Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">example result video</a>.</p> -->
+		<!-- <p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p> -->
+	</div>
+</div> <!-- /row -->
+<hr>
+
+
+
+
+
+<div class="row">
+	<div class="span4">
+		<ul class="media-grid">
+		<li><a href="http://rodrigob.github.io/documents/2014_eccv_face_detection_with_supplementary_material.pdf">
+			<img class="thumbnail" src="figures/2014_eccv_face_detection_example.png" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="span12">
+		<h3><a class="paper_link" href="http://rodrigob.github.io/documents/2014_eccv_face_detection_with_supplementary_material.pdf">
+			Face detection without bells and whistles</a></h3>
+		<p><a href="http://homes.esat.kuleuven.be/~mmathias/">M. Mathias</a>, R. Benenson, <a href="http://homes.esat.kuleuven.be/~mpederso/">M. Pedersoli</a>, L. Van Gool
+		<br>Oral at ECCV 2014<!--, 3% acceptance rate -->
+		<img class="bibtex_link" src="figures/bibtex.png" onclick="javascript:toggle(Mathias2014Eccv);" />
+		<br><span class="label success">Chef's recommendation</span>
+		<pre id="Mathias2014Eccv" class="invisible_bibtex">
+@INPROCEEDINGS{Mathias2014Eccv,
+  author = {M. Mathias and R. Benenson and M. Pedersoli and L. {Van Gool}},
+  title = {Face detection without bells and whistles},
+  booktitle = {ECCV},
+  year = {2014}
+}</pre>
+		</p>
+		<blockquote>
+			<p>We present two surprising new face detection results:
+                one using a vanilla deformable part model, and the other using only rigid templates (similar to Viola&Jones' detector).
+                <br>Both of these reach top performance, improving over commercial and research systems.
+                <br>We also discuss issues with existing evaluation benchmarks and propose an improved evaluation procedure.
+            </p>
+		</blockquote>
+		<!-- <p>Download <a class="paper_link" href="http://rodrigob.github.io/documents/2012_06_cvpr_talk.pdf">presentation slides</a>. Watch <a class="" href="http://techtalks.tv/talks/pedestrian-detection-at-100-frames-per-second/56381/">CVPR talk</a>.</p> -->
+		<!-- <p>Watch <a class="btn" href="http://youtu.be/htLRKbVaSDw">example result video</a>.</p> -->
+		<!-- <p><a href="https://bitbucket.org/rodrigob/doppia" class="source_code_link">Source code available</a>, with a research only license.</p> -->
+        <p>(Source code release in preparation).</p>
 	</div>
 </div> <!-- /row -->
 <hr>
