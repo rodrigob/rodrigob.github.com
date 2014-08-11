@@ -4,40 +4,19 @@
   :paper_year: '2009'
   :paper_venue: ICML
   :result: 92.5%
-  :paper_pdf_url: !ruby/string
-    str: http://ronan.collobert.com/pub/matos/2009_video_icml.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ronan.collobert.com/pub/matos/2009_video_icml.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ronan.collobert.com/pub/matos/2009_video_icml.pdf
 - :dataset_name: MNIST
   :paper_name: ! 'Multi-column Deep Neural Networks for Image Classiﬁcation '
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 0.23%
-  :paper_pdf_url: !ruby/string
-    str: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
 - :dataset_name: MNIST
   :paper_name: Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition
   :paper_year: '2010'
   :paper_venue: Neural Computation
   :result: 0.35%
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1003.0358.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1003.0358.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://arxiv.org/pdf/1003.0358.pdf
   :additional_information: 6-layer NN 784-2500-2000-1500-1000-500-10 (on GPU), uses
     elastic distortions
 - :dataset_name: MNIST
@@ -45,14 +24,7 @@
   :paper_year: '2006'
   :paper_venue: NIPS
   :result: 0.39%
-  :paper_pdf_url: !ruby/string
-    str: http://papers.nips.cc/paper/3112-efficient-learning-of-sparse-representations-with-an-energy-based-model
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://papers.nips.cc/paper/3112-efficient-learning-of-sparse-representations-with-an-energy-based-model
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://papers.nips.cc/paper/3112-efficient-learning-of-sparse-representations-with-an-energy-based-model
   :additional_information: Large conv. net, unsup pretraining, uses elastic distortions
 - :dataset_name: MNIST
   :paper_name: Best Practices for Convolutional Neural Networks Applied to Visual
@@ -60,41 +32,20 @@
   :paper_year: '2003'
   :paper_venue: Document Analysis and Recognition
   :result: 0.4%
-  :paper_pdf_url: !ruby/string
-    str: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=D1C7D701BD39935473808DA5A93426C5?doi=10.1.1.160.8494&rep=rep1&type=pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=D1C7D701BD39935473808DA5A93426C5?doi=10.1.1.160.8494&rep=rep1&type=pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=D1C7D701BD39935473808DA5A93426C5?doi=10.1.1.160.8494&rep=rep1&type=pdf
 - :dataset_name: MNIST
   :paper_name: What is the Best Multi-Stage Architecture for Object Recognition?
   :paper_year: '2009'
   :paper_venue: ICCV
   :result: 0.53%
-  :paper_pdf_url: !ruby/string
-    str: http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/jarrett-iccv-09.pdf
   :additional_information: Large conv. net, unsup pretraining, no distortions
 - :dataset_name: MNIST
   :paper_name: Deformation Models for Image Recognition
   :paper_year: '2007'
   :paper_venue: PAMI
   :result: 0.54%
-  :paper_pdf_url: !ruby/string
-    str: http://www.keysers.net/daniel/files/Keysers--Deformation-Models--TPAMI2007.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.keysers.net/daniel/files/Keysers--Deformation-Models--TPAMI2007.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.keysers.net/daniel/files/Keysers--Deformation-Models--TPAMI2007.pdf
   :additional_information: ! 'K-NN with non-linear deformation (IDM) (Preprocessing:
     shiftable edges)'
 - :dataset_name: MNIST
@@ -104,28 +55,14 @@
 
     Pattern Recognition'
   :result: 0.54%
-  :paper_pdf_url: !ruby/string
-    str: http://hal.inria.fr/docs/00/05/75/61/PDF/LauerSuenBlochPR.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://hal.inria.fr/docs/00/05/75/61/PDF/LauerSuenBlochPR.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://hal.inria.fr/docs/00/05/75/61/PDF/LauerSuenBlochPR.pdf
   :additional_information: Trainable feature extractor + SVMs, uses affine distortions
 - :dataset_name: MNIST
   :paper_name: Training Invariant Support Vector Machines
   :paper_year: '2002'
   :paper_venue: Machine Learning
   :result: 0.56%
-  :paper_pdf_url: !ruby/string
-    str: http://citeseerx.ist.psu.edu/icons/pdf.gif
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://citeseerx.ist.psu.edu/icons/pdf.gif
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://citeseerx.ist.psu.edu/icons/pdf.gif
   :additional_information: ! 'Virtual SVM, deg-9 poly, 2-pixel jittered (Preprocessing:
     deskewing)'
 - :dataset_name: MNIST
@@ -134,14 +71,7 @@
   :paper_year: '2008'
   :paper_venue: TNN
   :result: 0.59%
-  :paper_pdf_url: !ruby/string
-    str: http://www.inb.uni-luebeck.de/publikationen/pdfs/LaBaMa08c.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.inb.uni-luebeck.de/publikationen/pdfs/LaBaMa08c.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.inb.uni-luebeck.de/publikationen/pdfs/LaBaMa08c.pdf
   :additional_information: Unsupervised sparse features + SVM, no distortions
 - :dataset_name: MNIST
   :paper_name: Unsupervised learning of invariant feature hierarchies with applications
@@ -149,28 +79,14 @@
   :paper_year: '2007'
   :paper_venue: CVPR
   :result: 0.62%
-  :paper_pdf_url: !ruby/string
-    str: http://yann.lecun.com/exdb/publis/pdf/ranzato-cvpr-07.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://yann.lecun.com/exdb/publis/pdf/ranzato-cvpr-07.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/ranzato-cvpr-07.pdf
   :additional_information: Large conv. net, unsup features, no distortions
 - :dataset_name: MNIST
   :paper_name: Shape matching and object recognition using shape contexts
   :paper_year: '2002'
   :paper_venue: PAMI
   :result: 0.63%
-  :paper_pdf_url: !ruby/string
-    str: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=B2AAC2BC3824F19757CAC66986D5F3FF?doi=10.1.1.18.8852&rep=rep1&type=pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=B2AAC2BC3824F19757CAC66986D5F3FF?doi=10.1.1.18.8852&rep=rep1&type=pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=B2AAC2BC3824F19757CAC66986D5F3FF?doi=10.1.1.18.8852&rep=rep1&type=pdf
   :additional_information: ! 'K-NN, shape context matching (preprocessing: shape context
     feature extraction)'
 - :dataset_name: MNIST
@@ -179,14 +95,7 @@
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 0.64%
-  :paper_pdf_url: !ruby/string
-    str: http://www.icsi.berkeley.edu/pubs/vision/beyondspatial12.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.icsi.berkeley.edu/pubs/vision/beyondspatial12.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.icsi.berkeley.edu/pubs/vision/beyondspatial12.pdf
 - :dataset_name: MNIST
   :paper_name: Convolutional Deep Belief Networks for Scalable Unsupervised Learning
     of Hierarchical Representations
@@ -202,14 +111,7 @@
   :paper_year: '2009'
   :paper_venue: AISTATS
   :result: 0.95%
-  :paper_pdf_url: !ruby/string
-    str: http://www.utstat.toronto.edu/~rsalakhu/papers/dbm.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.utstat.toronto.edu/~rsalakhu/papers/dbm.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.utstat.toronto.edu/~rsalakhu/papers/dbm.pdf
 - :dataset_name: MNIST
   :paper_name: ! 'CS81: Learning words with Deep Belief Networks'
   :paper_year: '2008'
@@ -233,40 +135,19 @@
   :paper_year: '2012'
   :paper_venue: NIPS
   :result: 62.3% (± 1%)
-  :paper_pdf_url: !ruby/string
-    str: http://homes.cs.washington.edu/~rcg/papers/dspn.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://homes.cs.washington.edu/~rcg/papers/dspn.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://homes.cs.washington.edu/~rcg/papers/dspn.pdf
 - :dataset_name: STL-10
   :paper_name: ! 'Selecting Receptive Fields in Deep Networks '
   :paper_year: '2011'
   :paper_venue: NIPS
   :result: 60.1% (± 1%)
-  :paper_pdf_url: !ruby/string
-    str: http://www.stanford.edu/~acoates/papers/coatesng_nips_2011.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.stanford.edu/~acoates/papers/coatesng_nips_2011.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.stanford.edu/~acoates/papers/coatesng_nips_2011.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Object Detection with Discriminatively Trained Part Based Models
   :paper_year: '2010'
   :paper_venue: PAMI
   :result: 35.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cs.berkeley.edu/~rbg/latent/index.html
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cs.berkeley.edu/~rbg/latent/index.html
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cs.berkeley.edu/~rbg/latent/index.html
   :additional_information: 2012 results using [voc-release5](http://www.cs.berkeley.edu/~rbg/latent/index.html)
     (instead of release3 from 2010), with context. Obtains 33.7 mAP without context.
 - :dataset_name: Pascal VOC 2011/2012 comp3
@@ -274,14 +155,7 @@
   :paper_year: '2010'
   :paper_venue: PAMI
   :result: 33.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cs.berkeley.edu/~rbg/latent/index.html
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cs.berkeley.edu/~rbg/latent/index.html
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cs.berkeley.edu/~rbg/latent/index.html
   :additional_information: 2012 results [voc-release5](http://www.cs.berkeley.edu/~rbg/latent/index.html),
     with context and extra octave. Obtains 29.6 mAP without context (or extra octave).
 - :dataset_name: Pascal VOC 2011/2012 comp3
@@ -289,14 +163,7 @@
   :paper_year: '2012'
   :paper_venue: PASCAL VOC
   :result: 40.86 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/results/index.html#KEY_UVA_HYBRID_CODING_APE
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/results/index.html#KEY_UVA_HYBRID_CODING_APE
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/results/index.html#KEY_UVA_HYBRID_CODING_APE
   :additional_information: ! "Winner of comp3 2012. This unpublished work presented
     at the PASCAL VOC 2012 workshop (at ECCV 2012). \n\nSee the [UVA_HYBRID_CODING_APE
     method description](http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/results/index.html#KEY_UVA_HYBRID_CODING_APE)
@@ -307,40 +174,19 @@
   :paper_year: '2010'
   :paper_venue: CVPR
   :result: 29.6 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Automatic discovery of meaningful object parts with latent CRFs
   :paper_year: '2010'
   :paper_venue: CVPR
   :result: 28.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/cvpr10schnitzspan.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/cvpr10schnitzspan.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/cvpr10schnitzspan.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Object Detection with Discriminatively Trained Part Based Models
   :paper_year: '2010'
   :paper_venue: PAMI
   :result: 29.0 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cs.berkeley.edu/~rbg/latent/index.html
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cs.berkeley.edu/~rbg/latent/index.html
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cs.berkeley.edu/~rbg/latent/index.html
   :additional_information: Original PAMI 2010 results, using [voc-release3](http://www.cs.berkeley.edu/~rbg/latent/index.html),
     with context. Obtains 26.2 mAP without context.
 - :dataset_name: STL-10
@@ -348,28 +194,14 @@
   :paper_year: '2012'
   :paper_venue: arXiv
   :result: 58.28%
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1302.5056v1.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1302.5056v1.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://arxiv.org/pdf/1302.5056v1.pdf
   :additional_information: 1600 codes, learnt using 2x PDL
 - :dataset_name: STL-10
   :paper_name: Deep Learning of Invariant Features via Simulated Fixations in Video
   :paper_year: '2012'
   :paper_venue: NIPS
   :result: 56.5%
-  :paper_pdf_url: !ruby/string
-    str: http://ai.stanford.edu/~wzou/nips_ZouZhuNgYu12.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ai.stanford.edu/~wzou/nips_ZouZhuNgYu12.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ai.stanford.edu/~wzou/nips_ZouZhuNgYu12.pdf
   :additional_information: Trained also with video (unrelated to STL-10) obtained
     61%
 - :dataset_name: Leeds Sport Poses
@@ -378,41 +210,20 @@
   :paper_year: '2009'
   :paper_venue: CVPR
   :result: 55.6%
-  :paper_pdf_url: !ruby/string
-    str: http://www.d2.mpi-inf.mpg.de/andriluka_cvpr09
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.d2.mpi-inf.mpg.de/andriluka_cvpr09
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/andriluka_cvpr09
 - :dataset_name: CIFAR-100
   :paper_name: Maxout Networks
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 61.43%
-  :paper_pdf_url: !ruby/string
-    str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: Uses convolution. Does not use dataset agumentation.
 - :dataset_name: MNIST
   :paper_name: Maxout Networks
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 0.45%
-  :paper_pdf_url: !ruby/string
-    str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: ! 'Uses convolution.
 
     Does not use dataset augmentation.'
@@ -421,14 +232,7 @@
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 88.79%
-  :paper_pdf_url: !ruby/string
-    str: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.idsia.ch/~ciresan/data/cvpr2012.pdf
   :additional_information: ! '[Supplemental material](http://www.idsia.ch/~ciresan/data/cvpr2012-supp.pdf),
     [Technical Report](http://arxiv.org/pdf/1202.2745v1.pdf)'
 - :dataset_name: CIFAR-10
@@ -436,14 +240,7 @@
   :paper_year: '2012'
   :paper_venue: NIPS
   :result: 90.5%
-  :paper_pdf_url: !ruby/string
-    str: http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf
   :additional_information: ! 'Reaches 85.02% without data augmentation.
 
 
@@ -455,27 +252,13 @@
   :paper_year: '2013'
   :paper_venue: arXiv
   :result: 84.87%
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1301.3557.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1301.3557.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://arxiv.org/pdf/1301.3557.pdf
 - :dataset_name: CIFAR-10
   :paper_name: Improving neural networks by preventing co-adaptation of feature detectors
   :paper_year: '2012'
   :paper_venue: arXiv
   :result: 84.4%
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1207.0580.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1207.0580.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://arxiv.org/pdf/1207.0580.pdf
   :additional_information: So called "dropout" method.
 - :dataset_name: CIFAR-100
   :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
@@ -483,54 +266,26 @@
   :paper_year: '2013'
   :paper_venue: arXiv
   :result: 57.49%
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1301.3557.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1301.3557.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://arxiv.org/pdf/1301.3557.pdf
 - :dataset_name: CIFAR-10
   :paper_name: Discriminative Learning of Sum-Product Networks
   :paper_year: '2012'
   :paper_venue: NIPS
   :result: 83.96%
-  :paper_pdf_url: !ruby/string
-    str: http://papers.nips.cc/paper/4516-discriminative-learning-of-sum-product-networks
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://papers.nips.cc/paper/4516-discriminative-learning-of-sum-product-networks
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://papers.nips.cc/paper/4516-discriminative-learning-of-sum-product-networks
 - :dataset_name: CIFAR-100
   :paper_name: ! 'Beyond Spatial Pyramids: Receptive Field Learning for Pooled Image
     Features'
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 54.23%
-  :paper_pdf_url: !ruby/string
-    str: http://www.eecs.berkeley.edu/~jiayq/assets/pdf/cvpr12_pooling.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.eecs.berkeley.edu/~jiayq/assets/pdf/cvpr12_pooling.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.eecs.berkeley.edu/~jiayq/assets/pdf/cvpr12_pooling.pdf
 - :dataset_name: CIFAR-10
   :paper_name: ImageNet Classification with Deep Convolutional Neural Networks
   :paper_year: '2012'
   :paper_venue: NIPS
   :result: 89%
-  :paper_pdf_url: !ruby/string
-    str: http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks
   :additional_information: 87% error on the unaugmented data.
 - :dataset_name: SVHN
   :paper_name: Stochastic Pooling for Regularization of Deep Convolutional Neural
@@ -538,42 +293,21 @@
   :paper_year: '2013'
   :paper_venue: arXiv
   :result: 2.8%
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1301.3557.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1301.3557.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://arxiv.org/pdf/1301.3557.pdf
   :additional_information: 64-64-128 Stochastic Pooling
 - :dataset_name: SVHN
   :paper_name: Convolutional neural networks applied to house numbers digit classiﬁcation
   :paper_year: '2012'
   :paper_venue: ICPR
   :result: 4.9%
-  :paper_pdf_url: !ruby/string
-    str: http://yann.lecun.com/exdb/publis/pdf/sermanet-icpr-12.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://yann.lecun.com/exdb/publis/pdf/sermanet-icpr-12.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://yann.lecun.com/exdb/publis/pdf/sermanet-icpr-12.pdf
   :additional_information: ConvNet / MS / L4 / Padded
 - :dataset_name: SVHN
   :paper_name: Estimated human performance
   :paper_year: '2011'
   :paper_venue: NIPS
   :result: 2%
-  :paper_pdf_url: !ruby/string
-    str: http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ufldl.stanford.edu/housenumbers/nips2011_housenumbers.pdf
   :additional_information: ! 'Based on the paper that introduced the dataset [Reading
     Digits in Natural Images
 
@@ -585,41 +319,20 @@
   :paper_year: '2012'
   :paper_venue: IJCV
   :result: 80% / 83%
-  :paper_pdf_url: !ruby/string
-    str: http://link.springer.com/article/10.1007%2Fs11263-011-0449-8
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://link.springer.com/article/10.1007%2Fs11263-011-0449-8
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://link.springer.com/article/10.1007%2Fs11263-011-0449-8
   :additional_information: per-class % / per-pixel %
 - :dataset_name: MSRC-21
   :paper_name: Graph Cut based Inference with Co-occurrence Statistics
   :paper_year: '2010'
   :paper_venue: ECCV
   :result: 77% / 87%
-  :paper_pdf_url: !ruby/string
-    str: http://research.microsoft.com/en-us/um/people/pkohli/papers/lrkt_eccv2010.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://research.microsoft.com/en-us/um/people/pkohli/papers/lrkt_eccv2010.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://research.microsoft.com/en-us/um/people/pkohli/papers/lrkt_eccv2010.pdf
 - :dataset_name: MSRC-21
   :paper_name: TextonBoost for Image Understanding
   :paper_year: '2009'
   :paper_venue: IJCV
   :result: 57% / 72%
-  :paper_pdf_url: !ruby/string
-    str: http://research.microsoft.com/pubs/117885/ijcv07a.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://research.microsoft.com/pubs/117885/ijcv07a.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://research.microsoft.com/pubs/117885/ijcv07a.pdf
   :additional_information: ?? / 69.6 % (per-class / per-pixel) the unaries alone (no
     CRF on top)
 - :dataset_name: MSRC-21
@@ -627,27 +340,13 @@
   :paper_year: '2008'
   :paper_venue: CVPR
   :result: 67% / 72%
-  :paper_pdf_url: !ruby/string
-    str: http://mi.eng.cam.ac.uk/~cipolla/publications/inproceedings/2008-CVPR-semantic-texton-forests.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://mi.eng.cam.ac.uk/~cipolla/publications/inproceedings/2008-CVPR-semantic-texton-forests.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://mi.eng.cam.ac.uk/~cipolla/publications/inproceedings/2008-CVPR-semantic-texton-forests.pdf
 - :dataset_name: MSRC-21
   :paper_name: Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials
   :paper_year: '2011'
   :paper_venue: NIPS
   :result: 78% / 86%
-  :paper_pdf_url: !ruby/string
-    str: http://graphics.stanford.edu/projects/densecrf/densecrf.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://graphics.stanford.edu/projects/densecrf/densecrf.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://graphics.stanford.edu/projects/densecrf/densecrf.pdf
   :additional_information: ! 'Strong unary used provides 76.6% / 84.0% '
 - :dataset_name: MSRC-21
   :paper_name: ! 'Describing the Scene as a Whole: Joint Object Detection, Scene Classification
@@ -655,41 +354,20 @@
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 79% / 86%
-  :paper_pdf_url: !ruby/string
-    str: http://ttic.uchicago.edu/~rurtasun/publications/yao_et_al_cvpr12.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ttic.uchicago.edu/~rurtasun/publications/yao_et_al_cvpr12.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ttic.uchicago.edu/~rurtasun/publications/yao_et_al_cvpr12.pdf
 - :dataset_name: MSRC-21
   :paper_name: Auto-Context and Its Application to High-Level Vision Tasks and 3D
     Brain Image Segmentation
   :paper_year: '2010'
   :paper_venue: PAMI
   :result: 69% / 78%
-  :paper_pdf_url: !ruby/string
-    str: http://pages.ucsd.edu/~ztu/publication/pami_autocontext.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://pages.ucsd.edu/~ztu/publication/pami_autocontext.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://pages.ucsd.edu/~ztu/publication/pami_autocontext.pdf
 - :dataset_name: MSRC-21
   :paper_name: Are Spatial and Global Constraints Really Necessary for Segmentation?
   :paper_year: '2011'
   :paper_venue: ICCV
   :result: 77% / 85%
-  :paper_pdf_url: !ruby/string
-    str: http://infoscience.epfl.ch/record/169178/files/lucchi_ICCV11.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://infoscience.epfl.ch/record/169178/files/lucchi_ICCV11.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://infoscience.epfl.ch/record/169178/files/lucchi_ICCV11.pdf
   :additional_information: ! 'Several variants are examined, no single method attains
     the overall best results, i.e. both best per-class and per-pixel averages simultaneously.
     Indicated result corresponds to the method that we best on the average (per-class
@@ -701,40 +379,19 @@
   :paper_year: '2012'
   :paper_venue: ICML
   :result: 58.7%
-  :paper_pdf_url: !ruby/string
-    str: http://web.eecs.umich.edu/~honglak/icml12-invariantFeatureLearning.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://web.eecs.umich.edu/~honglak/icml12-invariantFeatureLearning.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://web.eecs.umich.edu/~honglak/icml12-invariantFeatureLearning.pdf
 - :dataset_name: STL-10
   :paper_name: Deep Learning of Invariant Features via Simulated Fixations in Video
   :paper_year: '2012'
   :paper_venue: NIPS 2012
   :result: 61%
-  :paper_pdf_url: !ruby/string
-    str: http://papers.nips.cc/paper/4730-deep-learning-of-invariant-features-via-simulated-fixations-in-video
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://papers.nips.cc/paper/4730-deep-learning-of-invariant-features-via-simulated-fixations-in-video
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://papers.nips.cc/paper/4730-deep-learning-of-invariant-features-via-simulated-fixations-in-video
 - :dataset_name: CIFAR-10
   :paper_name: Maxout Networks
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 90.65%
-  :paper_pdf_url: !ruby/string
-    str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: ! 'This result was obtained using both convolution and
     synthetic translations / horizontal reflections of the training data.
 
@@ -746,53 +403,25 @@
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 0.21%
-  :paper_pdf_url: !ruby/string
-    str: http://cs.nyu.edu/~wanli/dropc/
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://cs.nyu.edu/~wanli/dropc/
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://cs.nyu.edu/~wanli/dropc/
 - :dataset_name: CIFAR-10
   :paper_name: Regularization of Neural Networks using DropConnect
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 90.68%
-  :paper_pdf_url: !ruby/string
-    str: http://cs.nyu.edu/~wanli/dropc/
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://cs.nyu.edu/~wanli/dropc/
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://cs.nyu.edu/~wanli/dropc/
 - :dataset_name: SVHN
   :paper_name: Regularization of Neural Networks using DropConnect
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 1.94%
-  :paper_pdf_url: !ruby/string
-    str: http://cs.nyu.edu/~wanli/dropc/
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://cs.nyu.edu/~wanli/dropc/
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://cs.nyu.edu/~wanli/dropc/
 - :dataset_name: SVHN
   :paper_name: Maxout Networks
   :paper_year: '2013'
   :paper_venue: ICML
   :result: 2.47%
-  :paper_pdf_url: !ruby/string
-    str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://jmlr.org/proceedings/papers/v28/goodfellow13.pdf
   :additional_information: This result was obtained using convolution but not any
     synthetic transformations of the training data.
 - :dataset_name: Pascal VOC 2007 comp3
@@ -800,40 +429,19 @@
   :paper_year: '2012'
   :paper_venue: ECCV
   :result: 43.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://hci.iwr.uni-heidelberg.de/Staff/bommer/papers/monroy_ommer_eccv12.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://hci.iwr.uni-heidelberg.de/Staff/bommer/papers/monroy_ommer_eccv12.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://hci.iwr.uni-heidelberg.de/Staff/bommer/papers/monroy_ommer_eccv12.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Deformable Part Models with Individual Part Scaling
   :paper_year: '2013'
   :paper_venue: BMVC
   :result: 32.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.idiap.ch/~fleuret/papers/dubout-fleuret-bmvc2013.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.idiap.ch/~fleuret/papers/dubout-fleuret-bmvc2013.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.idiap.ch/~fleuret/papers/dubout-fleuret-bmvc2013.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Discriminatively Trained And-Or Tree Models for Object Detection
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 34.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
   :additional_information: The number of components, parts, their shape, appearance,
     and configuration are all learned.
 - :dataset_name: Pascal VOC 2010 comp3
@@ -841,14 +449,7 @@
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 29.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf
   :additional_information: The number of components, parts, their shape, appearance,
     and configuration are all learned.
 - :dataset_name: Pascal VOC 2010 comp3
@@ -856,14 +457,7 @@
   :paper_year: '2010'
   :paper_venue: PAMI
   :result: 33.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://people.cs.uchicago.edu/~rbg/latent-release5/
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://people.cs.uchicago.edu/~rbg/latent-release5/
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://people.cs.uchicago.edu/~rbg/latent-release5/
   :additional_information: ! 'This are the results of version 5 (September 2012) with
     context and extra octave. Raw detection obtains 29.6 mAP.
 
@@ -873,14 +467,7 @@
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 40.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://ttic.uchicago.edu/~fidler/papers/fidler_et_al_cvpr13a.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ttic.uchicago.edu/~fidler/papers/fidler_et_al_cvpr13a.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ttic.uchicago.edu/~fidler/papers/fidler_et_al_cvpr13a.pdf
   :additional_information: ! "Reaches 40.4 mAP when using full post-processing. \nReaches
     36.6 mAP without any post-processing.\nThis method builds upon a sophisticated
     object segmentation method (CPMC)."
@@ -889,14 +476,7 @@
   :paper_year: '2010'
   :paper_venue: ECCV
   :result: 36.8 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://kylezheng.org/publications/
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://kylezheng.org/publications/
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://kylezheng.org/publications/
   :additional_information: There seem to be no paper about this work, but only the
     slides from the entry at the PASCAL VOC workshop ECCV 2010.
 - :dataset_name: MSRC-21
@@ -904,14 +484,7 @@
   :paper_year: '2012'
   :paper_venue: ECCV
   :result: 76 % / 82 %
-  :paper_pdf_url: !ruby/string
-    str: http://infoscience.epfl.ch/record/180190
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://infoscience.epfl.ch/record/180190
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://infoscience.epfl.ch/record/180190
   :additional_information: 70 % / 73 % when using only local features (not considering
     global features)
 - :dataset_name: CIFAR-10
@@ -919,14 +492,7 @@
   :paper_year: '2011'
   :paper_venue: AISTATS
   :result: 79.6 %
-  :paper_pdf_url: !ruby/string
-    str: http://www.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf
   :additional_information: 79.6% obtained using K-means over whitened patches, with
     triangle encoding and 4000 features (clusters).
 - :dataset_name: Pascal VOC 2010 comp3
@@ -934,28 +500,14 @@
   :paper_year: '2011'
   :paper_venue: ICCV
   :result: 34.1 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.science.uva.nl/research/publications/2011/vandeSandeICCV2011/vandesande_iccv2011.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.science.uva.nl/research/publications/2011/vandeSandeICCV2011/vandesande_iccv2011.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.science.uva.nl/research/publications/2011/vandeSandeICCV2011/vandesande_iccv2011.pdf
   :additional_information: Source code availabe at http://koen.me/research/selectivesearch/
 - :dataset_name: Pascal VOC 2010 comp3
   :paper_name: Latent Hierarchical Structural Learning for Object  Detection
   :paper_year: '2010'
   :paper_venue: CVPR
   :result: 36.0 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf
   :additional_information: ! 'Result presented in the [VOC 2010 workshop](http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2010/workshop/mitucla.pdf)
     at ECCV 2010.
 
@@ -965,80 +517,38 @@
   :paper_year: '2011'
   :paper_venue: CVPR
   :result: 60.8 %
-  :paper_pdf_url: !ruby/string
-    str: http://www.ics.uci.edu/~dramanan/papers/pose2011.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.ics.uci.edu/~dramanan/papers/pose2011.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.ics.uci.edu/~dramanan/papers/pose2011.pdf
 - :dataset_name: Leeds Sport Poses
   :paper_name: Appearance sharing for collective human pose estimation
   :paper_year: '2012'
   :paper_venue: ACCV
   :result: 64.3 %
-  :paper_pdf_url: !ruby/string
-    str: http://groups.inf.ed.ac.uk/calvin/Publications/eichner12accv.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://groups.inf.ed.ac.uk/calvin/Publications/eichner12accv.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://groups.inf.ed.ac.uk/calvin/Publications/eichner12accv.pdf
 - :dataset_name: Leeds Sport Poses
   :paper_name: Poselet conditioned pictorial structures
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 63.3 %
-  :paper_pdf_url: !ruby/string
-    str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13cvpr.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13cvpr.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13cvpr.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Detection Evolution with Multi-Order Contextual Co-occurrence
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 38.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Color Attributes for Object Detection
   :paper_year: '2012'
   :paper_venue: CVPR
   :result: 34.8 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf
   :additional_information: Code [available](http://www.cat.uab.cat/Research/object-detection).
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Ensemble of Exemplar-SVMs for Object Detection and Beyond
   :paper_year: '2011'
   :paper_venue: ICCV
   :result: 22.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf
   :additional_information: ! 'Reaches 19.8 mAP when not using context.
 
 
@@ -1049,28 +559,14 @@
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 34.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf
 - :dataset_name: MSRC-21
   :paper_name: ! 'PatchMatchGraph: Building a Graph of Dense Patch Correspondences
     for Label Transfer'
   :paper_year: '2012'
   :paper_venue: ECCV
   :result: 72.8% / 79.0%
-  :paper_pdf_url: !ruby/string
-    str: http://users.cecs.anu.edu.au/~sgould/papers/eccv12-patchGraph.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://users.cecs.anu.edu.au/~sgould/papers/eccv12-patchGraph.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://users.cecs.anu.edu.au/~sgould/papers/eccv12-patchGraph.pdf
   :additional_information: ! ' 49.8% / 63.3% raw PatchMatchGraph accuracy, 72.8% /
     79.0% when using Boosted CRF.
 
@@ -1081,27 +577,13 @@
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 24.98 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf
 - :dataset_name: Leeds Sport Poses
   :paper_name: Strong Appearance and Expressive Spatial Models for Human Pose Estimation
   :paper_year: '2013'
   :paper_venue: ICCV
   :result: 69.2 %
-  :paper_pdf_url: !ruby/string
-    str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13iccv.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13iccv.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/sites/default/files/pishchulin13iccv.pdf
   :additional_information: Starting model reaches 58.1 %, improved local appearances
     reaches 66.9 %, and 69.2% when using the full model.
 - :dataset_name: Pascal VOC 2007 comp3
@@ -1109,14 +591,7 @@
   :paper_year: '2013'
   :paper_venue: CVPR
   :result: 34.3 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.ics.uci.edu/~dramanan/papers/hsc.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.ics.uci.edu/~dramanan/papers/hsc.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.ics.uci.edu/~dramanan/papers/hsc.pdf
   :additional_information: Reaches 26.9 mAP when using only the root templates (no
     parts).
 - :dataset_name: Pascal VOC 2007 comp3
@@ -1124,42 +599,21 @@
   :paper_year: '2012'
   :paper_venue: PAMI
   :result: 27.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf
   :additional_information: Source code [available](http://groups.inf.ed.ac.uk/calvin/objectness/).
 - :dataset_name: MNIST
   :paper_name: Trainable COSFIRE filters for keypoint detection and pattern recognition
   :paper_year: '2013'
   :paper_venue: PAMI
   :result: 0.52 %
-  :paper_pdf_url: !ruby/string
-    str: http://iwi.eldoc.ub.rug.nl/FILES/root/2013/IEEETPAMIAzzopardi/2013IEEETPAMIAzzopardi.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://iwi.eldoc.ub.rug.nl/FILES/root/2013/IEEETPAMIAzzopardi/2013IEEETPAMIAzzopardi.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://iwi.eldoc.ub.rug.nl/FILES/root/2013/IEEETPAMIAzzopardi/2013IEEETPAMIAzzopardi.pdf
   :additional_information: Source code [available](http://www.mathworks.de/matlabcentral/fileexchange/37395-trainable-cosfire-filters-for-keypoint-detection-and-pattern-recognition).
 - :dataset_name: STL-10
   :paper_name: Unsupervised Feature Learning for RGB-D Based Object Recognition
   :paper_year: '2012'
   :paper_venue: ISER
   :result: 64.5% (±1%)
-  :paper_pdf_url: !ruby/string
-    str: http://homes.cs.washington.edu/~lfb/paper/iser12.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://homes.cs.washington.edu/~lfb/paper/iser12.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://homes.cs.washington.edu/~lfb/paper/iser12.pdf
   :additional_information: Hierarchical sparse coding using Matching Pursuit and K-SVD
 - :dataset_name: MSRC-21
   :paper_name: ! 'Morphological Proximity Priors: Spatial Relationships for Semantic
@@ -1167,150 +621,59 @@
   :paper_year: '2013'
   :paper_venue: TUM-I1222
   :result: ! '78.2% / 85.0% '
-  :paper_pdf_url: !ruby/string
-    str: http://mediatum.ub.tum.de/doc/1175516/1175516.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://mediatum.ub.tum.de/doc/1175516/1175516.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://mediatum.ub.tum.de/doc/1175516/1175516.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Regionlets for Generic Object Detection
   :paper_year: '2013'
   :paper_venue: ICCV
   :result: 41.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
   :additional_information: No context information being used.
 - :dataset_name: Pascal VOC 2010 comp3
   :paper_name: Regionlets for Generic Object Detection
   :paper_year: '2013'
   :paper_venue: ICCV
   :result: 39.7 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf
   :additional_information: No context information being used.
-- :dataset_name: Pascal VOC 2007 comp4
-  :paper_name: Rich feature hierarchies for accurate object detection and semantic
-    segmentation
-  :paper_year: '2013'
-  :paper_venue: Arxiv
-  :result: 48.0 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1311.2524.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1311.2524.pdf
-      background: 9
-      mode: 0
-- :dataset_name: Pascal VOC 2010 comp4
-  :paper_name: Rich feature hierarchies for accurate object detection and semantic
-    segmentation
-  :paper_year: '2013'
-  :paper_venue: Arxiv
-  :result: 43.5 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://arxiv.org/pdf/1311.2524.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://arxiv.org/pdf/1311.2524.pdf
-      background: 9
-      mode: 0
 - :dataset_name: Pascal VOC 2010 comp3
   :paper_name: Selective Search for Object Recognition
   :paper_year: '2013'
   :paper_venue: IJCV
   :result: 35.1 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Segmentation Driven Object Detection with Fisher Vectors
   :paper_year: '2013'
   :paper_venue: ICCV
   :result: 40.5 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
   :additional_information: ! ' 38.5 mAP when not using inter-class contextual cues'
 - :dataset_name: Pascal VOC 2010 comp3
   :paper_name: Segmentation Driven Object Detection with Fisher Vectors
   :paper_year: '2013'
   :paper_venue: ICCV
   :result: 38.4 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf
   :additional_information: ! ' 35.8 mAP when not using inter-class contextual cues'
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Boosted local structured HOG-LBP for object localization
   :paper_year: '2011'
   :paper_venue: CVPR
   :result: 34.3 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf
 - :dataset_name: MNIST
   :paper_name: Sparse Activity and Sparse Connectivity in Supervised Learning
   :paper_year: '2013'
   :paper_venue: JMLR
   :result: 0.75%
-  :paper_pdf_url: !ruby/string
-    str: http://jmlr.org/papers/v14/thom13a.html
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://jmlr.org/papers/v14/thom13a.html
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://jmlr.org/papers/v14/thom13a.html
 - :dataset_name: Pascal VOC 2007 comp3
   :paper_name: Machine Learning Methods for Visual Object Detection
   :paper_year: '2011'
   :paper_venue: archives-ouvertes
   :result: 36.0 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf
   :additional_information: ! "Thesis results based on the features explained in our
     earlier paper \"Feature Sets and Dimensionality Reduction For Visual Object Detection,
     BMVC, 2010\". \n\nResults table can be found on the page 104 of thesis."
@@ -1320,14 +683,7 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 2.16%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/0c571b22-f4b6-4d58-87e4-99d7de42a893#0c571b22-f4b6-4d58-87e4-99d7de42a893
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/0c571b22-f4b6-4d58-87e4-99d7de42a893#0c571b22-f4b6-4d58-87e4-99d7de42a893
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/0c571b22-f4b6-4d58-87e4-99d7de42a893#0c571b22-f4b6-4d58-87e4-99d7de42a893
   :additional_information: ! 'For classification of individual digits with a single
     network, error rate is 2.16%.
 
@@ -1338,14 +694,7 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 91.2%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
   :additional_information: ! 'The code for NIN available at
 
     https://github.com/mavenlin/cuda-convnet
@@ -1359,14 +708,7 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 64.32%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
   :additional_information: ! 'NIN + Dropout
 
 
@@ -1378,14 +720,7 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 2.35%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
   :additional_information: ! 'NIN + Dropout
 
 
@@ -1397,14 +732,7 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 0.47%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/9b05a3bb-3a5e-49cb-91f7-0f482af65aea#9b05a3bb-3a5e-49cb-91f7-0f482af65aea
   :additional_information: ! 'NIN + Dropout
 
 
@@ -1416,54 +744,26 @@
   :paper_year: '2013'
   :paper_venue: BMVC
   :result: 80.02%
-  :paper_pdf_url: !ruby/string
-    str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
 - :dataset_name: CIFAR-100
   :paper_name: Learning Smooth Pooling Regions for Visual Recognition
   :paper_year: '2013'
   :paper_venue: BMVC
   :result: 56.29%
-  :paper_pdf_url: !ruby/string
-    str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.d2.mpi-inf.mpg.de/content/learning-smooth-pooling-regions-visual-recognition
   :additional_information: No data augmentation.
 - :dataset_name: MSRC-21
   :paper_name: Large-Scale Semantic Co-Labeling of Image Sets
   :paper_year: '2014'
   :paper_venue: WACV
   :result: 80.9% / 86.8%
-  :paper_pdf_url: !ruby/string
-    str: http://www.cvc.uab.es/~jalvarez/research_cosegment.php
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cvc.uab.es/~jalvarez/research_cosegment.php
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cvc.uab.es/~jalvarez/research_cosegment.php
 - :dataset_name: Pascal VOC 2007 comp4
   :paper_name: Multi-Component Models for Object Detection
   :paper_year: '2012'
   :paper_venue: ECCV
   :result: 29.0 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
   :additional_information: ! '20.9 Monolithic, 29.0 Multi-components.
 
 
@@ -1474,14 +774,7 @@
   :paper_year: '2012'
   :paper_venue: ECCV
   :result: 33.1 mAP
-  :paper_pdf_url: !ruby/string
-    str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf
   :additional_information: ! 'Multi-components result
 
 
@@ -1492,14 +785,7 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 90.61%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
   :additional_information: ! '88.65% without data augmentation.
 
     90.61% when using data augmentation.'
@@ -1508,41 +794,108 @@
   :paper_year: '2014'
   :paper_venue: ICLR
   :result: 61.86%
-  :paper_pdf_url: !ruby/string
-    str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://openreview.net/document/28d9c3ab-fe88-4836-b898-403d207a037c#28d9c3ab-fe88-4836-b898-403d207a037c
 - :dataset_name: MNIST
   :paper_name: On Optimization Methods for Deep Learning
   :paper_year: '2011'
   :paper_venue: ICML
   :result: 0.69%
-  :paper_pdf_url: !ruby/string
-    str: http://ai.stanford.edu/~quocle/LeNgiCoaLahProNg11.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ai.stanford.edu/~quocle/LeNgiCoaLahProNg11.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://ai.stanford.edu/~quocle/LeNgiCoaLahProNg11.pdf
 - :dataset_name: CIFAR-100
   :paper_name: Discriminative Transfer Learning with Tree-based Priors
   :paper_year: '2013'
   :paper_venue: NIPS
   :result: 63.15%
-  :paper_pdf_url: !ruby/string
-    str: http://www.cs.toronto.edu/~nitish/treebasedpriors.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cs.toronto.edu/~nitish/treebasedpriors.pdf
-      background: 9
-      mode: 0
+  :paper_pdf_url: http://www.cs.toronto.edu/~nitish/treebasedpriors.pdf
   :additional_information: ! 'The baseline "Convnet + max pooling + dropout" reaches
     62.80% (without any tree prior).
 
 '
+- :dataset_name: Pascal VOC 2007 comp4
+  :paper_name: Rich feature hierarchies for accurate object detection and semantic
+    segmentation
+  :paper_year: '2014'
+  :paper_venue: CVPR
+  :result: 58.5 mAP
+  :paper_pdf_url: http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf
+- :dataset_name: Pascal VOC 2010 comp4
+  :paper_name: Rich feature hierarchies for accurate object detection and semantic
+    segmentation
+  :paper_year: '2014'
+  :paper_venue: CVPR
+  :result: 53.7 mAP
+  :paper_pdf_url: http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf
+- :dataset_name: CIFAR-10
+  :paper_name: Learning Invariant Representations with Local Transformations
+  :paper_year: '2012'
+  :paper_venue: ICML
+  :result: 82.2%
+  :paper_pdf_url: http://icml.cc/2012/papers/659.pdf
+  :additional_information: K= 4,000
+- :dataset_name: STL-10
+  :paper_name: No more meta-parameter tuning in unsupervised sparse feature learning
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 61.0% (± 0.58%)
+  :paper_pdf_url: http://arxiv.org/abs/1402.5766
+- :dataset_name: STL-10
+  :paper_name: Multi-Task Bayesian Optimization
+  :paper_year: '2013'
+  :paper_venue: NIPS
+  :result: 70.1% (± 0.6%)
+  :paper_pdf_url: http://hips.seas.harvard.edu/files/swersky-multi-nips-2013.pdf
+  :additional_information: Also uses CIFAR-10 training data
+- :dataset_name: STL-10
+  :paper_name: Committees of deep feedforward networks trained with few data
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 68% (± 0.55%)
+  :paper_pdf_url: http://arxiv.org/abs/1406.5947
+- :dataset_name: Pascal VOC 2010 comp3
+  :paper_name: Fisher and VLAD with FLAIR
+  :paper_year: '2014'
+  :paper_venue: CVPR
+  :result: 40.4 mAP
+  :paper_pdf_url: http://koen.me/research/flair/
+- :dataset_name: Pascal VOC 2011 comp3
+  :paper_name: Fisher and VLAD with FLAIR
+  :paper_year: '2014'
+  :paper_venue: CVPR
+  :result: 40.6 mAP
+  :paper_pdf_url: http://koen.me/research/flair/
+- :dataset_name: CIFAR-10
+  :paper_name: Lessons learned from manually classifying CIFAR-10
+  :paper_year: '2011'
+  :paper_venue: unpublished
+  :result: 94%
+  :paper_pdf_url: http://karpathy.github.io/2011/04/27/manually-classifying-cifar10/
+  :additional_information: Rough estimate from a single individual, over 400 training
+    images (~1% of training data).
+- :dataset_name: MNIST
+  :paper_name: Convolutional Kernel Networks
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 0.39%
+  :paper_pdf_url: http://arxiv.org/abs/1406.3332
+  :additional_information: No data augmentation.
+- :dataset_name: CIFAR-10
+  :paper_name: Convolutional Kernel Networks
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 82.18%
+  :paper_pdf_url: http://arxiv.org/abs/1406.3332
+  :additional_information: No data augmentation.
+- :dataset_name: STL-10
+  :paper_name: Convolutional Kernel Networks
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 62.32%
+  :paper_pdf_url: http://arxiv.org/abs/1406.3332
+  :additional_information: No data augmentation.
+- :dataset_name: Pascal VOC 2007 comp4
+  :paper_name: Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition
+  :paper_year: '2014'
+  :paper_venue: ECCV
+  :result: 59.2 mAP
+  :paper_pdf_url: http://research.microsoft.com/en-us/um/people/kahe/eccv14sppnet/index.html
+  :additional_information: 20x faster than R-CNN.

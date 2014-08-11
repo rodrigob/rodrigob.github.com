@@ -100,7 +100,7 @@ def read_datasets_data worksheet
 	data = data.map { |datum| datum.select {|k,v| v and not v.empty?} }
 	
 	data.map { |d| check_dataset_urls d }
-
+        
 	groups = Set.new
 	data.each {|x| groups.add x[:group] }
 	grouped_datasets = {}
@@ -134,7 +134,12 @@ def read_curated_data worksheet
 	data = data.compact 
 	data = data.map{ |datum| datum.select {|k,v| v and not v.empty?} }
 	
-	data.map { |datum| check_url datum[:paper_pdf_url] }
+	# FIXME this should be a command line option
+	#check_all_urls = false
+	check_all_urls = true
+	if check_all_urls
+	  data.map { |datum| check_url datum[:paper_pdf_url] }
+	end
 	
 	data
 end # end of read_curated_data

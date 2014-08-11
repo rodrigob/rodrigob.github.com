@@ -60,6 +60,7 @@
       <a class='btn' href='#detection-dataset-type'>Detection</a>
       <a class='btn' href='#pose_estimation-dataset-type'>Pose estimation</a>
       <a class='btn' href='#semantic_labeling-dataset-type'>Semantic labeling</a>
+      <a class='btn' href='#saliency/segmentation-dataset-type'>Saliency/Segmentation</a>
     </div>
     <p></p>
     <div class='dataset-group'>
@@ -77,7 +78,7 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/classification_datasets_results.html#4d4e495354">MNIST</a>
-      <small>25 results collected</small>
+      <small>26 results collected</small>
     </h3>
     <p>
       Units:
@@ -100,7 +101,7 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130">CIFAR-10</a>
-      <small>12 results collected</small>
+      <small>15 results collected</small>
     </h3>
     <p>
       Units:
@@ -146,7 +147,7 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/classification_datasets_results.html#53544c2d3130">STL-10</a>
-      <small>7 results collected</small>
+      <small>11 results collected</small>
     </h3>
     <p>
       Units:
@@ -229,7 +230,7 @@
     </h3>
     <p>
       Units:
-      mAP
+      mAP percent
     </p>
     <blockquote><p>Pascal VOC 2007 is commonly used because the test set has been realased. comp3 is the objects detection competition, using only the comp3 pascal training data.</p></blockquote>
   </div>
@@ -248,10 +249,11 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7034">Pascal VOC 2007 comp4</a>
+      <small>3 results collected</small>
     </h3>
     <p>
       Units:
-      mAP
+      mAP percent
     </p>
     <blockquote><p>Just like comp3 but &#8220;any training data&#8221; can be used.</p></blockquote>
   </div>
@@ -270,11 +272,11 @@
   <div class='span7'>
     <h3>
       <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033">Pascal VOC 2010 comp3</a>
-      <small>9 results collected</small>
+      <small>10 results collected</small>
     </h3>
     <p>
       Units:
-      mAP
+      mAP percent
     </p>
     <blockquote><p>Pascal VOC 2010 version of the challenge. comp3 is the objects detection competition.</p></blockquote>
   </div>
@@ -297,7 +299,7 @@
     </h3>
     <p>
       Units:
-      mAP
+      mAP percent
     </p>
     <blockquote><p>Just like comp3 but &#8220;any training data&#8221; can be used.</p></blockquote>
   </div>
@@ -319,7 +321,7 @@
     </h3>
     <p>
       Units:
-      mAP
+      mAP percent
     </p>
     <blockquote><p>Last Pascal VOC challenge instance (2012 version had identical data).</p></blockquote>
   </div>
@@ -522,11 +524,38 @@
     <hr />
   </div>
 </div>
+    <div class='dataset-group'>
+  <div class='container span12' id='saliency/segmentation-dataset-type'>
+    <h2>Saliency/Segmentation</h2>
+    <div class='row dataset-preview'>
+  <div class='span2'>
+    <ul class='thumbnails'>
+      <li>
+        <a class="thumbnail" href="http://mmcheng.net/salobjbenchmark/"><img width="150px" height="150px" src="/are_we_there_yet/build/images/saliency_benchmark.png?1407721362" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class='span7'>
+    <h3>
+      <a class="external_link" href="http://mmcheng.net/salobjbenchmark/">Salient Object Detection benchmark</a>
+    </h3>
+    <p>
+      Units:
+      AUC (precision/recall area under the curve) and MAE (mean absolute error)
+    </p>
+    <blockquote><p>This benchmark aggregates results from 36 methods over five datasets (MSRA10K, ECSSD, THUR15K, JuddDB, and DUTOMRON).</p></blockquote>
+  </div>
+</div>
+<!-- end of row -->
+    <hr />
+  </div>
+</div>
   </div>
 </section>
     <div class='row'>
       <footer class='span12'>
-        <p>Last updated on 2014-04-15.</p>
+        <p>Last updated on 2014-08-11.</p>
         
         <p>&#169; 2013-2014 Rodrigo Benenson.</p>
         
