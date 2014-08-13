@@ -117,6 +117,7 @@ class BoundariesEstimationController {
     drop_zone_two.onDrop.listen(on_drop);
 
     loading_gif.hidden = true;
+    log_success("Javascript code loaded.");
     return;
   }
 

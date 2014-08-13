@@ -16449,6 +16449,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       t1 = t2.get$onDrop(t1);
       H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t1._html$_target, t1._eventType, W._wrapZone(this.get$on_drop()), t1._useCapture), [H.getTypeArgumentByIndex(t1, 0)])._tryResume$0();
       this.loading_gif.hidden = true;
+      this.log_message$2$paragraph_class("Javascript code loaded.", "bg-success");
       return;
     },
     static: {BoundariesEstimationController$: function() {
