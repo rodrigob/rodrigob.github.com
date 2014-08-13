@@ -1,0 +1,119 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+}
+
+h1, p {
+  color: #333;
+}
+
+#sketch>canvas,#sketch>img {
+  border: 10px solid lightgray;
+}
+
+#boundaries_image_canvas {
+  border: 10px solid lightgreen;
+}
+
+#input_image {
+  
+}
+
+#paint_canvas {
+  position: absolute;
+  z-index: 10;
+}
+
+#tmp_canvas {
+  position: relative;
+  z-index: 20;
+  cursor: crosshair;
+}
+
+#main_container {
+  width: 90%;
+}
+
+
+#sample_container_id {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+
+
+output {
+  display: block;
+}
+
+#byte-content {
+  margin: 5px 0;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#byte-range {
+  margin-top: 5px;
+}
+
+#drop-zone {
+  border: 2px dashed #bbb;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #bbb;
+  font-size: 20pt;
+  font-weight: bold;
+  padding: 25px;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+#drop-zone.hover {
+  background-color: #def;
+  border-color: #777;
+  color: #777;
+}
+
+
+#sketch.hover > img {
+  border: 10px solid lightblue;
+  opacity: 0.5;
+}
+
+
+#progress-bar {
+  background-color: #9cf;
+  border: 1px solid #000;
+  font-size: 14px;
+  margin: 10px 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  padding: 3px;
+}
+
+#progress-bar.loading {
+  opacity: 1.0;
+}
+
+.thumb {
+  border: 1px solid #000;
+  height: 75px;
+  margin: 10px 5px 0 0;
+}
+
+footer {
+  margin-top: 3em;
+  
+}

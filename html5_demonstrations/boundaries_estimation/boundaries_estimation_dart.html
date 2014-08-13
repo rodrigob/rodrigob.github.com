@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boundaries estimation demonstration</title>
+
+    <!--
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+
+    <link rel="import" href="packages/paper_elements/paper_button.html">
+    <link rel="import" href="packages/paper_elements/paper_ripple.html"> -->
+
+    <link rel="stylesheet" href="../style_sheets/bootstrap.3.1.0.min.css">
+    <link rel="stylesheet" href="boundaries_estimation_dart.css">
+
+</head>
+<body class="main" lang="en" unresolved>
+<div class="container" id="main_container">
+    <h1 class="text-center">
+        Estimating object boundaries in the browser
+    </h1>
+
+    <div class="row col-md-12 text-center">
+        <p>
+            Object boundary estimation using <a
+                href="http://arxiv.org/abs/1406.5549">structured forest
+            method</a> from <a
+                href="http://vision.ucsd.edu/~pdollar/research.html#BoundaryFeatureLearning">P.
+            Dollar and CL. Zitnick</a>, <br>ported to C++ by <a
+                href="http://www.philkr.net/home/gop">P. Krähenbühl</a>,
+            bundled into javascript magic via <a
+                href="http://kripken.github.io/emscripten-site">emscripten</a>.
+        </p>
+    </div>
+
+    <div class="row" boundaries_estimation>
+
+        <div class="col-md-4 col-md-offset-1">
+            <h3 class="text-center">Input image</h3>
+
+            <div id="sketch" class="row col-md-12">
+                <img src="images/test_image.jpg" id="input_image"
+                     class="center-block">
+            </div>
+
+            <div class="row">
+                <p class="col-md-8 btn-lg">
+                    Drop image here ⇧, or
+                </p>
+            </div>
+            <div class="row">
+                <form id="read">
+                    <input class="btn btn-lg" type="file" id="upload_input">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-md-offset-1">
+            <h3 class="text-center">Image boundaries</h3>
+
+            <div class="row col-md-12">
+                <div  id="boundaries_image_container" class="center-block">
+                    <img src="images/loading.gif" id="loading" width="50"
+                         style="position: absolute;">
+                    <canvas id="boundaries_image_canvas">
+                    </canvas>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                <button class="btn btn-lg btn-primary pull-left"
+                        ng-click="ctrl.compute_the_boundaries(use_sobel: true)">
+                    Sobel
+                </button>
+
+                <button class="btn btn-lg btn-primary pull-right"
+                        ng-click="ctrl.compute_the_boundaries(use_sobel: false)">
+                    Structured
+                    Forest
+                </button>
+                    </div>
+            </div>
+            <div class="row">
+                <h3 class="col-md-10 col-md-offset-1 text-justify">
+                    <small>Sobel is fast but only detects image
+                        gradients, structured forest reflects better the true
+                        object boundaries.
+                    </small>
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 col-md-offset-1">
+            <div id="drop-zone">
+                <small>You can also<br>drop image here</small>
+            </div>
+            <output id="list"></output>
+        </div>
+
+        <div class="col-md-5 col-md-offset-1">
+        <pre style="height: 10em;">
+            <output id="computation_log"><p class="bg-info">Loading javascript...</p></output>
+          </pre>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div class="row col-md-12 text-center">
+            <p>
+                Demonstration page created by <a
+                    href="http://rodrigob.github.io">R. Benenson</a>.
+            </p>
+        </div>
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="boundaries_js_lib.js"></script>
+<script type="application/dart" src="boundaries_estimation_dart.dart"></script>
+<script src="packages/browser/dart.js"></script>
+</body>
+</html>
+
