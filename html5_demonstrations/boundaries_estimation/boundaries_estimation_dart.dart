@@ -166,9 +166,11 @@ class BoundariesEstimationController {
 
   void update_images_sizes() {
 
-    final double aspect_ratio = img.width / img.height;
-    final int max_width = 500,
+    final double aspect_ratio = img.width.toDouble() / img.height;
+    final int
+        max_width = 500,
         max_height = 500;
+
     if (img.width > max_width) {
       img.width = max_width;
       img.height = max_width ~/ aspect_ratio;
@@ -233,8 +235,10 @@ class BoundariesEstimationController {
           thumbnail.title = sanitizer.convert(file.name);
           thumbHolder.nodes.add(thumbnail);
 
-
+          // we propagate the new content, and new image size
           img.src = thumbnail.src;
+          img.width = thumbnail.width;
+          img.height = thumbnail.height;
           update_images_sizes();
         });
         reader.readAsDataUrl(file);

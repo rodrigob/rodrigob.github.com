@@ -637,6 +637,9 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       else
         return Math.round(receiver);
     },
+    toDouble$0: function(receiver) {
+      return receiver;
+    },
     toRadixString$1: function(receiver, radix) {
       if (radix < 2 || radix > 36)
         throw H.wrapException(P.RangeError$(radix));
@@ -16305,10 +16308,14 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return;
     }, "call$1", "get$log_warning", 2, 0, 62, 117],
     update_images_sizes$0: function() {
-      var t1, t2, aspect_ratio, t3, t4, left_margin, top_margin;
+      var t1, t2, t3, t4, aspect_ratio, left_margin, top_margin;
       t1 = this.img;
       t2 = J.getInterceptor$x(t1);
-      aspect_ratio = J.$div$n(t2.get$width(t1), t2.get$height(t1));
+      t3 = J.toDouble$0$n(t2.get$width(t1));
+      t4 = t2.get$height(t1);
+      if (typeof t4 !== "number")
+        return H.iae(t4);
+      aspect_ratio = t3 / t4;
       if (J.$gt$n(t2.get$width(t1), 500)) {
         t2.set$width(t1, 500);
         t2.set$height(t1, C.JSInt_methods.$tdiv(500, aspect_ratio));
@@ -16498,7 +16505,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
   BoundariesEstimationController_on_files_selected_closure: {
     "^": "Closure:21;this_0,file_1,thumbHolder_2,reader_3",
     call$1: [function(e) {
-      var t1, t2;
+      var t1, t2, t3, t4;
       t1 = C.FileReader_methods.get$result(this.reader_3);
       e = document.createElement("img", null);
       if (t1 != null)
@@ -16508,7 +16515,11 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       t2 = this.this_0;
       t1.set$title(e, t2.sanitizer.convert$1(J.get$name$x(this.file_1)));
       this.thumbHolder_2.appendChild(e);
-      J.set$src$x(t2.img, t1.get$src(e));
+      t3 = t2.img;
+      t4 = J.getInterceptor$x(t3);
+      t4.set$src(t3, t1.get$src(e));
+      t4.set$width(t3, t1.get$width(e));
+      t4.set$height(t3, t1.get$height(e));
       t2.update_images_sizes$0();
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
@@ -27416,6 +27427,9 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     then$2$onError: function($0, $1) {
       return this.noSuchMethod$1(this, H.createInvocationMirror("then", "then$2$onError", 0, [$0, $1], ["onError"]));
     },
+    toDouble$0: function($receiver) {
+      return this.noSuchMethod$1(this, H.createInvocationMirror("toDouble", "toDouble$0", 0, [], []));
+    },
     toInt$0: function($receiver) {
       return this.noSuchMethod$1(this, H.createInvocationMirror("toInt", "toInt$0", 0, [], []));
     },
@@ -37801,6 +37815,9 @@ J.substring$1$s = function(receiver, a0) {
 };
 J.substring$2$s = function(receiver, a0, a1) {
   return J.getInterceptor$s(receiver).substring$2(receiver, a0, a1);
+};
+J.toDouble$0$n = function(receiver) {
+  return J.getInterceptor$n(receiver).toDouble$0(receiver);
 };
 J.toInt$0$n = function(receiver) {
   return J.getInterceptor$n(receiver).toInt$0(receiver);
