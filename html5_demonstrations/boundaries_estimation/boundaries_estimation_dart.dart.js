@@ -16262,10 +16262,10 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
 }],
 ["", "boundaries_estimation_dart.dart", , T, {
   "^": "",
-  main: [function() {
+  dart_main: [function() {
     var t1, t2, t3, t4, t5, t6, t7, t8;
     N.Logger_Logger("").set$level(C.Level_FINEST_300);
-    N.Logger_Logger("").get$onRecord().listen$1(new T.main_closure());
+    N.Logger_Logger("").get$onRecord().listen$1(new T.dart_main_closure());
     t1 = $.get$factories();
     t2 = $.get$typeAnnotations();
     t3 = $.get$getters();
@@ -16284,9 +16284,23 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     t8.push(t5);
     t7.run$0();
     return;
+  }, "call$0", "dart_main$closure", 0, 0, 40],
+  main: [function() {
+    T.dart_main();
   }, "call$0", "main$closure", 0, 0, 40],
   BoundariesEstimationController: {
-    "^": "Object;img,loading_gif,boundaries_image_container,boundaries_canvas,drop_zone_one,drop_zone_two,file_form,file_input,output,computation_log,sanitizer",
+    "^": "Object;img,loading_gif,boundaries_image_container,boundaries_canvas,drop_zone_one,drop_zone_two,file_form,file_input,output,computation_log,sanitizer,button_sb,button_sf",
+    javascript_loading_finished$0: function() {
+      this.loading_gif.hidden = true;
+      var t1 = this.button_sb;
+      t1.toString;
+      new W._ElementAttributeMap(t1).remove$1(0, "disabled");
+      t1 = this.button_sf;
+      t1.toString;
+      new W._ElementAttributeMap(t1).remove$1(0, "disabled");
+      this.log_message$2$paragraph_class("Javascript code loaded.", "bg-success");
+      return;
+    },
     log_message$2$paragraph_class: function(message, paragraph_class) {
       var p, t1;
       p = document.createElement("p", null);
@@ -16427,40 +16441,40 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return this.compute_the_boundaries$1$use_sobel(false);
     }, "compute_the_boundaries$0", "call$1$use_sobel", "call$0", "get$compute_the_boundaries", 0, 3, 297, 163, 298],
     BoundariesEstimationController$0: function() {
-      var emcc_module, t1, t2, t3;
+      var t1, emcc_module, t2, t3, t4;
       this.update_images_sizes$0();
-      emcc_module = J.$index$asx($.get$context(), "Module");
-      t1 = J.getInterceptor$ax(emcc_module);
-      t1.$indexSet(emcc_module, "print", this.get$log_info());
-      t1.$indexSet(emcc_module, "printErr", this.get$log_warning());
-      t1 = J.get$onChange$x(this.file_input);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t1._html$_target, t1._eventType, W._wrapZone(new T.BoundariesEstimationController_closure(this)), t1._useCapture), [H.getTypeArgumentByIndex(t1, 0)])._tryResume$0();
-      t1 = this.drop_zone_one;
-      t2 = J.getInterceptor$x(t1);
-      t3 = t2.get$onDragOver(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t3._html$_target, t3._eventType, W._wrapZone(this.get$on_drag_over()), t3._useCapture), [H.getTypeArgumentByIndex(t3, 0)])._tryResume$0();
-      t3 = t2.get$onDragEnter(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t3._html$_target, t3._eventType, W._wrapZone(new T.BoundariesEstimationController_closure0(this)), t3._useCapture), [H.getTypeArgumentByIndex(t3, 0)])._tryResume$0();
-      t3 = t2.get$onDragLeave(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t3._html$_target, t3._eventType, W._wrapZone(new T.BoundariesEstimationController_closure1(this)), t3._useCapture), [H.getTypeArgumentByIndex(t3, 0)])._tryResume$0();
-      t1 = t2.get$onDrop(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t1._html$_target, t1._eventType, W._wrapZone(this.get$on_drop()), t1._useCapture), [H.getTypeArgumentByIndex(t1, 0)])._tryResume$0();
-      t1 = this.drop_zone_two;
-      t2 = J.getInterceptor$x(t1);
-      t3 = t2.get$onDragOver(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t3._html$_target, t3._eventType, W._wrapZone(this.get$on_drag_over()), t3._useCapture), [H.getTypeArgumentByIndex(t3, 0)])._tryResume$0();
-      t3 = t2.get$onDragEnter(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t3._html$_target, t3._eventType, W._wrapZone(new T.BoundariesEstimationController_closure2(this)), t3._useCapture), [H.getTypeArgumentByIndex(t3, 0)])._tryResume$0();
-      t3 = t2.get$onDragLeave(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t3._html$_target, t3._eventType, W._wrapZone(new T.BoundariesEstimationController_closure3(this)), t3._useCapture), [H.getTypeArgumentByIndex(t3, 0)])._tryResume$0();
-      t1 = t2.get$onDrop(t1);
-      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t1._html$_target, t1._eventType, W._wrapZone(this.get$on_drop()), t1._useCapture), [H.getTypeArgumentByIndex(t1, 0)])._tryResume$0();
-      this.loading_gif.hidden = true;
-      this.log_message$2$paragraph_class("Javascript code loaded.", "bg-success");
+      t1 = $.get$context();
+      emcc_module = J.$index$asx(t1, "Module");
+      t2 = J.getInterceptor$ax(emcc_module);
+      t2.$indexSet(emcc_module, "print", this.get$log_info());
+      t2.$indexSet(emcc_module, "printErr", this.get$log_warning());
+      t2 = J.get$onChange$x(this.file_input);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._html$_target, t2._eventType, W._wrapZone(new T.BoundariesEstimationController_closure(this)), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+      t2 = this.drop_zone_one;
+      t3 = J.getInterceptor$x(t2);
+      t4 = t3.get$onDragOver(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t4._html$_target, t4._eventType, W._wrapZone(this.get$on_drag_over()), t4._useCapture), [H.getTypeArgumentByIndex(t4, 0)])._tryResume$0();
+      t4 = t3.get$onDragEnter(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t4._html$_target, t4._eventType, W._wrapZone(new T.BoundariesEstimationController_closure0(this)), t4._useCapture), [H.getTypeArgumentByIndex(t4, 0)])._tryResume$0();
+      t4 = t3.get$onDragLeave(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t4._html$_target, t4._eventType, W._wrapZone(new T.BoundariesEstimationController_closure1(this)), t4._useCapture), [H.getTypeArgumentByIndex(t4, 0)])._tryResume$0();
+      t2 = t3.get$onDrop(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._html$_target, t2._eventType, W._wrapZone(this.get$on_drop()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+      t2 = this.drop_zone_two;
+      t3 = J.getInterceptor$x(t2);
+      t4 = t3.get$onDragOver(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t4._html$_target, t4._eventType, W._wrapZone(this.get$on_drag_over()), t4._useCapture), [H.getTypeArgumentByIndex(t4, 0)])._tryResume$0();
+      t4 = t3.get$onDragEnter(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t4._html$_target, t4._eventType, W._wrapZone(new T.BoundariesEstimationController_closure2(this)), t4._useCapture), [H.getTypeArgumentByIndex(t4, 0)])._tryResume$0();
+      t4 = t3.get$onDragLeave(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t4._html$_target, t4._eventType, W._wrapZone(new T.BoundariesEstimationController_closure3(this)), t4._useCapture), [H.getTypeArgumentByIndex(t4, 0)])._tryResume$0();
+      t2 = t3.get$onDrop(t2);
+      H.setRuntimeTypeInfo(new W._EventStreamSubscription(0, t2._html$_target, t2._eventType, W._wrapZone(this.get$on_drop()), t2._useCapture), [H.getTypeArgumentByIndex(t2, 0)])._tryResume$0();
+      new T.BoundariesEstimationController_wait_for_emscripten(this, J.$index$asx(t1, "Module")).call$0();
       return;
     },
     static: {BoundariesEstimationController$: function() {
-        var t1 = new T.BoundariesEstimationController(document.querySelector("#input_image"), document.querySelector("#loading"), document.querySelector("#boundaries_image_container"), document.querySelector("#boundaries_image_canvas"), document.querySelector("#drop-zone"), document.querySelector("#sketch"), document.querySelector("#read"), document.querySelector("#upload_input"), document.querySelector("#list"), document.querySelector("#computation_log"), new P.HtmlEscape(C.HtmlEscapeMode_p2v));
+        var t1 = new T.BoundariesEstimationController(document.querySelector("#input_image"), document.querySelector("#loading"), document.querySelector("#boundaries_image_container"), document.querySelector("#boundaries_image_canvas"), document.querySelector("#drop-zone"), document.querySelector("#sketch"), document.querySelector("#read"), document.querySelector("#upload_input"), document.querySelector("#list"), document.querySelector("#computation_log"), new P.HtmlEscape(C.HtmlEscapeMode_p2v), document.querySelector("#sb_button"), document.querySelector("#sf_button"));
         t1.BoundariesEstimationController$0();
         return t1;
       }}
@@ -16502,6 +16516,23 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
+  BoundariesEstimationController_wait_for_emscripten: {
+    "^": "Closure:299;this_5,emscripten_module_6",
+    call$0: function() {
+      return P.Future_Future$delayed(C.Duration_10000, new T.BoundariesEstimationController_wait_for_emscripten_closure(this.this_5, this.emscripten_module_6, this), null);
+    },
+    $isFunction: true
+  },
+  BoundariesEstimationController_wait_for_emscripten_closure: {
+    "^": "Closure:32;this_7,emscripten_module_8,wait_for_emscripten_9",
+    call$0: function() {
+      if (J.$eq(J.$index$asx(this.emscripten_module_8, "calledRun"), true))
+        this.this_7.javascript_loading_finished$0();
+      else
+        this.wait_for_emscripten_9.call$0();
+    },
+    $isFunction: true
+  },
   BoundariesEstimationController_on_files_selected_closure: {
     "^": "Closure:21;this_0,file_1,thumbHolder_2,reader_3",
     call$1: [function(e) {
@@ -16525,16 +16556,16 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   BoundariesEstimationController_compute_the_boundaries_closure: {
-    "^": "Closure:300;this_0,use_sobel_1",
+    "^": "Closure:301;this_0,use_sobel_1",
     call$1: [function(time) {
       var t1 = this.this_0;
       t1.log_message$2$paragraph_class("Launching computation (might take a few seconds)", "bg-warning");
       C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries__closure(t1, this.use_sobel_1));
-    }, "call$1", null, 2, 0, null, 299, "call"],
+    }, "call$1", null, 2, 0, null, 300, "call"],
     $isFunction: true
   },
   BoundariesEstimationController_compute_the_boundaries__closure: {
-    "^": "Closure:300;this_2,use_sobel_3",
+    "^": "Closure:301;this_2,use_sobel_3",
     call$1: [function(time) {
       var t1, t2, t3, image_data, t4, width, height, uint8_data_view, num_bytes_to_allocate, emcc_module, buffer_ptr, heapu8, js_buffer_view, method_to_call, t5;
       t1 = this.this_2;
@@ -16574,23 +16605,23 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       P.print("Canvas updated");
       emcc_module.callMethod$2("_free", [buffer_ptr]);
       C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries___closure(t1));
-    }, "call$1", null, 2, 0, null, 299, "call"],
+    }, "call$1", null, 2, 0, null, 300, "call"],
     $isFunction: true
   },
   BoundariesEstimationController_compute_the_boundaries___closure: {
-    "^": "Closure:300;this_4",
+    "^": "Closure:301;this_4",
     call$1: [function(time) {
       var t1 = this.this_4;
       t1.log_message$2$paragraph_class("Boundaries computed.", "bg-success");
       t1.loading_gif.hidden = true;
-    }, "call$1", null, 2, 0, null, 299, "call"],
+    }, "call$1", null, 2, 0, null, 300, "call"],
     $isFunction: true
   },
   BoundariesEstimationModule: {
     "^": "Module;_di$_providers,_childModules,_typeFactories,_providersCache"
   },
-  main_closure: {
-    "^": "Closure:301;",
+  dart_main_closure: {
+    "^": "Closure:302;",
     call$1: [function(r) {
       P.print(J.get$message$x(r));
     }, "call$1", null, 2, 0, null, 156, "call"],
@@ -19726,6 +19757,13 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     P.scheduleMicrotask(new P.Future_Future$microtask_closure(computation, result));
     return result;
   },
+  Future_Future$delayed: function(duration, computation, $T) {
+    var completer, result;
+    completer = H.setRuntimeTypeInfo(new P._SyncCompleter(P._Future$(null)), [null]);
+    result = completer.future.then$1(new P.Future_Future$delayed_closure(computation));
+    P.Timer_Timer(duration, completer.get$complete(completer));
+    return result;
+  },
   Future_wait: function(futures, eagerError) {
     var t1, t2, t3, values, completer;
     t1 = {};
@@ -20082,7 +20120,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       this._sendError$2(error, stackTrace);
     }, function(error) {
       return this.addError$2(error, null);
-    }, "addError$1", "call$2", "call$1", "get$addError", 2, 2, 302, 44, 45, 46],
+    }, "addError$1", "call$2", "call$1", "get$addError", 2, 2, 303, 44, 45, 46],
     close$0: function(_) {
       var t1, doneFuture;
       t1 = this._state;
@@ -20253,6 +20291,13 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     }, "call$0", null, 0, 0, null, "call"],
     $isFunction: true
   },
+  Future_Future$delayed_closure: {
+    "^": "Closure:21;computation_0",
+    call$1: [function(ignored) {
+      return this.computation_0.call$0();
+    }, "call$1", null, 2, 0, null, 304, "call"],
+    $isFunction: true
+  },
   Future_wait_handleError: {
     "^": "Closure:23;box_0,eagerError_1",
     call$2: [function(theError, theStackTrace) {
@@ -20270,11 +20315,11 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
         }
       else if (t3 === 0 && !this.eagerError_1)
         t1.completer_0.completeError$2(t1.error_3, t1.stackTrace_4);
-    }, "call$2", null, 4, 0, null, 303, 304, "call"],
+    }, "call$2", null, 4, 0, null, 305, 306, "call"],
     $isFunction: true
   },
   Future_wait_closure: {
-    "^": "Closure:305;box_0,eagerError_2,pos_3",
+    "^": "Closure:307;box_0,eagerError_2,pos_3",
     call$1: [function(value) {
       var t1, t2, t3, t4;
       t1 = this.box_0;
@@ -20311,10 +20356,18 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       t1._asyncCompleteError$2(error, stackTrace);
     }, function(error) {
       return this.completeError$2(error, null);
-    }, "completeError$1", "call$2", "call$1", "get$completeError", 2, 2, 302, 44, 45, 46]
+    }, "completeError$1", "call$2", "call$1", "get$completeError", 2, 2, 303, 44, 45, 46]
   },
   _SyncCompleter: {
-    "^": "_Completer;future"
+    "^": "_Completer;future",
+    complete$1: [function(_, value) {
+      var t1 = this.future;
+      if (t1._state !== 0)
+        throw H.wrapException(P.StateError$("Future already completed"));
+      t1._complete$1(value);
+    }, function($receiver) {
+      return this.complete$1($receiver, null);
+    }, "complete$0", "call$1", "call$0", "get$complete", 0, 2, 308, 44, 22]
   },
   _Future: {
     "^": "Object;_state,_zone<,_resultOrListeners,_nextListener@,_onValueCallback,_errorTestCallback,_onErrorCallback,_whenCompleteActionCallback",
@@ -20615,7 +20668,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   _Future__propagateToListeners_handleValueCallback: {
-    "^": "Closure:306;box_1,listener_3,sourceValue_4,zone_5",
+    "^": "Closure:309;box_1,listener_3,sourceValue_4,zone_5",
     call$0: function() {
       var e, s, exception, t1;
       try {
@@ -20730,7 +20783,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:21;box_2,listener_11",
     call$1: [function(ignored) {
       P._Future__propagateToListeners(this.box_2.source_4, this.listener_11);
-    }, "call$1", null, 2, 0, null, 307, "call"],
+    }, "call$1", null, 2, 0, null, 304, "call"],
     $isFunction: true
   },
   _Future__propagateToListeners_handleWhenCompleteCallback_closure0: {
@@ -20940,7 +20993,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   Stream_any__closure0: {
-    "^": "Closure:308;box_0,future_6",
+    "^": "Closure:310;box_0,future_6",
     call$1: function(isMatch) {
       if (isMatch === true)
         P._cancelAndValue(this.box_0.subscription_0, this.future_6, true);
@@ -21749,7 +21802,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   _cancelAndErrorClosure_closure: {
-    "^": "Closure:309;subscription_0,future_1",
+    "^": "Closure:311;subscription_0,future_1",
     call$2: function(error, stackTrace) {
       return P._cancelAndError(this.subscription_0, this.future_1, error, stackTrace);
     },
@@ -21832,7 +21885,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     }, 164],
     _handleError$2: [function(error, stackTrace) {
       this._addError$2(error, stackTrace);
-    }, "call$2", "get$_handleError", 4, 0, 310, 45, 46],
+    }, "call$2", "get$_handleError", 4, 0, 312, 45, 46],
     _handleDone$0: [function() {
       this._close$0();
     }, "call$0", "get$_handleDone", 0, 0, 40],
@@ -21988,7 +22041,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
 
     }, function(error) {
       return this._handleError$2(error, null);
-    }, "_handleError$1", "call$2", "call$1", "get$_handleError", 2, 2, 311, 44, 45, 46],
+    }, "_handleError$1", "call$2", "call$1", "get$_handleError", 2, 2, 313, 44, 45, 46],
     _handleDone$0: [function() {
       var e, s, exception, t1;
       try {
@@ -22913,7 +22966,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:21;this_0",
     call$1: [function(each) {
       return this.this_0.$index(0, each);
-    }, "call$1", null, 2, 0, null, 312, "call"],
+    }, "call$1", null, 2, 0, null, 314, "call"],
     $isFunction: true
   },
   _IdentityHashMap: {
@@ -23221,7 +23274,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:21;this_0",
     call$1: [function(each) {
       return this.this_0.$index(0, each);
-    }, "call$1", null, 2, 0, null, 312, "call"],
+    }, "call$1", null, 2, 0, null, 314, "call"],
     $isFunction: true
   },
   _LinkedHashMap_addAll_closure: {
@@ -24569,10 +24622,10 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     bind$1: [function(source) {
       return H.setRuntimeTypeInfo(new P._BoundSinkStream(new P.Converter_bind_closure(this), source), [null, null]);
-    }, "call$1", "get$bind", 2, 0, 313, 314]
+    }, "call$1", "get$bind", 2, 0, 315, 316]
   },
   Converter_bind_closure: {
-    "^": "Closure:315;this_0",
+    "^": "Closure:317;this_0",
     call$1: function(sink) {
       return H.setRuntimeTypeInfo(new P._ConverterStreamEventSink(sink, this.this_0.startChunkedConversion$1(sink)), [null, null]);
     },
@@ -24739,7 +24792,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     bind$1: [function(stream) {
       return P.Converter.prototype.bind$1.call(this, stream);
-    }, "call$1", "get$bind", 2, 0, 316, 317],
+    }, "call$1", "get$bind", 2, 0, 318, 319],
     $asConverter: function() {
       return [P.Object, P.String];
     }
@@ -24772,7 +24825,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     bind$1: [function(stream) {
       return P.Converter.prototype.bind$1.call(this, stream);
-    }, "call$1", "get$bind", 2, 0, 318, 317],
+    }, "call$1", "get$bind", 2, 0, 320, 319],
     $asConverter: function() {
       return [P.String, P.Object];
     }
@@ -25148,7 +25201,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     bind$1: [function(stream) {
       return P.Converter.prototype.bind$1.call(this, stream);
-    }, "call$1", "get$bind", 2, 0, 319, 317],
+    }, "call$1", "get$bind", 2, 0, 321, 319],
     $asConverter: function() {
       return [P.String, [P.List, P.$int]];
     }
@@ -25332,7 +25385,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     bind$1: [function(stream) {
       return P.Converter.prototype.bind$1.call(this, stream);
-    }, "call$1", "get$bind", 2, 0, 320, 317],
+    }, "call$1", "get$bind", 2, 0, 322, 319],
     $asConverter: function() {
       return [[P.List, P.$int], P.String];
     }
@@ -25475,7 +25528,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     static: {"^": "_Utf8Decoder__LIMITS"}
   },
   _Utf8Decoder_convert_addSingleBytes: {
-    "^": "Closure:321;box_0,this_1,codeUnits_2",
+    "^": "Closure:323;box_0,this_1,codeUnits_2",
     call$2: function(from, to) {
       var t1, t2, t3;
       t1 = from === 0 && J.$eq(to, J.get$length$asx(this.codeUnits_2));
@@ -25631,7 +25684,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   NoSuchMethodError_toString_closure: {
-    "^": "Closure:322;box_0",
+    "^": "Closure:324;box_0",
     call$2: function(key, value) {
       var t1 = this.box_0;
       if (t1.i_1 > 0)
@@ -25819,7 +25872,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       }}
   },
   DateTime_parse_parseIntOrZero: {
-    "^": "Closure:323;",
+    "^": "Closure:325;",
     call$1: function(matched) {
       if (matched == null)
         return 0;
@@ -25828,7 +25881,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   DateTime_parse_parseDoubleOrZero: {
-    "^": "Closure:324;",
+    "^": "Closure:326;",
     call$1: function(matched) {
       if (matched == null)
         return 0;
@@ -28449,7 +28502,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       if (t1.$lt($byte, 0) || t1.$gt($byte, 255))
         this.error_0.call$1("each part must be in the range of `0..255`");
       return $byte;
-    }, "call$1", null, 2, 0, null, 325, "call"],
+    }, "call$1", null, 2, 0, null, 327, "call"],
     $isFunction: true
   },
   Uri_parseIPv6Address_error: {
@@ -28460,7 +28513,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   Uri_parseIPv6Address_parseHex: {
-    "^": "Closure:326;host_0,error_1",
+    "^": "Closure:328;host_0,error_1",
     call$2: function(start, end) {
       var value, t1;
       if (end - start > 4)
@@ -30716,7 +30769,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:23;xhr_0",
     call$2: [function(header, value) {
       this.xhr_0.setRequestHeader(header, value);
-    }, "call$2", null, 4, 0, null, 327, 22, "call"],
+    }, "call$2", null, 4, 0, null, 329, 22, "call"],
     $isFunction: true
   },
   HttpRequest_request_closure0: {
@@ -30900,7 +30953,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       if (t1._state !== 0)
         H.throwExpression(P.StateError$("Future already completed"));
       t1._complete$1(time);
-    }, "call$1", null, 2, 0, null, 299, "call"],
+    }, "call$1", null, 2, 0, null, 300, "call"],
     $isFunction: true
   },
   Interceptor_ListMixin3: {
@@ -31216,7 +31269,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return H.computeSignature(function(T) {
         return {func: "void__Stream", void: true, args: [[P.Stream, T]]};
       }, this.$receiver, "_StreamPool");
-    }, 317],
+    }, 319],
     close$0: [function(_) {
       var t1, t2;
       for (t1 = this._subscriptions, t2 = t1.get$values(t1), t2 = H.setRuntimeTypeInfo(new H.MappedIterator(null, J.get$iterator$ax(t2._iterable), t2._f), [H.getTypeArgumentByIndex(t2, 0), H.getTypeArgumentByIndex(t2, 1)]); t2.moveNext$0();)
@@ -31441,7 +31494,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:21;",
     call$1: [function(attr) {
       return "TEMPLATE::" + H.S(attr);
-    }, "call$1", null, 2, 0, null, 328, "call"],
+    }, "call$1", null, 2, 0, null, 330, "call"],
     $isFunction: true
   },
   _SvgNodeValidator: {
@@ -31609,7 +31662,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     }
   },
   _ValidatingTreeSanitizer_sanitizeTree_walk: {
-    "^": "Closure:329;this_0",
+    "^": "Closure:331;this_0",
     call$1: function(node) {
       var child, nextChild;
       this.this_0.sanitizeNode$1(node);
@@ -32232,7 +32285,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return P._convertToDart(this._jsObject.apply(t1, t2));
     }, function(args) {
       return this.apply$2$thisArg(args, null);
-    }, "apply$1", "call$2$thisArg", "call$1", "get$apply", 2, 3, 330, 44, 97, 331],
+    }, "apply$1", "call$2$thisArg", "call$1", "get$apply", 2, 3, 332, 44, 97, 333],
     static: {JsFunction_JsFunction$withThis: function(f) {
         return new P.JsFunction(P._convertDartFunction(f, true));
       }}
@@ -32931,7 +32984,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return this.bind$6$toFactory$toImplementation$toValue$visibility$withAnnotation(type, toFactory, null, X._DEFAULT_VALUE$closure(), null, null);
     }, "bind$2$toFactory", function(type, visibility) {
       return this.bind$6$toFactory$toImplementation$toValue$visibility$withAnnotation(type, X._DEFAULT_VALUE$closure(), null, X._DEFAULT_VALUE$closure(), visibility, null);
-    }, "bind$2$visibility", "call$6$toFactory$toImplementation$toValue$visibility$withAnnotation", "call$1", "call$3$toFactory$visibility", "call$2$toValue", "call$2$toImplementation", "call$2$toFactory", "call$2$visibility", "get$bind", 2, 11, 332, 333, 333, 44, 44, 44, 181, 334, 335, 336, 337, 338],
+    }, "bind$2$visibility", "call$6$toFactory$toImplementation$toValue$visibility$withAnnotation", "call$1", "call$3$toFactory$visibility", "call$2$toValue", "call$2$toImplementation", "call$2$toFactory", "call$2$visibility", "get$bind", 2, 11, 334, 335, 335, 44, 44, 44, 181, 336, 337, 338, 339, 340],
     bindByKey$5$toFactory$toImplementation$toValue$visibility: function(key, toFactory, toImplementation, toValue, visibility) {
       var t1, count, t2, t3;
       t1 = toValue !== X._DEFAULT_VALUE$closure();
@@ -32978,14 +33031,14 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       this.bindByKey$5$toFactory$toImplementation$toValue$visibility(Z.Key_Key(id, withAnnotation), X._DEFAULT_VALUE$closure(), null, value, visibility);
     }, function($receiver, id, value) {
       return this.value$4$visibility$withAnnotation($receiver, id, value, null, null);
-    }, "value$2", "call$4$visibility$withAnnotation", "call$2", "get$value", 4, 5, 339, 44, 44, 340, 22, 337, 338],
+    }, "value$2", "call$4$visibility$withAnnotation", "call$2", "get$value", 4, 5, 341, 44, 44, 342, 22, 339, 340],
     type$4$implementedBy$visibility$withAnnotation: [function(_, type, implementedBy, visibility, withAnnotation) {
       this.bindByKey$5$toFactory$toImplementation$toValue$visibility(Z.Key_Key(type, withAnnotation), X._DEFAULT_VALUE$closure(), implementedBy, X._DEFAULT_VALUE$closure(), visibility);
     }, function($receiver, type) {
       return this.type$4$implementedBy$visibility$withAnnotation($receiver, type, null, null, null);
     }, "type$1", function($receiver, type, visibility) {
       return this.type$4$implementedBy$visibility$withAnnotation($receiver, type, null, visibility, null);
-    }, "type$2$visibility", "call$4$implementedBy$visibility$withAnnotation", "call$1", "call$2$visibility", "get$type", 2, 7, 341, 44, 44, 44, 181, 337, 342, 338],
+    }, "type$2$visibility", "call$4$implementedBy$visibility$withAnnotation", "call$1", "call$2$visibility", "get$type", 2, 7, 343, 44, 44, 44, 181, 339, 344, 340],
     get$_isDirty: function() {
       return this._providersCache == null || H.IterableMixinWorkaround_any(this._childModules, new X.Module__isDirty_closure());
     },
@@ -33088,7 +33141,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return this.getInstanceByKey$3(Z.Key_Key(type, annotation), this, C.ResolutionContext_0_null_null);
     }, function(type) {
       return this.get$2(type, null);
-    }, "get$1", "call$2", "call$1", "get$get", 2, 2, 343, 44, 181, 180],
+    }, "get$1", "call$2", "call$1", "get$get", 2, 2, 345, 44, 181, 180],
     getByKey$1: function(key) {
       return this.getInstanceByKey$3(key, this, C.ResolutionContext_0_null_null);
     },
@@ -33147,7 +33200,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:21;this_0",
     call$1: [function(module) {
       module.get$bindings().forEach$1(0, new Q.BaseInjector$fromParent__closure(this.this_0));
-    }, "call$1", null, 2, 0, null, 344, "call"],
+    }, "call$1", null, 2, 0, null, 346, "call"],
     $isFunction: true
   },
   BaseInjector$fromParent__closure: {
@@ -33180,7 +33233,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Closure:129;this_3,resolving_4,provider_5",
     call$1: [function(inj) {
       return this.provider_5.get$4(this.this_3, inj, H.interceptedTypeCast(inj, "$isObjectFactory"), this.resolving_4);
-    }, "call$1", null, 2, 0, null, 345, "call"],
+    }, "call$1", null, 2, 0, null, 347, "call"],
     $isFunction: true
   },
   _ProviderWithDefiningInjector: {
@@ -33227,7 +33280,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return this._injector.getInstanceByKey$3(Z.Key_Key(type, annotation), this, this._resolving);
     }, function(type) {
       return this.get$2(type, null);
-    }, "get$1", "call$2", "call$1", "get$get", 2, 2, 343, 44, 181, 180],
+    }, "get$1", "call$2", "call$1", "get$get", 2, 2, 345, 44, 181, 180],
     getInstanceByKey$3: function(key, requester, resolving) {
       return this._injector.getInstanceByKey$3(key, requester, resolving);
     },
@@ -33301,13 +33354,13 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "Provider;value*,visibility,type",
     get$4: [function(injector, requestor, objFactory, resolving) {
       return this.value;
-    }, "call$4", "get$get", 8, 0, 346, 128, 347, 348, 349]
+    }, "call$4", "get$get", 8, 0, 348, 128, 349, 350, 351]
   },
   TypeProvider: {
     "^": "Provider;visibility,type",
     get$4: [function(injector, requestor, objFactory, resolving) {
       return injector.newInstanceOf$4(this.type, objFactory, requestor, resolving);
-    }, "call$4", "get$get", 8, 0, 346, 128, 347, 348, 349]
+    }, "call$4", "get$get", 8, 0, 348, 128, 349, 350, 351]
   },
   FactoryProvider: {
     "^": "Provider;factoryFn,visibility,type",
@@ -33316,7 +33369,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     get$4: [function(injector, requestor, objFactory, resolving) {
       return this.factoryFn$1(new U.InjectorDelagate(injector, resolving));
-    }, "call$4", "get$get", 8, 0, 346, 128, 347, 348, 349]
+    }, "call$4", "get$get", 8, 0, 348, 128, 349, 350, 351]
   }
 }],
 ["di.static_injector", "package:di/static_injector.dart", , Y, {
@@ -34271,7 +34324,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
           return record;
       }
       return record;
-    }, "call$2", "get$get", 4, 0, 350, 31, 351],
+    }, "call$2", "get$get", 4, 0, 352, 31, 353],
     remove$1: [function(_, record) {
       var prev, next;
       prev = record.get$_prevDup();
@@ -34285,7 +34338,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       else
         next.set$_prevDup(prev);
       return this.head == null;
-    }, "call$1", "get$remove", 2, 0, 352, 295],
+    }, "call$1", "get$remove", 2, 0, 354, 295],
     $is_DuplicateItemRecordList: true
   },
   DuplicateMap: {
@@ -34304,7 +34357,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return recordList == null ? null : recordList.get$2(key, hideIndex);
     }, function(key) {
       return this.get$2(key, null);
-    }, "get$1", "call$2", "call$1", "get$get", 2, 2, 353, 44, 31, 351],
+    }, "get$1", "call$2", "call$1", "get$get", 2, 2, 355, 44, 31, 353],
     remove$1: [function(_, record) {
       var t1, t2;
       t1 = this.map;
@@ -34312,7 +34365,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       if (J.remove$1$ax(t1.$index(0, t2.get$item(record)), record) === true)
         t1.remove$1(0, t2.get$item(record));
       return record;
-    }, "call$1", "get$remove", 2, 0, 354, 295],
+    }, "call$1", "get$remove", 2, 0, 356, 295],
     get$isEmpty: function(_) {
       var t1 = this.map;
       return t1.get$isEmpty(t1);
@@ -34403,7 +34456,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   convertNativeToDart_AcceptStructuredClone_readSlot: {
-    "^": "Closure:355;copies_2",
+    "^": "Closure:357;copies_2",
     call$1: function(i) {
       var t1 = this.copies_2;
       if (i >= t1.length)
@@ -34413,7 +34466,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   convertNativeToDart_AcceptStructuredClone_writeSlot: {
-    "^": "Closure:356;copies_3",
+    "^": "Closure:358;copies_3",
     call$2: function(i, x) {
       var t1 = this.copies_3;
       if (i >= t1.length)
@@ -34497,7 +34550,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     map$1: [function(_, f) {
       var t1 = this.readClasses$0();
       return H.setRuntimeTypeInfo(new H.EfficientLengthMappedIterable(t1, f), [H.getTypeArgumentByIndex(t1, 0), null]);
-    }, "call$1", "get$map", 2, 0, 357],
+    }, "call$1", "get$map", 2, 0, 359],
     where$1: function(_, f) {
       var t1 = this.readClasses$0();
       return H.setRuntimeTypeInfo(new H.WhereIterable(t1, f), [H.getTypeArgumentByIndex(t1, 0)]);
@@ -35685,7 +35738,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return this.config$3(message, null, null);
     }, "config$1", function(message, error) {
       return this.config$3(message, error, null);
-    }, "config$2", "call$3", "call$1", "call$2", "get$config", 2, 4, 358, 44, 44],
+    }, "config$2", "call$3", "call$1", "call$2", "get$config", 2, 4, 360, 44, 44],
     warning$3: function(message, error, stackTrace) {
       return this.log$4(C.Level_WARNING_900, message, error, stackTrace);
     },
@@ -35953,7 +36006,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return future;
     }, function(path) {
       return this.route$2$startingFrom(path, null);
-    }, "route$1", "call$2$startingFrom", "call$1", "get$route", 2, 3, 359, 44, 360, 361],
+    }, "route$1", "call$2$startingFrom", "call$1", "get$route", 2, 3, 361, 44, 362, 363],
     _route$2: function(path, startingFrom) {
       var baseRoute, treePath, mustLeave, leaveBase, ll, i, t1, t2, t3, lastEvent;
       if (startingFrom == null)
@@ -36110,7 +36163,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return C.JSString_methods.$add(t1, baseRoute._getHead$2(tail, queryParams)) + this._buildQuery$1(queryParams);
     }, function($receiver, routePath) {
       return this.url$3$parameters$startingFrom($receiver, routePath, null, null);
-    }, "url$1", "call$3$parameters$startingFrom", "call$1", "get$url", 2, 5, 362, 44, 44, 363, 361, 364],
+    }, "url$1", "call$3$parameters$startingFrom", "call$1", "get$url", 2, 5, 364, 44, 44, 365, 363, 366],
     _buildQuery$1: function(queryParams) {
       var t1;
       if (queryParams.get$isEmpty(queryParams))
@@ -36174,7 +36227,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     _normalizeHash$1: [function(hash) {
       var t1 = J.getInterceptor$asx(hash);
       return t1.get$isEmpty(hash) === true ? "" : t1.substring$1(hash, 1);
-    }, "call$1", "get$_normalizeHash", 2, 0, 14, 365],
+    }, "call$1", "get$_normalizeHash", 2, 0, 14, 367],
     gotoUrl$1: function(url) {
       return this.route$1(url).then$1(new D.Router_gotoUrl_closure(this, url));
     },
@@ -36209,7 +36262,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   Router__preLeave_closure0: {
-    "^": "Closure:367;box_0,this_2,path_3,treePath_4,leaveBase_5",
+    "^": "Closure:369;box_0,this_2,path_3,treePath_4,leaveBase_5",
     call$1: [function(results) {
       var t1;
       if (J.any$1$ax(results, new D.Router__preLeave__closure()) !== true) {
@@ -36218,7 +36271,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
         return t1._preEnter$2(this.path_3, this.treePath_4);
       }
       return P._Future$immediate(false, null);
-    }, "call$1", null, 2, 0, null, 366, "call"],
+    }, "call$1", null, 2, 0, null, 368, "call"],
     $isFunction: true
   },
   Router__preLeave__closure: {
@@ -36241,7 +36294,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   Router__preEnter_closure: {
-    "^": "Closure:368;preEnterFutures_1",
+    "^": "Closure:370;preEnterFutures_1",
     call$1: function(matchedRoute) {
       var t1, t2, t3, t4, t5;
       t1 = H.setRuntimeTypeInfo([], [[P.Future, P.bool]]);
@@ -36257,7 +36310,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   Router__preEnter_closure0: {
-    "^": "Closure:367;box_0,this_2",
+    "^": "Closure:369;box_0,this_2",
     call$1: [function(results) {
       var t1;
       if (J.any$1$ax(results, new D.Router__preEnter__closure()) !== true) {
@@ -36266,7 +36319,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
         return P._Future$immediate(true, null);
       }
       return P._Future$immediate(false, null);
-    }, "call$1", null, 2, 0, null, 366, "call"],
+    }, "call$1", null, 2, 0, null, 368, "call"],
     $isFunction: true
   },
   Router__preEnter__closure: {
@@ -36277,7 +36330,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   Router__enter_closure: {
-    "^": "Closure:368;box_0",
+    "^": "Closure:370;box_0",
     call$1: function(matchedRoute) {
       var $event, t1, t2;
       $event = new D.RouteEnterEvent(matchedRoute.get$urlMatch().match, matchedRoute.get$urlMatch().parameters, matchedRoute.get$route());
@@ -36344,7 +36397,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     call$1: [function(allowed) {
       if (allowed !== true)
         J.back$0$x(J.get$history$x(this.this_1._client$_window));
-    }, "call$1", null, 2, 0, null, 369, "call"],
+    }, "call$1", null, 2, 0, null, 371, "call"],
     $isFunction: true
   },
   Router_listen_getPath: {
@@ -36370,11 +36423,11 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     call$1: [function(allowed) {
       if (allowed !== true)
         J.back$0$x(J.get$history$x(this.this_5._client$_window));
-    }, "call$1", null, 2, 0, null, 369, "call"],
+    }, "call$1", null, 2, 0, null, 371, "call"],
     $isFunction: true
   },
   Router_listen_closure1: {
-    "^": "Closure:370;",
+    "^": "Closure:372;",
     call$1: function(e) {
       var t1 = J.getInterceptor$x(e);
       return !(t1.get$ctrlKey(e) === true || t1.get$metaKey(e) === true || t1.get$shiftKey(e) === true);
@@ -36507,7 +36560,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       }}
   },
   RouteHandle_discard_closure: {
-    "^": "Closure:371;",
+    "^": "Closure:373;",
     call$1: function(c) {
       return c.discard$0();
     },
@@ -37876,6 +37929,7 @@ C.List_empty = Isolate.makeConstantList([]);
 C.Map_empty = new H.ConstantStringMap(0, {}, C.List_empty);
 C.CallArguments_List_empty_Map_empty = new F.CallArguments(C.List_empty, C.Map_empty);
 C.Duration_0 = new P.Duration(0);
+C.Duration_10000 = new P.Duration(10000);
 C.EventStreamProvider_abort = H.setRuntimeTypeInfo(new W.EventStreamProvider("abort"), [W.Event]);
 C.EventStreamProvider_abort0 = H.setRuntimeTypeInfo(new W.EventStreamProvider("abort"), [W.ProgressEvent]);
 C.EventStreamProvider_beforecopy = H.setRuntimeTypeInfo(new W.EventStreamProvider("beforecopy"), [W.Event]);
@@ -39865,7 +39919,7 @@ Isolate.$lazy($, "_logger", "_logger", "get$_logger", function() {
 });
 // Native classes
 
-init.functionAliases = {RouteInitializerFn: 372};
+init.functionAliases = {RouteInitializerFn: 374};
 ;
 init.metadata = ["sender",
 "e",
@@ -40166,15 +40220,17 @@ C.C__DefaultFormatterMap,
 {func: "void__MouseEvent", void: true, args: [W.MouseEvent]},
 {func: "void___bool", void: true, named: {use_sobel: P.bool}},
 "use_sobel",
+{func: "Future_", ret: P.Future},
 "time",
 {func: "dynamic__num", args: [P.num]},
 {func: "dynamic__LogRecord", args: [N.LogRecord]},
 {func: "void__Object__StackTrace", void: true, args: [P.Object], opt: [P.StackTrace]},
+"ignored",
 "theError",
 "theStackTrace",
 {func: "dynamic__Object", args: [P.Object]},
+{func: "void___dynamic", void: true, opt: [null]},
 {func: "bool_", ret: P.bool},
-"ignored",
 {func: "dynamic__bool", args: [P.bool]},
 {func: "dynamic__dynamic_StackTrace", args: [null, P.StackTrace]},
 {func: "void__dynamic_StackTrace", void: true, args: [null, P.StackTrace]},

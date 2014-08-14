@@ -14,10 +14,13 @@ import 'package:logging/logging.dart';
 import 'dart:convert' show HtmlEscape;
 import 'dart:typed_data';
 import 'dart:js';
+
+import 'dart:async';
 import 'boundaries_estimation_dart_static_expressions.dart' as generated_static_expressions;
 import 'boundaries_estimation_dart_static_metadata.dart' as generated_static_metadata;
 import 'boundaries_estimation_dart_static_injector.dart' as generated_static_injector;
 
+final bool start_from_javascript = false;
 
 // This method will modify the provided image
 void boundaries_estimation(final CanvasElement canvas, {final bool use_sobel:
@@ -82,7 +85,7 @@ class BoundariesEstimationController {
   final ImageElement img = querySelector("#input_image");
   final ImageElement loading_gif = querySelector("#loading");
   final DivElement boundaries_image_container = querySelector(
-  "#boundaries_image_container");
+      "#boundaries_image_container");
   final CanvasElement boundaries_canvas = querySelector(
       "#boundaries_image_canvas");
 
@@ -94,6 +97,8 @@ class BoundariesEstimationController {
   final OutputElement computation_log = querySelector('#computation_log');
   final HtmlEscape sanitizer = new HtmlEscape();
 
+  final ButtonElement button_sb = querySelector("#sb_button"),
+      button_sf = querySelector("#sf_button");
 
   BoundariesEstimationController() {
     assert(img != null);
@@ -116,8 +121,38 @@ class BoundariesEstimationController {
         ));
     drop_zone_two.onDrop.listen(on_drop);
 
+    if (start_from_javascript) {
+      javascript_loading_finished();
+    } else {
+
+      final JsObject emscripten_module = context["Module"];
+
+      // we check every 10 milliseconds if Module.calledRun as been set
+      Future wait_for_emscripten() {
+        return new Future.delayed(const Duration(milliseconds: 10), () {
+
+          if (emscripten_module["calledRun"] == true) {
+            javascript_loading_finished();
+          } else {
+            wait_for_emscripten();
+          }
+        });
+      }
+
+      wait_for_emscripten();
+    }
+
+    return;
+  }
+
+  void javascript_loading_finished() {
+
     loading_gif.hidden = true;
+    button_sb.attributes.remove("disabled");
+    button_sf.attributes.remove("disabled");
+
     log_success("Javascript code loaded.");
+
     return;
   }
 
@@ -167,8 +202,7 @@ class BoundariesEstimationController {
   void update_images_sizes() {
 
     final double aspect_ratio = img.width.toDouble() / img.height;
-    final int
-        max_width = 500,
+    final int max_width = 500,
         max_height = 500;
 
     if (img.width > max_width) {
@@ -183,9 +217,9 @@ class BoundariesEstimationController {
 
     loading_gif.style.position = "absolute";
     loading_gif.width = (img.width * 0.25).toInt();
-    final String
-      left_margin = ((img.width - loading_gif.width) ~/ 2).toString() + "px",
-      top_margin = ((img.height - loading_gif.height) ~/ 2).toString() + "px";
+    final String left_margin = ((img.width - loading_gif.width) ~/ 2).toString()
+        + "px",
+        top_margin = ((img.height - loading_gif.height) ~/ 2).toString() + "px";
     loading_gif.style.marginLeft = left_margin;
     loading_gif.style.marginTop = top_margin;
 
@@ -300,7 +334,7 @@ class BoundariesEstimationModule extends Module {
 }
 
 
-void main() {
+void dart_main() {
 
   Logger.root.level = Level.FINEST; // Level.FINEST Level.INFO Level.OFF
   Logger.root.onRecord.listen((LogRecord r) {
@@ -310,4 +344,16 @@ void main() {
   staticApplicationFactory(generated_static_injector.factories, generated_static_metadata.typeAnnotations, generated_static_expressions.getters, generated_static_expressions.setters, generated_static_expressions.symbols).addModule(new BoundariesEstimationModule()).run();
 
   return;
+}
+
+void main() {
+
+  if (start_from_javascript) {
+    // we expose our entry function to javascript
+    context["dart_main"] = dart_main;
+    // (and now we wait for it to be called)
+  } else {
+    dart_main();
+  }
+
 }

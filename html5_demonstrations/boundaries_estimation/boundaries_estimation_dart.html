@@ -67,11 +67,15 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                 <button class="btn btn-lg btn-primary pull-left"
+                        id="sb_button"
+                        disabled="disabled"
                         ng-click="ctrl.compute_the_boundaries(use_sobel: true)">
                     Sobel
                 </button>
 
                 <button class="btn btn-lg btn-primary pull-right"
+                        id="sf_button"
+                        disabled="disabled"
                         ng-click="ctrl.compute_the_boundaries(use_sobel: false)">
                     Structured
                     Forest
@@ -101,7 +105,7 @@
 
         <div class="col-md-5 col-md-offset-1">
         <pre style="height: 10em;">
-            <output id="computation_log"><p class="bg-info">Loading javascript...</p></output>
+            <output id="computation_log"><p class="bg-info">Loading javascript (~2 MiB)...</p></output>
           </pre>
         </div>
 
@@ -120,8 +124,10 @@
 </div>
 
 <script type="text/javascript" src="boundaries_js_lib.js"></script>
+
 <script type="application/dart" src="boundaries_estimation_dart.dart"></script>
 <script src="packages/browser/dart.js"></script>
+
 </body>
 </html>
 
