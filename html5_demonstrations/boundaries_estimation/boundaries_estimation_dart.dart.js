@@ -10180,7 +10180,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
         t1 = this.get$rootScope();
         t1._transitionState$2("apply", null);
         t1.digest$0();
-        t1.flush$0(0);
+        t1.flush$0();
       }
     }, function(expression) {
       return this.apply$2(expression, null);
@@ -10423,7 +10423,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
         this._transitionState$2("digest", null);
       }
     }, "call$0", "get$digest", 0, 0, 40],
-    flush$0: [function(_) {
+    flush$0: [function() {
       var readOnlyGroup, runObservers, e, s, e0, s0, t1, t2, t3, t4, exception;
       t1 = this._stats;
       t1.flushStart$0();
@@ -14733,17 +14733,9 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     return t1;
   },
   _jsScope: function(scope, config) {
-    var t1, t2, t3, t4, t5, t6, t7;
-    t1 = scope.get$apply();
-    t2 = scope.get$broadcast();
-    t3 = scope.get$context();
-    t4 = scope.get$destroy();
-    t5 = scope.get$rootScope().get$digest();
-    t6 = scope.get$emit();
-    t7 = scope.get$rootScope();
-    t7 = P.JsObject_JsObject$jsify(P.LinkedHashMap_LinkedHashMap$_literal(["apply", t1, "broadcast", t2, "context", t3, "destroy", t4, "digest", t5, "emit", t6, "flush", t7.get$flush(t7), "get", new B._jsScope_closure(scope), "isAttached", scope.get$isAttached(), "isDestroyed", scope.get$isDestroyed(), "set", new B._jsScope_closure0(scope), "scopeStatsEnable", new B._jsScope_closure1(config), "scopeStatsDisable", new B._jsScope_closure2(config)], null, null));
-    J.$indexSet$ax(t7, "_dart_", scope);
-    return t7;
+    var t1 = P.JsObject_JsObject$jsify(P.LinkedHashMap_LinkedHashMap$_literal(["apply", scope.get$apply(), "broadcast", scope.get$broadcast(), "context", scope.get$context(), "destroy", scope.get$destroy(), "digest", scope.get$rootScope().get$digest(), "emit", scope.get$emit(), "flush", scope.get$rootScope().get$flush(), "get", new B._jsScope_closure(scope), "isAttached", scope.get$isAttached(), "isDestroyed", scope.get$isDestroyed(), "set", new B._jsScope_closure0(scope), "scopeStatsEnable", new B._jsScope_closure1(config), "scopeStatsDisable", new B._jsScope_closure2(config)], null, null));
+    J.$indexSet$ax(t1, "_dart_", scope);
+    return t1;
   },
   publishToJavaScript_closure: {
     "^": "Closure:23;",
@@ -16289,7 +16281,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     T.dart_main();
   }, "call$0", "main$closure", 0, 0, 40],
   BoundariesEstimationController: {
-    "^": "Object;img,loading_gif,boundaries_image_container,boundaries_canvas,drop_zone_one,drop_zone_two,file_form,file_input,output,computation_log,sanitizer,button_sb,button_sf",
+    "^": "Object;img,loading_gif,boundaries_image_container,boundaries_canvas,drop_zone_one,drop_zone_two,file_form,file_input,output,computation_log,sanitizer,button_sb,button_sf,sb_cache,sf_cache",
     javascript_loading_finished$0: function() {
       this.loading_gif.hidden = true;
       var t1 = this.button_sb;
@@ -16323,6 +16315,8 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     }, "call$1", "get$log_warning", 2, 0, 62, 117],
     update_images_sizes$0: function() {
       var t1, t2, t3, t4, aspect_ratio, left_margin, top_margin;
+      this.sb_cache = null;
+      this.sf_cache = null;
       t1 = this.img;
       t2 = J.getInterceptor$x(t1);
       t3 = J.toDouble$0$n(t2.get$width(t1));
@@ -16341,7 +16335,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       t3 = this.loading_gif;
       J.set$position$x(t3.style, "absolute");
       t4 = J.getInterceptor$x(t3);
-      t4.set$width(t3, J.toInt$0$n(J.$mul$ns(t2.get$width(t1), 0.25)));
+      t4.set$width(t3, J.toInt$0$n(J.$mul$ns(t2.get$width(t1), 0.2)));
       left_margin = C.JSNumber_methods.toString$0(C.JSNumber_methods._tdivFast$1(J.$sub$n(t2.get$width(t1), t4.get$width(t3)), 2)) + "px";
       top_margin = C.JSNumber_methods.toString$0(C.JSNumber_methods._tdivFast$1(J.$sub$n(t2.get$height(t1), t4.get$height(t3)), 2)) + "px";
       J.set$marginLeft$x(t3.style, left_margin);
@@ -16430,12 +16424,26 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       t1.appendChild(list);
     },
     compute_the_boundaries$1$use_sobel: [function(use_sobel) {
-      var t1, t2;
-      this.loading_gif.hidden = false;
-      t1 = this.boundaries_canvas;
-      t2 = J.getInterceptor$x(t1);
-      J.drawImageScaled$5$x(t2.getContext$1(t1, "2d"), this.img, 0, 0, t2.get$width(t1), t2.get$height(t1));
-      C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries_closure(this, use_sobel));
+      var t1, t2, t3, ctx, cached_result, method_name;
+      t1 = this.loading_gif;
+      t1.hidden = false;
+      t2 = this.boundaries_canvas;
+      t3 = J.getInterceptor$x(t2);
+      ctx = t3.get$context2D(t2);
+      ctx.drawImage(this.img, 0, 0, t3.get$width(t2), t3.get$height(t2));
+      if (use_sobel === true) {
+        cached_result = this.sb_cache;
+        method_name = "Sobel";
+      } else {
+        cached_result = this.sf_cache;
+        method_name = "Structured Forest";
+      }
+      if (cached_result != null) {
+        C.CanvasRenderingContext2D_methods.putImageData$3(ctx, cached_result, 0, 0);
+        this.log_message$2$paragraph_class("Showing cached " + method_name + " result", "bg-success");
+        t1.hidden = true;
+      } else
+        C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries_closure(this, use_sobel, ctx));
       return;
     }, function() {
       return this.compute_the_boundaries$1$use_sobel(false);
@@ -16474,7 +16482,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       return;
     },
     static: {BoundariesEstimationController$: function() {
-        var t1 = new T.BoundariesEstimationController(document.querySelector("#input_image"), document.querySelector("#loading"), document.querySelector("#boundaries_image_container"), document.querySelector("#boundaries_image_canvas"), document.querySelector("#drop-zone"), document.querySelector("#sketch"), document.querySelector("#read"), document.querySelector("#upload_input"), document.querySelector("#list"), document.querySelector("#computation_log"), new P.HtmlEscape(C.HtmlEscapeMode_p2v), document.querySelector("#sb_button"), document.querySelector("#sf_button"));
+        var t1 = new T.BoundariesEstimationController(document.querySelector("#input_image"), document.querySelector("#loading"), document.querySelector("#boundaries_image_container"), document.querySelector("#boundaries_image_canvas"), document.querySelector("#drop-zone"), document.querySelector("#sketch"), document.querySelector("#read"), document.querySelector("#upload_input"), document.querySelector("#list"), document.querySelector("#computation_log"), new P.HtmlEscape(C.HtmlEscapeMode_p2v), document.querySelector("#sb_button"), document.querySelector("#sf_button"), null, null);
         t1.BoundariesEstimationController$0();
         return t1;
       }}
@@ -16560,62 +16568,71 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     $isFunction: true
   },
   BoundariesEstimationController_compute_the_boundaries_closure: {
-    "^": "Closure:301;this_0,use_sobel_1",
+    "^": "Closure:301;this_0,use_sobel_1,ctx_2",
     call$1: [function(time) {
       var t1 = this.this_0;
-      t1.log_message$2$paragraph_class("Launching computation (might take a few seconds)", "bg-warning");
-      C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries__closure(t1, this.use_sobel_1));
+      t1.log_message$2$paragraph_class("Launching computation (will take a few seconds)", "bg-warning");
+      C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries__closure(t1, this.use_sobel_1, this.ctx_2));
     }, "call$1", null, 2, 0, null, 300, "call"],
     $isFunction: true
   },
   BoundariesEstimationController_compute_the_boundaries__closure: {
-    "^": "Closure:301;this_2,use_sobel_3",
+    "^": "Closure:301;this_3,use_sobel_4,ctx_5",
     call$1: [function(time) {
-      var t1, t2, t3, image_data, t4, width, height, uint8_data_view, num_bytes_to_allocate, emcc_module, buffer_ptr, heapu8, js_buffer_view, method_to_call, t5;
-      t1 = this.this_2;
+      var t1, t2, t3, t4, image_data, t5, width, height, uint8_data_view, num_bytes_to_allocate, emcc_module, buffer_ptr, heapu8, js_buffer_view, method_to_call, t6;
+      t1 = this.this_3;
       t2 = t1.boundaries_canvas;
-      t3 = J.getInterceptor$x(t2);
-      image_data = P.convertNativeToDart_ImageData(t3.get$context2D(t2).getImageData(0, 0, t3.get$width(t2), t3.get$height(t2)));
-      t4 = J.getInterceptor$x(image_data);
-      width = t4.get$width(image_data);
-      height = t4.get$height(image_data);
-      uint8_data_view = H.NativeUint8List_NativeUint8List$view(t4.get$data(image_data).buffer, 0, null);
-      t4 = [];
-      C.JSArray_methods.addAll$1(t4, C.NativeUint8List_methods.map$1(uint8_data_view, P._convertToJS$closure()));
-      H.setRuntimeTypeInfo(new P.JsArray(t4), [null]);
-      t4 = uint8_data_view.BYTES_PER_ELEMENT;
-      if (typeof t4 !== "number")
-        return H.iae(t4);
-      num_bytes_to_allocate = uint8_data_view.length * t4;
+      t3 = this.use_sobel_4;
+      t4 = J.getInterceptor$x(t2);
+      image_data = P.convertNativeToDart_ImageData(t4.get$context2D(t2).getImageData(0, 0, t4.get$width(t2), t4.get$height(t2)));
+      t5 = J.getInterceptor$x(image_data);
+      width = t5.get$width(image_data);
+      height = t5.get$height(image_data);
+      uint8_data_view = H.NativeUint8List_NativeUint8List$view(t5.get$data(image_data).buffer, 0, null);
+      t5 = [];
+      C.JSArray_methods.addAll$1(t5, C.NativeUint8List_methods.map$1(uint8_data_view, P._convertToJS$closure()));
+      H.setRuntimeTypeInfo(new P.JsArray(t5), [null]);
+      t5 = uint8_data_view.BYTES_PER_ELEMENT;
+      if (typeof t5 !== "number")
+        return H.iae(t5);
+      num_bytes_to_allocate = uint8_data_view.length * t5;
       emcc_module = J.$index$asx($.get$context(), "Module");
       buffer_ptr = emcc_module.callMethod$2("_malloc", [num_bytes_to_allocate]);
       heapu8 = J.$index$asx(emcc_module, "HEAPU8");
       if (heapu8 == null)
         P.print("heapu8 is null, nooo !");
-      t4 = J.getInterceptor$ax(heapu8);
-      t4.setAll$2(heapu8, buffer_ptr, uint8_data_view);
-      js_buffer_view = H.NativeUint8List_NativeUint8List$view(t4.get$buffer(heapu8), buffer_ptr, num_bytes_to_allocate);
-      method_to_call = this.use_sobel_3 === true ? "compute_boundaries_sobel" : "compute_boundaries_structured_forest";
+      t5 = J.getInterceptor$ax(heapu8);
+      t5.setAll$2(heapu8, buffer_ptr, uint8_data_view);
+      js_buffer_view = H.NativeUint8List_NativeUint8List$view(t5.get$buffer(heapu8), buffer_ptr, num_bytes_to_allocate);
+      method_to_call = t3 === true ? "compute_boundaries_sobel" : "compute_boundaries_structured_forest";
       P.print("Calling " + method_to_call);
-      t4 = [];
-      C.JSArray_methods.addAll$1(t4, C.JSArray_methods.map$1(["number", "number", "number"], P._convertToJS$closure()));
-      t4 = H.setRuntimeTypeInfo(new P.JsArray(t4), [null]);
       t5 = [];
-      C.JSArray_methods.addAll$1(t5, C.JSArray_methods.map$1([buffer_ptr, width, height], P._convertToJS$closure()));
-      emcc_module.callMethod$2("ccall", [method_to_call, "void", t4, H.setRuntimeTypeInfo(new P.JsArray(t5), [null])]);
+      C.JSArray_methods.addAll$1(t5, C.JSArray_methods.map$1(["number", "number", "number"], P._convertToJS$closure()));
+      t5 = H.setRuntimeTypeInfo(new P.JsArray(t5), [null]);
+      t6 = [];
+      C.JSArray_methods.addAll$1(t6, C.JSArray_methods.map$1([buffer_ptr, width, height], P._convertToJS$closure()));
+      emcc_module.callMethod$2("ccall", [method_to_call, "void", t5, H.setRuntimeTypeInfo(new P.JsArray(t6), [null])]);
       P.print("Boundaries computed.");
       C.NativeUint8List_methods.setAll$2(uint8_data_view, 0, js_buffer_view);
-      J.putImageData$3$x(t3.get$context2D(t2), image_data, 0, 0);
+      J.putImageData$3$x(t4.get$context2D(t2), image_data, 0, 0);
       P.print("Canvas updated");
       emcc_module.callMethod$2("_free", [buffer_ptr]);
-      C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries___closure(t1));
+      C.Window_methods.get$animationFrame(window).then$1(new T.BoundariesEstimationController_compute_the_boundaries___closure(t1, t3, this.ctx_5));
     }, "call$1", null, 2, 0, null, 300, "call"],
     $isFunction: true
   },
   BoundariesEstimationController_compute_the_boundaries___closure: {
-    "^": "Closure:301;this_4",
+    "^": "Closure:301;this_6,use_sobel_7,ctx_8",
     call$1: [function(time) {
-      var t1 = this.this_4;
+      var t1, t2, t3, image_data;
+      t1 = this.this_6;
+      t2 = t1.boundaries_canvas;
+      t3 = J.getInterceptor$x(t2);
+      image_data = P.convertNativeToDart_ImageData(this.ctx_8.getImageData(0, 0, t3.get$width(t2), t3.get$height(t2)));
+      if (this.use_sobel_7 === true)
+        t1.sb_cache = image_data;
+      else
+        t1.sf_cache = image_data;
       t1.log_message$2$paragraph_class("Boundaries computed.", "bg-success");
       t1.loading_gif.hidden = true;
     }, "call$1", null, 2, 0, null, 300, "call"],
@@ -25142,7 +25159,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     "^": "ByteConversionSink;_decoder,_chunkedSink,_buffer",
     close$0: function(_) {
       var t1, t2, t3, t4;
-      this._decoder.flush$0(0);
+      this._decoder.flush$0();
       t1 = this._buffer;
       t2 = t1._contents;
       t3 = t2.length;
@@ -25378,7 +25395,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       buffer = P.StringBuffer$("");
       decoder = new P._Utf8Decoder(this._allowMalformed, buffer, true, 0, 0, 0);
       decoder.convert$3(codeUnits, 0, J.get$length$asx(codeUnits));
-      decoder.flush$0(0);
+      decoder.flush$0();
       return buffer._contents;
     },
     startChunkedConversion$1: function(sink) {
@@ -25397,9 +25414,9 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
   _Utf8Decoder: {
     "^": "Object;_allowMalformed,_stringSink,_isFirstCharacter,_convert$_value,_expectedUnits,_extraUnits",
     close$0: function(_) {
-      this.flush$0(0);
+      this.flush$0();
     },
-    flush$0: function(_) {
+    flush$0: function() {
       if (this._expectedUnits > 0) {
         if (this._allowMalformed !== true)
           throw H.wrapException(P.FormatException$("Unfinished UTF-8 octet sequence"));
@@ -26581,9 +26598,6 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     detectChanges$5$changeLog$evalStopwatch$exceptionHandler$fieldStopwatch$processStopwatch: function($0, $1, $2, $3, $4) {
       return this.noSuchMethod$1(this, H.createInvocationMirror("detectChanges", "detectChanges$5$changeLog$evalStopwatch$exceptionHandler$fieldStopwatch$processStopwatch", 0, [$0, $1, $2, $3, $4], ["changeLog", "evalStopwatch", "exceptionHandler", "fieldStopwatch", "processStopwatch"]));
     },
-    drawImageScaled$5: function($receiver, $0, $1, $2, $3, $4) {
-      return this.noSuchMethod$1(this, H.createInvocationMirror("drawImageScaled", "drawImageScaled$5", 0, [$0, $1, $2, $3, $4], []));
-    },
     elementAt$1: function($receiver, $0) {
       return this.noSuchMethod$1(this, H.createInvocationMirror("elementAt", "elementAt$1", 0, [$0], []));
     },
@@ -27054,9 +27068,6 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     getByKey$1: function($0) {
       return this.noSuchMethod$1(this, H.createInvocationMirror("getByKey", "getByKey$1", 0, [$0], []));
-    },
-    getContext$1: function($receiver, $0) {
-      return this.noSuchMethod$1(this, H.createInvocationMirror("getContext", "getContext$1", 0, [$0], []));
     },
     getInstanceByKey$3: function($0, $1, $2) {
       return this.noSuchMethod$1(this, H.createInvocationMirror("getInstanceByKey", "getInstanceByKey$3", 0, [$0, $1, $2], []));
@@ -28718,12 +28729,6 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
   },
   CanvasElement: {
     "^": "HtmlElement;height%,width%",
-    getContext$2: function(receiver, contextId, attrs) {
-      return receiver.getContext(contextId);
-    },
-    getContext$1: function($receiver, contextId) {
-      return this.getContext$2($receiver, contextId, null);
-    },
     get$context2D: function(receiver) {
       return receiver.getContext("2d");
     },
@@ -28731,7 +28736,7 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
   },
   CanvasRenderingContext: {
     "^": "Interceptor;",
-    "%": "WebGLRenderingContext;CanvasRenderingContext"
+    "%": ";CanvasRenderingContext"
   },
   CanvasRenderingContext2D: {
     "^": "CanvasRenderingContext;",
@@ -28741,9 +28746,6 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     putImageData$3: function($receiver, imagedata, dx, dy) {
       return this.putImageData$7($receiver, imagedata, dx, dy, null, null, null, null);
-    },
-    drawImageScaled$5: function(receiver, source, destX, destY, destWidth, destHeight) {
-      return receiver.drawImage(source, destX, destY, destWidth, destHeight);
     },
     "%": "CanvasRenderingContext2D"
   },
@@ -37123,9 +37125,6 @@ J.createFragment$2$treeSanitizer$x = function(receiver, a0, a1) {
 J.createFragment$3$treeSanitizer$validator$x = function(receiver, a0, a1, a2) {
   return J.getInterceptor$x(receiver).createFragment$3$treeSanitizer$validator(receiver, a0, a1, a2);
 };
-J.drawImageScaled$5$x = function(receiver, a0, a1, a2, a3, a4) {
-  return J.getInterceptor$x(receiver).drawImageScaled$5(receiver, a0, a1, a2, a3, a4);
-};
 J.elementAt$1$ax = function(receiver, a0) {
   return J.getInterceptor$ax(receiver).elementAt$1(receiver, a0);
 };
@@ -37912,6 +37911,7 @@ J.trim$0$s = function(receiver) {
 J.where$1$ax = function(receiver, a0) {
   return J.getInterceptor$ax(receiver).where$1(receiver, a0);
 };
+C.CanvasRenderingContext2D_methods = W.CanvasRenderingContext2D.prototype;
 C.FileList_methods = W.FileList.prototype;
 C.FileReader_methods = W.FileReader.prototype;
 C.HttpRequest_methods = W.HttpRequest.prototype;

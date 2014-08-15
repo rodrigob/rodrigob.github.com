@@ -100,6 +100,9 @@ class BoundariesEstimationController {
   final ButtonElement button_sb = querySelector("#sb_button"),
       button_sf = querySelector("#sf_button");
 
+  ImageData sb_cache = null,
+      sf_cache = null;
+
   BoundariesEstimationController() {
     assert(img != null);
     assert(boundaries_canvas != null);
@@ -201,6 +204,10 @@ class BoundariesEstimationController {
 
   void update_images_sizes() {
 
+    // new image has been set, we clean the cache
+    sb_cache = null;
+    sf_cache = null;
+
     final double aspect_ratio = img.width.toDouble() / img.height;
     final int max_width = 500,
         max_height = 500;
@@ -216,7 +223,7 @@ class BoundariesEstimationController {
     }
 
     loading_gif.style.position = "absolute";
-    loading_gif.width = (img.width * 0.25).toInt();
+    loading_gif.width = (img.width * 0.20).toInt();
     final String left_margin = ((img.width - loading_gif.width) ~/ 2).toString()
         + "px",
         top_margin = ((img.height - loading_gif.height) ~/ 2).toString() + "px";
@@ -271,11 +278,11 @@ class BoundariesEstimationController {
           thumbHolder.nodes.add(thumbnail);
 
           // trick to get in image in Firefox
-          final ImageElement image_size_trick = new ImageElement(src: reader.result);
+          final ImageElement image_size_trick = new ImageElement(src:
+              reader.result);
           image_size_trick.style.display = "none";
           document.body.append(image_size_trick);
-          final int
-            image_width = image_size_trick.width,
+          final int image_width = image_size_trick.width,
               image_height = image_size_trick.height;
 
           // we propagate the new content, and new image size
@@ -310,25 +317,51 @@ class BoundariesEstimationController {
   void compute_the_boundaries({final bool use_sobel: false}) {
 
     loading_gif.hidden = false;
-    final ctx = boundaries_canvas.getContext('2d');
+    final ctx = boundaries_canvas.context2D;
     ctx.drawImageScaled(img, 0, 0, boundaries_canvas.width,
         boundaries_canvas.height);
 
-    // animationFrame is a trick to make sure the log message appears,
-    // before boundaries_estimation freezes the user interface
-    window.animationFrame.then((final num time) {
-      log_warning("Launching computation (might take a few seconds)");
+    ImageData cached_result = null;
+    String method_name = "";
+    if (use_sobel) {
+      cached_result = sb_cache;
+      method_name = "Sobel";
+    } else {
+      cached_result = sf_cache;
+      method_name = "Structured Forest";
+    }
+
+    if (cached_result != null) { // we use cache
+      ctx.putImageData(cached_result, 0, 0);
+      log_success("Showing cached $method_name result");
+      loading_gif.hidden = true;
+    } else { // we launch the computation
+
+      // animationFrame is a trick to make sure the log message appears,
+      // before boundaries_estimation freezes the user interface
       window.animationFrame.then((final num time) {
-
-        boundaries_estimation(boundaries_canvas, use_sobel: use_sobel);
-
+        log_warning("Launching computation (will take a few seconds)");
         window.animationFrame.then((final num time) {
-          log_success("Boundaries computed.");
-          loading_gif.hidden = true;
+
+          boundaries_estimation(boundaries_canvas, use_sobel: use_sobel);
+
+          window.animationFrame.then((final num time) {
+            final ImageData image_data = ctx.getImageData(0, 0,
+                boundaries_canvas.width, boundaries_canvas.height);
+
+            if (use_sobel) {
+              sb_cache = image_data;
+            } else {
+              sf_cache = image_data;
+            }
+
+            log_success("Boundaries computed.");
+            loading_gif.hidden = true;
+          });
         });
       });
-    });
 
+    }
     return;
   }
 

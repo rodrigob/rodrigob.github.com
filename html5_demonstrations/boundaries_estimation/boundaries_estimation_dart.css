@@ -4,7 +4,9 @@ body {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
-  margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
 }
 
 h1, p {
@@ -47,6 +49,14 @@ h1, p {
   background-color: #fff;
 }
 
+
+img#loading {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px; 
+  width: 100px;
+  background: rgba(255, 255, 255, 0.5);"
+}
 
 
 output {
