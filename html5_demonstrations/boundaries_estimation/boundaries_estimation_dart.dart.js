@@ -16536,22 +16536,26 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
   BoundariesEstimationController_on_files_selected_closure: {
     "^": "Closure:21;this_0,file_1,thumbHolder_2,reader_3",
     call$1: [function(e) {
-      var t1, t2, t3, t4;
-      t1 = C.FileReader_methods.get$result(this.reader_3);
-      e = document.createElement("img", null);
-      if (t1 != null)
-        J.set$src$x(e, t1);
-      t1 = J.getInterceptor$x(e);
-      t1.get$classes(e).add$1(0, "thumb");
-      t2 = this.this_0;
-      t1.set$title(e, t2.sanitizer.convert$1(J.get$name$x(this.file_1)));
-      this.thumbHolder_2.appendChild(e);
-      t3 = t2.img;
-      t4 = J.getInterceptor$x(t3);
-      t4.set$src(t3, t1.get$src(e));
-      t4.set$width(t3, t1.get$width(e));
-      t4.set$height(t3, t1.get$height(e));
-      t2.update_images_sizes$0();
+      var t1, thumbnail, t2, t3, image_size_trick, image_width, image_height, t4;
+      t1 = this.reader_3;
+      thumbnail = W.ImageElement_ImageElement(null, C.FileReader_methods.get$result(t1), null);
+      t2 = J.getInterceptor$x(thumbnail);
+      t2.get$classes(thumbnail).add$1(0, "thumb");
+      t3 = this.this_0;
+      t2.set$title(thumbnail, t3.sanitizer.convert$1(J.get$name$x(this.file_1)));
+      this.thumbHolder_2.appendChild(thumbnail);
+      image_size_trick = W.ImageElement_ImageElement(null, C.FileReader_methods.get$result(t1), null);
+      J.set$display$x(image_size_trick.style, "none");
+      document.body.appendChild(image_size_trick);
+      t1 = J.getInterceptor$x(image_size_trick);
+      image_width = t1.get$width(image_size_trick);
+      image_height = t1.get$height(image_size_trick);
+      t1 = t3.img;
+      t4 = J.getInterceptor$x(t1);
+      t4.set$src(t1, t2.get$src(thumbnail));
+      t4.set$width(t1, image_width);
+      t4.set$height(t1, image_height);
+      t3.update_images_sizes$0();
     }, "call$1", null, 2, 0, null, 1, "call"],
     $isFunction: true
   },
@@ -28603,6 +28607,12 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
       xhr.send();
     return completer.future;
   },
+  ImageElement_ImageElement: function(height, src, width) {
+    var e = document.createElement("img", null);
+    if (src != null)
+      J.set$src$x(e, src);
+    return e;
+  },
   OptionElement_OptionElement$_: function(data, value, defaultSelected, selected) {
     return new Option(data, value, defaultSelected, selected);
   },
@@ -30329,6 +30339,9 @@ init.mangledNames = {call$0: "call:0:0", call$1: "call:1:0", call$1$appRoot: "ca
     },
     content$1: function($receiver, arg0) {
       return this.get$content($receiver).call$1(arg0);
+    },
+    set$display: function(receiver, value) {
+      this.setProperty$3(receiver, "display", value, "");
     },
     set$marginLeft: function(receiver, value) {
       this.setProperty$3(receiver, "margin-left", value, "");
@@ -37598,6 +37611,9 @@ J.set$className$x = function(receiver, value) {
 };
 J.set$disabled$x = function(receiver, value) {
   return J.getInterceptor$x(receiver).set$disabled(receiver, value);
+};
+J.set$display$x = function(receiver, value) {
+  return J.getInterceptor$x(receiver).set$display(receiver, value);
 };
 J.set$href$x = function(receiver, value) {
   return J.getInterceptor$x(receiver).set$href(receiver, value);

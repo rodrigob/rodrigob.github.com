@@ -253,7 +253,7 @@ class BoundariesEstimationController {
   }
 
 
-  void on_files_selected(List<File> files) {
+  void on_files_selected(final List<File> files) {
     output.nodes.clear();
     var list = new UListElement();
     for (var file in files) {
@@ -264,15 +264,24 @@ class BoundariesEstimationController {
         var thumbHolder = new SpanElement();
         var reader = new FileReader();
         reader.onLoad.listen((e) {
-          var thumbnail = new ImageElement(src: reader.result);
+          final ImageElement thumbnail = new ImageElement(src: reader.result);
+
           thumbnail.classes.add('thumb');
           thumbnail.title = sanitizer.convert(file.name);
           thumbHolder.nodes.add(thumbnail);
 
+          // trick to get in image in Firefox
+          final ImageElement image_size_trick = new ImageElement(src: reader.result);
+          image_size_trick.style.display = "none";
+          document.body.append(image_size_trick);
+          final int
+            image_width = image_size_trick.width,
+              image_height = image_size_trick.height;
+
           // we propagate the new content, and new image size
           img.src = thumbnail.src;
-          img.width = thumbnail.width;
-          img.height = thumbnail.height;
+          img.width = image_width;
+          img.height = image_height;
           update_images_sizes();
         });
         reader.readAsDataUrl(file);
