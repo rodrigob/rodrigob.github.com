@@ -1697,3 +1697,163 @@
       background: 9
       mode: 0
   :additional_information: 20x faster than R-CNN.
+- :dataset_name: STL-10
+  :paper_name: ! 'Stable and Efficient Representation Learning with Nonnegativity
+    Constraints '
+  :paper_year: '2014'
+  :paper_venue: ICML
+  :result: 67.9% (±0.6%)
+  :paper_pdf_url: !ruby/string
+    str: http://jmlr.org/proceedings/papers/v32/line14.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://jmlr.org/proceedings/papers/v32/line14.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! '3-layers + multi-dict.
+
+    67.5 ± 0.5 with 3-layers only.
+
+    64.6 ± 0.6 with 1-layers only.'
+- :dataset_name: CIFAR-100
+  :paper_name: ! 'Stable and Efficient Representation Learning with Nonnegativity
+    Constraints '
+  :paper_year: '2014'
+  :paper_venue: ICML
+  :result: 60.8%
+  :paper_pdf_url: !ruby/string
+    str: http://jmlr.org/proceedings/papers/v32/line14.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://jmlr.org/proceedings/papers/v32/line14.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! '3-layers + multi-dict.
+
+    57.7 with 3-layers only.
+
+    53.3 with 1-layers only.'
+- :dataset_name: CIFAR-10
+  :paper_name: ! 'Stable and Efficient Representation Learning with Nonnegativity
+    Constraints '
+  :paper_year: '2014'
+  :paper_venue: ICML
+  :result: 82.9%
+  :paper_pdf_url: !ruby/string
+    str: http://jmlr.org/proceedings/papers/v32/line14.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://jmlr.org/proceedings/papers/v32/line14.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! 'Full data, 3-layers + multi-dict.
+
+    81.4 with 3-layers only.
+
+    78.0 with 1-layers only.'
+- :dataset_name: CIFAR-10
+  :paper_name: Deeply-Supervised Nets
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 91.78%
+  :paper_pdf_url: !ruby/string
+    str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+      background: 9
+      mode: 0
+  :additional_information: ! "Single model, with data augmentation: 91.78%. \nWithout
+    data augmentation: 90.22%."
+- :dataset_name: MNIST
+  :paper_name: Deeply-Supervised Nets
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 0.39%
+  :paper_pdf_url: !ruby/string
+    str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+      background: 9
+      mode: 0
+- :dataset_name: CIFAR-100
+  :paper_name: Deeply-Supervised Nets
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 65.43%
+  :paper_pdf_url: !ruby/string
+    str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+      background: 9
+      mode: 0
+  :additional_information: Single model, without data augmentation.
+- :dataset_name: SVHN
+  :paper_name: Deeply-Supervised Nets
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 1.92%
+  :paper_pdf_url: !ruby/string
+    str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://vcl.ucsd.edu/~sxie/2014/09/12/dsn-project/
+      background: 9
+      mode: 0
+- :dataset_name: MNIST
+  :paper_name: ! 'StrongNet: mostly unsupervised image recognition with strong neurons'
+  :paper_year: '2014'
+  :paper_venue: technical report on ALGLIB website
+  :result: 1.1%
+  :paper_pdf_url: !ruby/string
+    str: http://www.alglib.net/articles/tr-20140813-strongnet.pdf
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://www.alglib.net/articles/tr-20140813-strongnet.pdf
+      background: 9
+      mode: 0
+  :additional_information: ! "StrongNet is a neural design which uses two innovations:
+    \n(a) \"strong neurons\" – highly nonlinear neurons with multiple outputs and
+    \n(b) \"mostly unsupervised architecture\" – backpropagation-free design with
+    all layers except for the last one being trained in a completely unsupervised
+    setting."
+- :dataset_name: MNIST
+  :paper_name: ! 'PCANet: A Simple Deep Learning Baseline for Image Classification?'
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 0.62%
+  :paper_pdf_url: !ruby/string
+    str: http://arxiv.org/abs/1404.3606
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://arxiv.org/abs/1404.3606
+      background: 9
+      mode: 0
+  :additional_information: No data augmentation.
+- :dataset_name: CIFAR-10
+  :paper_name: ! 'PCANet: A Simple Deep Learning Baseline for Image Classification?'
+  :paper_year: '2014'
+  :paper_venue: arXiv
+  :result: 78.67%
+  :paper_pdf_url: !ruby/string
+    str: http://arxiv.org/abs/1404.3606
+    background: 9
+    mode: 0
+    uncolorized: !ruby/string
+      str: http://arxiv.org/abs/1404.3606
+      background: 9
+      mode: 0
+  :additional_information: ! 'No data augmentation. Multiple feature scales combined.
+
+    77.14% when using only a single scale.'
