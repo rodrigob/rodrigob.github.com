@@ -3,7 +3,7 @@ Classification:
 - :group: Classification
   :name: MNIST
   :evaluation_units: error %
-  :description: ! "[Classify handwriten digits](http://yann.lecun.com/exdb/mnist/).
+  :description: "[Classify handwriten digits](http://yann.lecun.com/exdb/mnist/).
     \nSome additional results are available on the [original dataset page](http://yann.lecun.com/exdb/mnist/)."
   :figure_url: mnist.png
 - :group: Classification
@@ -24,202 +24,108 @@ Classification:
 - :group: Classification
   :name: SVHN
   :evaluation_units: error %
-  :description: ! '[The Street View House Numbers (SVHN) Dataset](http://ufldl.stanford.edu/housenumbers).
+  :description: |
+    [The Street View House Numbers (SVHN) Dataset](http://ufldl.stanford.edu/housenumbers).
 
-
-    SVHN is a real-world image dataset for developing machine learning and object
-    recognition algorithms with minimal requirement on data preprocessing and formatting.
-    It can be seen as similar in flavor to MNIST (e.g., the images are of small cropped
-    digits), but incorporates an order of magnitude more labeled data (over 600,000
-    digit images) and comes from a significantly harder, unsolved, real world problem
-    (recognizing digits and numbers in natural scene images). SVHN is obtained from
-    house numbers in Google Street View images.
-
-'
-  :figure_url: !ruby/string
-    str: http://ufldl.stanford.edu/housenumbers/32x32eg.png
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://ufldl.stanford.edu/housenumbers/32x32eg.png
-      background: 9
-      mode: 0
+    SVHN is a real-world image dataset for developing machine learning and object recognition algorithms with minimal requirement on data preprocessing and formatting. It can be seen as similar in flavor to MNIST (e.g., the images are of small cropped digits), but incorporates an order of magnitude more labeled data (over 600,000 digit images) and comes from a significantly harder, unsolved, real world problem (recognizing digits and numbers in natural scene images). SVHN is obtained from house numbers in Google Street View images.
+  :figure_url: http://ufldl.stanford.edu/housenumbers/32x32eg.png
 - :group: Classification
   :name: ILSVRC2012 task 1
   :evaluation_units: Error (5 guesses)
-  :description: ! '1000 categories [classification challenge](http://www.image-net.org/challenges/LSVRC/2012/index).
-    With tens of thousands of training, validation and testing images.
+  :description: |-
+    1000 categories [classification challenge](http://www.image-net.org/challenges/LSVRC/2012/index). With tens of thousands of training, validation and testing images.
 
-
-    See this interesting [comparative analysis](http://www.image-net.org/challenges/LSVRC/2012/analysis/).'
+    See this interesting [comparative analysis](http://www.image-net.org/challenges/LSVRC/2012/analysis/).
   :figure_url: ilsvrc2012_task1.png
-  :external_results_url: !ruby/string
-    str: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
-      background: 9
-      mode: 0
+  :external_results_url: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
 Detection:
 - :group: Detection
   :name: Pascal VOC 2007 comp3
-  :evaluation_units: ! 'mAP percent '
+  :evaluation_units: 'mAP percent '
   :description: Pascal VOC 2007 is commonly used because the test set has been realased.
     comp3 is the objects detection competition, using only the comp3 pascal training
     data.
   :figure_url: pascal_voc_2007.png
 - :group: Detection
   :name: Pascal VOC 2007 comp4
-  :evaluation_units: ! 'mAP percent '
+  :evaluation_units: 'mAP percent '
   :description: Just like comp3 but "any training data" can be used.
   :figure_url: pascal_voc_2007.png
 - :group: Detection
   :name: Pascal VOC 2010 comp3
-  :evaluation_units: ! 'mAP percent '
+  :evaluation_units: 'mAP percent '
   :description: Pascal VOC 2010 version of the challenge. comp3 is the objects detection
     competition.
   :figure_url: pascal_voc_2010.png
 - :group: Detection
   :name: Pascal VOC 2010 comp4
-  :evaluation_units: ! 'mAP percent '
+  :evaluation_units: 'mAP percent '
   :description: Just like comp3 but "any training data" can be used.
   :figure_url: pascal_voc_2010.png
 - :group: Detection
   :name: Pascal VOC 2011 comp3
-  :evaluation_units: ! 'mAP percent '
+  :evaluation_units: 'mAP percent '
   :description: Last Pascal VOC challenge instance (2012 version had identical data).
   :figure_url: pascal_voc_2012.png
 - :group: Detection
   :name: Caltech Pedestrians USA
   :evaluation_units: average miss-rate %
-  :description: ! '[Project website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).'
-  :figure_url: !ruby/string
-    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
-      background: 9
-      mode: 0
-  :external_results_url: !ruby/string
-    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf
-      background: 9
-      mode: 0
+  :description: "[Project website](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/)."
+  :figure_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf
 - :group: Detection
   :name: INRIA Persons
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
-
-    [Original dataset website](http://pascal.inrialpes.fr/data/human/).'
+  :description: |-
+    Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+    [Original dataset website](http://pascal.inrialpes.fr/data/human/).
   :figure_url: inria_persons.png
-  :external_results_url: !ruby/string
-    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf
-      background: 9
-      mode: 0
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf
 - :group: Detection
-  :name: ! 'ETH Pedestrian '
+  :name: 'ETH Pedestrian '
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
-
+  :description: |-
+    Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
     Only left images used.
-
-    [Original dataset website](http://www.vision.ee.ethz.ch/~aess/dataset/).'
+    [Original dataset website](http://www.vision.ee.ethz.ch/~aess/dataset/).
   :figure_url: eth_pedestrian.png
-  :external_results_url: !ruby/string
-    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf
-      background: 9
-      mode: 0
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf
 - :group: Detection
   :name: TUD-Brussels Pedestrian
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
-
-    [Original dataset website](http://www.d2.mpi-inf.mpg.de/tud-brussels).'
-  :figure_url: !ruby/string
-    str: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
-      background: 9
-      mode: 0
-  :external_results_url: !ruby/string
-    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf
-      background: 9
-      mode: 0
+  :description: |-
+    Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+    [Original dataset website](http://www.d2.mpi-inf.mpg.de/tud-brussels).
+  :figure_url: http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf
 - :group: Detection
   :name: Daimler Pedestrian
   :evaluation_units: average miss-rate %
-  :description: ! 'Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
-
-    [Original dataset website](http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Mono_Ped__Detection_Be/daimler_mono_ped__detection_be.html).'
-  :figure_url: !ruby/string
-    str: http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/ped_det_benchmark.jpg
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/ped_det_benchmark.jpg
-      background: 9
-      mode: 0
-  :external_results_url: !ruby/string
-    str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf
-      background: 9
-      mode: 0
+  :description: |-
+    Evaluated using the [Caltech Pedestrians toolkit](http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/).
+    [Original dataset website](http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Mono_Ped__Detection_Be/daimler_mono_ped__detection_be.html).
+  :figure_url: http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/ped_det_benchmark.jpg
+  :external_results_url: http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf
 - :group: Detection
   :name: KITTI Vision Benchmark
   :evaluation_units: average recall %
   :description: A rich dataset to evaluate multiple computer vision tasks, including
     cars, pedestrian and bycicles detection.
-  :figure_url: !ruby/string
-    str: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
-      background: 9
-      mode: 0
-  :external_results_url: !ruby/string
-    str: http://www.cvlibs.net/datasets/kitti/eval_object.php
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://www.cvlibs.net/datasets/kitti/eval_object.php
-      background: 9
-      mode: 0
+  :figure_url: http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg
+  :external_results_url: http://www.cvlibs.net/datasets/kitti/eval_object.php
 Pose estimation:
 - :group: Pose estimation
   :name: Leeds Sport Poses
   :evaluation_units: PCP %
-  :description: ! '[2000 poses anotated pictures](http://www.comp.leeds.ac.uk/mat4saj/lsp.html)
+  :description: "[2000 poses anotated pictures](http://www.comp.leeds.ac.uk/mat4saj/lsp.html)
     from Flickr. From a selected set of activities and with the person at the center
-    of the pictures.'
+    of the pictures."
   :figure_url: leeds_sport_poses.jpg
 Semantic labeling:
 - :group: Semantic labeling
   :name: MSRC-21
   :evaluation_units: accuracy % per-class / (and) per-pixel
-  :description: ! "One of the oldest and classic dataset for semantic labelling.\n21
+  :description: "One of the oldest and classic dataset for semantic labelling.\n21
     different categories of surfaces are considered.\nDespite the innacuracies in
     the annotations and how unbalanced the classes are, this dataset still is commonly
     used as reference point.\nNote that here we consider the [original annotations](http://jamie.shotton.org/work/data.html)
@@ -235,11 +141,4 @@ Saliency/Segmentation:
   :description: This benchmark aggregates results from 36 methods over five datasets
     (MSRA10K, ECSSD, THUR15K, JuddDB, and DUTOMRON).
   :figure_url: saliency_benchmark.png
-  :external_results_url: !ruby/string
-    str: http://mmcheng.net/salobjbenchmark/
-    background: 9
-    mode: 0
-    uncolorized: !ruby/string
-      str: http://mmcheng.net/salobjbenchmark/
-      background: 9
-      mode: 0
+  :external_results_url: http://mmcheng.net/salobjbenchmark/

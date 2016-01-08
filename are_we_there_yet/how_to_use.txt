@@ -1,0 +1,3 @@
+
+rvm 2.2 do bundle exec ruby download_data.rb
+and then build.sh

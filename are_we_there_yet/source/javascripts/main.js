@@ -1,6 +1,5 @@
 
-// require bootstrap
-
+//= require bootstrap
 //= require bootstrap-scrollspy
 //= require bootstrap-tooltip
 //= require bootstrap-popover
@@ -12,7 +11,7 @@ $(function () {
 
    $("a[rel='popover']").each(function() {
 
-	   var content_id = $(this).data("content_id");
+	   var content_id = $(this).data("content-id");
 
 	   $(this).popover( {
 		 delay: { show: 0, hide: 1000 },

@@ -14,11 +14,12 @@ title: Semantic labeling datasets results
 %div.row.datasets-list
   %ul.span4.offset2.nav.nav-stacked.nav-pills
     - data.datasets["Semantic labeling"].each do |dataset|
-      %li= link_to dataset.name, anchor:dataset_anchor(dataset)
+      -# %li= link_to dataset.name, anchor:dataset_anchor(dataset)
+      %li= link_to dataset.name, ("#" + dataset_anchor(dataset))
 
 - data.datasets["Semantic labeling"].each do |dataset|
   = partial "dataset_results", { :locals => {:dataset => dataset}}
-  %hr
+  -# %hr
 
     
    

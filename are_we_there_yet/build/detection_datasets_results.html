@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang='en'></html>
 <head>
-  <meta charset='utf-8' />
-  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+  <meta charset='utf-8'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <title>Detection datasets results</title>
-  <meta content='' name='description' />
-  <meta content='Rodrigo Benenson' name='author' />
-  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-  <link href="/are_we_there_yet/build/stylesheets/screen.css?1363119633" media="screen" rel="stylesheet" type="text/css" />
+  <meta content='' name='description'>
+  <meta content='Rodrigo Benenson' name='author'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <link href="are_we_there_yet/build/stylesheets/screen.css?1452216744" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body data-spy='scroll' data-target='#the-top-navbar'>
   <div class='container main-container'>
@@ -16,10 +16,10 @@
         <div>
           <ul class='nav nav-pills pull-right'>
             <li>
-              <a href="/are_we_there_yet/build/#about">About</a>
+              <a href="are_we_there_yet/build/#about">About</a>
             </li>
             <li>
-              <a href="/are_we_there_yet/build/#datasets">Datasets</a>
+              <a href="are_we_there_yet/build/#datasets">Datasets</a>
             </li>
             <li>
               <a href="http://rodrigob.github.com/#contact">Contact</a>
@@ -29,820 +29,807 @@
         </div>
       </div>
     </div>
-    <hr />
+    <hr>
     <div class='jumbotron'>
-  <h1>Where are the objects in the image ?</h1>
-  <p class='lead'>
-    Discover the current state of the art in objects detection.
-  </p>
-</div>
-<div class='row datasets-list'>
-  <ul class='span4 offset2 nav nav-stacked nav-pills'>
-    <li><a href="#50617363616c20564f43203230303720636f6d7033">Pascal VOC 2007 comp3</a></li>
-    <li><a href="#50617363616c20564f43203230303720636f6d7034">Pascal VOC 2007 comp4</a></li>
-    <li><a href="#50617363616c20564f43203230313020636f6d7033">Pascal VOC 2010 comp3</a></li>
-    <li><a href="#50617363616c20564f43203230313020636f6d7034">Pascal VOC 2010 comp4</a></li>
-    <li><a href="#50617363616c20564f43203230313120636f6d7033">Pascal VOC 2011 comp3</a></li>
-    <li><a href="#43616c74656368205065646573747269616e7320555341">Caltech Pedestrians USA</a></li>
-    <li><a href="#494e52494120506572736f6e73">INRIA Persons</a></li>
-    <li><a href="#455448205065646573747269616e20">ETH Pedestrian </a></li>
-    <li><a href="#5455442d4272757373656c73205065646573747269616e">TUD-Brussels Pedestrian</a></li>
-    <li><a href="#4461696d6c6572205065646573747269616e">Daimler Pedestrian</a></li>
-    <li><a href="#4b4954544920566973696f6e2042656e63686d61726b">KITTI Vision Benchmark</a></li>
-  </ul>
-</div>
-<section>
-  <div class='dataset-results container span9' id='50617363616c20564f43203230303720636f6d7033' name='50617363616c20564f43203230303720636f6d7033'>
-    <h1 class='page-header'>Pascal VOC 2007 comp3<br/><small>who is the best in Pascal VOC 2007 comp3 ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7033"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2007.png?1363085077" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7033">Pascal VOC 2007 comp3</a>
-      <small>17 results collected</small>
-    </h3>
-    <p>
-      Units:
-      mAP percent
-    </p>
-    <blockquote><p>Pascal VOC 2007 is commonly used because the test set has been realased. comp3 is the objects detection competition, using only the comp3 pascal training data.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <table class='table table-striped'>
-      <thead>
-        <tr>
-          <th class='span2 pull-right'>
-            Result
-          </th>
-          <th>Method</th>
-          <th class='span2'>Venue</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='span2'>22.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf">Ensemble of Exemplar-SVMs for Object Detection and Beyond</a></td>
-          <td class='span2'>ICCV 2011</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-0' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-0' style='display:none'>
-              <p>Reaches 19.8 mAP when not using context.</p>
-
-<p>Code <a href='http://www.cs.cmu.edu/~tmalisie/projects/iccv11'>available</a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>27.4 mAP</td>
-          <td><a class="pdf_link" href="http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf">Measuring the objectness of image windows</a></td>
-          <td class='span2'>PAMI 2012</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-1' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-1' style='display:none'>
-              <p>Source code <a href='http://groups.inf.ed.ac.uk/calvin/objectness/'>available</a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>28.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/cvpr10schnitzspan.pdf">Automatic discovery of meaningful object parts with latent CRFs</a></td>
-          <td class='span2'>CVPR 2010</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>29.0 mAP</td>
-          <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/latent/index.html">Object Detection with Discriminatively Trained Part Based Models</a></td>
-          <td class='span2'>PAMI 2010</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-3' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-3' style='display:none'>
-              <p>Original PAMI 2010 results, using <a href='http://www.cs.berkeley.edu/~rbg/latent/index.html'>voc-release3</a>, with context. Obtains 26.2 mAP without context.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>29.6 mAP</td>
-          <td><a class="pdf_link" href="http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf">Latent Hierarchical Structural Learning for Object Detection</a></td>
-          <td class='span2'>CVPR 2010</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>32.4 mAP</td>
-          <td><a class="pdf_link" href="http://www.idiap.ch/~fleuret/papers/dubout-fleuret-bmvc2013.pdf">Deformable Part Models with Individual Part Scaling</a></td>
-          <td class='span2'>BMVC 2013</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>34.3 mAP</td>
-          <td><a class="pdf_link" href="http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf">Boosted local structured HOG-LBP for object localization</a></td>
-          <td class='span2'>CVPR 2011</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>34.3 mAP</td>
-          <td><a class="pdf_link" href="http://www.ics.uci.edu/~dramanan/papers/hsc.pdf">Histograms of Sparse Codes for Object Detection</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-7' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-7' style='display:none'>
-              <p>Reaches 26.9 mAP when using only the root templates (no parts).</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>34.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf">Discriminatively Trained And-Or Tree Models for Object Detection</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-8' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-8' style='display:none'>
-              <p>The number of components, parts, their shape, appearance, and configuration are all learned.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>34.7 mAP</td>
-          <td><a class="pdf_link" href="http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf">Incorporating Structural Alternatives and Sharing into Hierarchy for Multiclass Object Recognition and Detection</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>34.8 mAP</td>
-          <td><a class="pdf_link" href="http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf">Color Attributes for Object Detection</a></td>
-          <td class='span2'>CVPR 2012</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-10' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-10' style='display:none'>
-              <p>Code <a href='http://www.cat.uab.cat/Research/object-detection'>available</a>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>35.4 mAP</td>
-          <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/latent/index.html">Object Detection with Discriminatively Trained Part Based Models</a></td>
-          <td class='span2'>PAMI 2010</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-11' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-11' style='display:none'>
-              <p>2012 results using <a href='http://www.cs.berkeley.edu/~rbg/latent/index.html'>voc-release5</a> (instead of release3 from 2010), with context. Obtains 33.7 mAP without context.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>36.0 mAP</td>
-          <td><a class="pdf_link" href="http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf">Machine Learning Methods for Visual Object Detection</a></td>
-          <td class='span2'>archives-ouvertes 2011</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-12' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-12' style='display:none'>
-              <p>Thesis results based on the features explained in our earlier paper &#8220;Feature Sets and Dimensionality Reduction For Visual Object Detection, BMVC, 2010&#8221;.</p>
-                
-                <p>Results table can be found on the page 104 of thesis.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>38.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf">Detection Evolution with Multi-Order Contextual Co-occurrence</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>40.5 mAP</td>
-          <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf">Segmentation Driven Object Detection with Fisher Vectors</a></td>
-          <td class='span2'>ICCV 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-14' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-14' style='display:none'>
-              <ol>
-                <li>5 mAP when not using inter-class contextual cues</li>
-                </ol>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>41.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf">Regionlets for Generic Object Detection</a></td>
-          <td class='span2'>ICCV 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7033-method-15' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7033-method-15' style='display:none'>
-              <p>No context information being used.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>43.7 mAP</td>
-          <td><a class="pdf_link" href="http://hci.iwr.uni-heidelberg.de/Staff/bommer/papers/monroy_ommer_eccv12.pdf">Beyond Bounding-Boxes: Learning Object Shape by Model-Driven Grouping</a></td>
-          <td class='span2'>ECCV 2012</td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <small>Something is off, something is missing ? Feel free to <a href='/are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='50617363616c20564f43203230303720636f6d7034' name='50617363616c20564f43203230303720636f6d7034'>
-    <h1 class='page-header'>Pascal VOC 2007 comp4<br/><small>who is the best in Pascal VOC 2007 comp4 ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7034"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2007.png?1363085077" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7034">Pascal VOC 2007 comp4</a>
-      <small>3 results collected</small>
-    </h3>
-    <p>
-      Units:
-      mAP percent
-    </p>
-    <blockquote><p>Just like comp3 but &#8220;any training data&#8221; can be used.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <table class='table table-striped'>
-      <thead>
-        <tr>
-          <th class='span2 pull-right'>
-            Result
-          </th>
-          <th>Method</th>
-          <th class='span2'>Venue</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='span2'>59.2 mAP</td>
-          <td><a class="pdf_link" href="http://research.microsoft.com/en-us/um/people/kahe/eccv14sppnet/index.html">Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition</a></td>
-          <td class='span2'>ECCV 2014</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7034-method-0' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7034-method-0' style='display:none'>
-              <p>20x faster than R-CNN.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>58.5 mAP</td>
-          <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf">Rich feature hierarchies for accurate object detection and semantic segmentation</a></td>
-          <td class='span2'>CVPR 2014</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>29.0 mAP</td>
-          <td><a class="pdf_link" href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf">Multi-Component Models for Object Detection</a></td>
-          <td class='span2'>ECCV 2012</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230303720636f6d7034-method-2' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230303720636f6d7034-method-2' style='display:none'>
-              <ol>
-              <li>9 Monolithic, 29.0 Multi-components.</li>
-              </ol>
-              
-              <p>Uses poselets and segmentation masks labels to build the clusters (thus comp4 not comp3).</p>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <small>Something is off, something is missing ? Feel free to <a href='/are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='50617363616c20564f43203230313020636f6d7033' name='50617363616c20564f43203230313020636f6d7033'>
-    <h1 class='page-header'>Pascal VOC 2010 comp3<br/><small>who is the best in Pascal VOC 2010 comp3 ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2010.png?1363085077" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033">Pascal VOC 2010 comp3</a>
-      <small>10 results collected</small>
-    </h3>
-    <p>
-      Units:
-      mAP percent
-    </p>
-    <blockquote><p>Pascal VOC 2010 version of the challenge. comp3 is the objects detection competition.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <table class='table table-striped'>
-      <thead>
-        <tr>
-          <th class='span2 pull-right'>
-            Result
-          </th>
-          <th>Method</th>
-          <th class='span2'>Venue</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='span2'>24.98 mAP</td>
-          <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf">Learning Collections of Part Models for Object Recognition</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>29.4 mAP</td>
-          <td><a class="pdf_link" href="http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf">Discriminatively Trained And-Or Tree Models for Object Detection</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-1' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-1' style='display:none'>
-              <p>The number of components, parts, their shape, appearance, and configuration are all learned.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>33.4 mAP</td>
-          <td><a class="pdf_link" href="http://people.cs.uchicago.edu/~rbg/latent-release5/">Object Detection with Discriminatively Trained Part Based Models</a></td>
-          <td class='span2'>PAMI 2010</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-2' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-2' style='display:none'>
-              <p>This are the results of version 5 (September 2012) with context and extra octave. Raw detection obtains 29.6 mAP.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>34.1 mAP</td>
-          <td><a class="pdf_link" href="http://www.science.uva.nl/research/publications/2011/vandeSandeICCV2011/vandesande_iccv2011.pdf">Segmentation as selective search for object recognition</a></td>
-          <td class='span2'>ICCV 2011</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-3' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-3' style='display:none'>
-              <p>Source code availabe at http://koen.me/research/selectivesearch/</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>35.1 mAP</td>
-          <td><a class="pdf_link" href="http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf">Selective Search for Object Recognition</a></td>
-          <td class='span2'>IJCV 2013</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>36.0 mAP</td>
-          <td><a class="pdf_link" href="http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf">Latent Hierarchical Structural Learning for Object  Detection</a></td>
-          <td class='span2'>CVPR 2010</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-5' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-5' style='display:none'>
-              <p>Result presented in the <a href='http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2010/workshop/mitucla.pdf'>VOC 2010 workshop</a> at ECCV 2010. They reported 35.99, which rounds up to 36.0.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>36.8 mAP</td>
-          <td><a class="pdf_link" href="http://kylezheng.org/publications/">Object Detection by Context and Boosted HOG-LBP</a></td>
-          <td class='span2'>ECCV 2010</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-6' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-6' style='display:none'>
-              <p>There seem to be no paper about this work, but only the slides from the entry at the PASCAL VOC workshop ECCV 2010.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>38.4 mAP</td>
-          <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf">Segmentation Driven Object Detection with Fisher Vectors</a></td>
-          <td class='span2'>ICCV 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-7' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-7' style='display:none'>
-              <ol>
-              <li>8 mAP when not using inter-class contextual cues</li>
-              </ol>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>39.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf">Regionlets for Generic Object Detection</a></td>
-          <td class='span2'>ICCV 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7033-method-8' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7033-method-8' style='display:none'>
-              <p>No context information being used.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>40.4 mAP</td>
-          <td><a class="pdf_link" href="http://koen.me/research/flair/">Fisher and VLAD with FLAIR</a></td>
-          <td class='span2'>CVPR 2014</td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <small>Something is off, something is missing ? Feel free to <a href='/are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='50617363616c20564f43203230313020636f6d7034' name='50617363616c20564f43203230313020636f6d7034'>
-    <h1 class='page-header'>Pascal VOC 2010 comp4<br/><small>who is the best in Pascal VOC 2010 comp4 ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7034"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2010.png?1363085077" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7034">Pascal VOC 2010 comp4</a>
-      <small>3 results collected</small>
-    </h3>
-    <p>
-      Units:
-      mAP percent
-    </p>
-    <blockquote><p>Just like comp3 but &#8220;any training data&#8221; can be used.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <table class='table table-striped'>
-      <thead>
-        <tr>
-          <th class='span2 pull-right'>
-            Result
-          </th>
-          <th>Method</th>
-          <th class='span2'>Venue</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='span2'>53.7 mAP</td>
-          <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf">Rich feature hierarchies for accurate object detection and semantic segmentation</a></td>
-          <td class='span2'>CVPR 2014</td>
-          <td>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>40.4 mAP</td>
-          <td><a class="pdf_link" href="http://ttic.uchicago.edu/~fidler/papers/fidler_et_al_cvpr13a.pdf">Bottom-up Segmentation for Top-down Detection</a></td>
-          <td class='span2'>CVPR 2013</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7034-method-1' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7034-method-1' style='display:none'>
-              <p>Reaches 40.4 mAP when using full post-processing. Reaches 36.6 mAP without any post-processing. This method builds upon a sophisticated object segmentation method (CPMC).</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class='span2'>33.1 mAP</td>
-          <td><a class="pdf_link" href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf">Multi-Component Models for Object Detection</a></td>
-          <td class='span2'>ECCV 2012</td>
-          <td>
-            <a class='btn' data-content_id='#50617363616c20564f43203230313020636f6d7034-method-2' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
-              Details
-            </a>
-            <div id='50617363616c20564f43203230313020636f6d7034-method-2' style='display:none'>
-              <p>Multi-components result</p>
-              
-              <p>Uses poselets and segmentation masks labels to build the clusters (thus comp4 not comp3).</p>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <small>Something is off, something is missing ? Feel free to <a href='/are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='50617363616c20564f43203230313120636f6d7033' name='50617363616c20564f43203230313120636f6d7033'>
-    <h1 class='page-header'>Pascal VOC 2011 comp3<br/><small>who is the best in Pascal VOC 2011 comp3 ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313120636f6d7033"><img width="150px" height="150px" src="/are_we_there_yet/build/images/pascal_voc_2012.png?1376533467" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a href="/are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313120636f6d7033">Pascal VOC 2011 comp3</a>
-    </h3>
-    <p>
-      Units:
-      mAP percent
-    </p>
-    <blockquote><p>Last Pascal VOC challenge instance (2012 version had identical data).</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <table class='table table-striped'>
-      <thead>
-        <tr>
-          <th class='span2 pull-right'>
-            Result
-          </th>
-          <th>Method</th>
-          <th class='span2'>Venue</th>
-          <th>Details</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class='span2'>40.6 mAP</td>
-          <td><a class="pdf_link" href="http://koen.me/research/flair/">Fisher and VLAD with FLAIR</a></td>
-          <td class='span2'>CVPR 2014</td>
-          <td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <small>Something is off, something is missing ? Feel free to <a href='/are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='43616c74656368205065646573747269616e7320555341' name='43616c74656368205065646573747269616e7320555341'>
-    <h1 class='page-header'>Caltech Pedestrians USA<br/><small>who is the best in Caltech Pedestrians USA ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf"><img width="150px" height="150px" src="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf">Caltech Pedestrians USA</a>
-    </h3>
-    <p>
-      Units:
-      average miss-rate %
-    </p>
-    <blockquote><p><a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Project website</a>.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf'>external webpage</a></p>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='494e52494120506572736f6e73' name='494e52494120506572736f6e73'>
-    <h1 class='page-header'>INRIA Persons<br/><small>who is the best in INRIA Persons ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf"><img width="150px" height="150px" src="/are_we_there_yet/build/images/inria_persons.png?1363085077" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf">INRIA Persons</a>
-    </h3>
-    <p>
-      Units:
-      average miss-rate %
-    </p>
-    <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. <a href='http://pascal.inrialpes.fr/data/human/'>Original dataset website</a>.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf'>external webpage</a></p>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='455448205065646573747269616e20' name='455448205065646573747269616e20'>
-    <h1 class='page-header'>ETH Pedestrian <br/><small>who is the best in ETH Pedestrian  ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf"><img width="150px" height="150px" src="/are_we_there_yet/build/images/eth_pedestrian.png?1363085077" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf">ETH Pedestrian </a>
-    </h3>
-    <p>
-      Units:
-      average miss-rate %
-    </p>
-    <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. Only left images used. <a href='http://www.vision.ee.ethz.ch/~aess/dataset/'>Original dataset website</a>.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf'>external webpage</a></p>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='5455442d4272757373656c73205065646573747269616e' name='5455442d4272757373656c73205065646573747269616e'>
-    <h1 class='page-header'>TUD-Brussels Pedestrian<br/><small>who is the best in TUD-Brussels Pedestrian ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf"><img width="150px" height="150px" src="http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf">TUD-Brussels Pedestrian</a>
-    </h3>
-    <p>
-      Units:
-      average miss-rate %
-    </p>
-    <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. <a href='http://www.d2.mpi-inf.mpg.de/tud-brussels'>Original dataset website</a>.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf'>external webpage</a></p>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='4461696d6c6572205065646573747269616e' name='4461696d6c6572205065646573747269616e'>
-    <h1 class='page-header'>Daimler Pedestrian<br/><small>who is the best in Daimler Pedestrian ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf"><img width="150px" height="150px" src="http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/ped_det_benchmark.jpg" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf">Daimler Pedestrian</a>
-    </h3>
-    <p>
-      Units:
-      average miss-rate %
-    </p>
-    <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. <a href='http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Mono_Ped__Detection_Be/daimler_mono_ped__detection_be.html'>Original dataset website</a>.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf'>external webpage</a></p>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
-<section>
-  <div class='dataset-results container span9' id='4b4954544920566973696f6e2042656e63686d61726b' name='4b4954544920566973696f6e2042656e63686d61726b'>
-    <h1 class='page-header'>KITTI Vision Benchmark<br/><small>who is the best in KITTI Vision Benchmark ?</small></h1>
-    <div class='row dataset-preview'>
-  <div class='span2'>
-    <ul class='thumbnails'>
-      <li>
-        <a class="thumbnail" href="http://www.cvlibs.net/datasets/kitti/eval_object.php"><img width="150px" height="150px" src="http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg" />
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class='span7'>
-    <h3>
-      <a class="external_link" href="http://www.cvlibs.net/datasets/kitti/eval_object.php">KITTI Vision Benchmark</a>
-    </h3>
-    <p>
-      Units:
-      average recall %
-    </p>
-    <blockquote><p>A rich dataset to evaluate multiple computer vision tasks, including cars, pedestrian and bycicles detection.</p></blockquote>
-  </div>
-</div>
-<!-- end of row -->
-    <p>Results are collected in the following <a class='external_link' href='http://www.cvlibs.net/datasets/kitti/eval_object.php'>external webpage</a></p>
-  </div>
-</section>
-<!-- end of dataset section -->
-<hr />
+      <h1>Where are the objects in the image ?</h1>
+      <p class='lead'>
+        Discover the current state of the art in objects detection.
+      </p>
+    </div>
+    <div class='row datasets-list'>
+      <ul class='span4 offset2 nav nav-stacked nav-pills'>
+        <li><a href="#50617363616c20564f43203230303720636f6d7033">Pascal VOC 2007 comp3</a></li>
+        <li><a href="#50617363616c20564f43203230303720636f6d7034">Pascal VOC 2007 comp4</a></li>
+        <li><a href="#50617363616c20564f43203230313020636f6d7033">Pascal VOC 2010 comp3</a></li>
+        <li><a href="#50617363616c20564f43203230313020636f6d7034">Pascal VOC 2010 comp4</a></li>
+        <li><a href="#50617363616c20564f43203230313120636f6d7033">Pascal VOC 2011 comp3</a></li>
+        <li><a href="#43616c74656368205065646573747269616e7320555341">Caltech Pedestrians USA</a></li>
+        <li><a href="#494e52494120506572736f6e73">INRIA Persons</a></li>
+        <li><a href="#455448205065646573747269616e20">ETH Pedestrian </a></li>
+        <li><a href="#5455442d4272757373656c73205065646573747269616e">TUD-Brussels Pedestrian</a></li>
+        <li><a href="#4461696d6c6572205065646573747269616e">Daimler Pedestrian</a></li>
+        <li><a href="#4b4954544920566973696f6e2042656e63686d61726b">KITTI Vision Benchmark</a></li>
+      </ul>
+    </div>
+    <section>
+      <div class='dataset-results container span9' id='50617363616c20564f43203230303720636f6d7033' name='50617363616c20564f43203230303720636f6d7033'>
+        <h1 class='page-header'>Pascal VOC 2007 comp3<br/><small>who is the best in Pascal VOC 2007 comp3 ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7033"><img width="150px" height="150px" src="are_we_there_yet/build/images/pascal_voc_2007.png?1363085077" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7033">Pascal VOC 2007 comp3</a>
+              <small>17 results collected</small>
+            </h3>
+            <p>
+              Units:
+              mAP percent
+            </p>
+            <blockquote><p>Pascal VOC 2007 is commonly used because the test set has been realased. comp3 is the objects detection competition, using only the comp3 pascal training data.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th class='span2 pull-right'>
+                Result
+              </th>
+              <th>Method</th>
+              <th class='span2'>Venue</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='span2'>22.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.cs.cmu.edu/~tmalisie/projects/iccv11/exemplarsvm-iccv11.pdf">Ensemble of Exemplar-SVMs for Object Detection and Beyond</a></td>
+              <td class='span2'>ICCV 2011</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-0' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-0' style='display:none'>
+                  <p>Reaches 19.8 mAP when not using context.</p>
+                  
+                  <p>Code <a href='http://www.cs.cmu.edu/~tmalisie/projects/iccv11'>available</a>.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>27.4 mAP</td>
+              <td><a class="pdf_link" href="http://groups.inf.ed.ac.uk/calvin/Publications/alexe12pami.pdf">Measuring the objectness of image windows</a></td>
+              <td class='span2'>PAMI 2012</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-1' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-1' style='display:none'>
+                  <p>Source code <a href='http://groups.inf.ed.ac.uk/calvin/objectness/'>available</a>.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>28.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/cvpr10schnitzspan.pdf">Automatic discovery of meaningful object parts with latent CRFs</a></td>
+              <td class='span2'>CVPR 2010</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>29.0 mAP</td>
+              <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/latent/index.html">Object Detection with Discriminatively Trained Part Based Models</a></td>
+              <td class='span2'>PAMI 2010</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-3' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-3' style='display:none'>
+                  <p>Original PAMI 2010 results, using <a href='http://www.cs.berkeley.edu/~rbg/latent/index.html'>voc-release3</a>, with context. Obtains 26.2 mAP without context.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>29.6 mAP</td>
+              <td><a class="pdf_link" href="http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf">Latent Hierarchical Structural Learning for Object Detection</a></td>
+              <td class='span2'>CVPR 2010</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>32.4 mAP</td>
+              <td><a class="pdf_link" href="http://www.idiap.ch/~fleuret/papers/dubout-fleuret-bmvc2013.pdf">Deformable Part Models with Individual Part Scaling</a></td>
+              <td class='span2'>BMVC 2013</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>34.3 mAP</td>
+              <td><a class="pdf_link" href="http://www.ics.uci.edu/~dramanan/papers/hsc.pdf">Histograms of Sparse Codes for Object Detection</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-6' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-6' style='display:none'>
+                  <p>Reaches 26.9 mAP when using only the root templates (no parts).</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>34.3 mAP</td>
+              <td><a class="pdf_link" href="http://www.nlpr.ia.ac.cn/2011papers/gjhy/gh20.pdf">Boosted local structured HOG-LBP for object localization</a></td>
+              <td class='span2'>CVPR 2011</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>34.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf">Discriminatively Trained And-Or Tree Models for Object Detection</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-8' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-8' style='display:none'>
+                  <p>The number of components, parts, their shape, appearance, and configuration are all learned.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>34.7 mAP</td>
+              <td><a class="pdf_link" href="http://ss.sysu.edu.cn/~ll/files/multiclassaog_cvpr2013.pdf">Incorporating Structural Alternatives and Sharing into Hierarchy for Multiclass Object Recognition and Detection</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>34.8 mAP</td>
+              <td><a class="pdf_link" href="http://cat.uab.cat/Public/Publications/2012/SRV2012/cvpr2012.pdf">Color Attributes for Object Detection</a></td>
+              <td class='span2'>CVPR 2012</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-10' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-10' style='display:none'>
+                  <p>Code <a href='http://www.cat.uab.cat/Research/object-detection'>available</a>.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>35.4 mAP</td>
+              <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/latent/index.html">Object Detection with Discriminatively Trained Part Based Models</a></td>
+              <td class='span2'>PAMI 2010</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-11' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-11' style='display:none'>
+                  <p>2012 results using <a href='http://www.cs.berkeley.edu/~rbg/latent/index.html'>voc-release5</a> (instead of release3 from 2010), with context. Obtains 33.7 mAP without context.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>36.0 mAP</td>
+              <td><a class="pdf_link" href="http://tel.archives-ouvertes.fr/docs/00/72/26/32/PDF/thesis.pdf">Machine Learning Methods for Visual Object Detection</a></td>
+              <td class='span2'>archives-ouvertes 2011</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-12' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-12' style='display:none'>
+                  <p>Thesis results based on the features explained in our earlier paper &#8220;Feature Sets and Dimensionality Reduction For Visual Object Detection, BMVC, 2010&#8221;.</p>
+                  
+                  <p>Results table can be found on the page 104 of thesis.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>38.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Chen_Detection_Evolution_with_2013_CVPR_paper.pdf">Detection Evolution with Multi-Order Contextual Co-occurrence</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>40.5 mAP</td>
+              <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf">Segmentation Driven Object Detection with Fisher Vectors</a></td>
+              <td class='span2'>ICCV 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-14' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-14' style='display:none'>
+                  <ol>
+                  <li>5 mAP when not using inter-class contextual cues</li>
+                  </ol>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>41.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf">Regionlets for Generic Object Detection</a></td>
+              <td class='span2'>ICCV 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7033-method-15' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7033-method-15' style='display:none'>
+                  <p>No context information being used.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>43.7 mAP</td>
+              <td><a class="pdf_link" href="http://hci.iwr.uni-heidelberg.de/Staff/bommer/papers/monroy_ommer_eccv12.pdf">Beyond Bounding-Boxes: Learning Object Shape by Model-Driven Grouping</a></td>
+              <td class='span2'>ECCV 2012</td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <small>Something is off, something is missing ? Feel free to <a href='are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='50617363616c20564f43203230303720636f6d7034' name='50617363616c20564f43203230303720636f6d7034'>
+        <h1 class='page-header'>Pascal VOC 2007 comp4<br/><small>who is the best in Pascal VOC 2007 comp4 ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7034"><img width="150px" height="150px" src="are_we_there_yet/build/images/pascal_voc_2007.png?1363085077" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230303720636f6d7034">Pascal VOC 2007 comp4</a>
+              <small>3 results collected</small>
+            </h3>
+            <p>
+              Units:
+              mAP percent
+            </p>
+            <blockquote><p>Just like comp3 but &#8220;any training data&#8221; can be used.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th class='span2 pull-right'>
+                Result
+              </th>
+              <th>Method</th>
+              <th class='span2'>Venue</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='span2'>59.2 mAP</td>
+              <td><a class="pdf_link" href="http://research.microsoft.com/en-us/um/people/kahe/eccv14sppnet/index.html">Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition</a></td>
+              <td class='span2'>ECCV 2014</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7034-method-0' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7034-method-0' style='display:none'>
+                  <p>20x faster than R-CNN.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>58.5 mAP</td>
+              <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf">Rich feature hierarchies for accurate object detection and semantic segmentation</a></td>
+              <td class='span2'>CVPR 2014</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>29.0 mAP</td>
+              <td><a class="pdf_link" href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf">Multi-Component Models for Object Detection</a></td>
+              <td class='span2'>ECCV 2012</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230303720636f6d7034-method-2' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230303720636f6d7034-method-2' style='display:none'>
+                  <ol>
+                  <li>9 Monolithic, 29.0 Multi-components.</li>
+                  </ol>
+                  
+                  <p>Uses poselets and segmentation masks labels to build the clusters (thus comp4 not comp3).</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <small>Something is off, something is missing ? Feel free to <a href='are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='50617363616c20564f43203230313020636f6d7033' name='50617363616c20564f43203230313020636f6d7033'>
+        <h1 class='page-header'>Pascal VOC 2010 comp3<br/><small>who is the best in Pascal VOC 2010 comp3 ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033"><img width="150px" height="150px" src="are_we_there_yet/build/images/pascal_voc_2010.png?1363085077" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7033">Pascal VOC 2010 comp3</a>
+              <small>10 results collected</small>
+            </h3>
+            <p>
+              Units:
+              mAP percent
+            </p>
+            <blockquote><p>Pascal VOC 2010 version of the challenge. comp3 is the objects detection competition.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th class='span2 pull-right'>
+                Result
+              </th>
+              <th>Method</th>
+              <th class='span2'>Venue</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='span2'>24.98 mAP</td>
+              <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Endres_Learning_Collections_of_2013_CVPR_paper.pdf">Learning Collections of Part Models for Object Recognition</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>29.4 mAP</td>
+              <td><a class="pdf_link" href="http://www.stat.ucla.edu/~sczhu/papers/Conf_2013/DiscriminativeAOG_cvpr2013.pdf">Discriminatively Trained And-Or Tree Models for Object Detection</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-1' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-1' style='display:none'>
+                  <p>The number of components, parts, their shape, appearance, and configuration are all learned.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>33.4 mAP</td>
+              <td><a class="pdf_link" href="http://people.cs.uchicago.edu/~rbg/latent-release5/">Object Detection with Discriminatively Trained Part Based Models</a></td>
+              <td class='span2'>PAMI 2010</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-2' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-2' style='display:none'>
+                  <p>This are the results of version 5 (September 2012) with context and extra octave. Raw detection obtains 29.6 mAP.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>34.1 mAP</td>
+              <td><a class="pdf_link" href="http://www.science.uva.nl/research/publications/2011/vandeSandeICCV2011/vandesande_iccv2011.pdf">Segmentation as selective search for object recognition</a></td>
+              <td class='span2'>ICCV 2011</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-3' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-3' style='display:none'>
+                  <p>Source code availabe at http://koen.me/research/selectivesearch/</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>35.1 mAP</td>
+              <td><a class="pdf_link" href="http://www.science.uva.nl/research/publications/2013/UijlingsIJCV2013/uijlings_ijcv2013_draft.pdf">Selective Search for Object Recognition</a></td>
+              <td class='span2'>IJCV 2013</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>36.0 mAP</td>
+              <td><a class="pdf_link" href="http://people.csail.mit.edu/leozhu/paper/cvpr10iCCCP.pdf">Latent Hierarchical Structural Learning for Object  Detection</a></td>
+              <td class='span2'>CVPR 2010</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-5' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-5' style='display:none'>
+                  <p>Result presented in the <a href='http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2010/workshop/mitucla.pdf'>VOC 2010 workshop</a> at ECCV 2010. They reported 35.99, which rounds up to 36.0.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>36.8 mAP</td>
+              <td><a class="pdf_link" href="http://kylezheng.org/publications/">Object Detection by Context and Boosted HOG-LBP</a></td>
+              <td class='span2'>ECCV 2010</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-6' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-6' style='display:none'>
+                  <p>There seem to be no paper about this work, but only the slides from the entry at the PASCAL VOC workshop ECCV 2010.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>38.4 mAP</td>
+              <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Cinbis_Segmentation_Driven_Object_2013_ICCV_paper.pdf">Segmentation Driven Object Detection with Fisher Vectors</a></td>
+              <td class='span2'>ICCV 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-7' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-7' style='display:none'>
+                  <ol>
+                  <li>8 mAP when not using inter-class contextual cues</li>
+                  </ol>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>39.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Wang_Regionlets_for_Generic_2013_ICCV_paper.pdf">Regionlets for Generic Object Detection</a></td>
+              <td class='span2'>ICCV 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7033-method-8' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7033-method-8' style='display:none'>
+                  <p>No context information being used.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>40.4 mAP</td>
+              <td><a class="pdf_link" href="http://koen.me/research/flair/">Fisher and VLAD with FLAIR</a></td>
+              <td class='span2'>CVPR 2014</td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <small>Something is off, something is missing ? Feel free to <a href='are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='50617363616c20564f43203230313020636f6d7034' name='50617363616c20564f43203230313020636f6d7034'>
+        <h1 class='page-header'>Pascal VOC 2010 comp4<br/><small>who is the best in Pascal VOC 2010 comp4 ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7034"><img width="150px" height="150px" src="are_we_there_yet/build/images/pascal_voc_2010.png?1363085077" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313020636f6d7034">Pascal VOC 2010 comp4</a>
+              <small>3 results collected</small>
+            </h3>
+            <p>
+              Units:
+              mAP percent
+            </p>
+            <blockquote><p>Just like comp3 but &#8220;any training data&#8221; can be used.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th class='span2 pull-right'>
+                Result
+              </th>
+              <th>Method</th>
+              <th class='span2'>Venue</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='span2'>53.7 mAP</td>
+              <td><a class="pdf_link" href="http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf">Rich feature hierarchies for accurate object detection and semantic segmentation</a></td>
+              <td class='span2'>CVPR 2014</td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>40.4 mAP</td>
+              <td><a class="pdf_link" href="http://ttic.uchicago.edu/~fidler/papers/fidler_et_al_cvpr13a.pdf">Bottom-up Segmentation for Top-down Detection</a></td>
+              <td class='span2'>CVPR 2013</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7034-method-1' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7034-method-1' style='display:none'>
+                  <p>Reaches 40.4 mAP when using full post-processing. Reaches 36.6 mAP without any post-processing. This method builds upon a sophisticated object segmentation method (CPMC).</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class='span2'>33.1 mAP</td>
+              <td><a class="pdf_link" href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/shape/galym_eccv2012.pdf">Multi-Component Models for Object Detection</a></td>
+              <td class='span2'>ECCV 2012</td>
+              <td>
+                <a class='btn' data-content-id='#50617363616c20564f43203230313020636f6d7034-method-2' data-html='true' data-original-title='Additional information' data-placement='left' data-toggle='popover' data-trigger='hover' rel='popover'>
+                  Details
+                </a>
+                <div id='50617363616c20564f43203230313020636f6d7034-method-2' style='display:none'>
+                  <p>Multi-components result</p>
+                  
+                  <p>Uses poselets and segmentation masks labels to build the clusters (thus comp4 not comp3).</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <small>Something is off, something is missing ? Feel free to <a href='are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='50617363616c20564f43203230313120636f6d7033' name='50617363616c20564f43203230313120636f6d7033'>
+        <h1 class='page-header'>Pascal VOC 2011 comp3<br/><small>who is the best in Pascal VOC 2011 comp3 ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313120636f6d7033"><img width="150px" height="150px" src="are_we_there_yet/build/images/pascal_voc_2012.png?1376533467" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a href="are_we_there_yet/build/detection_datasets_results.html#50617363616c20564f43203230313120636f6d7033">Pascal VOC 2011 comp3</a>
+            </h3>
+            <p>
+              Units:
+              mAP percent
+            </p>
+            <blockquote><p>Last Pascal VOC challenge instance (2012 version had identical data).</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th class='span2 pull-right'>
+                Result
+              </th>
+              <th>Method</th>
+              <th class='span2'>Venue</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class='span2'>40.6 mAP</td>
+              <td><a class="pdf_link" href="http://koen.me/research/flair/">Fisher and VLAD with FLAIR</a></td>
+              <td class='span2'>CVPR 2014</td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <small>Something is off, something is missing ? Feel free to <a href='are_we_there_yet/build/new_result_form.html'>fill in the form</a>.</small>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='43616c74656368205065646573747269616e7320555341' name='43616c74656368205065646573747269616e7320555341'>
+        <h1 class='page-header'>Caltech Pedestrians USA<br/><small>who is the best in Caltech Pedestrians USA ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf"><img width="150px" height="150px" src="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/peds02_web.jpg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf">Caltech Pedestrians USA</a>
+            </h3>
+            <p>
+              Units:
+              average miss-rate %
+            </p>
+            <blockquote><p><a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Project website</a>.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/UsaTestRocReasonable.pdf'>external webpage</a></p>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='494e52494120506572736f6e73' name='494e52494120506572736f6e73'>
+        <h1 class='page-header'>INRIA Persons<br/><small>who is the best in INRIA Persons ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf"><img width="150px" height="150px" src="are_we_there_yet/build/images/inria_persons.png?1363085077" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf">INRIA Persons</a>
+            </h3>
+            <p>
+              Units:
+              average miss-rate %
+            </p>
+            <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. <a href='http://pascal.inrialpes.fr/data/human/'>Original dataset website</a>.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/InriaTestRocReasonable.pdf'>external webpage</a></p>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='455448205065646573747269616e20' name='455448205065646573747269616e20'>
+        <h1 class='page-header'>ETH Pedestrian <br/><small>who is the best in ETH Pedestrian  ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf"><img width="150px" height="150px" src="are_we_there_yet/build/images/eth_pedestrian.png?1363085077" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf">ETH Pedestrian </a>
+            </h3>
+            <p>
+              Units:
+              average miss-rate %
+            </p>
+            <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. Only left images used. <a href='http://www.vision.ee.ethz.ch/~aess/dataset/'>Original dataset website</a>.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/ETHRocReasonable.pdf'>external webpage</a></p>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='5455442d4272757373656c73205065646573747269616e' name='5455442d4272757373656c73205065646573747269616e'>
+        <h1 class='page-header'>TUD-Brussels Pedestrian<br/><small>who is the best in TUD-Brussels Pedestrian ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf"><img width="150px" height="150px" src="http://www.d2.mpi-inf.mpg.de/sites/default/files/datasets/tud-brussels/teaser.png" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf">TUD-Brussels Pedestrian</a>
+            </h3>
+            <p>
+              Units:
+              average miss-rate %
+            </p>
+            <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. <a href='http://www.d2.mpi-inf.mpg.de/tud-brussels'>Original dataset website</a>.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/TudBrusselsRocReasonable.pdf'>external webpage</a></p>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='4461696d6c6572205065646573747269616e' name='4461696d6c6572205065646573747269616e'>
+        <h1 class='page-header'>Daimler Pedestrian<br/><small>who is the best in Daimler Pedestrian ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf"><img width="150px" height="150px" src="http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/ped_det_benchmark.jpg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a class="external_link" href="http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf">Daimler Pedestrian</a>
+            </h3>
+            <p>
+              Units:
+              average miss-rate %
+            </p>
+            <blockquote><p>Evaluated using the <a href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/'>Caltech Pedestrians toolkit</a>. <a href='http://www.gavrila.net/Datasets/Daimler_Pedestrian_Benchmark_D/Daimler_Mono_Ped__Detection_Be/daimler_mono_ped__detection_be.html'>Original dataset website</a>.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <p>Results are collected in the following <a class='external_link' href='http://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/rocs/DaimlerRocReasonable.pdf'>external webpage</a></p>
+      </div>
+    </section>
+    <!-- end of dataset section -->
+    <section>
+      <div class='dataset-results container span9' id='4b4954544920566973696f6e2042656e63686d61726b' name='4b4954544920566973696f6e2042656e63686d61726b'>
+        <h1 class='page-header'>KITTI Vision Benchmark<br/><small>who is the best in KITTI Vision Benchmark ?</small></h1>
+        <div class='row dataset-preview'>
+          <div class='span2'>
+            <ul class='thumbnails'>
+              <li>
+                <a class="thumbnail" href="http://www.cvlibs.net/datasets/kitti/eval_object.php"><img width="150px" height="150px" src="http://www.cvlibs.net/datasets/kitti/video/kitti_trailer.jpg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='span7'>
+            <h3>
+              <a class="external_link" href="http://www.cvlibs.net/datasets/kitti/eval_object.php">KITTI Vision Benchmark</a>
+            </h3>
+            <p>
+              Units:
+              average recall %
+            </p>
+            <blockquote><p>A rich dataset to evaluate multiple computer vision tasks, including cars, pedestrian and bycicles detection.</p></blockquote>
+          </div>
+        </div>
+        <!-- end of row -->
+        <p>Results are collected in the following <a class='external_link' href='http://www.cvlibs.net/datasets/kitti/eval_object.php'>external webpage</a></p>
+      </div>
+    </section>
+    <!-- end of dataset section -->
     <div class='row'>
       <footer class='span12'>
-        <p>Last updated on 2014-09-30.</p>
+        <p>Last updated on 2016-01-08.</p>
         
-        <p>&#169; 2013-2014 Rodrigo Benenson.</p>
+        <p>&#169; 2013-2016 Rodrigo Benenson.</p>
         
         <p>Built using <a href='http://middlemanapp.com'>middleman</a> and <a href='http://twitter.github.com/bootstrap'>bootstrap</a>.</p>
       </footer>
     </div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-  <script src="/are_we_there_yet/build/javascripts/main.js?1363085077" type="text/javascript"></script>
-  <script src="/are_we_there_yet/build/javascripts/plugins.js?1363085077" type="text/javascript"></script>
-  <script src="/are_we_there_yet/build/javascripts/script.js" type="text/javascript"></script>
+  <script src="are_we_there_yet/build/javascripts/main.js?1452217145" type="text/javascript"></script>
+  <script src="are_we_there_yet/build/javascripts/plugins.js?1363085077" type="text/javascript"></script>
+  <script src="are_we_there_yet/build/javascripts/script.js?1452216744" type="text/javascript"></script>
   <!-- Google Analytics -->
-  <script type='text/javascript'>
-    //<![CDATA[
-       var _gaq=[['_setAccount','UA-80935-10'],['_trackPageview']];
-       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-       s.parentNode.insertBefore(g,s)}(document,'script'));
-    //]]>
+  <script>
+     var _gaq=[['_setAccount','UA-80935-10'],['_trackPageview']];
+     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+     s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
 </body>

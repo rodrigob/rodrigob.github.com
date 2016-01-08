@@ -1,7 +1,9 @@
 # This script should be executed calling $ bundle exec ruby download_data.rb
 
 require "bundler"
+
 require "psych"
+require "google/api_client"
 require "google_drive"
 require "colorize"
 require "faraday" # HTTP requests library
@@ -9,18 +11,32 @@ require "set"
 
 puts "Start of script".green
 
-if not (ENV['google_mail'] and ENV['google_password']) then
-	raise "Environment variables 'google_mail' and 'google_password' need to be set."
-end
+use_oauth = true
 
-session = GoogleDrive.login( ENV['google_mail'], ENV['google_password'])
+if use_oauth then
+  session = GoogleDrive.saved_session("oauth_config.json")
+else
+  if not (ENV['google_mail'] and ENV['google_password']) then
+	raise "Environment variables 'google_mail' and 'google_password' need to be set."
+  end
+  session = GoogleDrive.login( ENV['google_mail'], ENV['google_password'])
+end
 
 if not session then
   raise "Failed to open GoogleDrive session"
+else
+  puts "Started google session", session
 end
 
 spreadsheet_key = "0AqLzqcYZJN2cdEhBMlFpUzU2OTZHUXNoWW1aNlJvOUE"
 spreadsheet = session.spreadsheet_by_key(spreadsheet_key)
+
+if spreadsheet.nil?
+  raise "Failed to obtain the requested spreadsheet"
+else
+  puts "Obtained spreadsheet with worksheets:", spreadsheet.worksheets
+end
+
 data_worksheet = spreadsheet.worksheets[1]
 datasets_worksheet = spreadsheet.worksheets[2]
 
