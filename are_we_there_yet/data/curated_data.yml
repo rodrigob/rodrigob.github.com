@@ -1038,7 +1038,7 @@
   :paper_venue: CVPR
   :result: 68.25%
   :paper_pdf_url: http://www.cv-foundation.org/openaccess/content_cvpr_2015/app/2B_004.pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Recurrent Convolutional Neural Network for Object Recognition
   :paper_year: '2015'
   :paper_venue: CVPR
@@ -1135,7 +1135,7 @@
   :paper_pdf_url: http://arxiv.org/abs/1512.03385
   :additional_information: Best performance reached with 110 layers. Using 1202 layers
     leads to 92.07%, 56 layers lead to 93.03%.
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Training Very Deep Networks
   :paper_year: '2015'
   :paper_venue: NIPS
@@ -1234,7 +1234,7 @@
   :paper_venue: arXiv
   :result: 67.16%
   :paper_pdf_url: http://arxiv.org/abs/1511.03719
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Multi-Loss Regularized Deep Neural Network
   :paper_year: '2015'
   :paper_venue: CSVT
@@ -1318,7 +1318,7 @@
   :paper_venue: NIPS
   :result: 68.40%
   :paper_pdf_url: http://papers.nips.cc/paper/5649-spectral-representations-for-convolutional-neural-networks.pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: 'APAC: Augmented PAttern Classification with Neural Networks'
   :paper_year: '2015'
   :paper_venue: arXiv
@@ -1330,7 +1330,7 @@
   :paper_venue: arXiv
   :result: 89.67%
   :paper_pdf_url: http://arxiv.org/abs/1505.03229
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: 'ReNet: A Recurrent Neural Network Based Alternative to Convolutional
     Networks'
   :paper_year: '2015'
@@ -1363,7 +1363,7 @@
   :paper_venue: ICML
   :result: 72.60%
   :paper_pdf_url: http://arxiv.org/abs/1502.05700
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Deep Fried Convnets
   :paper_year: '2015'
   :paper_venue: ICCV
@@ -1387,7 +1387,7 @@
   :paper_pdf_url: http://arxiv.org/abs/1412.6597
   :additional_information: Unsupervised pre-training, with supervised fine-tuning.
     Uses dropout and data-augmentation.
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: 'Generalizing Pooling Functions in Convolutional Neural Networks: Mixed,
     Gated, and Tree'
   :paper_year: '2016'
@@ -1426,7 +1426,7 @@
   :paper_venue: arXiv
   :result: 68.23% ± 0.5
   :paper_pdf_url: http://arxiv.org/abs/1412.7259
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: 'C-SVDDNet: An Effective Single-Layer Network for Unsupervised Feature
     Learning'
   :paper_year: '2014'
@@ -1445,13 +1445,13 @@
   :paper_venue: AAAI
   :result: 73.15%
   :paper_pdf_url: http://personal.ie.cuhk.edu.hk/~ccloy/files/aaai_2015_target_coding.pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Deep Representation Learning with Target Coding
   :paper_year: '2015'
   :paper_venue: AAAI
   :result: 14.53%
   :paper_pdf_url: http://personal.ie.cuhk.edu.hk/~ccloy/files/aaai_2015_target_coding.pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Enhanced Image Classification With a Fast-Learning Shallow Convolutional
     Neural Network
   :paper_year: '2015'
@@ -1514,28 +1514,28 @@
   :paper_venue: CVPR
   :result: 80%
   :paper_pdf_url: http://research.cs.washington.edu/istc/lfb/paper/cvpr11.pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: 'Hybrid Orthogonal Projection and Estimation (HOPE): A New Framework
     to Probe and Learn Neural Networks'
   :paper_year: '2015'
   :paper_venue: " arXiv"
   :result: 0.40%
   :paper_pdf_url: http://arxiv.org/pdf/1502.00702.pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Supervised Translation-Invariant Sparse Coding
   :paper_year: '2010'
   :paper_venue: CVPR
   :result: 0.84%
   :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.206.339&rep=rep1&type=pdf
   :additional_information: Uses sparse coding + svm.
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Handwritten Digit Recognition using Convolutional Neural Networks and
     Gabor Filters
   :paper_year: '2003'
   :paper_venue: ICCI
   :result: 0.68%
   :paper_pdf_url: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.133.6559&rep=rep1&type=pdf
-- :dataset_name: 'MNIST '
+- :dataset_name: MNIST
   :paper_name: Explaining and Harnessing Adversarial Examples
   :paper_year: '2015'
   :paper_venue: ICLR
