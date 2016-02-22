@@ -1542,3 +1542,61 @@
   :result: 0.78%
   :paper_pdf_url: http://arxiv.org/abs/1412.6572
   :additional_information: permutation invariant network used
+- :dataset_name: CIFAR-10
+  :paper_name: Empirical Evaluation of Rectified Activations in Convolution Network
+  :paper_year: '2015'
+  :paper_venue: ICML workshop
+  :result: 88.80%
+  :paper_pdf_url: http://arxiv.org/pdf/1505.00853.pdf
+  :additional_information: Using Randomized Leaky ReLU
+- :dataset_name: CIFAR-100
+  :paper_name: Empirical Evaluation of Rectified Activations in Convolution Network
+  :paper_year: '2015'
+  :paper_venue: ICML workshop
+  :result: 59.75%
+  :paper_pdf_url: http://arxiv.org/pdf/1505.00853.pdf
+  :additional_information: Using Randomized Leaky ReLU
+- :dataset_name: CIFAR-100
+  :paper_name: All you need is a good init
+  :paper_year: '2015'
+  :paper_venue: ICLR
+  :result: 72.34%
+  :paper_pdf_url: http://arxiv.org/abs/1511.06422
+  :additional_information: Using RMSProp optimizer
+- :dataset_name: 'MNIST '
+  :paper_name: All you need is a good init
+  :paper_year: '2015'
+  :paper_venue: ICLR
+  :result: 0.38%
+  :paper_pdf_url: http://arxiv.org/abs/1511.06422
+- :dataset_name: CIFAR-10
+  :paper_name: All you need is a good init
+  :paper_year: '2016'
+  :paper_venue: ICLR
+  :result: 94.16%
+  :paper_pdf_url: http://arxiv.org/abs/1511.06422
+  :additional_information: Only mirroring and random shifts, no extreme data augmentation.
+    Uses thin deep residual net with maxout activations.
+- :dataset_name: CIFAR-10
+  :paper_name: 'BinaryConnect: Training Deep Neural Networks with binary weights during
+    propagations'
+  :paper_year: '2015'
+  :paper_venue: NIPS
+  :result: 91.73%
+  :paper_pdf_url: http://papers.nips.cc/paper/5647-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations.pdf
+  :additional_information: These results were obtained without using any data-augmentation.
+- :dataset_name: SVHN
+  :paper_name: 'BinaryConnect: Training Deep Neural Networks with binary weights during
+    propagations'
+  :paper_year: '2015'
+  :paper_venue: NIPS
+  :result: 2.15%
+  :paper_pdf_url: http://papers.nips.cc/paper/5647-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations.pdf
+- :dataset_name: MNIST
+  :paper_name: 'BinaryConnect: Training Deep Neural Networks with binary weights during
+    propagations'
+  :paper_year: '2015'
+  :paper_venue: NIPS
+  :result: 1.01%
+  :paper_pdf_url: http://papers.nips.cc/paper/5647-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations.pdf
+  :additional_information: Using 50% dropout
