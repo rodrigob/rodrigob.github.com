@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/rodrigob
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rodrigob.github.io
+  * I am rodrigob (https://keybase.io/rodrigob) on keybase.
+  * I have a public key ASC82BGm99XWmFSd_jXhcTE2haXK9RGrjYjLkMkW-KbfZQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01014167e774754e3804ee1e01606eb0184a092429f0c6fb4f19990a9333bbe086f20a",
+            "host": "keybase.io",
+            "kid": "0120bcd811a6f7d5d698549dfe35e171313685a5caf511ab8d88cb90c916f8a6df650a",
+            "uid": "e16122e39c4515503f2accc07953eb19",
+            "username": "rodrigob"
+        },
+        "service": {
+            "hostname": "rodrigob.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1474821370,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1474821062,
+        "hash": "67b76921b30cc1ae8167d20631277c67d3f8654a6fe0648846505201c8a78188ff223550ba013214bcea5854ec554b3c058f8106fab32ea9e07e75a6373c29b1",
+        "seqno": 652573
+    },
+    "prev": "edd80e5a5502364d97932df3deea0f1927f8d7bb5be49acdda65e6ac5875ffd8",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgvNgRpvfV1phUnf414XExNoWlyvURq42Iy5DJFvim32UKp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNDE2N2U3NzQ3NTRlMzgwNGVlMWUwMTYwNmViMDE4NGEwOTI0MjlmMGM2ZmI0ZjE5OTkwYTkzMzNiYmUwODZmMjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYmNkODExYTZmN2Q1ZDY5ODU0OWRmZTM1ZTE3MTMxMzY4NWE1Y2FmNTExYWI4ZDg4Y2I5MGM5MTZmOGE2ZGY2NTBhIiwidWlkIjoiZTE2MTIyZTM5YzQ1MTU1MDNmMmFjY2MwNzk1M2ViMTkiLCJ1c2VybmFtZSI6InJvZHJpZ29iIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJyb2RyaWdvYi5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNyJ9LCJjdGltZSI6MTQ3NDgyMTM3MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDc0ODIxMDYyLCJoYXNoIjoiNjdiNzY5MjFiMzBjYzFhZTgxNjdkMjA2MzEyNzdjNjdkM2Y4NjU0YTZmZTA2NDg4NDY1MDUyMDFjOGE3ODE4OGZmMjIzNTUwYmEwMTMyMTRiY2VhNTg1NGVjNTU0YjNjMDU4ZjgxMDZmYWIzMmVhOWUwN2U3NWE2MzczYzI5YjEiLCJzZXFubyI6NjUyNTczfSwicHJldiI6ImVkZDgwZTVhNTUwMjM2NGQ5NzkzMmRmM2RlZWEwZjE5MjdmOGQ3YmI1YmU0OWFjZGRhNjVlNmFjNTg3NWZmZDgiLCJzZXFubyI6NywidGFnIjoic2lnbmF0dXJlIn2jc2lnxECr1dxaiEyUrcV/0U4Rp/Y4iIibFX85UxRNO5JalBP5Cm9F3RxMWQNSIAJTxbwW8NZET7vYOE39z2IxTo0Pgp8FqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgecFGioVvWVUijs1aojuuL3zOUYe0Uo4HA6OehkJrHl2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rodrigob
+
+==================================================================
