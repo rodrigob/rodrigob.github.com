@@ -1600,3 +1600,19 @@
   :result: 1.01%
   :paper_pdf_url: http://papers.nips.cc/paper/5647-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations.pdf
   :additional_information: Using 50% dropout
+- :dataset_name: GIFGIF
+  :paper_name: 'Predicting Perceived Emotions in Animated GIFs with 3D Convolutional Neural Networks'
+  :paper_year: '2016'
+  :result: 0:6652
+  :paper_pdf_url: http://affect.media.mit.edu/pdfs/16.Chen-etal-ISM-full.pdf
+- :dataset_name: Video Emotion Dataset
+  :paper_name: 'Emotion in Context: Deep Semantic Feature Fusion for Video Emotion Recognition'
+  :paper_year: '2016'
+  :result: 50.6
+  :paper_pdf_url: http://www.yugangjiang.info/publication/16MM-emotion.pdf
+- :dataset_name: Ekman Emotion Dataset
+  :paper_name: 'Emotion in Context: Deep Semantic Feature Fusion for Video Emotion Recognition'
+  :paper_year: '2016'
+  :result: 51.8
+  :paper_pdf_url: http://www.yugangjiang.info/publication/16MM-emotion.pdf
+
