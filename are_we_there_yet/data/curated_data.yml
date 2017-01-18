@@ -1615,4 +1615,8 @@
   :paper_year: '2016'
   :result: 51.8
   :paper_pdf_url: http://www.yugangjiang.info/publication/16MM-emotion.pdf
-
+- :dataset_name: NTU RGB+D
+  :paper_name: 'Spatio-Temporal LSTM with Trust Gates for 3D Human Action Recognition'
+  :paper_year: '2016'
+  :result: 77.7
+  :paper_pdf_url: https://arxiv.org/pdf/1607.07043v1.pdf

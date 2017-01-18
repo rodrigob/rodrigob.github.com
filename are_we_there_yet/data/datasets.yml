@@ -34,6 +34,7 @@ Classification:
   :evaluation_units: Error (5 guesses)
   :description: |-
     1000 categories [classification challenge](http://www.image-net.org/challenges/LSVRC/2012/index). With tens of thousands of training, validation and testing images.
+
     See this interesting [comparative analysis](http://www.image-net.org/challenges/LSVRC/2012/analysis/).
   :figure_url: ilsvrc2012_task1.png
   :external_results_url: http://www.image-net.org/challenges/LSVRC/2012/results.html#t1
@@ -53,9 +54,14 @@ Classification:
   :name: Ekman Emotion Dataset
   :evaluation_units: accuracy %
   :description: |-
-    Contains 1,637 videos labeled into Ekman’s 6 basic emotions (joy, sadness, anger, fear, disgust, surprise) by 10 volunteers with
-    a minimum number of 221 videos per category.
+    Contains 1,637 videos labeled into Ekman’s 6 basic emotions (joy, sadness, anger, fear, disgust, surprise) by 10 volunteers with a minimum number of 221 videos per category.
   :figure_url: ekman-emotion-video.png
+- :group: Classification
+  :name: NTU RGB+D
+  :evaluation_units: accuracy %
+  :description: |-
+    This dataset consists of 56,880 action samples containing 4 different modalities (RGB videos, depth map sequences, 3D skeletal data, infrared videos) of data for each sample and [60 classes of actions](https://github.com/shahroudy/NTURGB-D).
+  :figure_url: ntu-rgbd.png
 Detection:
 - :group: Detection
   :name: Pascal VOC 2007 comp3
