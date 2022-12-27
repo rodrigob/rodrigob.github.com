@@ -1,8 +1,7 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
-import { AiMap } from '../src/AiMap.js';
-import '../src/ai-map.js';
+import { AiMap } from '../src/ai-map.js';
 
 describe('AiMap', () => {
   let element: AiMap;

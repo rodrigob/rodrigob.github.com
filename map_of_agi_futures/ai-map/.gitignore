@@ -22,6 +22,8 @@
 /_site/
 /dist/
 /out-tsc/
+/.rollup.cache/
+tsconfig.tsbuildinfo
 
 storybook-static
 custom-elements.json

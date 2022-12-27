@@ -1,0 +1,617 @@
+digraph G {
+
+    
+  graph [
+    label="Map of AGI doom"
+    labelloc = t
+    labeljust = l
+	fontname = "Helvetica,Arial,sans-serif"
+	fontsize = 30
+	layout = dot
+	rankdir = TB
+	newrank = true
+	#splines=ortho
+	#splines=curved
+	splines=true
+  ]  
+  
+  node [
+	//	style=filled
+	//	shape=rect
+    	penwidth=3
+    	color="#d9d9d9"
+	//	pencolor="#00000044" // frames color
+		fontname="Helvetica,Arial,sans-serif"
+	//	shape=plaintext
+	    shape=rounded
+	
+	]
+    edge [
+    //	arrowsize=0.5
+    	fontname="Helvetica,Arial,sans-serif"
+    //	labeldistance=3
+    //	labelfontcolor="#00000080"
+    	penwidth=2
+    //	style=dotted // dotted style symbolizes data transfer
+      
+    ]
+    
+    
+    
+    
+    
+  // stylesheet = "https://g3doc.corp.google.com/frameworks/g3doc/includes/graphviz-style.css"
+  can_agi_exist
+  [
+      label="Can superhuman\nArtifical General Intelligence exist?"
+                //shape=diamond
+                //shape=egg
+                shape=oval
+                //shape=box
+                style=filled fillcolor="#bafffc" 
+                color=none 
+                class="start-node"]
+  
+ 
+
+  
+  
+  {
+      
+     
+      
+  node[
+      color=none
+      //shape=rectangle
+      shape=box
+      //shape=egg
+      style=filled
+  ]
+  
+ 
+ 
+  ai_this_century [label= "AGI this century"]
+  ai_this_century [fillcolor=yellow]
+  
+
+  second_chance_for_ai [fillcolor="#feb531"]
+
+  
+  {
+  node[
+   fillcolor="#ff8f8f"
+   class="end-node"
+   ]
+  astro_suffering
+  "Medium scale dystopia"
+  ai_kills_humans
+  "Shoot-in-foot\nhuman extinction"
+  "Authoritarian dystopia"
+  }
+
+  {
+  node[
+   class="end-node"
+   ]
+  no_ai_this_century [fillcolor=lightgray ]
+  business_as_usual [ label= "Business as usual" fillcolor=lightgray ]
+  "AGI Utopia"[fillcolor="#94ff8f"]
+  # "Peaceful human extinction"[fillcolor="#e3b591"]
+  
+  conflicting_ais [label="Conflicting AGIs" fillcolor="#feb531"]
+ created_inefectual_ai [ fillcolor=yellow ]
+ humans_killed_harmfull_ai  [ fillcolor=yellow ]
+ offed_misaligned_ai [ fillcolor=yellow ]
+ 
+
+  }
+  
+  }
+  
+  will_ai_collaborate_with_ai [label="Will AGIs colaborate\nwith each other?" ]
+  can_agi_exist_this_century [label="...in this century?"]
+  
+  can_agi_exist -> can_agi_exist_this_century [
+      label=<&nbsp;yes; 99>
+      #labeldistance=3
+      weight=3 
+      penwidth=4]
+      
+      
+  no_ai_this_century [label="No AGI this century"]
+  
+  can_agi_exist -> no_ai_this_century [
+      taillabel=<no; 1> 
+      labeldistance=3
+      tailport=c
+      headport=c
+      penwidth=1 
+      weight=0
+      ]
+ can_agi_exist_this_century -> can_we_agree_no_ai [
+     label=<&nbsp;yes; 70> 
+     weight=10 
+     penwidth=3]
+  can_agi_exist_this_century -> no_ai_this_century [
+      taillabel=<&nbsp;no; 30> 
+      labeldistance=3.5
+      tailport=e
+      #headport=c
+      penwidth=2
+      weight=0
+      ]
+  is_alignment_problem_solved -> "Is the AGI aligned?" [
+      label=<&nbsp;yes; 70> 
+      #labeldistance=0
+      tailport=s
+      headport=n
+      weight=10 
+      penwidth=3]
+ is_alignment_problem_solved -> can_we_detect_misaligned [
+      taillabel=<&nbsp;no; 30> 
+      labeldistance=6
+      tailport=w
+      headport=n
+      weight=5
+      penwidth=2]
+  
+  
+  {rank=same can_we_agree_no_ai can_we_enforce_no_ai}
+  
+  can_we_agree_no_ai [label="Can we agree not to build it?"]
+  can_we_enforce_no_ai [label= "Can we enforce it?"]
+  
+  can_we_agree_no_ai -> can_we_enforce_no_ai [
+      label=<&nbsp;yes; 15> 
+      #headport=c
+      #tailport=c
+      weight=1
+      penwidth=1]
+  can_we_agree_no_ai -> ai_this_century [
+      label=<&nbsp;no; 85> 
+      weight=20 
+      penwidth=4]
+
+  can_we_enforce_no_ai -> no_ai_this_century [
+      taillabel=<&nbsp;yes; 1>
+      labeldistance=2.5
+      #headport=ne
+      tailport=se
+      weight=1
+      penwidth=1]
+  can_we_enforce_no_ai -> "Will there be someone\nwilling to build it?" [
+      label=<&nbsp;no; 99> 
+      weight=8
+      penwidth=4]
+ 
+  "Will there be someone\nwilling to build it?" -> ai_this_century [
+      label=<&nbsp;yes; 95> 
+      tailport=sw
+      headport=c
+      weight=1 
+      penwidth=4]
+  "Will there be someone\nwilling to build it?" -> no_ai_this_century [
+      label=<&nbsp;no; 5> 
+      #headport=c
+      #tailport=c
+      weight=10
+      penwidth=1]
+  
+  # "AI this century" -> "Can AGI be aligned?" [weight=10 penwidth=5]
+  
+  {rank=same "Is AI transformative?" business_as_usual }
+  ai_this_century -> "Is AGI transformative?" [
+      weight=5
+      #minlen=1
+      ]
+  
+  first_ai_kills_other_ais [label="Will the first AGI\nprevent second AGI to appear?"]
+  
+  "Is AGI transformative?" -> first_ai_kills_other_ais [
+      label=<&nbsp;yes; 99> 
+      weight=15
+      penwidth=3
+      ]
+  "Is AGI transformative?" -> business_as_usual [
+      label=<&nbsp;no; 1>
+      tailport=c
+      headport=c
+      weight=1
+    ]
+  
+  is_alignment_problem_solved [label="Have we solved\nAGI alignment in theory?"]
+  
+  first_ai_kills_other_ais -> is_alignment_problem_solved [
+      label=<&nbsp;yes; 80> 
+  weight=20
+  penwidth=4
+  ] 
+  
+  
+  #{rank=same first_ai_kills_other_ais will_ai_collaborate_with_ai conflicting_ais}
+  {rank=same first_ai_kills_other_ais will_ai_collaborate_with_ai}
+   first_ai_kills_other_ais -> will_ai_collaborate_with_ai [
+      label=<&nbsp;no; 20>
+      #tailport=e
+      #headport=n
+      penwidth=1
+      weight=1
+      ]
+ # first_ai_kills_other_ais -> "It's complicated..." [label=no]
+
+  
+  
+  will_ai_collaborate_with_ai -> is_alignment_problem_solved [
+    label=<&nbsp;yes; 10>
+    penwidth=1
+    weight=5
+    tailport=sw
+    headport=e
+   ]
+  
+   #{rank=same will_ai_collaborate_with_ai conflicting_ais}
+    will_ai_collaborate_with_ai -> conflicting_ais [
+ 
+    label=<&nbsp;no; 90>
+    penwidth=4
+    weight=1
+    #tailport=w
+    #headport=c
+   ]
+ 
+  
+  
+  "Is the AGI aligned?" -> "Aligned to whom?" [
+      label=<&nbsp;yes; 60> 
+      #labeldistance=3.5
+      #labelangle=25
+      # this weight is crucial for the overall layout
+      weight=10
+      #weight=80 
+      penwidth=3]
+      
+  "Is the AGI aligned?" -> can_we_detect_misaligned[
+      label=<&nbsp;no; 40> 
+      tailport=w
+      headport=c
+      weight=1
+      penwidth=2
+      ]
+      
+
+
+   
+ 
+
+  
+  subgraph cluster_aligned {
+    graph [style="dashed"
+            label="Aligned AGI"
+            fontsize = 20
+            labelloc=t
+            labeljust=r
+            ]
+    "Aligned to whom?" -> "AGI Utopia" [
+        label=<&nbsp;All humans; 40> 
+        weight=130 
+        penwidth=2
+    ]
+    "Aligned to whom?" -> "Are they thoughtful regarding\nunintended consequences?" [
+        taillabel=<&nbsp;Some humans; 60> 
+        labeldistance=8
+        labelangle=15
+        tailport=c
+        headport=n
+        weight=1
+        penwidth=3]
+    #"Aligned to whom?" -> "Does AGI decide to\nextinguish humans?" [label=<&nbsp;All sentient beings; 3> weight=1 penwidth=1]
+    
+    #"Does AGI decide to\nextinguish humans?" -> "Peaceful human extinction" [label=<yes; 20> penwidth=1]
+    #"Does AGI decide to\nextinguish humans?" -> "AGI Utopia" [label=<no; 80> weight=80 penwidth=4]
+ 
+    "Are they thoughtful regarding\nunintended consequences?" -> "Do they have good\nintentions for humanity?" [
+        label=<&nbsp;yes; 60> 
+    tailport=s
+    headport=n
+    weight=200]
+    "Are they thoughtful regarding\nunintended consequences?" -> "Does the AGI protect its users?" [label=<&nbsp;no; 40> 
+    tailport=e
+    headport=n
+    weight=1
+    ]
+ 
+    "Does the AGI protect its users?" ->  "Shoot-in-foot\nhuman extinction" [label=<&nbsp;no; 50>  weight=300]
+    "Does the AGI protect its users?" ->  "Do they have good\nintentions for humanity?" [
+        label=<&nbsp;yes; 50>  weight=1]
+    
+    "Do they have good\nintentions for humanity?" -> "AGI Utopia" [
+        label=<&nbsp;yes; 40>
+        weight=0
+        ]
+    "Do they have good\nintentions for humanity?" -> "Authoritarian dystopia" [
+        label=<&nbsp;no; 60>
+        ]
+  }
+  
+ 
+  
+  subgraph cluster_misaligned {
+      
+    
+      
+    graph [style="dashed"
+    label="Misaligned AGI"
+    fontsize = 20
+    labelloc=t
+    labeljust=l
+    ]
+    
+    can_we_off_it [ label= "Can we easily turn it off?" ]
+    
+     
+    can_we_detect_misaligned [label="Can we know it's misaligned?"]
+    
+    can_we_detect_misaligned -> can_we_off_it [
+        label=<&nbsp;yes; 30> 
+        tailport=w
+        headport=n
+        weight=2
+        #tailport=s
+        penwidth=2]
+    
+    
+    ai_harms_humans [label="Is it harming us?"]
+    
+    can_we_detect_misaligned -> ai_harms_humans [
+        label=<&nbsp;no; 70> 
+        #tailport=s
+        headport=e
+        weight=1
+        penwidth=3]
+    
+    
+    
+    can_we_off_it ->  ai_harms_humans [
+        label=<&nbsp;no; 80>
+    weight=10
+    penwidth=4]
+  
+    humans_can_kill_ai [label="Can we destroy it?"]
+    
+    
+    ai_harms_humans -> humans_can_kill_ai [
+        label=<&nbsp;yes; 80> 
+        weight=15
+        penwidth=4]
+    
+    wants_human_exctinction [label= "Does it benefit from our extinction?"]
+    wants_human_suffering [label= "Does is benefit from our suffering?"]
+    ai_kills_humans [label= "AGI-initiated\nhuman extinction"]
+    
+    
+    humans_can_kill_ai -> wants_human_exctinction [
+        label=<&nbsp;no; 70>
+        weight=15
+        penwidth=3]
+ 
+    {rank=same wants_human_exctinction ai_kills_humans}
+    wants_human_exctinction -> ai_kills_humans  [
+        label=<&nbsp;yes; 50>
+        weight=1
+        #tailport=e
+        #headport=w
+        penwidth=2
+        ]
+        
+        
+    wants_human_exctinction -> wants_human_suffering [
+        label=<&nbsp;no; 50> weight=1 penwidth=2]
+        
+    wants_human_suffering -> "Medium scale dystopia" [label=<&nbsp;no; 99> 
+    penwidth=4
+    tailport=s
+    headport=n
+    weight=2 
+    
+    ]
+
+   astro_suffering [label="Astronomical\nsuffering"] 
+
+   {rank=same wants_human_suffering astro_suffering }
+   
+    wants_human_suffering -> astro_suffering [
+        label=<&nbsp;yes; 1> 
+        penwidth=1
+    #tailport=se
+    #headport=c
+    weight=1 
+        ]
+
+
+  }
+  
+  
+   offed_misaligned_ai [label="Turned off misaligned AGI"] 
+  created_inefectual_ai [label="Inefectual AGI exists"]
+  humans_killed_harmfull_ai [label="We destroyed harmfull AGI"]
+
+  {rank=same can_we_off_it offed_misaligned_ai }
+  {rank=same ai_harms_humans created_inefectual_ai}
+  {rank=same humans_can_kill_ai humans_killed_harmfull_ai}
+
+      
+  {offed_misaligned_ai -> created_inefectual_ai -> humans_killed_harmfull_ai [
+      style=invis
+      weight=10
+      ] }
+     
+  can_we_off_it -> offed_misaligned_ai [
+        taillabel=<&nbsp;yes; 20>
+        labeldistance=3.5
+        labelangle=30
+        tailport=w
+        headport=c
+        weight=2
+        #tailport=sw
+        penwidth=1]
+    
+  
+
+  
+  ai_harms_humans -> created_inefectual_ai [
+      
+      taillabel=<no; 20>
+      labeldistance=3.5
+      labelangle=30
+      #xlabel=<We live<br/>harmless but misaligned AGI>
+      #samehead=build_or_not_build 
+      tailport=w
+      headport=c
+      weight=2
+      penwidth=1]
+  
+  
+ 
+  
+  #"Can we agree not to build it?" [
+  #    taillabel=<no; 20>
+  #    labeldistance=3.5
+  #    labelangle=20
+  #    #xlabel=<We live<br/>harmless but misaligned AGI>
+  #    #samehead=build_or_not_build 
+  #    #headport=sw
+  #    #headport=w
+  #    #tailport=w
+  #    weight=2
+  #    penwidth=1]
+  
+ 
+ 
+
+  humans_can_kill_ai ->  humans_killed_harmfull_ai [
+      taillabel=<yes; 30> 
+      labeldistance=3.5
+      labelangle=40
+      #xlabel=<We destroyed<br/>bad AGI>
+      #samehead=build_or_not_build 
+      #headport=sw
+      headport=c
+      tailport=w
+      weight=2
+      penwidth=2
+      ]
+      
+      
+     
+    offed_misaligned_ai -> second_chance_for_ai  [
+    tailport=sw
+    #tailport=s
+    #headport=c
+    headport=nw
+    #samehead=created_inefectual_ai
+    weight=0
+    ] 
+    
+    created_inefectual_ai -> second_chance_for_ai [
+     #tailport=w
+    tailport=sw
+    #headport=n
+    #headport=c
+    weight=1
+    ]
+    
+    humans_killed_harmfull_ai -> second_chance_for_ai [
+     tailport=s
+     #tailport=s
+     headport=n
+     weight=10
+     ]      
+  
+     
+  second_chance_for_ai [label="Second chance at building AGI"]
+   
+  second_chance_for_ai -> can_we_agree_no_ai [
+      #taillabel=<yes; 20> 
+      xlabel="Second chance at building AGI"
+      #labeldistance=6
+      style=dashed
+      #labeldistance=4
+      #labelangle=40
+      #xlabel=<We turned-off<br/>bad AGI>
+      #samehead=build_or_not_build 
+      #tailport=nw
+      #tailport=w
+      headport=w
+      #headport=sw
+      #weight=50
+      weight=1
+      penwidth=1
+      ]
+  
+  
+  subgraph cluster_legend {
+    graph[
+    #style=filled
+    #color=lightgrey
+    style=dotted
+    #color=lightblue
+    label="Nodes legend";
+    fontsize = 20
+    labelloc=t
+    labeljust=r
+    margin="36,8"
+
+    ]
+    
+  subgraph {
+  
+  
+  node[
+      color=none
+      shape=box
+      style=filled
+  ] 
+    
+    legend_start [label="Start"]
+    legend_start [ 
+        color=none
+        shape=oval
+        fillcolor="#bafffc" ]       
+        
+    da [ 
+        color=lightgray
+        fillcolor=none ] 
+        
+    db [ 
+        color=lightgray
+        fillcolor=none ] 
+        
+    "State" [ fillcolor=yellow ]   
+    
+    "Unchanged future" [ fillcolor=lightgray ] 
+    "Good future" [ fillcolor="#94ff8f" ] 
+    "Uncertain future" [ fillcolor="#feb531" ] 
+    "Bad future" [ fillcolor="#ff8f8f" ] 
+    da [ label = "Bifurcation A"]
+    db [ label = "Bifurcation B"] 
+    
+    legend_start -> da -> "State" -> db [weight=2]
+   
+    da -> "Unchanged future" [tailport=e headport=c weight=0]
+    
+     { rank=same
+    db -> "Unchanged future" 
+         
+     }
+ 
+    db -> "Good future"
+    db -> "Uncertain future"
+    db -> "Bad future"
+    
+    }
+  }
+  
+  #legend_start -> "Can we agree not to build it?" [style=invis weight=100]
+  
+  
+}

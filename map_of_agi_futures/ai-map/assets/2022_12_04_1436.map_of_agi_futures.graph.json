@@ -1,0 +1,480 @@
+{
+  "can_agi_exist": {
+    "nodeId": "can_agi_exist",
+    "label": "Can superhuman\\nArtifical General Intelligence exist?",
+    "classes": [
+      "start-node"
+    ],
+    "children": [
+      "no_ai_this_century",
+      "can_agi_exist_this_century"
+    ],
+    "childrenWeights": {
+      "no_ai_this_century": 0.01,
+      "can_agi_exist_this_century": 0.99
+    }
+  },
+  "ai_this_century": {
+    "nodeId": "ai_this_century",
+    "label": "AGI this century",
+    "classes": [],
+    "children": [
+      "is_agi_transformative"
+    ],
+    "childrenWeights": {}
+  },
+  "second_chance_for_ai": {
+    "nodeId": "second_chance_for_ai",
+    "label": "Second chance at building AGI",
+    "classes": [],
+    "children": [
+      "can_we_agree_no_ai"
+    ],
+    "childrenWeights": {}
+  },
+  "astro_suffering": {
+    "nodeId": "astro_suffering",
+    "label": "Astronomical\\nsuffering",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "medium_scale_dystopia": {
+    "nodeId": "medium_scale_dystopia",
+    "label": "Medium scale dystopia",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "ai_kills_humans": {
+    "nodeId": "ai_kills_humans",
+    "label": "AGI-initiated\\nhuman extinction",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "aligned_ai_human_extinction": {
+    "nodeId": "aligned_ai_human_extinction",
+    "label": "Shoot-in-foot\\nhuman extinction",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "authoritarian_dystopia": {
+    "nodeId": "authoritarian_dystopia",
+    "label": "Authoritarian dystopia",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "no_ai_this_century": {
+    "nodeId": "no_ai_this_century",
+    "label": "No AGI this century",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "business_as_usual": {
+    "nodeId": "business_as_usual",
+    "label": "Business as usual",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "agi_utopia": {
+    "nodeId": "agi_utopia",
+    "label": "Beneficial AGI",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "conflicting_ais": {
+    "nodeId": "conflicting_ais",
+    "label": "Conflicting AGIs",
+    "classes": [
+      "end-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "created_inefectual_ai": {
+    "nodeId": "created_inefectual_ai",
+    "label": "Harmless misaligned AGI exists",
+    "classes": [
+      "end-node"
+    ],
+    "children": [
+      "second_chance_for_ai"
+    ],
+    "childrenWeights": {}
+  },
+  "humans_killed_harmfull_ai": {
+    "nodeId": "humans_killed_harmfull_ai",
+    "label": "We neutralized harmfull AGI",
+    "classes": [
+      "end-node"
+    ],
+    "children": [
+      "second_chance_for_ai"
+    ],
+    "childrenWeights": {}
+  },
+  "offed_misaligned_ai": {
+    "nodeId": "offed_misaligned_ai",
+    "label": "Turned off misaligned AGI",
+    "classes": [
+      "end-node"
+    ],
+    "children": [
+      "second_chance_for_ai"
+    ],
+    "childrenWeights": {}
+  },
+  "will_ai_collaborate_with_ai": {
+    "nodeId": "will_ai_collaborate_with_ai",
+    "label": "Will AGIs colaborate\\nwith each other?",
+    "classes": [],
+    "children": [
+      "conflicting_ais",
+      "is_alignment_problem_solved"
+    ],
+    "childrenWeights": {
+      "conflicting_ais": 0.9,
+      "is_alignment_problem_solved": 0.1
+    }
+  },
+  "can_agi_exist_this_century": {
+    "nodeId": "can_agi_exist_this_century",
+    "label": "...in this century?",
+    "classes": [],
+    "children": [
+      "no_ai_this_century",
+      "can_we_agree_no_ai"
+    ],
+    "childrenWeights": {
+      "no_ai_this_century": 0.3,
+      "can_we_agree_no_ai": 0.7
+    }
+  },
+  "can_we_agree_no_ai": {
+    "nodeId": "can_we_agree_no_ai",
+    "label": "Can we agree not to build it?",
+    "classes": [],
+    "children": [
+      "ai_this_century",
+      "can_we_enforce_no_ai"
+    ],
+    "childrenWeights": {
+      "ai_this_century": 0.85,
+      "can_we_enforce_no_ai": 0.15
+    }
+  },
+  "is_alignment_problem_solved": {
+    "nodeId": "is_alignment_problem_solved",
+    "label": "Have we solved\\nAGI alignment in theory?",
+    "classes": [],
+    "children": [
+      "is_agi_aligned",
+      "can_we_detect_misaligned"
+    ],
+    "childrenWeights": {
+      "is_agi_aligned": 0.7,
+      "can_we_detect_misaligned": 0.3
+    }
+  },
+  "is_agi_aligned": {
+    "nodeId": "is_agi_aligned",
+    "label": "Is the AGI aligned?",
+    "classes": [],
+    "children": [
+      "can_we_detect_misaligned",
+      "agi_protects_users"
+    ],
+    "childrenWeights": {
+      "can_we_detect_misaligned": 0.4,
+      "agi_protects_users": 0.6
+    }
+  },
+  "can_we_detect_misaligned": {
+    "nodeId": "can_we_detect_misaligned",
+    "label": "Can we know it's misaligned?",
+    "classes": [],
+    "children": [
+      "can_we_off_it",
+      "ai_harms_humans"
+    ],
+    "childrenWeights": {
+      "can_we_off_it": 0.3,
+      "ai_harms_humans": 0.7
+    }
+  },
+  "can_we_enforce_no_ai": {
+    "nodeId": "can_we_enforce_no_ai",
+    "label": "Can we enforce it?",
+    "classes": [],
+    "children": [
+      "no_ai_this_century",
+      "someone_wants_to_build_it"
+    ],
+    "childrenWeights": {
+      "no_ai_this_century": 0.01,
+      "someone_wants_to_build_it": 0.99
+    }
+  },
+  "someone_wants_to_build_it": {
+    "nodeId": "someone_wants_to_build_it",
+    "label": "Will there be someone\\nwilling to build it?",
+    "classes": [],
+    "children": [
+      "ai_this_century",
+      "no_ai_this_century"
+    ],
+    "childrenWeights": {
+      "ai_this_century": 0.95,
+      "no_ai_this_century": 0.05
+    }
+  },
+  "is_agi_transformative": {
+    "nodeId": "is_agi_transformative",
+    "label": "Is AGI transformative?",
+    "classes": [],
+    "children": [
+      "business_as_usual",
+      "first_ai_kills_other_ais"
+    ],
+    "childrenWeights": {
+      "business_as_usual": 0.01,
+      "first_ai_kills_other_ais": 0.99
+    }
+  },
+  "first_ai_kills_other_ais": {
+    "nodeId": "first_ai_kills_other_ais",
+    "label": "Will the first AGI\\nprevent second AGI to appear?",
+    "classes": [],
+    "children": [
+      "will_ai_collaborate_with_ai",
+      "is_alignment_problem_solved"
+    ],
+    "childrenWeights": {
+      "will_ai_collaborate_with_ai": 0.2,
+      "is_alignment_problem_solved": 0.8
+    }
+  },
+  "do_they_have_good_intentions": {
+    "nodeId": "do_they_have_good_intentions",
+    "label": "Do they have good\\nintentions for humanity?",
+    "classes": [],
+    "children": [
+      "authoritarian_dystopia",
+      "agi_utopia"
+    ],
+    "childrenWeights": {
+      "authoritarian_dystopia": 0.6,
+      "agi_utopia": 0.4
+    }
+  },
+  "are_they_thoughful": {
+    "nodeId": "are_they_thoughful",
+    "label": "Are the controlers thoughtful of\\nunintended consequences?",
+    "classes": [],
+    "children": [
+      "aligned_ai_human_extinction",
+      "aligned_to_whom"
+    ],
+    "childrenWeights": {
+      "aligned_ai_human_extinction": 0.5,
+      "aligned_to_whom": 0.5
+    }
+  },
+  "aligned_to_whom": {
+    "nodeId": "aligned_to_whom",
+    "label": "Aligned to whom?",
+    "classes": [],
+    "children": [
+      "agi_utopia",
+      "do_they_have_good_intentions"
+    ],
+    "childrenWeights": {
+      "agi_utopia": 0.4,
+      "do_they_have_good_intentions": 0.6
+    }
+  },
+  "agi_protects_users": {
+    "nodeId": "agi_protects_users",
+    "label": "Follows values or instructions?",
+    "classes": [],
+    "children": [
+      "are_they_thoughful",
+      "aligned_to_whom"
+    ],
+    "childrenWeights": {
+      "are_they_thoughful": 0.4,
+      "aligned_to_whom": 0.6
+    }
+  },
+  "can_we_off_it": {
+    "nodeId": "can_we_off_it",
+    "label": "Can we easily turn it off?",
+    "classes": [],
+    "children": [
+      "offed_misaligned_ai",
+      "ai_harms_humans"
+    ],
+    "childrenWeights": {
+      "offed_misaligned_ai": 0.2,
+      "ai_harms_humans": 0.8
+    }
+  },
+  "ai_harms_humans": {
+    "nodeId": "ai_harms_humans",
+    "label": "Is it harming us?",
+    "classes": [],
+    "children": [
+      "created_inefectual_ai",
+      "humans_can_kill_ai"
+    ],
+    "childrenWeights": {
+      "created_inefectual_ai": 0.2,
+      "humans_can_kill_ai": 0.8
+    }
+  },
+  "humans_can_kill_ai": {
+    "nodeId": "humans_can_kill_ai",
+    "label": "Can we neutralize it?",
+    "classes": [],
+    "children": [
+      "humans_killed_harmfull_ai",
+      "wants_human_exctinction"
+    ],
+    "childrenWeights": {
+      "humans_killed_harmfull_ai": 0.3,
+      "wants_human_exctinction": 0.7
+    }
+  },
+  "wants_human_exctinction": {
+    "nodeId": "wants_human_exctinction",
+    "label": "Does it benefit from our extinction?",
+    "classes": [],
+    "children": [
+      "ai_kills_humans",
+      "wants_human_suffering"
+    ],
+    "childrenWeights": {
+      "ai_kills_humans": 0.5,
+      "wants_human_suffering": 0.5
+    }
+  },
+  "wants_human_suffering": {
+    "nodeId": "wants_human_suffering",
+    "label": "Does is benefit from our suffering?",
+    "classes": [],
+    "children": [
+      "astro_suffering",
+      "medium_scale_dystopia"
+    ],
+    "childrenWeights": {
+      "astro_suffering": 0.01,
+      "medium_scale_dystopia": 0.99
+    }
+  },
+  "legend_start": {
+    "nodeId": "legend_start",
+    "label": "Start",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [
+      "da"
+    ],
+    "childrenWeights": {}
+  },
+  "da": {
+    "nodeId": "da",
+    "label": "Bifurcation A",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [
+      "state",
+      "unchanged_future"
+    ],
+    "childrenWeights": {}
+  },
+  "db": {
+    "nodeId": "db",
+    "label": "Bifurcation B",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [
+      "unchanged_future",
+      "good_future",
+      "uncertain_future",
+      "bad_future"
+    ],
+    "childrenWeights": {}
+  },
+  "state": {
+    "nodeId": "state",
+    "label": "State",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [
+      "db"
+    ],
+    "childrenWeights": {}
+  },
+  "unchanged_future": {
+    "nodeId": "unchanged_future",
+    "label": "Unchanged future",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "good_future": {
+    "nodeId": "good_future",
+    "label": "Good future",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "uncertain_future": {
+    "nodeId": "uncertain_future",
+    "label": "Uncertain future",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  },
+  "bad_future": {
+    "nodeId": "bad_future",
+    "label": "Bad future",
+    "classes": [
+      "legend-node"
+    ],
+    "children": [],
+    "childrenWeights": {}
+  }
+}

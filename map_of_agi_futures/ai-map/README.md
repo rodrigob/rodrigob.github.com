@@ -33,3 +33,5 @@ If you customize the configuration a lot, you can consider moving them to indivi
 ## Graph pre-processing
 
 The graphviz graphs in `./assets/*.gv` should be pre-processed via `npm run parsegraphs` which will convert any `.gv` into a `.graph.json` file. We expect the `./assets` folder to have `some_name.gv` files (dot graph descriptions), `some_name.svg` files (rendered graph SVG that might include manual edits), and `some_name.graph.json` files (parsegraphs output, used by the <ai-map> logic). 
+
+It is best if the svgs for rendering to be created via Inkscape's "Save As... Optimized SVG" to keep the files as compact as possible.

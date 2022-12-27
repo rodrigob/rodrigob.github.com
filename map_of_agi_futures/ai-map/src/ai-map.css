@@ -16,6 +16,10 @@ main {
     flex-grow: 1;
 }
 
+#graph_svg {
+    width: 50em;
+}
+
 .logo {
     margin-top: 36px;
     animation: app-logo-spin infinite 20s linear;

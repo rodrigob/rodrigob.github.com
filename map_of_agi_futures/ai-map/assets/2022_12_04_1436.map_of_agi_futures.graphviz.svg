@@ -1,0 +1,1093 @@
+<svg id="graph_svg" width="1215.7pt" height="1531.6pt" version="1.1" viewBox="0 0 1215.7 1531.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g class="graph" transform="translate(-1.6519 1539.1)">
+  <title>G</title>
+  <text x="852.25269" y="-1492.657" font-family="Helvetica, Arial, sans-serif" font-size="30px" text-anchor="middle">Map of AGI futures</text>
+  <g class="cluster">
+   <title>cluster_aligned</title>
+   <polygon points="1147 -185 745 -185 745 -622 1147 -622" fill="none" stroke="#000" stroke-dasharray="5, 2"/>
+   <text x="1085.5" y="-602" font-family="Helvetica, Arial, sans-serif" font-size="20px" text-anchor="middle">Aligned AGI</text>
+  </g>
+  <g class="cluster">
+   <title>cluster_misaligned</title>
+   <polygon points="737 -8 310 -8 310 -622 737 -622" fill="none" stroke="#000" stroke-dasharray="5, 2"/>
+   <text x="386" y="-602" font-family="Helvetica, Arial, sans-serif" font-size="20px" text-anchor="middle">Misaligned AGI</text>
+  </g>
+  <g id="can_agi_exist" class="node start-node">
+   <title>can_agi_exist</title>
+   <g id="a_can_agi_exist">
+    <a xlink:href="#can_agi_exist" xlink:title="Can superhuman\nArtifical General Intelligence exist?">
+     <ellipse cx="853" cy="-1403.9" rx="158.28" ry="26.74" fill="#bafffc" stroke="transparent" stroke-width="3"/>
+     <text x="853" y="-1407.67" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Can superhuman</text>
+     <text x="853" y="-1392.67" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Artifical General Intelligence exist?</text>
+    </a>
+   </g>
+  </g>
+  <g id="no_ai_this_century" class="node end-node">
+   <title>no_ai_this_century</title>
+   <g id="a_no_ai_this_century">
+    <a xlink:href="#no_ai_this_century" xlink:title="No AGI this century">
+     <polygon points="1010 -1063 1010 -1027 1144 -1027 1144 -1063" fill="#d3d3d3" stroke="transparent" stroke-width="3"/>
+     <text x="1077" y="-1041.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">No AGI this century</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_agi_exist-&gt;no_ai_this_century" class="edge">
+   <title>can_agi_exist:c-&gt;no_ai_this_century:c</title>
+   <g id="a_can_agi_exist-&gt;no_ai_this_century">
+    <a stroke="#000" xlink:href="#can_agi_exist">
+     <path d="m933.92-1380.7c73.29 23.88 179.68 68.64 246.08 141.72 47.23 51.98 52.04 114.36-3 158-7.09 5.62-15.15 10.38-23.55 14.39" fill="none"/>
+     <polygon points="1154.8 -1063.4 1144.2 -1062.5 1152 -1069.8"/>
+    </a>
+   </g>
+   <g id="a_can_agi_exist-&gt;no_ai_this_century-taillabel">
+    <a xlink:href="#can_agi_exist" xlink:title="no; 1">
+     <text x="940.07001" y="-1356.26" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 1</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_agi_exist_this_century" class="node">
+   <title>can_agi_exist_this_century</title>
+   <g id="a_can_agi_exist_this_century">
+    <a xlink:href="#can_agi_exist_this_century" xlink:title="...in this century?">
+     <polygon points="793.5 -1326 793.5 -1290 912.5 -1290 912.5 -1326" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-1304.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">...in this century?</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_agi_exist-&gt;can_agi_exist_this_century" class="edge">
+   <title>can_agi_exist-&gt;can_agi_exist_this_century</title>
+   <g id="a_can_agi_exist-&gt;can_agi_exist_this_century">
+    <a stroke="#000" stroke-width="4" xlink:href="#can_agi_exist" xlink:title="&amp;nbsp;yes; 99">
+     <path d="m853-1377v40.65" fill="none"/>
+     <polygon points="856.5 -1336.2 853 -1326.2 849.5 -1336.2"/>
+    </a>
+   </g>
+   <g id="a_can_agi_exist-&gt;can_agi_exist_this_century-label">
+    <a xlink:href="#can_agi_exist" xlink:title="&amp;nbsp;yes; 99">
+     <text x="853" y="-1347.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 99</text>
+    </a>
+   </g>
+  </g>
+  <g id="ai_this_century" class="node">
+   <title>ai_this_century</title>
+   <g id="a_ai_this_century">
+    <a xlink:href="#ai_this_century" xlink:title="AGI this century">
+     <polygon points="796.5 -1063 796.5 -1027 909.5 -1027 909.5 -1063" fill="#ff0" stroke="transparent" stroke-width="3"/>
+     <text x="853" y="-1041.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">AGI this century</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_agi_transformative" class="node">
+   <title>is_agi_transformative</title>
+   <g id="a_is_agi_transformative">
+    <a xlink:href="#is_agi_transformative" xlink:title="Is AGI transformative?">
+     <polygon points="777 -964 777 -928 929 -928 929 -964" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-942.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Is AGI transformative?</text>
+    </a>
+   </g>
+  </g>
+  <g id="ai_this_century-&gt;is_agi_transformative" class="edge">
+   <title>ai_this_century-&gt;is_agi_transformative</title>
+   <g id="a_ai_this_century-&gt;is_agi_transformative">
+    <a stroke="#000" stroke-width="2" xlink:href="#ai_this_century">
+     <path d="m853-1026.7v52.16" fill="none"/>
+     <polygon points="856.5 -974.19 853 -964.19 849.5 -974.19"/>
+    </a>
+   </g>
+  </g>
+  <g id="second_chance_for_ai" class="node">
+   <title>second_chance_for_ai</title>
+   <g id="a_second_chance_for_ai">
+    <a xlink:href="#second_chance_for_ai" xlink:title="Second chance at building AGI">
+     <polygon points="96 -229 96 -193 298 -193 298 -229" fill="#feb531" stroke="transparent" stroke-width="3"/>
+     <text x="197" y="-207.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Second chance at building AGI</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_agree_no_ai" class="node">
+   <title>can_we_agree_no_ai</title>
+   <g id="a_can_we_agree_no_ai">
+    <a xlink:href="#can_we_agree_no_ai" xlink:title="Can we agree not to build it?">
+     <polygon points="759 -1239 759 -1203 947 -1203 947 -1239" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-1217.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Can we agree not to build it?</text>
+    </a>
+   </g>
+  </g>
+  <g id="second_chance_for_ai-&gt;can_we_agree_no_ai" class="edge">
+   <title>second_chance_for_ai-&gt;can_we_agree_no_ai:w</title>
+   <g id="a_second_chance_for_ai-&gt;can_we_agree_no_ai">
+    <a stroke="#000" xlink:href="#second_chance_for_ai">
+     <path d="m95.9-220.13c-198.22-72.561 62.583-1002.6 651.76-1000.9" fill="none" stroke-dasharray="5, 2"/>
+     <polygon points="758 -1221 748 -1217.5 748 -1224.5"/>
+    </a>
+   </g>
+   <g id="a_second_chance_for_ai-&gt;can_we_agree_no_ai-label" transform="rotate(-5.3453 384.65 -1426.4)">
+    <a transform="rotate(-25.452 500.36 -1136.4)" xlink:href="#second_chance_for_ai">
+     <text x="429.32693" y="-1168.7296" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Second chance at building AGI</text>
+    </a>
+   </g>
+  </g>
+  <g id="astro_suffering" class="node end-node">
+   <title>astro_suffering</title>
+   <g id="a_astro_suffering">
+    <a xlink:href="#astro_suffering" xlink:title="Astronomical\nsuffering">
+     <polygon points="600.5 -141 600.5 -103 695.5 -103 695.5 -141" fill="#ff8f8f" stroke="transparent" stroke-width="3"/>
+     <text x="648" y="-125.8" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Astronomical</text>
+     <text x="648" y="-110.8" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">suffering</text>
+    </a>
+   </g>
+  </g>
+  <g id="medium_scale_dystopia" class="node end-node">
+   <title>medium_scale_dystopia</title>
+   <g id="a_medium_scale_dystopia">
+    <a xlink:href="#medium_scale_dystopia" xlink:title="Medium scale dystopia">
+     <polygon points="353.5 -52 353.5 -16 508.5 -16 508.5 -52" fill="#ff8f8f" stroke="transparent" stroke-width="3"/>
+     <text x="431" y="-30.299999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Medium scale dystopia</text>
+    </a>
+   </g>
+  </g>
+  <g id="ai_kills_humans" class="node end-node">
+   <title>ai_kills_humans</title>
+   <g id="a_ai_kills_humans">
+    <a xlink:href="#ai_kills_humans" xlink:title="AGI-initiated\nhuman extinction">
+     <polygon points="609.5 -230 609.5 -192 728.5 -192 728.5 -230" fill="#ff8f8f" stroke="transparent" stroke-width="3"/>
+     <text x="669" y="-214.8" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">AGI-initiated</text>
+     <text x="669" y="-199.8" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">human extinction</text>
+    </a>
+   </g>
+  </g>
+  <g id="aligned_ai_human_extinction" class="node end-node">
+   <title>aligned_ai_human_extinction</title>
+   <g id="a_aligned_ai_human_extinction">
+    <a xlink:href="#aligned_ai_human_extinction" xlink:title="Shoot-in-foot\nhuman extinction">
+     <polygon points="978.5 -408 978.5 -370 1097.5 -370 1097.5 -408" fill="#ff8f8f" stroke="transparent" stroke-width="3"/>
+     <text x="1038" y="-392.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Shoot-in-foot</text>
+     <text x="1038" y="-377.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">human extinction</text>
+    </a>
+   </g>
+  </g>
+  <g id="authoritarian_dystopia" class="node end-node">
+   <title>authoritarian_dystopia</title>
+   <g id="a_authoritarian_dystopia">
+    <a xlink:href="#authoritarian_dystopia" xlink:title="Authoritarian dystopia">
+     <polygon points="972.5 -229 972.5 -193 1119.5 -193 1119.5 -229" fill="#ff8f8f" stroke="transparent" stroke-width="3"/>
+     <text x="1046" y="-207.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Authoritarian dystopia</text>
+    </a>
+   </g>
+  </g>
+  <g id="business_as_usual" class="node end-node">
+   <title>business_as_usual</title>
+   <g id="a_business_as_usual">
+    <a xlink:href="#business_as_usual" xlink:title="Business as usual">
+     <polygon points="980.5 -964 980.5 -928 1105.5 -928 1105.5 -964" fill="#d3d3d3" stroke="transparent" stroke-width="3"/>
+     <text x="1043" y="-942.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Business as usual</text>
+    </a>
+   </g>
+  </g>
+  <g id="agi_utopia" class="node end-node">
+   <title>agi_utopia</title>
+   <g id="a_agi_utopia">
+    <a xlink:href="#agi_utopia" xlink:title="Beneficial AGI">
+     <polygon points="802 -229 802 -193 904 -193 904 -229" fill="#94ff8f" stroke="transparent" stroke-width="3"/>
+     <text x="853" y="-207.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Beneficial AGI</text>
+    </a>
+   </g>
+  </g>
+  <g id="conflicting_ais" class="node end-node">
+   <title>conflicting_ais</title>
+   <g id="a_conflicting_ais">
+    <a xlink:href="#conflicting_ais" xlink:title="Conflicting AGIs">
+     <polygon points="1028.5 -787 1028.5 -751 1141.5 -751 1141.5 -787" fill="#feb531" stroke="transparent" stroke-width="3"/>
+     <text x="1085" y="-765.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Conflicting AGIs</text>
+    </a>
+   </g>
+  </g>
+  <g id="created_inefectual_ai" class="node end-node" transform="translate(-7.5)">
+   <title>created_inefectual_ai</title>
+   <g id="a_created_inefectual_ai">
+    <a xlink:href="#created_inefectual_ai" xlink:title="Harmless misaligned AGI exists">
+     <polygon points="92.5 -371 301.5 -371 301.5 -407 92.5 -407" fill="#ff0" stroke="transparent" stroke-width="3"/>
+     <text x="197" y="-385.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Harmless misaligned AGI exists</text>
+    </a>
+   </g>
+  </g>
+  <g id="created_inefectual_ai-&gt;second_chance_for_ai" class="edge">
+   <title>created_inefectual_ai:sw-&gt;second_chance_for_ai</title>
+   <g id="a_created_inefectual_ai-&gt;second_chance_for_ai">
+    <a stroke="#000" stroke-width="2" xlink:href="#created_inefectual_ai">
+     <path d="m92-370c-27.99 27.99-16.14 54.36 3 89 11.3 20.45 31.53 36.01 51.02 47.13" fill="none"/>
+     <polygon points="147.76 -236.91 154.88 -229.07 144.42 -230.75"/>
+    </a>
+   </g>
+  </g>
+  <g id="humans_killed_harmfull_ai" class="node end-node" transform="translate(-7.5)">
+   <title>humans_killed_harmfull_ai</title>
+   <g id="a_humans_killed_harmfull_ai">
+    <a xlink:href="#humans_killed_harmfull_ai" xlink:title="We neutralized harmfull AGI">
+     <polygon points="104 -282 290 -282 290 -318 104 -318" fill="#ff0" stroke="transparent" stroke-width="3"/>
+     <text x="197" y="-296.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">We neutralized harmfull AGI</text>
+    </a>
+   </g>
+  </g>
+  <g id="humans_killed_harmfull_ai-&gt;second_chance_for_ai" class="edge">
+   <title>humans_killed_harmfull_ai:s-&gt;second_chance_for_ai:n</title>
+   <g id="a_humans_killed_harmfull_ai-&gt;second_chance_for_ai">
+    <a stroke="#000" stroke-width="2" xlink:href="#humans_killed_harmfull_ai">
+     <path d="m197-281v40.65" fill="none"/>
+     <polygon points="200.5 -240 197 -230 193.5 -240"/>
+    </a>
+   </g>
+  </g>
+  <g id="offed_misaligned_ai" class="node end-node" transform="translate(-7.5)">
+   <title>offed_misaligned_ai</title>
+   <g id="a_offed_misaligned_ai">
+    <a xlink:href="#offed_misaligned_ai" xlink:title="Turned off misaligned AGI">
+     <polygon points="110 -460 284 -460 284 -496 110 -496" fill="#ff0" stroke="transparent" stroke-width="3"/>
+     <text x="197" y="-474.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Turned off misaligned AGI</text>
+    </a>
+   </g>
+  </g>
+  <g id="offed_misaligned_ai-&gt;second_chance_for_ai" class="edge">
+   <title>offed_misaligned_ai:sw-&gt;second_chance_for_ai:nw</title>
+   <g id="a_offed_misaligned_ai-&gt;second_chance_for_ai">
+    <a stroke="#000" stroke-width="2" xlink:href="#offed_misaligned_ai">
+     <path d="m110-459c-69.57 69.57-85.05 150.95-21.29 221.35" fill="none"/>
+     <polygon points="91.64 -239.66 96 -230 86.57 -234.83"/>
+    </a>
+   </g>
+  </g>
+  <g id="will_ai_collaborate_with_ai" class="node">
+   <title>will_ai_collaborate_with_ai</title>
+   <g id="a_will_ai_collaborate_with_ai">
+    <a xlink:href="#will_ai_collaborate_with_ai" xlink:title="Will AGIs colaborate\nwith each other?">
+     <polygon points="1015 -877 1015 -839 1155 -839 1155 -877" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="1085" y="-861.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Will AGIs colaborate</text>
+     <text x="1085" y="-846.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">with each other?</text>
+    </a>
+   </g>
+  </g>
+  <g id="will_ai_collaborate_with_ai-&gt;conflicting_ais" class="edge">
+   <title>will_ai_collaborate_with_ai-&gt;conflicting_ais</title>
+   <g id="a_will_ai_collaborate_with_ai-&gt;conflicting_ais">
+    <a stroke="#000" stroke-width="4" xlink:href="#will_ai_collaborate_with_ai" xlink:title="&amp;nbsp;no; 90">
+     <path d="m1085-838.97v41.61" fill="none"/>
+     <polygon points="1088.5 -797.12 1085 -787.12 1081.5 -797.12"/>
+    </a>
+   </g>
+   <g id="a_will_ai_collaborate_with_ai-&gt;conflicting_ais-label">
+    <a xlink:href="#will_ai_collaborate_with_ai" xlink:title="&amp;nbsp;no; 90">
+     <text x="1085" y="-809.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 90</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_alignment_problem_solved" class="node">
+   <title>is_alignment_problem_solved</title>
+   <g id="a_is_alignment_problem_solved">
+    <a xlink:href="#is_alignment_problem_solved" xlink:title="Have we solved\nAGI alignment in theory?">
+     <polygon points="769.5 -788 769.5 -750 936.5 -750 936.5 -788" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-772.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Have we solved</text>
+     <text x="853" y="-757.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">AGI alignment in theory?</text>
+    </a>
+   </g>
+  </g>
+  <g id="will_ai_collaborate_with_ai-&gt;is_alignment_problem_solved" class="edge">
+   <title>will_ai_collaborate_with_ai:sw-&gt;is_alignment_problem_solved:e</title>
+   <g id="a_will_ai_collaborate_with_ai-&gt;is_alignment_problem_solved">
+    <a stroke="#000" xlink:href="#will_ai_collaborate_with_ai" xlink:title="&amp;nbsp;yes; 10">
+     <path d="m1015-839c-30.36 30.36-31.45 64.23-67.92 69.34" fill="none"/>
+     <polygon points="947.21 -766.16 937 -769 946.75 -773.15"/>
+    </a>
+   </g>
+   <g id="a_will_ai_collaborate_with_ai-&gt;is_alignment_problem_solved-label">
+    <a xlink:href="#will_ai_collaborate_with_ai" xlink:title="&amp;nbsp;yes; 10">
+     <text x="998" y="-809.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 10</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_agi_exist_this_century-&gt;no_ai_this_century" class="edge">
+   <title>can_agi_exist_this_century:e-&gt;no_ai_this_century</title>
+   <g id="a_can_agi_exist_this_century-&gt;no_ai_this_century">
+    <a stroke="#000" stroke-width="2" xlink:href="#can_agi_exist_this_century">
+     <path d="m914-1308c54.85 0 195.41 33.23 237 69 43.24 37.19 46.64 70.76 29 125-6.75 20.76-24.44 35.76-43.29 46.31" fill="none"/>
+     <polygon points="1138.2 -1064.5 1127.7 -1063 1135 -1070.7"/>
+    </a>
+   </g>
+   <g id="a_can_agi_exist_this_century-&gt;no_ai_this_century-taillabel">
+    <a xlink:href="#can_agi_exist_this_century" xlink:title="&amp;nbsp;no; 30">
+     <text x="923.91998" y="-1287.9" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 30</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_agi_exist_this_century-&gt;can_we_agree_no_ai" class="edge">
+   <title>can_agi_exist_this_century-&gt;can_we_agree_no_ai</title>
+   <g id="a_can_agi_exist_this_century-&gt;can_we_agree_no_ai">
+    <a stroke="#000" stroke-width="3" xlink:href="#can_agi_exist_this_century" xlink:title="&amp;nbsp;yes; 70">
+     <path d="m853-1289.8v40.56" fill="none"/>
+     <polygon points="856.5 -1249.2 853 -1239.2 849.5 -1249.2"/>
+    </a>
+   </g>
+   <g id="a_can_agi_exist_this_century-&gt;can_we_agree_no_ai-label">
+    <a xlink:href="#can_agi_exist_this_century" xlink:title="&amp;nbsp;yes; 70">
+     <text x="853" y="-1260.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 70</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_agree_no_ai-&gt;ai_this_century" class="edge">
+   <title>can_we_agree_no_ai-&gt;ai_this_century</title>
+   <g id="a_can_we_agree_no_ai-&gt;ai_this_century">
+    <a stroke="#000" stroke-width="4" xlink:href="#can_we_agree_no_ai" xlink:title="&amp;nbsp;no; 85">
+     <path d="m853-1203v129.57" fill="none"/>
+     <polygon points="856.5 -1073.1 853 -1063.1 849.5 -1073.1"/>
+    </a>
+   </g>
+   <g id="a_can_we_agree_no_ai-&gt;ai_this_century-label">
+    <a xlink:href="#can_we_agree_no_ai" xlink:title="&amp;nbsp;no; 85">
+     <text x="853" y="-1129.3" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 85</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_enforce_no_ai" class="node">
+   <title>can_we_enforce_no_ai</title>
+   <g id="a_can_we_enforce_no_ai">
+    <a xlink:href="#can_we_enforce_no_ai" xlink:title="Can we enforce it?">
+     <polygon points="1012.5 -1239 1012.5 -1203 1141.5 -1203 1141.5 -1239" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="1077" y="-1217.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Can we enforce it?</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_agree_no_ai-&gt;can_we_enforce_no_ai" class="edge">
+   <title>can_we_agree_no_ai-&gt;can_we_enforce_no_ai</title>
+   <g id="a_can_we_agree_no_ai-&gt;can_we_enforce_no_ai">
+    <a stroke="#000" xlink:href="#can_we_agree_no_ai" xlink:title="&amp;nbsp;yes; 15">
+     <path d="m947.02-1221h55.18" fill="none"/>
+     <polygon points="1002.4 -1224.5 1012.4 -1221 1002.4 -1217.5"/>
+    </a>
+   </g>
+   <g id="a_can_we_agree_no_ai-&gt;can_we_enforce_no_ai-label">
+    <a xlink:href="#can_we_agree_no_ai" xlink:title="&amp;nbsp;yes; 15">
+     <text x="955.75" y="-1227.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 15</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_agi_aligned" class="node">
+   <title>is_agi_aligned</title>
+   <g id="a_is_agi_aligned">
+    <a xlink:href="#is_agi_aligned" xlink:title="Is the AGI aligned?">
+     <polygon points="787.5 -699 787.5 -663 918.5 -663 918.5 -699" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-677.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Is the AGI aligned?</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_alignment_problem_solved-&gt;is_agi_aligned" class="edge">
+   <title>is_alignment_problem_solved:s-&gt;is_agi_aligned:n</title>
+   <g id="a_is_alignment_problem_solved-&gt;is_agi_aligned">
+    <a stroke="#000" stroke-width="3" xlink:href="#is_alignment_problem_solved" xlink:title="&amp;nbsp;yes; 70">
+     <path d="m853-750v40.65" fill="none"/>
+     <polygon points="856.5 -709 853 -699 849.5 -709"/>
+    </a>
+   </g>
+   <g id="a_is_alignment_problem_solved-&gt;is_agi_aligned-label">
+    <a xlink:href="#is_alignment_problem_solved" xlink:title="&amp;nbsp;yes; 70">
+     <text x="853" y="-720.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 70</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_detect_misaligned" class="node">
+   <title>can_we_detect_misaligned</title>
+   <g id="a_can_we_detect_misaligned">
+    <a xlink:href="#can_we_detect_misaligned" xlink:title="Can we know it's misaligned?">
+     <polygon points="535 -584 535 -548 729 -548 729 -584" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="632" y="-562.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Can we know it's misaligned?</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_alignment_problem_solved-&gt;can_we_detect_misaligned" class="edge">
+   <title>is_alignment_problem_solved:w-&gt;can_we_detect_misaligned:n</title>
+   <g id="a_is_alignment_problem_solved-&gt;can_we_detect_misaligned">
+    <a stroke="#000" stroke-width="2" xlink:href="#is_alignment_problem_solved">
+     <path d="m769-769c-98.57 0-134.6 76.69-136.88 173.91" fill="none"/>
+     <polygon points="635.62 -594.96 632 -585 628.62 -595.04"/>
+    </a>
+   </g>
+   <g id="a_is_alignment_problem_solved-&gt;can_we_detect_misaligned-taillabel">
+    <a xlink:href="#is_alignment_problem_solved" xlink:title="&amp;nbsp;no; 30">
+     <text x="691.75" y="-786.19" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 30</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_agi_aligned-&gt;can_we_detect_misaligned" class="edge">
+   <title>is_agi_aligned:w-&gt;can_we_detect_misaligned:c</title>
+   <g id="a_is_agi_aligned-&gt;can_we_detect_misaligned">
+    <a stroke="#000" stroke-width="2" xlink:href="#is_agi_aligned" xlink:title="&amp;nbsp;no; 40">
+     <path d="m786-681c-59.18 0-110.49 55.07-136.28 88.66" fill="none"/>
+     <polygon points="652.51 -590.23 643.72 -584.31 646.9 -594.42"/>
+    </a>
+   </g>
+   <g id="a_is_agi_aligned-&gt;can_we_detect_misaligned-label">
+    <a xlink:href="#is_agi_aligned" xlink:title="&amp;nbsp;no; 40">
+     <text x="699" y="-633.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 40</text>
+    </a>
+   </g>
+  </g>
+  <g id="agi_protects_users" class="node">
+   <title>agi_protects_users</title>
+   <g id="a_agi_protects_users">
+    <a xlink:href="#agi_protects_users" xlink:title="Follows values or instructions?">
+     <polygon points="753 -584 753 -548 953 -548 953 -584" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-562.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Follows values or instructions?</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_agi_aligned-&gt;agi_protects_users" class="edge">
+   <title>is_agi_aligned-&gt;agi_protects_users</title>
+   <g id="a_is_agi_aligned-&gt;agi_protects_users">
+    <a stroke="#000" stroke-width="3" xlink:href="#is_agi_aligned" xlink:title="&amp;nbsp;yes; 60">
+     <path d="m853-662.84v68.45" fill="none"/>
+     <polygon points="856.5 -594.32 853 -584.32 849.5 -594.32"/>
+    </a>
+   </g>
+   <g id="a_is_agi_aligned-&gt;agi_protects_users-label">
+    <a xlink:href="#is_agi_aligned" xlink:title="&amp;nbsp;yes; 60">
+     <text x="853" y="-633.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 60</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_off_it" class="node">
+   <title>can_we_off_it</title>
+   <g id="a_can_we_off_it">
+    <a xlink:href="#can_we_off_it" xlink:title="Can we easily turn it off?">
+     <polygon points="349 -496 349 -460 513 -460 513 -496" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="431" y="-474.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Can we easily turn it off?</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_detect_misaligned-&gt;can_we_off_it" class="edge">
+   <title>can_we_detect_misaligned:w-&gt;can_we_off_it:n</title>
+   <g id="a_can_we_detect_misaligned-&gt;can_we_off_it">
+    <a stroke="#000" stroke-width="2" xlink:href="#can_we_detect_misaligned" xlink:title="&amp;nbsp;yes; 30">
+     <path d="m534-566c-51.55 0-96.8 12.17-102.41 58.85" fill="none"/>
+     <polygon points="435.07 -506.78 431 -497 428.08 -507.19"/>
+    </a>
+   </g>
+   <g id="a_can_we_detect_misaligned-&gt;can_we_off_it-label">
+    <a xlink:href="#can_we_detect_misaligned" xlink:title="&amp;nbsp;yes; 30">
+     <text x="439" y="-518.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 30</text>
+    </a>
+   </g>
+  </g>
+  <g id="ai_harms_humans" class="node">
+   <title>ai_harms_humans</title>
+   <g id="a_ai_harms_humans">
+    <a xlink:href="#ai_harms_humans" xlink:title="Is it harming us?">
+     <polygon points="373 -407 373 -371 489 -371 489 -407" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="431" y="-385.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Is it harming us?</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_detect_misaligned-&gt;ai_harms_humans" class="edge">
+   <title>can_we_detect_misaligned-&gt;ai_harms_humans:e</title>
+   <g id="a_can_we_detect_misaligned-&gt;ai_harms_humans">
+    <a stroke="#000" stroke-width="3" xlink:href="#can_we_detect_misaligned" xlink:title="&amp;nbsp;no; 70">
+     <path d="m627.22-547.8c-12.89 42.38-52.53 149.09-126.98 158.18" fill="none"/>
+     <polygon points="500.19 -386.11 490 -389 499.77 -393.1"/>
+    </a>
+   </g>
+   <g id="a_can_we_detect_misaligned-&gt;ai_harms_humans-label">
+    <a xlink:href="#can_we_detect_misaligned" xlink:title="&amp;nbsp;no; 70">
+     <text x="608" y="-474.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 70</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_enforce_no_ai-&gt;no_ai_this_century" class="edge">
+   <title>can_we_enforce_no_ai:se-&gt;no_ai_this_century</title>
+   <g id="a_can_we_enforce_no_ai-&gt;no_ai_this_century">
+    <a stroke="#000" xlink:href="#can_we_enforce_no_ai">
+     <path d="m1142-1203c28.67 28.67 37.56 52.46 20 89-9.06 18.86-26.18 34.12-42.7 45.37" fill="none"/>
+     <polygon points="1121.1 -1065.6 1110.8 -1063.1 1117.3 -1071.5"/>
+    </a>
+   </g>
+   <g id="a_can_we_enforce_no_ai-&gt;no_ai_this_century-taillabel">
+    <a xlink:href="#can_we_enforce_no_ai" xlink:title="&amp;nbsp;yes; 1">
+     <text x="1129.88" y="-1175.5699" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 1</text>
+    </a>
+   </g>
+  </g>
+  <g id="someone_wants_to_build_it" class="node">
+   <title>someone_wants_to_build_it</title>
+   <g id="a_someone_wants_to_build_it">
+    <a xlink:href="#someone_wants_to_build_it" xlink:title="Will there be someone\nwilling to build it?">
+     <polygon points="1001 -1152 1001 -1114 1153 -1114 1153 -1152" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="1077" y="-1136.8" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Will there be someone</text>
+     <text x="1077" y="-1121.8" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">willing to build it?</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_enforce_no_ai-&gt;someone_wants_to_build_it" class="edge">
+   <title>can_we_enforce_no_ai-&gt;someone_wants_to_build_it</title>
+   <g id="a_can_we_enforce_no_ai-&gt;someone_wants_to_build_it">
+    <a stroke="#000" stroke-width="4" xlink:href="#can_we_enforce_no_ai" xlink:title="&amp;nbsp;no; 99">
+     <path d="m1077-1202.6v40.24" fill="none"/>
+     <polygon points="1080.5 -1162.3 1077 -1152.3 1073.5 -1162.3"/>
+    </a>
+   </g>
+   <g id="a_can_we_enforce_no_ai-&gt;someone_wants_to_build_it-label">
+    <a xlink:href="#can_we_enforce_no_ai" xlink:title="&amp;nbsp;no; 99">
+     <text x="1077" y="-1173.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 99</text>
+    </a>
+   </g>
+  </g>
+  <g id="someone_wants_to_build_it-&gt;ai_this_century" class="edge">
+   <title>someone_wants_to_build_it:sw-&gt;ai_this_century:c</title>
+   <g id="a_someone_wants_to_build_it-&gt;ai_this_century">
+    <a stroke="#000" stroke-width="4" xlink:href="#someone_wants_to_build_it" xlink:title="&amp;nbsp;yes; 95">
+     <path d="m1001-1114c-22.45 22.45-53.67 38.28-81.65 48.99" fill="none"/>
+     <polygon points="920.2 -1061.6 909.61 -1061.4 917.79 -1068.2"/>
+    </a>
+   </g>
+   <g id="a_someone_wants_to_build_it-&gt;ai_this_century-label">
+    <a xlink:href="#someone_wants_to_build_it" xlink:title="&amp;nbsp;yes; 95">
+     <text x="977" y="-1084.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 95</text>
+    </a>
+   </g>
+  </g>
+  <g id="someone_wants_to_build_it-&gt;no_ai_this_century" class="edge">
+   <title>someone_wants_to_build_it-&gt;no_ai_this_century</title>
+   <g id="a_someone_wants_to_build_it-&gt;no_ai_this_century">
+    <a stroke="#000" xlink:href="#someone_wants_to_build_it" xlink:title="&amp;nbsp;no; 5">
+     <path d="m1077-1113.8v40.71" fill="none"/>
+     <polygon points="1080.5 -1073 1077 -1063 1073.5 -1073"/>
+    </a>
+   </g>
+   <g id="a_someone_wants_to_build_it-&gt;no_ai_this_century-label">
+    <a xlink:href="#someone_wants_to_build_it" xlink:title="&amp;nbsp;no; 5">
+     <text x="1077" y="-1084.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 5</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_agi_transformative-&gt;business_as_usual" class="edge">
+   <title>is_agi_transformative:c-&gt;business_as_usual:c</title>
+   <g id="a_is_agi_transformative-&gt;business_as_usual">
+    <a stroke="#000" stroke-width="2" xlink:href="#is_agi_transformative" xlink:title="&amp;nbsp;no; 1">
+     <path d="m929.19-946h40.91" fill="none"/>
+     <polygon points="970.2 -949.5 980.2 -946 970.2 -942.5"/>
+    </a>
+   </g>
+   <g id="a_is_agi_transformative-&gt;business_as_usual-label">
+    <a xlink:href="#is_agi_transformative" xlink:title="&amp;nbsp;no; 1">
+     <text x="937.75" y="-952.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 1</text>
+    </a>
+   </g>
+  </g>
+  <g id="first_ai_kills_other_ais" class="node">
+   <title>first_ai_kills_other_ais</title>
+   <g id="a_first_ai_kills_other_ais">
+    <a xlink:href="#first_ai_kills_other_ais" xlink:title="Will the first AGI\nprevent second AGI to appear?">
+     <polygon points="751 -877 751 -839 955 -839 955 -877" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-861.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Will the first AGI</text>
+     <text x="853" y="-846.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">prevent second AGI to appear?</text>
+    </a>
+   </g>
+  </g>
+  <g id="is_agi_transformative-&gt;first_ai_kills_other_ais" class="edge">
+   <title>is_agi_transformative-&gt;first_ai_kills_other_ais</title>
+   <g id="a_is_agi_transformative-&gt;first_ai_kills_other_ais">
+    <a stroke="#000" stroke-width="3" xlink:href="#is_agi_transformative" xlink:title="&amp;nbsp;yes; 99">
+     <path d="m853-927.6v40.24" fill="none"/>
+     <polygon points="856.5 -887.27 853 -877.27 849.5 -887.27"/>
+    </a>
+   </g>
+   <g id="a_is_agi_transformative-&gt;first_ai_kills_other_ais-label">
+    <a xlink:href="#is_agi_transformative" xlink:title="&amp;nbsp;yes; 99">
+     <text x="853" y="-898.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 99</text>
+    </a>
+   </g>
+  </g>
+  <g id="first_ai_kills_other_ais-&gt;will_ai_collaborate_with_ai" class="edge">
+   <title>first_ai_kills_other_ais-&gt;will_ai_collaborate_with_ai</title>
+   <g id="a_first_ai_kills_other_ais-&gt;will_ai_collaborate_with_ai">
+    <a stroke="#000" xlink:href="#first_ai_kills_other_ais" xlink:title="&amp;nbsp;no; 20">
+     <path d="m955.1-858h49.43" fill="none"/>
+     <polygon points="1004.9 -861.5 1014.9 -858 1004.9 -854.5"/>
+    </a>
+   </g>
+   <g id="a_first_ai_kills_other_ais-&gt;will_ai_collaborate_with_ai-label">
+    <a xlink:href="#first_ai_kills_other_ais" xlink:title="&amp;nbsp;no; 20">
+     <text x="964" y="-864.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 20</text>
+    </a>
+   </g>
+  </g>
+  <g id="first_ai_kills_other_ais-&gt;is_alignment_problem_solved" class="edge">
+   <title>first_ai_kills_other_ais-&gt;is_alignment_problem_solved</title>
+   <g id="a_first_ai_kills_other_ais-&gt;is_alignment_problem_solved">
+    <a stroke="#000" stroke-width="4" xlink:href="#first_ai_kills_other_ais" xlink:title="&amp;nbsp;yes; 80">
+     <path d="m853-838.97v40.81" fill="none"/>
+     <polygon points="856.5 -798 853 -788 849.5 -798"/>
+    </a>
+   </g>
+   <g id="a_first_ai_kills_other_ais-&gt;is_alignment_problem_solved-label">
+    <a xlink:href="#first_ai_kills_other_ais" xlink:title="&amp;nbsp;yes; 80">
+     <text x="853" y="-809.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 80</text>
+    </a>
+   </g>
+  </g>
+  <g id="do_they_have_good_intentions" class="node">
+   <title>do_they_have_good_intentions</title>
+   <g id="a_do_they_have_good_intentions">
+    <a xlink:href="#do_they_have_good_intentions" xlink:title="Do they have good\nintentions for humanity?">
+     <polygon points="965.5 -319 965.5 -281 1126.5 -281 1126.5 -319" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="1046" y="-303.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Do they have good</text>
+     <text x="1046" y="-288.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">intentions for humanity?</text>
+    </a>
+   </g>
+  </g>
+  <g id="do_they_have_good_intentions-&gt;authoritarian_dystopia" class="edge">
+   <title>do_they_have_good_intentions-&gt;authoritarian_dystopia</title>
+   <g id="a_do_they_have_good_intentions-&gt;authoritarian_dystopia">
+    <a stroke="#000" stroke-width="2" xlink:href="#do_they_have_good_intentions" xlink:title="&amp;nbsp;no; 60">
+     <path d="m1046-280.97v41.61" fill="none"/>
+     <polygon points="1049.5 -239.12 1046 -229.12 1042.5 -239.12"/>
+    </a>
+   </g>
+   <g id="a_do_they_have_good_intentions-&gt;authoritarian_dystopia-label">
+    <a xlink:href="#do_they_have_good_intentions" xlink:title="&amp;nbsp;no; 60">
+     <text x="1046" y="-251.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 60</text>
+    </a>
+   </g>
+  </g>
+  <g id="do_they_have_good_intentions-&gt;agi_utopia" class="edge">
+   <title>do_they_have_good_intentions-&gt;agi_utopia</title>
+   <g id="a_do_they_have_good_intentions-&gt;agi_utopia">
+    <a stroke="#000" stroke-width="2" xlink:href="#do_they_have_good_intentions" xlink:title="&amp;nbsp;yes; 40">
+     <path d="m1006-280.97c-30.75 13.86-73.32 33.05-105.75 47.67" fill="none"/>
+     <polygon points="901.52 -230.03 890.97 -229.12 898.65 -236.42"/>
+    </a>
+   </g>
+   <g id="a_do_they_have_good_intentions-&gt;agi_utopia-label">
+    <a xlink:href="#do_they_have_good_intentions" xlink:title="&amp;nbsp;yes; 40">
+     <text x="961" y="-251.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 40</text>
+    </a>
+   </g>
+  </g>
+  <g id="are_they_thoughful" class="node">
+   <title>are_they_thoughful</title>
+   <g id="a_are_they_thoughful">
+    <a xlink:href="#are_they_thoughful" xlink:title="Are the controlers thoughtful of\nunintended consequences?">
+     <polygon points="937.5 -497 937.5 -459 1138.5 -459 1138.5 -497" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="1038" y="-481.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Are the controlers thoughtful of</text>
+     <text x="1038" y="-466.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">unintended consequences?</text>
+    </a>
+   </g>
+  </g>
+  <g id="are_they_thoughful-&gt;aligned_ai_human_extinction" class="edge">
+   <title>are_they_thoughful-&gt;aligned_ai_human_extinction</title>
+   <g id="a_are_they_thoughful-&gt;aligned_ai_human_extinction">
+    <a stroke="#000" stroke-width="2" xlink:href="#are_they_thoughful" xlink:title="&amp;nbsp;no; 50">
+     <path d="m1038-458.97v40.81" fill="none"/>
+     <polygon points="1041.5 -418 1038 -408 1034.5 -418"/>
+    </a>
+   </g>
+   <g id="a_are_they_thoughful-&gt;aligned_ai_human_extinction-label">
+    <a xlink:href="#are_they_thoughful" xlink:title="&amp;nbsp;no; 50">
+     <text x="1038" y="-429.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 50</text>
+    </a>
+   </g>
+  </g>
+  <g id="aligned_to_whom" class="node">
+   <title>aligned_to_whom</title>
+   <g id="a_aligned_to_whom">
+    <a xlink:href="#aligned_to_whom" xlink:title="Aligned to whom?">
+     <polygon points="790.5 -407 790.5 -371 915.5 -371 915.5 -407" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="853" y="-385.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Aligned to whom?</text>
+    </a>
+   </g>
+  </g>
+  <g id="are_they_thoughful-&gt;aligned_to_whom" class="edge">
+   <title>are_they_thoughful-&gt;aligned_to_whom</title>
+   <g id="a_are_they_thoughful-&gt;aligned_to_whom">
+    <a stroke="#000" stroke-width="2" xlink:href="#are_they_thoughful" xlink:title="&amp;nbsp;yes; 50">
+     <path d="m999.67-458.97c-29.35 13.8-69.93 32.88-100.97 47.48" fill="none"/>
+     <polygon points="899.93 -408.2 889.39 -407.12 896.95 -414.54"/>
+    </a>
+   </g>
+   <g id="a_are_they_thoughful-&gt;aligned_to_whom-label">
+    <a xlink:href="#are_they_thoughful" xlink:title="&amp;nbsp;yes; 50">
+     <text x="956" y="-429.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 50</text>
+    </a>
+   </g>
+  </g>
+  <g id="aligned_to_whom-&gt;agi_utopia" class="edge">
+   <title>aligned_to_whom-&gt;agi_utopia</title>
+   <g id="a_aligned_to_whom-&gt;agi_utopia">
+    <a stroke="#000" stroke-width="2" xlink:href="#aligned_to_whom" xlink:title="&amp;nbsp;All humans; 40">
+     <path d="m853-370.8v131.34" fill="none"/>
+     <polygon points="856.5 -239.01 853 -229.01 849.5 -239.01"/>
+    </a>
+   </g>
+   <g id="a_aligned_to_whom-&gt;agi_utopia-label">
+    <a xlink:href="#aligned_to_whom" xlink:title="&amp;nbsp;All humans; 40">
+     <text x="853" y="-296.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px">All humans; 40</text>
+    </a>
+   </g>
+  </g>
+  <g id="aligned_to_whom-&gt;do_they_have_good_intentions" class="edge">
+   <title>aligned_to_whom:c-&gt;do_they_have_good_intentions:n</title>
+   <g id="a_aligned_to_whom-&gt;do_they_have_good_intentions">
+    <a stroke="#000" stroke-width="3" xlink:href="#aligned_to_whom" xlink:title="&amp;nbsp;Some humans; 60">
+     <path d="m915.66-377.87c49.53 9.61 112.68 26.02 127.25 49" fill="none"/>
+     <polygon points="1046.4 -329.59 1046 -319 1039.7 -327.5"/>
+    </a>
+   </g>
+   <g id="a_aligned_to_whom-&gt;do_they_have_good_intentions-label">
+    <a xlink:href="#aligned_to_whom" xlink:title="&amp;nbsp;Some humans; 60">
+     <text x="1032" y="-340.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">Some humans; 60</text>
+    </a>
+   </g>
+  </g>
+  <g id="agi_protects_users-&gt;are_they_thoughful" class="edge">
+   <title>agi_protects_users:e-&gt;are_they_thoughful:n</title>
+   <g id="a_agi_protects_users-&gt;are_they_thoughful">
+    <a stroke="#000" stroke-width="2" xlink:href="#agi_protects_users" xlink:title="&amp;nbsp;instructions; 40">
+     <path d="m954-566c44.82 0 78.78 17.8 83.45 58.96" fill="none"/>
+     <polygon points="1041 -507.18 1038 -497 1034 -506.79"/>
+    </a>
+   </g>
+   <g id="a_agi_protects_users-&gt;are_they_thoughful-label">
+    <a xlink:href="#agi_protects_users" xlink:title="&amp;nbsp;instructions; 40">
+     <text x="1035" y="-518.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">instructions; 40</text>
+    </a>
+   </g>
+  </g>
+  <g id="agi_protects_users-&gt;aligned_to_whom" class="edge">
+   <title>agi_protects_users:s-&gt;aligned_to_whom:n</title>
+   <g id="a_agi_protects_users-&gt;aligned_to_whom">
+    <a stroke="#000" stroke-width="2" xlink:href="#agi_protects_users" xlink:title="&amp;nbsp;values; 60">
+     <path d="m853-548v129.86" fill="none"/>
+     <polygon points="856.5 -418 853 -408 849.5 -418"/>
+    </a>
+   </g>
+   <g id="a_agi_protects_users-&gt;aligned_to_whom-label">
+    <a xlink:href="#agi_protects_users" xlink:title="&amp;nbsp;values; 60">
+     <text x="853" y="-474.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px">values; 60</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_off_it-&gt;offed_misaligned_ai" class="edge" transform="matrix(1.12 0 0 .99785 -41.857 -1.0076)">
+   <title>can_we_off_it:w-&gt;offed_misaligned_ai:c</title>
+   <g id="a_can_we_off_it-&gt;offed_misaligned_ai">
+    <a stroke="#000" xlink:href="#can_we_off_it">
+     <path d="m349-478h-54.74" fill="none"/>
+     <polygon points="284.24 -478 294.24 -481.5 294.24 -474.5"/>
+    </a>
+   </g>
+   <g id="a_can_we_off_it-&gt;offed_misaligned_ai-taillabel">
+    <a xlink:href="#can_we_off_it" xlink:title="&amp;nbsp;yes; 20">
+     <text x="294.69" y="-456.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 20</text>
+    </a>
+   </g>
+  </g>
+  <g id="can_we_off_it-&gt;ai_harms_humans" class="edge">
+   <title>can_we_off_it-&gt;ai_harms_humans</title>
+   <g id="a_can_we_off_it-&gt;ai_harms_humans">
+    <a stroke="#000" stroke-width="4" xlink:href="#can_we_off_it" xlink:title="&amp;nbsp;no; 80">
+     <path d="m431-459.81v42.63" fill="none"/>
+     <polygon points="434.5 -417.15 431 -407.15 427.5 -417.15"/>
+    </a>
+   </g>
+   <g id="a_can_we_off_it-&gt;ai_harms_humans-label">
+    <a xlink:href="#can_we_off_it" xlink:title="&amp;nbsp;no; 80">
+     <text x="431" y="-429.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 80</text>
+    </a>
+   </g>
+  </g>
+  <g id="ai_harms_humans-&gt;created_inefectual_ai" class="edge" transform="matrix(.86362 0 0 .998 50.901 -.75883)">
+   <title>ai_harms_humans:w-&gt;created_inefectual_ai:c</title>
+   <g id="a_ai_harms_humans-&gt;created_inefectual_ai">
+    <a stroke="#000" xlink:href="#ai_harms_humans">
+     <path d="m373-389h-83.77" fill="none"/>
+     <polygon points="289.03 -392.5 289.03 -385.5 279.03 -389"/>
+    </a>
+   </g>
+   <g id="a_ai_harms_humans-&gt;created_inefectual_ai-taillabel">
+    <a xlink:href="#ai_harms_humans" xlink:title="no; 20">
+     <text x="323.69" y="-367.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 20</text>
+    </a>
+   </g>
+  </g>
+  <g id="humans_can_kill_ai" class="node">
+   <title>humans_can_kill_ai</title>
+   <g id="a_humans_can_kill_ai">
+    <a xlink:href="#humans_can_kill_ai" xlink:title="Can we neutralize it?">
+     <polygon points="359.5 -318 359.5 -282 502.5 -282 502.5 -318" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="431" y="-296.29999" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Can we neutralize it?</text>
+    </a>
+   </g>
+  </g>
+  <g id="ai_harms_humans-&gt;humans_can_kill_ai" class="edge">
+   <title>ai_harms_humans-&gt;humans_can_kill_ai</title>
+   <g id="a_ai_harms_humans-&gt;humans_can_kill_ai">
+    <a stroke="#000" stroke-width="4" xlink:href="#ai_harms_humans" xlink:title="&amp;nbsp;yes; 80">
+     <path d="m431-370.81v42.63" fill="none"/>
+     <polygon points="434.5 -328.15 431 -318.15 427.5 -328.15"/>
+    </a>
+   </g>
+   <g id="a_ai_harms_humans-&gt;humans_can_kill_ai-label">
+    <a xlink:href="#ai_harms_humans" xlink:title="&amp;nbsp;yes; 80">
+     <text x="431" y="-340.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 80</text>
+    </a>
+   </g>
+  </g>
+  <g id="humans_can_kill_ai-&gt;humans_killed_harmfull_ai" class="edge" transform="matrix(.73385 0 0 1.009 95.558 2.5884)">
+   <title>humans_can_kill_ai:w-&gt;humans_killed_harmfull_ai:c</title>
+   <g id="a_humans_can_kill_ai-&gt;humans_killed_harmfull_ai">
+    <a stroke="#000" stroke-width="2" xlink:href="#humans_can_kill_ai">
+     <path d="m359.5-300h-94.3" fill="none"/>
+     <polygon points="265.18 -303.5 265.18 -296.5 255.18 -300"/>
+    </a>
+   </g>
+   <g id="a_humans_can_kill_ai-&gt;humans_killed_harmfull_ai-taillabel">
+    <a xlink:href="#humans_can_kill_ai" xlink:title="yes; 30">
+     <text x="310.69" y="-273.79999" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 30</text>
+    </a>
+   </g>
+  </g>
+  <g id="wants_human_exctinction" class="node">
+   <title>wants_human_exctinction</title>
+   <g id="a_wants_human_exctinction">
+    <a xlink:href="#wants_human_exctinction" xlink:title="Does it benefit from our extinction?">
+     <polygon points="318 -229 318 -193 544 -193 544 -229" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="431" y="-207.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Does it benefit from our extinction?</text>
+    </a>
+   </g>
+  </g>
+  <g id="humans_can_kill_ai-&gt;wants_human_exctinction" class="edge">
+   <title>humans_can_kill_ai-&gt;wants_human_exctinction</title>
+   <g id="a_humans_can_kill_ai-&gt;wants_human_exctinction">
+    <a stroke="#000" stroke-width="3" xlink:href="#humans_can_kill_ai" xlink:title="&amp;nbsp;no; 70">
+     <path d="m431-281.81v42.63" fill="none"/>
+     <polygon points="434.5 -239.15 431 -229.15 427.5 -239.15"/>
+    </a>
+   </g>
+   <g id="a_humans_can_kill_ai-&gt;wants_human_exctinction-label">
+    <a xlink:href="#humans_can_kill_ai" xlink:title="&amp;nbsp;no; 70">
+     <text x="431" y="-251.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 70</text>
+    </a>
+   </g>
+  </g>
+  <g id="wants_human_exctinction-&gt;ai_kills_humans" class="edge">
+   <title>wants_human_exctinction-&gt;ai_kills_humans</title>
+   <g id="a_wants_human_exctinction-&gt;ai_kills_humans">
+    <a stroke="#000" stroke-width="2" xlink:href="#wants_human_exctinction" xlink:title="&amp;nbsp;yes; 50">
+     <path d="m544.08-211h55.24" fill="none"/>
+     <polygon points="599.32 -214.5 609.32 -211 599.32 -207.5"/>
+    </a>
+   </g>
+   <g id="a_wants_human_exctinction-&gt;ai_kills_humans-label">
+    <a xlink:href="#wants_human_exctinction" xlink:title="&amp;nbsp;yes; 50">
+     <text x="552.75" y="-217.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 50</text>
+    </a>
+   </g>
+  </g>
+  <g id="wants_human_suffering" class="node">
+   <title>wants_human_suffering</title>
+   <g id="a_wants_human_suffering">
+    <a xlink:href="#wants_human_suffering" xlink:title="Does is benefit from our suffering?">
+     <polygon points="319 -140 319 -104 543 -104 543 -140" fill="none" stroke="#d9d9d9" stroke-width="3"/>
+     <text x="431" y="-118.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Does is benefit from our suffering?</text>
+    </a>
+   </g>
+  </g>
+  <g id="wants_human_exctinction-&gt;wants_human_suffering" class="edge">
+   <title>wants_human_exctinction-&gt;wants_human_suffering</title>
+   <g id="a_wants_human_exctinction-&gt;wants_human_suffering">
+    <a stroke="#000" stroke-width="2" xlink:href="#wants_human_exctinction" xlink:title="&amp;nbsp;no; 50">
+     <path d="m431-192.81v42.63" fill="none"/>
+     <polygon points="434.5 -150.15 431 -140.15 427.5 -150.15"/>
+    </a>
+   </g>
+   <g id="a_wants_human_exctinction-&gt;wants_human_suffering-label">
+    <a xlink:href="#wants_human_exctinction" xlink:title="&amp;nbsp;no; 50">
+     <text x="431" y="-162.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 50</text>
+    </a>
+   </g>
+  </g>
+  <g id="wants_human_suffering-&gt;astro_suffering" class="edge">
+   <title>wants_human_suffering-&gt;astro_suffering</title>
+   <g id="a_wants_human_suffering-&gt;astro_suffering">
+    <a stroke="#000" xlink:href="#wants_human_suffering" xlink:title="&amp;nbsp;yes; 1">
+     <path d="m543.31-122h46.89" fill="none"/>
+     <polygon points="590.49 -125.5 600.49 -122 590.49 -118.5"/>
+    </a>
+   </g>
+   <g id="a_wants_human_suffering-&gt;astro_suffering-label">
+    <a xlink:href="#wants_human_suffering" xlink:title="&amp;nbsp;yes; 1">
+     <text x="551.75" y="-128.8" font-family="Helvetica, Arial, sans-serif" font-size="14px">yes; 1</text>
+    </a>
+   </g>
+  </g>
+  <g id="wants_human_suffering-&gt;medium_scale_dystopia" class="edge">
+   <title>wants_human_suffering:s-&gt;medium_scale_dystopia:n</title>
+   <g id="a_wants_human_suffering-&gt;medium_scale_dystopia">
+    <a stroke="#000" stroke-width="4" xlink:href="#wants_human_suffering" xlink:title="&amp;nbsp;no; 99">
+     <path d="m431-103v40.65" fill="none"/>
+     <polygon points="434.5 -62 431 -52 427.5 -62"/>
+    </a>
+   </g>
+   <g id="a_wants_human_suffering-&gt;medium_scale_dystopia-label">
+    <a xlink:href="#wants_human_suffering" xlink:title="&amp;nbsp;no; 99">
+     <text x="431" y="-73.800003" font-family="Helvetica, Arial, sans-serif" font-size="14px">no; 99</text>
+    </a>
+   </g>
+  </g>
+  <g transform="matrix(.91016 0 0 .91016 -1199.3 -227.01)">
+   <g class="cluster">
+    <title>cluster_legend</title>
+    <polygon transform="matrix(.9133 0 0 .8817 129.88 -129.34)" points="1303 -991 1303 -1487.9 1693 -1487.9 1693 -991" fill="none" stroke="#000" stroke-dasharray="1, 5"/>
+    <text x="1623" y="-1397.37" font-family="Helvetica, Arial, sans-serif" font-size="20px" text-anchor="middle">Legend</text>
+   </g>
+   <g id="legend_start" class="node legend-node">
+    <title>legend_start</title>
+    <g id="a_legend_start">
+     <a xlink:href="#legend_start" xlink:title="Start">
+      <ellipse cx="1451" cy="-1403.9" rx="29.5" ry="18" fill="#bafffc" stroke="transparent" stroke-width="3"/>
+      <text x="1451" y="-1400.17" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Start</text>
+     </a>
+    </g>
+   </g>
+   <g id="da" class="node legend-node">
+    <title>da</title>
+    <g id="a_da">
+     <a xlink:href="#da" xlink:title="Bifurcation A">
+      <polygon points="1497 -1290 1497 -1326 1405 -1326 1405 -1290" fill="#fff" stroke="#d3d3d3" stroke-width="3"/>
+      <text x="1451" y="-1304.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Bifurcation A</text>
+     </a>
+    </g>
+   </g>
+   <g id="legend_start-&gt;da" class="edge">
+    <title>legend_start-&gt;da</title>
+    <g id="a_legend_start-&gt;da">
+     <a stroke="#000" stroke-width="2" xlink:href="#legend_start">
+      <path d="m1451-1385.6v49.22" fill="none"/>
+      <polygon points="1454.5 -1336.1 1451 -1326.1 1447.5 -1336.1"/>
+     </a>
+    </g>
+   </g>
+   <g id="state" class="node legend-node">
+    <title>state</title>
+    <g id="a_state">
+     <a xlink:href="#state" xlink:title="State">
+      <polygon points="1478 -1203 1478 -1239 1424 -1239 1424 -1203" fill="#ff0" stroke="transparent" stroke-width="3"/>
+      <text x="1451" y="-1217.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">State</text>
+     </a>
+    </g>
+   </g>
+   <g id="da-&gt;state" class="edge">
+    <title>da-&gt;state</title>
+    <g id="a_da-&gt;state">
+     <a stroke="#000" stroke-width="2" xlink:href="#da">
+      <path d="m1451-1289.8v40.56" fill="none"/>
+      <polygon points="1454.5 -1249.2 1451 -1239.2 1447.5 -1249.2"/>
+     </a>
+    </g>
+   </g>
+   <g id="unchanged_future" class="node legend-node">
+    <title>unchanged_future</title>
+    <g id="a_unchanged_future">
+     <a xlink:href="#unchanged_future" xlink:title="Unchanged future">
+      <polygon points="1657 -1115 1657 -1151 1533 -1151 1533 -1115" fill="#d3d3d3" stroke="transparent" stroke-width="3"/>
+      <text x="1595" y="-1129.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Unchanged future</text>
+     </a>
+    </g>
+   </g>
+   <g id="da-&gt;unchanged_future" class="edge">
+    <title>da:e-&gt;unchanged_future:c</title>
+    <g id="a_da-&gt;unchanged_future">
+     <a stroke="#000" stroke-width="2" xlink:href="#da">
+      <path d="m1498-1308c66.4 0 87.76 97.86 94.29 146.8" fill="none"/>
+      <polygon points="1595.8 -1161.4 1593.5 -1151 1588.8 -1160.5"/>
+     </a>
+    </g>
+   </g>
+   <g id="db" class="node legend-node">
+    <title>db</title>
+    <g id="a_db">
+     <a xlink:href="#db" xlink:title="Bifurcation B">
+      <polygon points="1404.5 -1151 1404.5 -1115 1497.5 -1115 1497.5 -1151" fill="#fff" stroke="#d3d3d3" stroke-width="3"/>
+      <text x="1451" y="-1129.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Bifurcation B</text>
+     </a>
+    </g>
+   </g>
+   <g id="db-&gt;unchanged_future" class="edge">
+    <title>db-&gt;unchanged_future</title>
+    <g id="a_db-&gt;unchanged_future">
+     <a stroke="#000" stroke-width="2" xlink:href="#db">
+      <path d="m1497.7-1133h24.86" fill="none"/>
+      <polygon points="1522.7 -1136.5 1532.7 -1133 1522.7 -1129.5"/>
+     </a>
+    </g>
+   </g>
+   <g id="good_future" class="node legend-node">
+    <title>good_future</title>
+    <g id="a_good_future">
+     <a xlink:href="#good_future" xlink:title="Good future">
+      <polygon points="1428.5 -1027 1428.5 -1063 1339.5 -1063 1339.5 -1027" fill="#94ff8f" stroke="transparent" stroke-width="3"/>
+      <text x="1384" y="-1041.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Good future</text>
+     </a>
+    </g>
+   </g>
+   <g id="db-&gt;good_future" class="edge">
+    <title>db-&gt;good_future</title>
+    <g id="a_db-&gt;good_future">
+     <a stroke="#000" stroke-width="2" xlink:href="#db">
+      <path d="m1437.4-1114.6c-9.69 12.44-22.88 29.37-33.73 43.3" fill="none"/>
+      <polygon points="1406.2 -1068.8 1397.3 -1063.1 1400.7 -1073.1"/>
+     </a>
+    </g>
+   </g>
+   <g id="uncertain_future" class="node legend-node">
+    <title>uncertain_future</title>
+    <g id="a_uncertain_future">
+     <a xlink:href="#uncertain_future" xlink:title="Uncertain future">
+      <polygon points="1559.5 -1027 1559.5 -1063 1446.5 -1063 1446.5 -1027" fill="#feb531" stroke="transparent" stroke-width="3"/>
+      <text x="1503" y="-1041.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Uncertain future</text>
+     </a>
+    </g>
+   </g>
+   <g id="db-&gt;uncertain_future" class="edge">
+    <title>db-&gt;uncertain_future</title>
+    <g id="a_db-&gt;uncertain_future">
+     <a stroke="#000" stroke-width="2" xlink:href="#db">
+      <path d="m1461.5-1114.6c7.45 12.32 17.57 29.05 25.94 42.9" fill="none"/>
+      <polygon points="1490.5 -1073.4 1492.7 -1063.1 1484.5 -1069.8"/>
+     </a>
+    </g>
+   </g>
+   <g id="bad_future" class="node legend-node">
+    <title>bad_future</title>
+    <g id="a_bad_future">
+     <a xlink:href="#bad_future" xlink:title="Bad future">
+      <polygon points="1656.5 -1027 1656.5 -1063 1577.5 -1063 1577.5 -1027" fill="#ff8f8f" stroke="transparent" stroke-width="3"/>
+      <text x="1617" y="-1041.3" font-family="Helvetica, Arial, sans-serif" font-size="14px" text-anchor="middle">Bad future</text>
+     </a>
+    </g>
+   </g>
+   <g id="db-&gt;bad_future" class="edge">
+    <title>db-&gt;bad_future</title>
+    <g id="a_db-&gt;bad_future">
+     <a stroke="#000" stroke-width="2" xlink:href="#db">
+      <path d="m1484.2-1114.8c26.1 13.52 62.62 32.44 90.76 47.02" fill="none"/>
+      <polygon points="1576.9 -1070.7 1584.2 -1063 1573.7 -1064.5"/>
+     </a>
+    </g>
+   </g>
+   <g id="state-&gt;db" class="edge">
+    <title>state-&gt;db</title>
+    <g id="a_state-&gt;db">
+     <a stroke="#000" stroke-width="2" xlink:href="#state">
+      <path d="m1451-1202.6v41.31" fill="none"/>
+      <polygon points="1454.5 -1161.1 1451 -1151.1 1447.5 -1161.1"/>
+     </a>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

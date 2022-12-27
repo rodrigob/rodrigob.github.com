@@ -3,40 +3,334 @@
 
 <head>
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
   <base href="/">
+  <title>Map of AGI futures</title>
 
+  <!-- <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet"> -->
   <style>
-    html,
-    body {
-      margin: 0;
+    html {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
       padding: 0;
       font-family: sans-serif;
-      background-color: #ededed;
+      background-color: #ffffff;
+    }
+
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+    }
+
+    section#faq {
+      width: 60em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section#faq iron-icon {
+      color: lightgray;
+    }
+
+    /* this is the content of https://fonts.googleapis.com/css?family=Material+Icons&display=block */
+    /* fallback */
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      /* src: url(https://fonts.gstatic.com/s/materialicons/v139/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2'); */
+      src: url(./assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+    }
+
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
     }
   </style>
-  <title>ai-map</title>
 </head>
 
 <body>
+  <span id="top"></span>
   <ai-map></ai-map>
-
   <script type="module" src="./out-tsc/src/ai-map.js"></script>
+  <script type="module">
+    import '@polymer/iron-icon/iron-icon.js';
+    import '@polymer/iron-icons/iron-icons.js';
+  </script>
+  <script>
+    // make sure that clicks on FAQ back arrow leads top when reached via scrolling only. 
+    const url = new URL(window.location);
+    url.hash = "top";
+    window.history.pushState({}, '', url);
+  </script>
 
-<section>
-<h1>Frequently Asked Questions</h1>
+  <section id="faq">
+    <h1>Frequently Asked Questions</h1>
 
 
-<h2>About the graph</h2>
+    <h2>About the graph</h2>
 
-<h2>About the edges</h2>
+    <h2>About the edges</h2>
 
-<h2>About the nodes</h2>
+    <h2>About the nodes</h2>
 
-<h3 id="faq-business_as_usual">Node: Business as usual</h3>
+    <h4 id="faq:can_agi_exist">Can superhuman Artifical General Intelligence exist?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Can superhuman Artifical General Intelligence exist?</p>
 
-</section>
+    <h4 id="faq:no_ai_this_century">No AGI this century
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About No AGI this century</p>
+
+    <h4 id="faq:can_agi_exist_this_century">...in this century?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About ...in this century?</p>
+
+    <h4 id="faq:can_we_agree_no_ai">Can we agree not to build it?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Can we agree not to build it?</p>
+
+    <h4 id="faq:ai_this_century">AGI this century
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About AGI this century</p>
+
+    <h4 id="faq:can_we_enforce_no_ai">Can we enforce it?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Can we enforce it?</p>
+
+    <h4 id="faq:is_agi_transformative">Is AGI transformative?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Is AGI transformative?</p>
+
+    <h4 id="faq:someone_wants_to_build_it">Will there be someone willing to build it?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Will there be someone willing to build it?</p>
+
+    <h4 id="faq:business_as_usual">Business as usual
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Business as usual</p>
+
+    <h4 id="faq:first_ai_kills_other_ais">Will the first AGI prevent second AGI to appear?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Will the first AGI prevent second AGI to appear?</p>
+
+    <h4 id="faq:will_ai_collaborate_with_ai">Will AGIs colaborate with each other?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Will AGIs colaborate with each other?</p>
+
+    <h4 id="faq:is_alignment_problem_solved">Have we solved AGI alignment in theory?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Have we solved AGI alignment in theory?</p>
+
+    <h4 id="faq:conflicting_ais">Conflicting AGIs
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Conflicting AGIs</p>
+
+    <h4 id="faq:is_agi_aligned">Is the AGI aligned?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Is the AGI aligned?</p>
+
+    <h4 id="faq:can_we_detect_misaligned">Can we know it's misaligned?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Can we know it's misaligned?</p>
+
+    <h4 id="faq:agi_protects_users">Follows values or instructions?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Follows values or instructions?</p>
+
+    <h4 id="faq:can_we_off_it">Can we easily turn it off?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Can we easily turn it off?</p>
+
+    <h4 id="faq:ai_harms_humans">Is it harming us?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Is it harming us?</p>
+
+    <h4 id="faq:are_they_thoughful">Are the controlers thoughtful of unintended consequences?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Are the controlers thoughtful of unintended consequences?</p>
+
+    <h4 id="faq:aligned_to_whom">Aligned to whom?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Aligned to whom?</p>
+
+    <h4 id="faq:offed_misaligned_ai">Turned off misaligned AGI
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Turned off misaligned AGI</p>
+
+    <h4 id="faq:created_inefectual_ai">Harmless misaligned AGI exists
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Harmless misaligned AGI exists</p>
+
+    <h4 id="faq:humans_can_kill_ai">Can we neutralize it?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Can we neutralize it?</p>
+
+    <h4 id="faq:aligned_ai_human_extinction">Shoot-in-foot human extinction
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Shoot-in-foot human extinction</p>
+
+    <h4 id="faq:agi_utopia">Beneficial AGI
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Beneficial AGI</p>
+
+    <h4 id="faq:do_they_have_good_intentions">Do they have good intentions for humanity?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Do they have good intentions for humanity?</p>
+
+    <h4 id="faq:second_chance_for_ai">Second chance at building AGI
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Second chance at building AGI</p>
+
+    <h4 id="faq:humans_killed_harmfull_ai">We neutralized harmfull AGI
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About We neutralized harmfull AGI</p>
+
+    <h4 id="faq:wants_human_exctinction">Does it benefit from our extinction?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Does it benefit from our extinction?</p>
+
+    <h4 id="faq:authoritarian_dystopia">Authoritarian dystopia
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Authoritarian dystopia</p>
+
+    <h4 id="faq:ai_kills_humans">AGI-initiated human extinction
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About AGI-initiated human extinction</p>
+
+    <h4 id="faq:wants_human_suffering">Does is benefit from our suffering?
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Does is benefit from our suffering?</p>
+
+    <h4 id="faq:astro_suffering">Astronomical suffering
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Astronomical suffering</p>
+
+    <h4 id="faq:medium_scale_dystopia">Medium scale dystopia
+      <a href="#" onclick="window.history.back()">
+        <iron-icon icon="icons:arrow-upward"></iron-icon>
+      </a>
+    </h4>
+    <p>About Medium scale dystopia</p>
+
+
+  </section>
 
 </body>
 
