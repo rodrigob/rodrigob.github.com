@@ -13,7 +13,8 @@ import { PaperSliderElement } from '@polymer/paper-slider/paper-slider.js';
 import '@material/mwc-slider/slider.js';
 import '@material/mwc-select/mwc-select.js';
 
-import { gzip } from 'fflate';
+import { base64ToBytes, bytesToBase64 } from "byte-base64"; // somehow this is part of the standard libraries
+import { gzip, gunzipSync } from 'fflate'; // or pako https://github.com/nodeca/pako
 
 // import style from 'ai-map.css'; // did not manage to make work, failed to get https://github.com/petecarapetyan/lit-css-ts-MVP
 import { style } from './ai-map-css';
@@ -130,33 +131,133 @@ function printGraphFaqSections(graph: Graph) {
   console.log(nodesFaqHtml.join("\n\n"));
 }
 
-export function setWeightsInUrl(weights: Map<NodeId, number>) {
 
-  const weightsJson = JSON.stringify(weights);
-  const data = new TextEncoder().encode(weightsJson);
+let setGraphWeightsInUrlLastTime = Date.now();
+let setGraphWeightsInUrlTimeoutId : number | undefined = undefined;
+
+
+/** Extracts weights from graph, encodes, and stores in the url. 
+ * Throttled to avoid calling "heavy" gzip too often.
+ * @throttle is in milliseconds
+ * 
+*/
+function setGraphWeightsInUrl(graph: Map<NodeId, GraphNode>, throttle = 150) {
+
+  const now = Date.now();
+  setGraphWeightsInUrlLastTime = now;
+  clearTimeout(setGraphWeightsInUrlTimeoutId);
+  if(throttle <= 0) {
+    setGraphWeightsInUrlImpl(graph, now);
+  }
+  else {
+    setTimeout(() => {setGraphWeightsInUrlImpl(graph, now);}, throttle);
+  }
+}
+
+function setGraphWeightsInUrlImpl(graph: Map<NodeId, GraphNode>, now: number) {
+
+  if (now !== setGraphWeightsInUrlLastTime) {
+    // setGraphWeightsInUrl was called before the timeout, 
+    // we will wait until next timout expires.
+    return;
+  }
+
+  console.info("setGraphWeightsInUrlImpl", {graph, now});
+  const weights = new Map<string, number>();
+
+  for (const [parentNodeId, node] of graph.entries()) {
+    for (const [childNodeId, weight] of node.childrenWeights.entries()) {
+      const key = `${parentNodeId},${childNodeId}`;
+      weights.set(key, weight);
+    }
+  }
+  setWeightsInUrl(weights);
+}
+
+
+/** Encodes all the weights of the graph in the url.
+ */
+function setWeightsInUrl(weights: Map<string, number>) {
+  // https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers
+  // recommends 2048 characters max in URL bar (certainly 32k max).
+  // our typical graph takes  ~900 characters, thus we are fine in length.
+
+  const replacer =
+    (key: any, value: any) => {
+      if (value instanceof Map) {
+        return Object.fromEntries(value);
+      }
+      else if (typeof value === "number") {
+        return value.toFixed(4);
+      }
+      else {
+        return value;
+      }
+    };
+  const weightsJson = JSON.stringify(weights, replacer);
+  const textEncoder = new TextEncoder();
+  const data = textEncoder.encode(weightsJson);
+  // console.info("setWeightsInUrl debug", { weights, weightsJson, data });
+
   gzip(data, (err, compressedData) => {
 
-    if (err === null) {
-      console.error("Failed to compress weights data.");
+    if (err !== null) {
+      console.error("Failed to compress weights data.", { err });
       return;
     }
-
-    const cd64 = Buffer.from(compressedData).toString('base64');
+    const cd64 = bytesToBase64(compressedData);
     const ucd64 = encodeURIComponent(cd64);
+
+    // read via  JSON.parse(base64ToBtyes(decodeURIComponent(b64))));
+
     const url = new URL(window.location.href);
     url.searchParams.set("weights", ucd64);
-    window.location.assign(url);
+    //window.location.assign(url); // this reloads the page, not good
     // window.history.pushState({}, "", url); // adds to the navigation history
-    console.info("Updated URL &weights= component.")
+    window.history.replaceState({}, "", url); // changes without increasing the navigation history
+    console.info("Updated URL &weights= component.", {
+      graphWeights: weights,
+      weightsJson: weightsJson,
+      data: data,
+      compressedData: compressedData,
+      compressedWeightsLength: ucd64.length,
+      compressedWeights: ucd64,
+      url: url,
+      // decoded: decodeWeightsFromUrlSync(ucd64)
+    });
   });
 
+}
+
+/**  Base64 URI component encoded gziped stringified JSON */
+export function decodeWeightsFromUrlSync(ucd64: string): Map<string, number> | undefined {
+
+  const cd64 = decodeURIComponent(ucd64);
+  const compressedData = base64ToBytes(cd64);
+  const uint8Data = gunzipSync(compressedData);
+  const jsonData = new TextDecoder().decode(uint8Data);
+
+  // json is expected to be of the kind "parentNodeId,childNodeId" -> number after toFixed 
+  const reviver = (key: any, value: any) => {
+    // no-key value is top value indexed object, key values are the weights-as-strings
+    return key ? Number(value) : new Map(Object.entries(value));
+  };
+  const weights = JSON.parse(jsonData, reviver);
+  console.debug("decodeWeightsFromUrlSync", {
+    compressedData,
+    uint8Data,
+    jsonData, weights
+  });
+  return weights;
 }
 
 @customElement("ai-map")
 export class AiMap extends LitElement {
   @property({ type: String }) title = 'My app';
 
-  @property({ type: String }) graphVersion = "2022_12_04_1436";
+  @property({ type: String })
+  graphVersion = "2022_12_04_1436";
+  // graphVersion = "2022_12_27_0016"; // FIXME: THIS IS THE LATEST
   @property({ type: String }) graphStyle: GraphStyle = GraphStyle.GraphViz;
   @property({ type: Boolean }) showSliders = true;
 
@@ -240,6 +341,7 @@ export class AiMap extends LitElement {
             node.childrenWeights = new Map<NodeId, number>(Object.entries(node.childrenWeights));
           }
           this.graphData = getDecisionGraphData(jsonDataMap);
+          setGraphWeightsInUrl(this.graphData.graph);
         }
         else {
           throw new Error("Received empty jsonData");
@@ -382,23 +484,27 @@ export class AiMap extends LitElement {
     // since SVG rendering depends on the order of appearance in document,
     // and since we will alter with, best if this lives _under_ the box.
     // we move it here
-    for(const childEdgeNode of childEdges.values())
-    {
+    for (const childEdgeNode of childEdges.values()) {
       node.parentNode?.insertBefore(childEdgeNode, node);
     }
 
 
     const onValueChanged = (event: any) => {
       // we already checked children.length == 2
-      const yesEdge = childEdges.get(graphNode!.children[0]);
-      const noEdge = childEdges.get(graphNode!.children[1]);
+      const yesId = graphNode!.children[0], noId = graphNode!.children[1];
+      const yesEdge = childEdges.get(yesId);
+      const noEdge = childEdges.get(noId);
       const minWidth = 2, maxWidth = 10, widthDelta = maxWidth - minWidth;
       // const v = (typeof slider.value === "number" ? slider.value : 50) / 100,
-      const v = (slider.value ?? 50) / 100,
+      // const v = (slider.value ?? 50) / 100,
+      const v = (slider.immediateValue ?? 50) / 100,
         yesWidth = minWidth + v * widthDelta,
         noWidth = minWidth + (1 - v) * widthDelta;
 
-      console.log("New value for yes-no slider", {node, slider, value:slider.value, v});
+      console.log("New value for yes-no slider", { node, slider, 
+        oldValue: (slider as any).oldValue,
+        immediateValue: slider.immediateValue,
+        value: slider.value, v });
 
       yesEdge?.querySelectorAll("path, polygon").forEach(e => {
         const svgElement = e as SVGElement;
@@ -410,6 +516,12 @@ export class AiMap extends LitElement {
         svgElement.style.setProperty("stroke-width", `${noWidth.toFixed(2)}px`);
       });
 
+      // update graph weights
+      graphNode!.childrenWeights.set(yesId, v);
+      graphNode!.childrenWeights.set(noId, 1 - v);
+      if (this.graphData !== undefined) {
+        setGraphWeightsInUrl(this.graphData.graph);
+      }
     };
 
     slider.addEventListener("value-changed", onValueChanged); // at end of change
@@ -555,13 +667,13 @@ export class AiMap extends LitElement {
 
 
     const editWeightsButton = html`
-    <mwc-button outlined raise=${this.showSliders} label=${this.showSliders ? "Default weights" : "Edit weights" }
-      icon="commit" @click=${(e: MouseEvent) => this.onShowSlidersClick(e)}>
+    <mwc-button outlined raise=${this.showSliders} label=${this.showSliders ? "Default weights" : "Edit weights"}
+      icon="commit" @click=${(e: MouseEvent)=> this.onShowSlidersClick(e)}>
     </mwc-button>
     
     
     <!-- <mwc-slider discrete="" step="1" min="0" max="100" class="node-slider" id="slider-test" style="visibility: visible;">
-                        </mwc-slider> -->
+                                    </mwc-slider> -->
     `;
 
     return html`

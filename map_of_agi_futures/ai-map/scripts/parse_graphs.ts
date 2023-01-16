@@ -44,7 +44,12 @@ for (const gvJsonPath of gvJsonPaths) {
     readGvJsonWriteNodesJson(gvJsonPath, nodesJsonPath);
 }
 
-
+/**
+ * Will read a graphviz json file, parse it, and generate the logical graph that ai-maps will consume.
+ * @param gvJsonPath prefix.gv.json file to read
+ * @param nodesJsonPath prefix.graph.json file to be created
+ * @returns 
+ */
 function readGvJsonWriteNodesJson(
     gvJsonPath: string,
     nodesJsonPath: string) {
@@ -54,7 +59,6 @@ function readGvJsonWriteNodesJson(
 
     const gvJson = JSON.parse(gvJsonRaw);
     const nodesMap = gvJsonToNodesMap(gvJson);
-    //const nodes_data_for_json = Array.from(nodes_map.entries());
     const replacer =
         (key: any, value: any) => {
             if (value instanceof Map) {
@@ -86,6 +90,21 @@ function labelStrToWeight(labelStr: string | undefined): number | undefined {
     const matches = labelStr.match(/\d+$/);
     const weight = matches ? parseInt(matches[0]) / 100 : undefined;
     return weight;
+}
+
+/**
+ * Helper function to parse labels and decide if it is the "yes" choice.
+ * Labels are in the form "&nbsp;yes; 99"
+ * @param labelStr: input string 
+ * @return True if "yes" choice, false otherwise
+ */
+function labelStrToYes(labelStr: string | undefined): boolean {
+    if (labelStr === undefined) {
+        return false;
+    }
+    const lowLabel = labelStr.toLowerCase();
+    const isYes = (lowLabel.includes("yes;") || lowLabel.includes("values;") || lowLabel.includes("all humans;"));
+    return isYes;
 }
 
 function gvJsonToNodesMap(gvJson: any): any {
@@ -145,8 +164,9 @@ function gvJsonToNodesMap(gvJson: any): any {
             continue;
         }
 
-        const l2w = labelStrToWeight;
+        const l2w = labelStrToWeight, l2y = labelStrToYes;
         const edgeWeight = l2w(edge["label"]) || l2w(edge["taillabel"]) || l2w(edge["headlabel"]);
+        const isYesEdge = l2y(edge["label"]) || l2y(edge["taillabel"]) || l2y(edge["headlabel"]);
 
         const tailNode = gvIdToNode.get(tailGvId);
         const headId = gvIdToNode.get(headGvId)?.nodeId;
@@ -162,7 +182,12 @@ function gvJsonToNodesMap(gvJson: any): any {
             console.error(msg, { headGvId: headGvId });
             throw ReferenceError(msg);
         }
-        tailNode.children.push(headId);
+        if (isYesEdge) { // by convention with ai-map the "yes" child goes first
+            tailNode.children.unshift(headId);
+        }
+        else {
+            tailNode.children.push(headId);
+        }
         if (edgeWeight !== undefined) {
             tailNode.childrenWeights.set(headId, edgeWeight);
         }
