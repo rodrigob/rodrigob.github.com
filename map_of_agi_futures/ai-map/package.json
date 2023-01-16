@@ -30,6 +30,7 @@
     "@material/mwc-slider": "^0.27.0",
     "@polymer/iron-icons": "^3.0.1",
     "@polymer/paper-slider": "^3.0.1",
+    "byte-base64": "^1.1.0",
     "fflate": "^0.7.4",
     "lit": "^2.0.2"
   },

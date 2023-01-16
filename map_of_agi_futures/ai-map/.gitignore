@@ -17,6 +17,7 @@
 
 # Generated assets
 /assets/*.gv.json
+noname.gv.xdot
 
 # build
 /_site/
