@@ -38,11 +38,13 @@ interface GraphNode {
 };
 
 type Graph = Map<NodeId, GraphNode>;
+type Weights = Map<string, number>; // key: "parentId,childId", value: float in [0, 1] range
 
 interface GraphData {
   startNode: GraphNode,
   graph: Graph,
   endNodeIds: NodeId[]
+  defaultWeights: Weights
 };
 
 /**
@@ -107,8 +109,9 @@ function getDecisionGraphData(graph: Graph): GraphData {
   console.info(`get_decision_graph input graph size: ${graph.size}, ` +
     `pruned graph size: ${prunedGraph.size}`);
 
+  const weights = getGraphWeights(graph);
   return {
-    startNode: startNode, graph: prunedGraph, endNodeIds: endNodeIds
+    startNode: startNode, graph: prunedGraph, endNodeIds: endNodeIds, defaultWeights: weights
   }
 }
 
@@ -133,7 +136,7 @@ function printGraphFaqSections(graph: Graph) {
 
 
 let setGraphWeightsInUrlLastTime = Date.now();
-let setGraphWeightsInUrlTimeoutId : number | undefined = undefined;
+let setGraphWeightsInUrlTimeoutId: number | undefined = undefined;
 
 
 /** Extracts weights from graph, encodes, and stores in the url. 
@@ -146,12 +149,25 @@ function setGraphWeightsInUrl(graph: Map<NodeId, GraphNode>, throttle = 150) {
   const now = Date.now();
   setGraphWeightsInUrlLastTime = now;
   clearTimeout(setGraphWeightsInUrlTimeoutId);
-  if(throttle <= 0) {
+  if (throttle <= 0) {
     setGraphWeightsInUrlImpl(graph, now);
   }
   else {
-    setTimeout(() => {setGraphWeightsInUrlImpl(graph, now);}, throttle);
+    setTimeout(() => { setGraphWeightsInUrlImpl(graph, now); }, throttle);
   }
+}
+
+function getGraphWeights(graph: Map<NodeId, GraphNode>): Weights {
+  const weights = new Map<string, number>();
+
+  for (const [parentNodeId, node] of graph.entries()) {
+    for (const [childNodeId, weight] of node.childrenWeights.entries()) {
+      const key = `${parentNodeId},${childNodeId}`;
+      weights.set(key, weight);
+    }
+  }
+
+  return weights;
 }
 
 function setGraphWeightsInUrlImpl(graph: Map<NodeId, GraphNode>, now: number) {
@@ -162,22 +178,15 @@ function setGraphWeightsInUrlImpl(graph: Map<NodeId, GraphNode>, now: number) {
     return;
   }
 
-  console.info("setGraphWeightsInUrlImpl", {graph, now});
-  const weights = new Map<string, number>();
-
-  for (const [parentNodeId, node] of graph.entries()) {
-    for (const [childNodeId, weight] of node.childrenWeights.entries()) {
-      const key = `${parentNodeId},${childNodeId}`;
-      weights.set(key, weight);
-    }
-  }
+  console.info("setGraphWeightsInUrlImpl", { graph, now });
+  const weights = getGraphWeights(graph);
   setWeightsInUrl(weights);
 }
 
 
 /** Encodes all the weights of the graph in the url.
  */
-function setWeightsInUrl(weights: Map<string, number>) {
+function setWeightsInUrl(weights: Weights) {
   // https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers
   // recommends 2048 characters max in URL bar (certainly 32k max).
   // our typical graph takes  ~900 characters, thus we are fine in length.
@@ -212,7 +221,7 @@ function setWeightsInUrl(weights: Map<string, number>) {
 
     const url = new URL(window.location.href);
     url.searchParams.set("weights", ucd64);
-    //window.location.assign(url); // this reloads the page, not good
+    // window.location.assign(url); // this reloads the page, not good
     // window.history.pushState({}, "", url); // adds to the navigation history
     window.history.replaceState({}, "", url); // changes without increasing the navigation history
     console.info("Updated URL &weights= component.", {
@@ -222,6 +231,7 @@ function setWeightsInUrl(weights: Map<string, number>) {
       compressedData: compressedData,
       compressedWeightsLength: ucd64.length,
       compressedWeights: ucd64,
+      localtionHref: window.location.href,
       url: url,
       // decoded: decodeWeightsFromUrlSync(ucd64)
     });
@@ -230,7 +240,7 @@ function setWeightsInUrl(weights: Map<string, number>) {
 }
 
 /**  Base64 URI component encoded gziped stringified JSON */
-export function decodeWeightsFromUrlSync(ucd64: string): Map<string, number> | undefined {
+export function decodeWeightsFromUrlSync(ucd64: string): Weights | undefined {
 
   const cd64 = decodeURIComponent(ucd64);
   const compressedData = base64ToBytes(cd64);
@@ -266,6 +276,8 @@ export class AiMap extends LitElement {
   protected loadedGraphVersion: string = ""; // updated when graphData and graphRawSvg are up-to-date.
   protected graphData: GraphData | undefined = undefined;
   protected graphRawSvg: string = "";
+  protected initialWeights: Weights | undefined = undefined;
+  protected isFirstGraphFetch: boolean = false;
 
   @query("#graph_svg") graphSvg!: SVGElement;
 
@@ -301,6 +313,15 @@ export class AiMap extends LitElement {
     }
   }
 
+  constructor() {
+    super();
+
+    const params = new URL(window.location.href).searchParams;
+    const weightsParam = params.get("weights");
+    if (weightsParam !== null) {
+      this.initialWeights = decodeWeightsFromUrlSync(weightsParam);
+    }
+  }
 
   /**
    * Asynchronous loading of new graph.
@@ -327,6 +348,7 @@ export class AiMap extends LitElement {
         { loadedGraphVersion: this.loadedGraphVersion, graphVersion: this.graphVersion })
     }
 
+    this.isFirstGraphFetch = this.graphData === undefined;
     this.loadedGraphVersion = ""; // invalidate current data
     this.graphData = undefined;
     this.graphRawSvg = "";
@@ -341,7 +363,9 @@ export class AiMap extends LitElement {
             node.childrenWeights = new Map<NodeId, number>(Object.entries(node.childrenWeights));
           }
           this.graphData = getDecisionGraphData(jsonDataMap);
-          setGraphWeightsInUrl(this.graphData.graph);
+          if (this.initialWeights === undefined) {
+            setGraphWeightsInUrl(this.graphData.graph);
+          }
         }
         else {
           throw new Error("Received empty jsonData");
@@ -497,23 +521,30 @@ export class AiMap extends LitElement {
       const minWidth = 2, maxWidth = 10, widthDelta = maxWidth - minWidth;
       // const v = (typeof slider.value === "number" ? slider.value : 50) / 100,
       // const v = (slider.value ?? 50) / 100,
+      const zeroOpacity = 0.1;
       const v = (slider.immediateValue ?? 50) / 100,
         yesWidth = minWidth + v * widthDelta,
-        noWidth = minWidth + (1 - v) * widthDelta;
+        yesOpacity = v ? 1.0 : zeroOpacity,
+        noWidth = minWidth + (1 - v) * widthDelta,
+        noOpacity = (1 - v) ? 1.0 : zeroOpacity;
 
-      console.log("New value for yes-no slider", { node, slider, 
+      console.log("New value for yes-no slider", {
+        node, slider,
         oldValue: (slider as any).oldValue,
         immediateValue: slider.immediateValue,
-        value: slider.value, v });
+        value: slider.value, v
+      });
 
       yesEdge?.querySelectorAll("path, polygon").forEach(e => {
-        const svgElement = e as SVGElement;
-        svgElement.style.setProperty("stroke-width", `${yesWidth.toFixed(2)}px`);
+        const svgElementStyle = (e as SVGElement).style;
+        svgElementStyle.setProperty("stroke-width", `${yesWidth.toFixed(2)}px`);
+        svgElementStyle.setProperty("opacity", `${yesOpacity.toFixed(2)}`);
       });
 
       noEdge?.querySelectorAll("path, polygon").forEach(e => {
-        const svgElement = e as SVGElement;
-        svgElement.style.setProperty("stroke-width", `${noWidth.toFixed(2)}px`);
+        const svgElementStyle = (e as SVGElement).style;
+        svgElementStyle.setProperty("stroke-width", `${noWidth.toFixed(2)}px`);
+        svgElementStyle.setProperty("opacity", `${noOpacity.toFixed(2)}`);
       });
 
       // update graph weights
@@ -636,24 +667,101 @@ export class AiMap extends LitElement {
     this.fixSvgHoverText(); // FIXME: fix for edges too
     this.addInputSliders();
     this.addOutputSlider();
+
+    if (this.initialWeights !== undefined && this.isFirstGraphFetch) {
+      console.info("Setting initial weights");
+      this.setGraphWeights(this.initialWeights);
+    }
+
   }
+
   protected onShowSlidersClick(e: Event) {
     this.showSliders = !this.showSliders;
 
     // poor's man CSS style
-
     this.graphSvg.querySelectorAll(".node-slider").forEach(
       (nodeSlider: Element) => {
-        const slider = nodeSlider as HTMLElement;
+        const slider = nodeSlider as PaperSliderElement; // as HTMLElement
         // changing visibility does not affect the HTML layout (unlike 'display')
-        slider.style.visibility = this.showSliders ? "visible" : "hidden";
+        // slider.style.visibility = this.showSliders ? "visible" : "hidden";
+        slider.disabled = !this.showSliders;
       }
     );
+  }
+
+  protected onResetWeightsClick(e: Event) {
+    if (this.graphData !== undefined) {
+      this.setGraphWeights(this.graphData.defaultWeights);
+    }
+  }
+
+  /**
+   * Update the application state with new graph weights.
+   * Will update the internal graph and the UI.
+   * 
+   * @param weights keys should be in "parentNodeId,childNodeId" format,
+   *                values should be floating number in [0, 1] range.
+   */
+  protected setGraphWeights(weights: Weights) {
+
+    const graphData = this.graphData!;
+
+    // for each parentNodeId,childNodeId
+    for (const [key, weight] of weights.entries()) {
+      // should update the graph data and the slider.value (to impact UI)
+
+      const splitKey = key.split(",");
+      if (splitKey.length != 2) {
+        console.error("setGraphWeights wrong key format, " +
+          "weight keys should be in the 'parentNodeId,childNodId' format.",
+          { key, weight, weights });
+        return;
+      }
+
+      if (weight < 0 || weight > 1) {
+        console.error("setGraphWeights wrong weight value, " +
+          "weights should be in range [0, 1]",
+          { key, weight, weights });
+        return;
+      }
+
+      const parentNodeId = splitKey[0], childNodeId = splitKey[1];
+      const parentNode = graphData.graph.get(parentNodeId);
+      const childIndex = (parentNode?.children.length) ? parentNode.children.indexOf(childNodeId) : -1;
+      const sliderElement = this.renderRoot.querySelector(`#slider-${parentNodeId}`);
+      // setting the slider 
+      // will trigger onValueChanged event, 
+      // which updates the graphData, the weigths URL, and the UI
+      // Sliders focus on the "yes" child,
+      // we skip the "no" children, assuming that in weights yes + no == 1
 
 
+      if (parentNode !== undefined
+        && sliderElement !== undefined
+        && parentNode.children.length == 2
+        && childIndex == 0
+      ) {
+        // yes edge
+        // .childrenWeights key should match the .children entries
+        const slider = sliderElement as PaperSliderElement;
+        slider.value = weight * 100;
+      }
+      else if (parentNode === undefined || childIndex < 0) {
+        console.error("setGraphWeights could not find the edge parent and child nodes.",
+          { key, weight, parentNodeId, childNodeId, parentNode, childIndex, weights });
+        return;
+      }
+      else {
+        // no edge, or non yes/no edge
+        // for no edges, this is redundant with setting slider.value 
+        // (due to onValueChanged setting both yes and no graph edges)
+        // but should not harm either, keeps code simple.
+        parentNode.childrenWeights.set(childNodeId, weight);
+      }
+    } // end of "for each weight"
 
-
-
+    setGraphWeightsInUrl(graphData.graph);
+    return;
   }
 
   render() {
@@ -666,21 +774,23 @@ export class AiMap extends LitElement {
 `;
 
 
-    const editWeightsButton = html`
-    <mwc-button outlined raise=${this.showSliders} label=${this.showSliders ? "Default weights" : "Edit weights"}
-      icon="commit" @click=${(e: MouseEvent)=> this.onShowSlidersClick(e)}>
+    const editWeightsButtons = html`
+    <mwc-button outlined raise=${this.showSliders} label=${this.showSliders ? "Fix weights" : "Edit weights" } icon="commit"
+      @click=${(e: MouseEvent) => this.onShowSlidersClick(e)}>
     </mwc-button>
     
+    <mwc-button outlined label="Reset weights" icon="commit" @click=${(e: MouseEvent) => this.onResetWeightsClick(e)}>
+    </mwc-button>
     
     <!-- <mwc-slider discrete="" step="1" min="0" max="100" class="node-slider" id="slider-test" style="visibility: visible;">
-                                    </mwc-slider> -->
+                                                        </mwc-slider> -->
     `;
 
     return html`
    
     
     <div>
-      <p>Graph: ${this.loadedGraphVersion} ${this.graphStyle} ${editWeightsButton}</p>
+      <p>Graph: ${this.loadedGraphVersion} ${this.graphStyle} ${editWeightsButtons}</p>
       ${svgElement}
     </div>
     

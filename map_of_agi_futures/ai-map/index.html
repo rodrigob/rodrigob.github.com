@@ -76,9 +76,11 @@
   </script>
   <script>
     // make sure that clicks on FAQ back arrow leads top when reached via scrolling only. 
+    const originalUrl = new URL(window.location) ;
     const url = new URL(window.location);
     url.hash = "top";
     window.history.pushState({}, '', url);
+    window.history.pushState({}, '', originalUrl);
   </script>
 
   <section id="faq">

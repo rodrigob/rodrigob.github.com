@@ -9,6 +9,11 @@ export const style = css`
     --paper-slider-secondary-color:	var(-google-red-300, pink);
     --paper-slider-knob-color:	var(--google-red-700, red);
     --paper-slider-pin-color:	var(--google-red-700, red);
+    /* disabled defaults to --paper-grey-400 */
+    /* --paper-slider-disabled-knob-color: var(--paper-grey-400, grey); */
+    /*--paper-slider-disabled-active-color: var(--paper-grey-400, grey); */
+    --paper-slider-disabled-knob-color: transparent; 
+    --paper-slider-disabled-active-color: var(--google-red-700, red);
     --paper-slider-height: 6px; /* 2px default */
 }
 
