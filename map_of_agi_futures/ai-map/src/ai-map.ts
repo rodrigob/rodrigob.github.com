@@ -535,6 +535,7 @@ export class AiMap extends LitElement {
         value: slider.value, v
       });
 
+      // update edges width
       yesEdge?.querySelectorAll("path, polygon").forEach(e => {
         const svgElementStyle = (e as SVGElement).style;
         svgElementStyle.setProperty("stroke-width", `${yesWidth.toFixed(2)}px`);
@@ -547,12 +548,32 @@ export class AiMap extends LitElement {
         svgElementStyle.setProperty("opacity", `${noOpacity.toFixed(2)}`);
       });
 
+      // update the edge labels
+      const yesLabelId = `tspan#${graphNode.nodeId}\\-\\>${yesId}-label-value`;
+      const yesLabel = this.renderRoot.querySelector(yesLabelId);
+      if (yesLabel !== null) {
+        yesLabel.textContent = (v * 100).toFixed(0);
+      }
+      else {
+        console.debug("onValueChanged could not find yesLabel", { yesLabelId, yesLabel });
+      }
+      const noLabelId = `tspan#${graphNode.nodeId}\\-\\>${noId}-label-value`;
+      const noLabel = this.renderRoot.querySelector(noLabelId);
+      if (noLabel !== null) {
+        noLabel.textContent = ((1 - v) * 100).toFixed(0);
+      }
+      else {
+        console.debug("onValueChanged could not find noLabel", { noLabelId, noLabel });
+      }
+
       // update graph weights
       graphNode!.childrenWeights.set(yesId, v);
       graphNode!.childrenWeights.set(noId, 1 - v);
       if (this.graphData !== undefined) {
         setGraphWeightsInUrl(this.graphData.graph);
       }
+
+
     };
 
     slider.addEventListener("value-changed", onValueChanged); // at end of change
@@ -650,6 +671,48 @@ export class AiMap extends LitElement {
     });
   }
 
+  protected fixSvgEdgeText() {
+    // injects <tspan> elements inside the edge text
+    // makes it easier to have the numbers change interactivelly.
+
+    // follows the structure of the graphviz SVG,
+
+    this.renderRoot.querySelectorAll("g.edge text").forEach(
+      (textElement: Element) => {
+        const id = textElement!.parentElement!.parentElement!.parentElement!.id;
+        const idSplit = id.split("->");
+        if (idSplit.length !== 2) {
+          console.error("fixSvgEdgeText unexpected edge g.id",
+            { textElement, id, idSplit });
+          return;
+        }
+        const parentId = idSplit[0], childId = idSplit[1];
+
+        const textSplit = textElement.textContent!.split(";");
+        if (textSplit.length !== 2) {
+          console.error("fixSvgEdgeText unexpected edge textContent",
+            { textElement, id, idSplit });
+          return;
+        }
+
+        textElement.textContent = textSplit[0] + "; ";
+
+        const svgNS = "http://www.w3.org/2000/svg";
+        const tspan = document.createElementNS(svgNS, "tspan");
+        tspan.id = `${id}-label-value`;
+        tspan.textContent = textSplit[1];
+
+        textElement.append(tspan);
+      }
+    );
+
+    // temp1.parentElement.querySelector(`g#can_we_agree_no_ai\\-\\>ai_this_century.edge text`).textContent
+
+    // temp2.querySelectorAll("g.edge text")
+    // temp3.parentElement.parentElement.parentElement.id.split("->")
+
+  }
+
   protected initializeSvg() {
     if (!this.loadedGraphVersion) {
       // nothing to do if no graph loaded
@@ -665,6 +728,7 @@ export class AiMap extends LitElement {
 
     this.fixSvgNodeLinks();
     this.fixSvgHoverText(); // FIXME: fix for edges too
+    this.fixSvgEdgeText();
     this.addInputSliders();
     this.addOutputSlider();
 
@@ -775,15 +839,15 @@ export class AiMap extends LitElement {
 
 
     const editWeightsButtons = html`
-    <mwc-button outlined raise=${this.showSliders} label=${this.showSliders ? "Fix weights" : "Edit weights" } icon="commit"
-      @click=${(e: MouseEvent) => this.onShowSlidersClick(e)}>
+    <mwc-button outlined raise=${this.showSliders} label=${this.showSliders ? "Fix weights" : "Edit weights"} icon="commit"
+      @click=${(e: MouseEvent)=> this.onShowSlidersClick(e)}>
     </mwc-button>
     
-    <mwc-button outlined label="Reset weights" icon="commit" @click=${(e: MouseEvent) => this.onResetWeightsClick(e)}>
+    <mwc-button outlined label="Reset weights" icon="refresh" @click=${(e: MouseEvent)=> this.onResetWeightsClick(e)}>
     </mwc-button>
     
     <!-- <mwc-slider discrete="" step="1" min="0" max="100" class="node-slider" id="slider-test" style="visibility: visible;">
-                                                        </mwc-slider> -->
+                                                                                    </mwc-slider> -->
     `;
 
     return html`
