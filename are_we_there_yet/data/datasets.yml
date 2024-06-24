@@ -19,7 +19,7 @@ Classification:
 - :group: Classification
   :name: STL-10
   :evaluation_units: accuracy %
-  :description: Similar to CIFAR-10 but with 96x96 images. [Original dataset website](http://www.stanford.edu/~acoates/stl10/).
+  :description: Similar to CIFAR-10 but with 96x96 images. [Original dataset website](http://cs.stanford.edu/~acoates/stl10/).
   :figure_url: stl_10.png
 - :group: Classification
   :name: SVHN
